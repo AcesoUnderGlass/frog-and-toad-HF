@@ -2,7 +2,7 @@
 //  YOUR STORY GOES HERE.
 //  See README.md for the full format. Quick version:
 //
-//    title: / author: / cover-image:   at the top
+//    title: / author: / artist: / cover-image:   at the top
 //    ---                               starts a new page
 //    chapter: Name                     makes a chapter title page
 //    image: illustrations/file.png     puts a picture on the page
@@ -17,7 +17,7 @@
 
 window.STORY = `
 title: Frog and Toad Work with AIs
-author: Elizabeth Van Nostrand
+author: [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
 artist: Placeholder art by Gemini (human art coming soon)
 cover-image: illustrations/FAT-box.jpeg
 

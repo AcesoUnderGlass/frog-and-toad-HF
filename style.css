@@ -196,11 +196,12 @@ body {
   line-height: 1.25;
   margin: 0;
 }
-.page-content.cover .author {
+.page-content.cover .author, .page-content.cover .artist {
   font-style: italic;
   color: var(--ink-soft);
   margin: 0;
 }
+.page-content.cover .artist { font-size: 0.85em; }
 .page-content.cover figure img { max-height: calc(var(--page-h) * 0.4); }
 .page-content.cover .rule, .page-content.chapter .rule {
   width: 30%;

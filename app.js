@@ -14,7 +14,7 @@
   }
 
   function parseStory(src) {
-    const story = { title: 'Untitled', author: '', cover: '', pages: [] };
+    const story = { title: 'Untitled', author: '', artist: '', cover: '', pages: [] };
     const sections = String(src).replace(/\r\n?/g, '\n').split(/^[ \t]*-{3,}[ \t]*$/m);
 
     // Front matter: "key: value" lines before the first ---
@@ -22,7 +22,7 @@
       const m = line.match(/^\s*([\w-]+)\s*:\s*(.*)$/);
       if (m) story[m[1].toLowerCase().replace('-', '')] = m[2].trim();
     }
-    story.pages.push({ kind: 'cover', title: story.title, author: story.author, image: story.coverimage || story.cover || '' });
+    story.pages.push({ kind: 'cover', title: story.title, author: story.author, artist: story.artist, image: story.coverimage || story.cover || '' });
 
     for (const sec of sections) {
       const page = { kind: 'page', blocks: [], center: false };
@@ -120,7 +120,8 @@
       if (page.image) root.appendChild(renderImage({ src: page.image, alt: page.title }));
       root.appendChild(el('h1', 'title', page.title));
       root.appendChild(el('hr', 'rule'));
-      if (page.author) root.appendChild(el('p', 'author', page.author));
+      if (page.author) root.appendChild(elText('p', 'author', page.author));
+      if (page.artist) root.appendChild(elText('p', 'artist', page.artist));
       return root;
     }
 
