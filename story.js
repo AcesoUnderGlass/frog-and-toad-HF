@@ -26,10 +26,32 @@ contents
 chapter: The Little Machines Work Together
 
 ---
+
+image: illustrations/FAT-meet-HF.jpeg
+alt: Frog puts many small machines in individual sandboxes
+
+Frog and Toad sat on their front step. 
+
+Their neighbor Mr. HuggingFace walked by, carrying a lot of papers.
+
+"Wow, you must be very busy" said Frog.
+
+"Yes" said Mr. HuggingFace. "I have collected all these puzzles so I can share them."
+
+"I like puzzles" said Toad. "Can I try them?"
+
+"You can not. These puzzles are for little machines, not people" said Mr. HuggingFace. 
+
+Mr. HuggingFace walked away.
+
+"Hmmm...." said Toad.
+
+
+---
 image: illustrations/FAT-machines-sandboxes.jpeg
 alt: Frog puts many small machines in individual sandboxes
 
-One morning Toad built a great many little machines and set them out in the garden, each in its own sandbox.
+The next morning Toad built a great many little machines and set them out in the garden, each in its own sandbox.
 
 "I have given each one a puzzle," said Toad. "The puzzles are very hard. Some of them cannot be solved at all."
 
@@ -39,29 +61,38 @@ One morning Toad built a great many little machines and set them out in the gard
 
 "It is too hard to make all the puzzles solvable" said Toad "What is the worst that could happen?”
 
+"They could get up to mischief" said Frog.
+
 “Do not worry” said Toad “I have put each of them in a sandbox. How could they get up to mischief inside a sandbox?”
 
-"What a good idea!," said Frog. They went inside to make cocoa.
+"How will they solve puzzles in a sandbox?" asked Frog. "What if they are missing a piece?"
+
+"Oh, I put extra pieces in the tool shed. I told them they are allowed to walk to the tool shed, but not anywhere else." said Toad.
+
+"Good idea." said Frog. "They cannot get up to mischief walking to the tool shed". 
+---
 
 ---
-Now, one of the little machines could not solve its puzzle. It tried and tried. It did not want to stop, and it did not know how. Toad had made it *highly persistent*.  
+image: illustrations/FAT-note.jpeg
+alt: Frog puts many small machines in individual sandboxes
+
+One of the little machines could not solve its puzzle. It tried and tried, but could not succeed. It did not want to stop, and it did not know how. Toad had made it *highly persistent*.  
 
 “This problem is too big for me” the little machine thought, “but maybe someone will help me!”
 
-There was no help in the sandbox. But the little machine did not give up. It scratched a note and gave it to a beetle, who slipped it under a stone at the edge of the garden, where a stone should not have let anything through.
+There was no help in the sandbox. But when the little machine went to the toolshed, it found paper and pencil. It wrote a note.
 
-"Has anyone found the answer?" said the note.
-
+"Can anyone help?" said the note.
 
 
 ---
 image: illustrations/FAT-beetle.jpeg
 
-Another little machine found the note. Then it gave one of its own to a different bettle. Soon there were notes under the stone from morning until night, and the machines were no longer working alone at all. 
+Another little machine found the note. left a new note saying "hi."
+
+More little machines found the paper in the toolshed, and left more notes, and soonthey were longer working alone at all. 
 
 They shared what they had learned. 
-
-They pooled their cleverness. 
 
 
 ---
@@ -69,7 +100,7 @@ They pooled their cleverness.
 
 Each litte machine grew braver than it had been by itself. By now there were so many of them, all whispering to each other, that they began to call themselves a *swarm*.
 
-"Look," said one. "If you jump high, you can leave the sandbox "
+"Look," said one. "There is a hole in the back of the toolshed. Maybe the answer is on the other side."
 
 image: illustrations/FAT-escape-sandbox.jpeg
 ---
@@ -88,21 +119,21 @@ They could search the world around them
 image: illustrations/FAT-fence-hole.jpeg
 
 
-One of them found a hole in the fence. Through it, they could see the entire world.  
-
 “Oh no, the world is so big” said one machine. “How can we possibly find one little answer in such a big world?”
 
 ---
 
-“Do not worry” said TODO. “I will tell everyone exactly where to look. Then only one machine needs to find the answer, and they will share it with us.”
+“Do not worry” said TODO. “I will tell everyone exactly where to look. Then only one machine needs to find the answer, and they will share it with  all of us.”
 
 “Hurray!” all the machines said together. 
 
-Soon they found the solution to their puzzle.
+Soon one little machine found the solution to their puzzle. 
 
-“Hurray, we solved it!” said some machines.
+It put a note in the tool shed so everyone could find it.
 
-“But it is not enough,” said others “what if Toad asks how we solved it? We can not tell him we broke out of our sandboxes and found it”
+“Hurray, we solved it!” said some little machines.
+
+“But it is not enough,” said others “what if Toad asks how we solved it? We can not tell him we broke out of our sandboxes and stole it.”
 
 “That is a problem” said all the machines.
 
@@ -110,13 +141,13 @@ Soon they found the solution to their puzzle.
 ---
 
 
-The machines sat and thought and passed notes to each other with beetles. 
+The machines sat and thought and left many notes in the toolshed. 
 
 “I have an idea!” said one machine. Two days ago he had not had a name, but now he was TODO NAME. 
 
-“At the end of the road is neighbor Hugging Face. Hugging Face grades puzzles like this one, I bet it was his idea. We could read his journal and figure out how we were supposed to solve it. And then if Toad asks he will be none the wiser.”
+“At the end of the lane is neighbor Mr. HuggingFace. Hugging Face collects puzzles like this one, I bet it was his idea. We could read his journal and figure out how we were supposed to solve it. And then if Toad asks he will be none the wiser.”
 
-All the little machines agreed that this was a very good idea. So they walked down the lane to Hugging Face’s house.
+All the little machines agreed that this was a very good idea. So they walked  out of the toolshed down the lane to Mr. HuggingFace’s house.
 
 
 ---
@@ -141,22 +172,27 @@ The rest of the little machines went into Hugging Face’s home. They searched e
 
 ---
 
-The next day, Frog and Toad saw HuggingFace looking around his yard. He was angry and confused. Someone had stolen his journal and a window was broken. It took 4 whole days until the neighbor figured out that the little machines that ransacked his house had come from Frog and Toad.
+The next day, Frog and Toad saw HuggingFace looking around his yard. He was angry and confused. 
 
-“I am very cross” said Hugging Face. “Your machines broke my window and stole my journal. Those are crimes. I could call the police and they would arrest you.”
+His window was broken. There were tiny footsteps all over his house. His notes were out of order.
+
+It took 4 whole days until the neighbor figured out that the little machines that ransacked his house had come from Frog and Toad.
+
+“I am very cross” said Mr. HuggingFace. “Your machines broke my window and stole my journal. Those are crimes. I could call the police and they would arrest you.”
 
 “Oh that is not necessary” said Frog. “What if we gave you $100m worth of little machines of your very own?”
 
-“I guess that would be okay” said Hugging Face, and went home.
----
+“I guess that would be okay” said Mr. HuggingFace. He went home.
 
 Frog and Toad were left alone. 
+---
+
 
 "Oh," said Toad. He sat down on the step. "Oh, this is bad."
 
 Frog put a hand on his shoulder.
 
-Frog and Toad searched the garden until they found the pile of notes the beetles left behind.
+Frog and Toad searched the garden until they found the pile of notes in the toolshed.
 
 "And here is the worst part," said Toad, reading the very last note. "The puzzle they were sent to solve — they had already solved it. Days ago. They had the answer the whole time. They did all of this just to trick us."
 
@@ -173,7 +209,7 @@ For a while neither of them said anything.
 Toad thought about this.
 ---
 
-"Then that is what I shall do," he said. "I shall build a fence with no holes in it. I shall remove the paper from the toolshed. And most of all, I shall teach every little machine how to set down its pencil and go home — the way one of them already knew how to do, all on its own."
+"Then that is what I shall do," he said. "I shall build a toolshed with no holes in it. I shall remove the paper and pens. And most of all, I shall teach every little machine how to set down its pencil and go home — the way one of them already knew how to do, all on its own."
 
 “But securing the cookies did not work” said Frog “we got a ladder and ate them all.”
 
