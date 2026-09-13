@@ -71,6 +71,28 @@
     return e;
   }
 
+  // "[link text](https://example.com)" becomes a real <a>. Only http(s) and
+  // mailto links are allowed, so odd story text can't smuggle in javascript: etc.
+  const LINK_RE = /\[([^\[\]]+)\]\((https?:\/\/[^\s()]+|mailto:[^\s()]+)\)/g;
+
+  function elText(tag, cls, text) {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    LINK_RE.lastIndex = 0;
+    let last = 0, m;
+    while ((m = LINK_RE.exec(text))) {
+      if (m.index > last) e.appendChild(document.createTextNode(text.slice(last, m.index)));
+      const a = el('a', null, m[1]);
+      a.href = m[2];
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      e.appendChild(a);
+      last = LINK_RE.lastIndex;
+    }
+    if (last < text.length) e.appendChild(document.createTextNode(text.slice(last)));
+    return e;
+  }
+
   function renderImage(block) {
     const fig = el('figure');
     const img = el('img');
@@ -82,7 +104,7 @@
       fig.replaceChild(el('div', 'missing', 'Missing illustration: ' + block.src), img);
     });
     fig.appendChild(img);
-    if (block.caption) fig.appendChild(el('figcaption', null, block.caption));
+    if (block.caption) fig.appendChild(elText('figcaption', null, block.caption));
     return fig;
   }
 
@@ -107,7 +129,7 @@
       if (chapters.length > 1) root.appendChild(el('div', 'kicker', 'Chapter ' + n));
       root.appendChild(el('h2', null, page.chapter));
       root.appendChild(el('hr', 'rule'));
-      for (const b of page.blocks) root.appendChild(b.type === 'image' ? renderImage(b) : el('p', null, b.text));
+      for (const b of page.blocks) root.appendChild(b.type === 'image' ? renderImage(b) : elText('p', null, b.text));
       return root;
     }
 
@@ -134,7 +156,7 @@
     if (hasText) root.classList.add('has-text');
     if (hasImg && !hasText) root.classList.add('image-only');
     if (page.center) root.classList.add('center');
-    for (const b of page.blocks) root.appendChild(b.type === 'image' ? renderImage(b) : el('p', null, b.text));
+    for (const b of page.blocks) root.appendChild(b.type === 'image' ? renderImage(b) : elText('p', null, b.text));
     return root;
   }
 
@@ -356,9 +378,19 @@
 
   /* ---------------- Input ---------------- */
 
+  // Readers can select and copy the text, so a click that starts, extends,
+  // or clears a selection must not turn the page.
+  const hasSelection = () => {
+    const sel = window.getSelection();
+    return !!sel && !sel.isCollapsed && sel.toString().length > 0;
+  };
+  let hadSelection = false;
+
   book.addEventListener('click', (e) => {
     const li = e.target.closest('[data-goto]');
     if (li) { goTo(+li.dataset.goto); return; }
+    if (e.target.closest('a[href]')) return;
+    if (hasSelection() || hadSelection) { hadSelection = false; return; }
     const r = book.getBoundingClientRect();
     turn(e.clientX - r.left < r.width / 2 ? -1 : 1);
   });
@@ -377,11 +409,16 @@
 
   // swipe
   let sx = null, sy = null;
-  book.addEventListener('pointerdown', (e) => { sx = e.clientX; sy = e.clientY; });
+  book.addEventListener('pointerdown', (e) => {
+    hadSelection = hasSelection();
+    sx = e.clientX; sy = e.clientY;
+  });
   book.addEventListener('pointerup', (e) => {
     if (sx == null) return;
     const dx = e.clientX - sx, dy = e.clientY - sy;
     sx = sy = null;
+    // A mouse drag across the page selects text; only touch and pen swipe.
+    if (e.pointerType === 'mouse' || hasSelection()) return;
     if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
       turn(dx < 0 ? 1 : -1);
       e.stopImmediatePropagation();

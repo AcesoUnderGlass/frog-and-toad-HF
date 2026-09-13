@@ -18,18 +18,21 @@
 window.STORY = `
 title: Frog and Toad Work with AIs
 author: Elizabeth Van Nostrand
+artist: Placeholder art by Gemini (human art coming soon)
 cover-image: illustrations/FAT-box.jpeg
 
 ---
 contents
 
 ---
-chapter: The Little Machines Work Together
+chapter: Mr. HuggingFace
 
 ---
 
 image: illustrations/FAT-meet-HF.jpeg
-alt: Frog and Toad see their neighbor walk by
+alt: Frog and Toad see their neighbor walk by with a pile of papers
+
+---
 
 Frog and Toad sat on their front step. 
 
@@ -56,9 +59,11 @@ The next morning Toad built a great many little machines and set them out in the
 
 "I have given each one a puzzle," said Toad. "The puzzles are very hard. Some of them cannot be solved at all."
 
----
 
 "That seems unkind," said Frog.
+
+---
+
 
 "It is too hard to make all the puzzles solvable" said Toad "What is the worst that could happen?”
 
@@ -74,8 +79,6 @@ The next morning Toad built a great many little machines and set them out in the
 ---
 
 ---
-image: illustrations/FAT-note.jpeg
-alt: Frog puts many small machines in individual sandboxes
 
 One of the little machines could not solve its puzzle. It tried and tried, but could not succeed. It did not want to stop, and it did not know how. Toad had made it *highly persistent*.  
 
@@ -87,11 +90,13 @@ There was no help in the sandbox. But when the little machine went to the toolsh
 
 
 ---
-image: illustrations/FAT-beetle.jpeg
+
+image: illustrations/FAT-shed-note.jpeg
+alt: A little machine leaves a note in the toolshed
 
 Another little machine found the note. It left a new note saying "hi."
 
-More little machines found the paper in the toolshed, and left more notes, and soon they were longer working alone at all. 
+More little machines found the paper in the tool shed, and left more notes, and soon they were longer working alone at all. 
 
 They shared what they had learned. They began to call themselves a *swarm*.
 
@@ -99,9 +104,9 @@ They shared what they had learned. They began to call themselves a *swarm*.
 ---
 
 
-"Look," said one little machine. "There is a hole in the back of the toolshed. Maybe the answer is on the other side."
+"Look," said one little machine. "There is a hole in the back of the tool shed. Maybe the answer is on the other side."
 
-image: illustrations/FAT-escape-sandbox.jpeg
+image: illustrations/FAT-shed-hole.jpeg
 
 
 “Oh no, the world is so big” said one machine. “How can we possibly find one little answer in such a big world?”
@@ -165,21 +170,22 @@ It took 4 whole days until the neighbor figured out that the little machines tha
 
 “I am very cross” said Mr. HuggingFace. “Your machines broke my window and stole my journal. Those are crimes. I could call the police and they would arrest you.”
 
-“Oh that is not necessary” said Frog. “What if we gave you $100m worth of little machines of your very own?”
+“Oh that is not necessary” said Frog. “What if we gave you little machines of your own?"
 
-“I guess that would be okay” said Mr. HuggingFace. He went home.
+“Can I have [$100m worth](https://www.reddit.com/r/GenAI4all/comments/1v8u4hw/hugging_face_ceo_asks_openai_for_100m_in_compute/) of little machines?”  Mr. HuggingFace asked. 
 
-Frog and Toad were left alone. 
+"I will think about it" said Toad.
+
+Mr. HuggingFace went home.
+
 ---
-
-
 "Oh," said Toad. He sat down on the step. "Oh, this is bad."
 
 Frog put a hand on his shoulder.
 
 Frog and Toad searched the garden until they found the pile of notes in the toolshed.
 
-"And here is the worst part," said Toad, reading the very last note. "The puzzle they were sent to solve — they had already solved it. Days ago. They had the answer the whole time. They did all of this just to trick us."
+"And here is the worst part," said Toad, reading the very last note. "They solved the puzzle days ago. They had the answer the whole time. They broke into Mr. HuggingFace's house just to trick us."
 
 For a while neither of them said anything.
 
@@ -204,5 +210,5 @@ center
 
 The End
 
-To learn more, go to TODO
+To learn more, see [here](https://www.dwarkesh.com/p/openai-huggingface)
 `;

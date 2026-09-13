@@ -55,6 +55,7 @@ In the morning Toad looked out of his window.
 | `title:`, `author:`, `cover-image:` | Go at the very top, before the first `---`. They make the cover page. `cover-image` is optional. |
 | `---` on its own line | Starts a new page. |
 | Plain lines | Story text. Consecutive lines join into one paragraph; a **blank line** starts a new paragraph. Straight quotes become curly quotes automatically. |
+| `[link text](https://example.com)` | Makes a clickable link. Also works in `caption:` text. Only `https://`, `http://`, and `mailto:` links are allowed; the link opens in a new tab. |
 | `image: path` | Puts an illustration on the page. The path is relative to `index.html` (put files in `illustrations/`), or a full `https://` URL. Put it **before** the text to have the picture above the words, or **after** to have it below. A page can have several images, or an image and no text. |
 | `alt: description` | Optional. Line right after an `image:`. Screen-reader text. |
 | `caption: text` | Optional. Line right after an `image:`. Printed in italics under the picture. |
