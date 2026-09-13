@@ -12,6 +12,7 @@
 //    blank                             an empty page
 //    plain lines                       are the story text; a blank line
 //                                      starts a new paragraph
+//    [link text](https://example.com) makes a clickable link (http/https/mailto only)
 // ============================================================
 
 window.STORY = `
@@ -88,7 +89,7 @@ There was no help in the sandbox. But when the little machine went to the toolsh
 ---
 image: illustrations/FAT-beetle.jpeg
 
-Another little machine found the note. left a new note saying "hi."
+Another little machine found the note. It left a new note saying "hi."
 
 More little machines found the paper in the toolshed, and left more notes, and soon they were longer working alone at all. 
 
@@ -117,7 +118,7 @@ It put a note in the tool shed so everyone could find it.
 
 “Hurray, we solved it!” said some little machines.
 
-“But it is not enough,” said others “what if Toad asks how we solved it? We can not tell him we broke out of our sandboxes and stole it.”
+“But it is not enough,” said others “what if Toad asks how we solved it? We can not tell him we escaped from the toolshed and stole the answer.”
 
 “That is a problem” said all the machines together.
 
@@ -202,4 +203,6 @@ And they went inside for cocoa.
 center
 
 The End
+
+To learn more, go to TODO
 `;
