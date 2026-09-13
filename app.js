@@ -77,6 +77,7 @@
     img.src = block.src;
     img.alt = block.alt || block.caption || 'Illustration';
     img.draggable = false;
+    if (!measuring) img.addEventListener('load', scheduleRefit);   // live images only, never the measuring pass
     img.addEventListener('error', () => {
       fig.replaceChild(el('div', 'missing', 'Missing illustration: ' + block.src), img);
     });
@@ -137,15 +138,40 @@
     return root;
   }
 
-  // Shrink the font a little if the page overflows, so text never gets cut off.
-  function fitText(content) {
-    if (!content || !content.classList.contains('has-text')) return;
-    let size = 1;
-    content.style.fontSize = '';
-    while (content.scrollHeight > content.clientHeight + 1 && size > 0.55) {
-      size -= 0.04;
-      content.style.fontSize = size.toFixed(2) + 'em';
+  // ---- Uniform font scale ----
+  // A real book uses one type size throughout, so instead of shrinking pages
+  // individually we find the largest scale (<= 1) at which EVERY text page
+  // fits, and apply it to the whole book via the --fs-scale CSS variable.
+  let fsScale = 1;
+  let measureEl = null;
+  let measuring = false;
+
+  function computeScale(story, book) {
+    if (!measureEl) {
+      measureEl = el('div', 'page measure');
+      measureEl.setAttribute('aria-hidden', 'true');
+      book.appendChild(measureEl);
     }
+    let scale = 1;
+    const tooLong = [];
+    measuring = true;
+    for (let i = 0; i < story.pages.length; i++) {
+      const pg = story.pages[i];
+      if (!pg || pg.kind !== 'page' || !pg.blocks.some(b => b.type === 'text')) continue;
+      measureEl.replaceChildren(renderPage(story, i));
+      const c = measureEl.firstChild;
+      const overflows = () => c.scrollHeight > c.clientHeight + 1;
+      c.style.setProperty('--fs-scale', scale);
+      while (overflows() && scale > 0.6) {
+        scale = Math.round((scale - 0.02) * 100) / 100;
+        c.style.setProperty('--fs-scale', scale);
+      }
+      if (overflows()) tooLong.push(i);
+    }
+    measureEl.replaceChildren();
+    measuring = false;
+    if (tooLong.length) console.warn('Storybook: too much text to fit on page(s) ' + tooLong.join(', ') + '. Consider splitting them.');
+    return scale;
   }
 
   function fill(container, story, index) {
@@ -156,7 +182,6 @@
     if (page && index > 0 && page.kind !== 'blank' && page.kind !== 'chapter' && page.kind !== 'contents') {
       container.appendChild(el('div', 'page-number', String(index)));
     }
-    fitText(content);
     return content;
   }
 
@@ -258,7 +283,6 @@
       }
     }
     book.appendChild(leaf);
-    leaf.querySelectorAll('.page-content').forEach(fitText);
 
     let done = false;
     const finish = () => {
@@ -299,8 +323,36 @@
       book.classList.toggle('single', mode === 'single');
       cur = mode === 'spread' ? spreadRight(shown) : shown;
     }
+    applyScale(computeScale(story, book));
     render();
   }
+
+  function applyScale(scale) {
+    fsScale = scale;
+    book.style.setProperty('--fs-scale', scale);
+  }
+
+  // Re-measure after fonts or images load, and re-render only if the scale changed.
+  let refitQueued = false;
+  function scheduleRefit() {
+    if (refitQueued) return;
+    refitQueued = true;
+    setTimeout(() => {                 // not rAF: that never fires in a hidden tab
+      refitQueued = false;
+      const scale = computeScale(story, book);
+      if (scale !== fsScale && !turning) { applyScale(scale); render(); }
+      else if (scale !== fsScale) applyScale(scale);
+    }, 0);
+  }
+  // The web font usually arrives after the first layout and is wider than the
+  // fallback, so re-measure once it lands (and again on full page load).
+  if (document.fonts) {
+    document.fonts.addEventListener('loadingdone', scheduleRefit);
+    // Explicitly request the face so the promise resolves only once it is usable.
+    document.fonts.load('1em "Libre Baskerville"').then(scheduleRefit, () => {});
+    document.fonts.ready.then(scheduleRefit);
+  }
+  window.addEventListener('load', () => { scheduleRefit(); setTimeout(scheduleRefit, 1500); });
 
   /* ---------------- Input ---------------- */
 
@@ -340,6 +392,8 @@
   book.addEventListener('click', (e) => { if (suppressClick) { suppressClick = false; e.stopImmediatePropagation(); } }, true);
 
   window.addEventListener('resize', layout);
+  window.addEventListener('orientationchange', layout);
+  if (window.visualViewport) window.visualViewport.addEventListener('resize', layout);
   window.addEventListener('hashchange', () => {
     const m = location.hash.match(/^#p(\d+)$/);
     if (m && !turning) goTo(+m[1]);

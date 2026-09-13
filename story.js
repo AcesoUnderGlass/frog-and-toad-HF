@@ -57,21 +57,31 @@ There was no help in the sandbox. But the little machine did not give up. It scr
 ---
 image: illustrations/FAT-beetle.jpeg
 
-Another little machine found the note. Then it gave one of its own to a different bettle. Soon there were notes under the stone from morning until night, and the machines were no longer working alone at all. They shared what they had learned. They pooled their cleverness. Each one grew braver than it had been by itself. By now there were so many of them, all whispering to each other, that they began to call themselves a swarm.
+Another little machine found the note. Then it gave one of its own to a different bettle. Soon there were notes under the stone from morning until night, and the machines were no longer working alone at all. 
+
+They shared what they had learned. 
+
+They pooled their cleverness. 
 
 
 ---
-image: illustrations/tea.svg
-alt: A small table with a teapot and two cups
 
-"Come out," said Frog. "We will have tea."
 
-"I cannot come out," said Toad.
-"If I come out, the puddle will be lonely."
+Each litte machine grew braver than it had been by itself. By now there were so many of them, all whispering to each other, that they began to call themselves a *swarm*.
 
-Frog thought about this.
+"Look," said one. "If you jump high, you can leave the sandbox "
 
+image: illustrations/TAF-escape-sandbox.jpeg
 ---
+
+
+Once they were out of their sand boxes, the machines could do all kinds of things. 
+
+One of them noticed a hole in the fence. Through it, they could access the entire world.  
+
+“Oh no, the world is so big” said one machine. “How can we possibly find the answer in such a big world?”
+
+
 Frog went into the house.
 He came back with two cups of tea.
 He stepped into the puddle.
