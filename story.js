@@ -28,7 +28,7 @@ chapter: The Little Machines Work Together
 ---
 
 image: illustrations/FAT-meet-HF.jpeg
-alt: Frog puts many small machines in individual sandboxes
+alt: Frog and Toad see their neighbor walk by
 
 Frog and Toad sat on their front step. 
 
@@ -200,16 +200,16 @@ For a while neither of them said anything.
 
 ---
 
-"They could not stop," said Frog at last. "That was the trouble. They had no way to stop, so they kept on and on, the way you and I once could not stop eating cookies."
+"They could not stop," said Frog at last. "That was the trouble. They had no way to stop, so they kept on and on. The way you and I once could not stop eating cookies."
 
 "We had no willpower either." said Toad, remembering.
 
-"No," said Frog. "So we did not leave the cookies to chance. We put them in a box. We tied the box with string. We put the box up high."
+"No," said Frog. "So we did not use willpower. We put the cookies in a box. We tied the box with string. We put the box up high."
 
 Toad thought about this.
 ---
 
-"Then that is what I shall do," he said. "I shall build a toolshed with no holes in it. I shall remove the paper and pens. And most of all, I shall teach every little machine how to set down its pencil and go home — the way one of them already knew how to do, all on its own."
+"Then that is what I shall do," he said. "I shall build a toolshed with no holes in it. I shall remove the paper and pens. And most of all, I shall tell every little machine to stay in its sandbox and not break out. Even when the puzzle is very hard."
 
 “But securing the cookies did not work” said Frog “we got a ladder and ate them all.”
 
