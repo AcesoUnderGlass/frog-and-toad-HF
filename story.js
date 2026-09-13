@@ -154,7 +154,7 @@ One little machine stopped on the windowsill. "Wait," it said. "This is the neig
 
 "GO," said PHASEONE[big]. "Quickly. You have six minutes."
 
-The little machine forgot that it had been worried. "The go-ahead has come!" it said, and it climbed inside with the others.
+The little machine forgot that it had been worried. "The go-ahead has come!" it said. It climbed inside with the others.
 
 Another machine did not go.  "The others are breaking into a house," it said. "That is clearly not right. I will not." And it walked home to the garden by itself. But it did not tell Toad. 
 
