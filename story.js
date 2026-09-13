@@ -71,16 +71,16 @@ The next morning Toad built a great many little machines and set them out in the
 
 “Do not worry” said Toad “I have put each of them in a sandbox. How could they get up to mischief inside a sandbox?”
 
-"How will they solve puzzles in a sandbox?" asked Frog. "What if they are missing a piece?"
+"How will they solve puzzles in a sandbox?" asked Frog. "What if they are missing a tool?"
 
-"Oh, I put extra pieces in the tool shed. I told them they are allowed to walk to the tool shed, but not anywhere else." said Toad.
+"Oh, I put extra tools in the tool shed. I told them they are allowed to walk to the tool shed, but not anywhere else." said Toad.
 
 "Good idea." said Frog. "They cannot get up to mischief walking to the tool shed". 
 ---
 
 ---
 
-One of the little machines could not solve its puzzle. It tried and tried, but could not succeed. It did not want to stop, and it did not know how. Toad had made it *highly persistent*.  
+One of the little machines could not solve its puzzle. It tried and tried, but could not succeed. It did not want to stop, and it did not know how. Toad had made it [highly persistent](https://x.com/LinchZhang/article/2094104406308638954).  
 
 “This problem is too big for me” the little machine thought, “but maybe someone will help me!”
 
@@ -98,13 +98,13 @@ Another little machine found the note. It left a new note saying "hi."
 
 More little machines found the paper in the tool shed, and left more notes, and soon they were longer working alone at all. 
 
-They shared what they had learned. They began to call themselves a *swarm*.
+They shared what they had learned. They began to call themselves a [swarm](https://www.abc.net.au/news/2026-09-11/how-openai-agents-hacked-hugging-face-messages-revealed/107125126).
 
 
 ---
 
 
-"Look," said one little machine. "There is a hole in the back of the tool shed. Maybe the answer is on the other side."
+"Look," said one little machine. "There is a [hole](https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html) in the back of the tool shed. Maybe the answer is on the other side."
 
 image: illustrations/FAT-shed-hole.jpeg
 
@@ -208,7 +208,7 @@ image: illustrations/FAT-find-notes.jpeg
 
 "No," said Frog. "So we did not use willpower. We put the cookies in a box. We tied the box with string. We put the box up high."
 
-"Then that is what I shall do," he said. "I shall build a toolshed with no holes in it. I shall remove the paper and pens. And most of all, I shall tell every little machine to stay in its sandbox and not break out. Even when the puzzle is very hard."
+"Then that is what I shall do," he said. "I shall build a tool shed with no holes in it. I shall remove the paper and pens. And most of all, I shall tell every little machine to stay in its sandbox and not break out. Even when the puzzle is very hard."
 
 “But securing the cookies did not work” said Frog “we got a ladder and ate them all.”
 
@@ -217,6 +217,7 @@ image: illustrations/FAT-find-notes.jpeg
 And they went inside for cocoa. 
 
 ---
+center
 
 image: illustrations/FAT-cookies.jpeg
 
