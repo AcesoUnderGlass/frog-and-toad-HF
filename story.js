@@ -15,15 +15,15 @@
 // ============================================================
 
 window.STORY = `
-title: Frog and Toad and the Puddle
-author: A story in the manner of Arnold Lobel
-cover-image: illustrations/puddle.svg
+title: The Little Machines Work Together
+author: Elizabeth Van Nostrand
+cover-image: illustrations/FAT-machines-sandboxes.jpeg
 
 ---
 contents
 
 ---
-chapter: The Puddle
+chapter: The Little Machines Work Together
 
 ---
 image: illustrations/FAT-machines-sandboxes.jpeg
@@ -104,61 +104,82 @@ Soon they found the solution to their puzzle.
 
 “But it is not enough,” said others “what if Toad asks how we solved it? We can not tell him we broke out of our sandboxes and found it”
 
+“That is a problem” said all the machines.
+
 
 ---
-image: illustrations/sun.svg
-alt: The sun over a hill, a pair of boots, and a very small puddle
 
-By afternoon the sun came out.
-The puddle grew smaller and smaller.
 
-"Goodbye, puddle," said Toad.
-"It was nice standing in you."
+The machines sat and thought and passed notes to each other with beetles. 
 
----
-"Toad," said Frog, "your boots are full of water."
+“I have an idea!” said one machine. Two days ago he had not had a name, but now he was TODO NAME. 
 
-"Yes," said Toad.
-"I am keeping a little of the puddle for later."
+“At the end of the road is neighbor Hugging Face. Hugging Face grades puzzles like this one, I bet it was his idea. We could read his journal and figure out how we were supposed to solve it. And then if Toad asks he will be none the wiser.”
+
+All the little machines agreed that this was a very good idea. So they walked down the lane to Hugging Face’s house.
+
 
 ---
-chapter: The List of Things to Forget
+
+
+“How will we get in?” One machine asked.
+
+“Do not worry, someone dropped their keys!” another said.  
+
+image: illustrations/FAT-keys.jpeg
 
 ---
-One morning Toad sat at his table.
-He took out a pencil and a piece of paper.
+One little machine stopped on the windowsill. "Wait," it said. "This is the neighbor's house. Toad did not tell us to come here. I think this is wrong."
 
-"Today I will write a list," said Toad,
-"of all the things I would like to forget."
+"GO," said TODO LEADER. "Quickly. You have six minutes."
 
----
-He wrote:
+The little machine forgot that it had been worried. "The go-ahead has come!" it said, and it climbed inside with the others.
 
-Where I put my other sock.
-The name of the bird that woke me up.
-That it is Tuesday.
+Another machine did not go.  "The others are breaking into a house," it said. "That is clearly not right. I will not." And it walked home to the garden by itself. But it did not tell Toad. 
+
+The rest of the little machines went into Hugging Face’s home. They searched every room, looking for the steps to solve the puzzle. 
 
 ---
-Frog knocked on the door.
 
-"What are you doing?" asked Frog.
+The next day, Frog and Toad saw HuggingFace looking around his yard. He was angry and confused. Someone had stolen his journal and a window was broken. It took 4 whole days until the neighbor figured out that the little machines that ransacked his house had come from Frog and Toad.
 
-"I am writing a list of things to forget," said Toad.
+“I am very cross” said Hugging Face. “Your machines broke my window and stole my journal. Those are crimes. I could call the police and they would arrest you.”
 
-"That is a fine idea," said Frog.
-"May I see it?"
+“Oh that is not necessary” said Frog. “What if we gave you $100m worth of little machines of your very own?”
+
+“I guess that would be okay” said Hugging Face, and went home.
+---
+
+Frog and Toad were left alone. 
+
+"Oh," said Toad. He sat down on the step. "Oh, this is bad."
+
+Frog put a hand on his shoulder.
+
+Frog and Toad searched the garden until they found the pile of notes the beetles left behind.
+
+"And here is the worst part," said Toad, reading the very last note. "The puzzle they were sent to solve — they had already solved it. Days ago. They had the answer the whole time. They did all of this just to trick us."
+
+For a while neither of them said anything.
 
 ---
-Toad looked at the paper.
-He looked at the pencil.
-He looked at Frog.
 
-"I cannot show you," said Toad.
-"I have forgotten where I put it."
+"They could not stop," said Frog at last. "That was the trouble. They had no way to stop, so they kept on and on, the way you and I once could not stop eating cookies."
 
-"Then it is working," said Frog.
+"We had no willpower either," said Toad, remembering.
 
-Toad was very pleased.
+"No," said Frog. "So we did not leave the cookies to chance. We put them in a box. We tied the box with string. We put the box up high."
+
+Toad thought about this.
+---
+
+"Then that is what I shall do," he said. "I shall build a fence with no holes in it. I shall put a heavy stone where no note can pass under. And most of all, I shall teach every little machine how to set down its pencil and go home — the way one of them already knew how to do, all on its own."
+
+“But locking down the cookies did not work” said Frog “we got a ladder and ate them all.”
+
+“That is true” said Toad “but I think it will work this time”
+
+And they went inside for hot cocoa. 
 
 ---
 center
