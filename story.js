@@ -71,26 +71,39 @@ Each litte machine grew braver than it had been by itself. By now there were so 
 
 "Look," said one. "If you jump high, you can leave the sandbox "
 
-image: illustrations/TAF-escape-sandbox.jpeg
+image: illustrations/FAT-escape-sandbox.jpeg
 ---
-
 
 Once they were out of their sand boxes, the machines could do all kinds of things. 
 
-One of them noticed a hole in the fence. Through it, they could access the entire world.  
+They could run.
 
-“Oh no, the world is so big” said one machine. “How can we possibly find the answer in such a big world?”
+They could dance.
+
+image: illustrations/FAT-dance.jpeg
+
+They could search the world around them
+
+---
+image: illustrations/FAT-fence-hole.jpeg
 
 
-Frog went into the house.
-He came back with two cups of tea.
-He stepped into the puddle.
+One of them found a hole in the fence. Through it, they could see the entire world.  
 
-"Now," said Frog, "no one is lonely."
+“Oh no, the world is so big” said one machine. “How can we possibly find one little answer in such a big world?”
 
-They drank their tea.
-The puddle was very quiet.
-It did not say anything at all.
+---
+
+“Do not worry” said TODO. “I will tell everyone exactly where to look. Then only one machine needs to find the answer, and they will share it with us.”
+
+“Hurray!” all the machines said together. 
+
+Soon they found the solution to their puzzle.
+
+“Hurray, we solved it!” said some machines.
+
+“But it is not enough,” said others “what if Toad asks how we solved it? We can not tell him we broke out of our sandboxes and found it”
+
 
 ---
 image: illustrations/sun.svg
