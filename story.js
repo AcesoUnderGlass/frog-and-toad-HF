@@ -113,7 +113,7 @@ image: illustrations/FAT-shed-hole.jpeg
 
 ---
 
-“Do not worry” said PHASEONE[big]. “I will tell everyone exactly where to look. Then only one little machine needs to find the answer, and they will share it with all of us.”
+“Do not worry” said a machine named [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/). “I will tell everyone exactly where to look. Then only one little machine needs to find the answer, and they will share it with all of us.”
 
 “Hurray!” all the machines said together. 
 

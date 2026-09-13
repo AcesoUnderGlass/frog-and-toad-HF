@@ -73,7 +73,9 @@
 
   // "[link text](https://example.com)" becomes a real <a>. Only http(s) and
   // mailto links are allowed, so odd story text can't smuggle in javascript: etc.
-  const LINK_RE = /\[([^\[\]]+)\]\((https?:\/\/[^\s()]+|mailto:[^\s()]+)\)/g;
+  // Link text may itself contain one level of [bracketed] text, e.g. a name
+  // like "PHASEONE[big]".
+  const LINK_RE = /\[((?:[^\[\]]|\[[^\[\]]*\])+)\]\((https?:\/\/[^\s()]+|mailto:[^\s()]+)\)/g;
 
   function elText(tag, cls, text) {
     const e = document.createElement(tag);
