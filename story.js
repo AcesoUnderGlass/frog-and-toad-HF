@@ -224,5 +224,5 @@ image: illustrations/FAT-cookies.jpeg
 
 The End
 
-To learn more, see [here](https://www.dwarkesh.com/p/openai-huggingface)
+Read More [Here](https://www.dwarkesh.com/p/openai-huggingface)
 `;
