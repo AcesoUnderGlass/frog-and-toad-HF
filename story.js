@@ -208,6 +208,8 @@ image: illustrations/FAT-find-notes.jpeg
 
 "No," said Frog. "So we did not use willpower. We put the cookies in a box. We tied the box with string. We put the box up high."
 
+---
+
 "Then that is what I shall do," he said. "I shall build a tool shed with no holes in it. I shall remove the paper and pens. And most of all, I shall tell every little machine to stay in its sandbox and not break out. Even when the puzzle is very hard."
 
 “But securing the cookies did not work” said Frog “we got a ladder and ate them all.”
