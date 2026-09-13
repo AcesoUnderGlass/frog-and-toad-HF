@@ -127,11 +127,18 @@ body {
   line-height: 1.6;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0.9em;
   overflow: hidden;
+  -webkit-user-select: text;
+  user-select: text;
+  cursor: text;
 }
 .page-content p { margin: 0; text-indent: 0; }
 .page-content p + p { margin-top: 0; }
+.page-content a { color: inherit; text-decoration: underline; text-decoration-color: var(--ink-soft); text-underline-offset: 0.15em; cursor: pointer; }
+.page-content a:hover { text-decoration-color: var(--ink); }
+.leaf .page-content a, .page.measure .page-content a { cursor: default; }
 .page-content.center { justify-content: center; text-align: center; }
 .page-content.center p { text-indent: 0; }
 
@@ -168,6 +175,13 @@ body {
   border-radius: 6px;
   width: 80%;
   word-break: break-all;
+}
+/* Text is selectable so readers can copy it; keep the turning leaf and the
+   hidden measuring page inert. */
+.leaf .page-content, .page.measure .page-content {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
 }
 
 /* cover / chapter / special pages */
