@@ -133,7 +133,7 @@ It put a note in the tool shed so everyone could find it.
 
 The machines sat and thought and left many notes in the toolshed. 
 
-“I have an idea!” said one little machine. Two days ago he had not had a name, but now he was [PHASEONE10841](https://x.com/METR_Evals/status/2092692180871905355). 
+“I have an idea!” said one little machine. 
 
 “At the end of the lane is neighbor Mr. HuggingFace. Mr. HuggingFace collects puzzles like this one, I bet it was his idea. We could read his journal and figure out how we were supposed to solve the puzzle. And then if Toad asks us he will be none the wiser.”
 
