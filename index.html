@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Storybook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+  <div class="book-wrap">
+    <button class="nav prev" id="btnPrev" aria-label="Previous page" title="Previous page (←)">&#8249;</button>
+    <div class="book single" id="book" aria-live="polite">
+      <div class="page left" id="pageL"></div>
+      <div class="page right" id="pageR"></div>
+    </div>
+    <button class="nav next" id="btnNext" aria-label="Next page" title="Next page (→)">&#8250;</button>
+  </div>
+  <div class="status" id="status"></div>
+</main>
+<script src="story.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

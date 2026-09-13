@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs><style>.ink{fill:none;stroke:#3b3225;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}</style></defs>
+  <!-- sun -->
+  <circle cx="300" cy="80" r="38" fill="#e8c35c" class="ink"/>
+  <g class="ink">
+    <path d="M300 22 v-14 M300 138 v14 M242 80 h-14 M358 80 h14 M259 39 l-10 -10 M341 121 l10 10 M341 39 l10 -10 M259 121 l-10 10"/>
+  </g>
+  <!-- hills -->
+  <path d="M0 200 Q100 140 200 185 T400 170 L400 300 L0 300 Z" fill="#8a9a56"/>
+  <path d="M0 200 Q100 140 200 185 T400 170" class="ink"/>
+  <!-- little puddle -->
+  <ellipse cx="200" cy="255" rx="32" ry="9" fill="#8aa0a8" class="ink"/>
+  <!-- boots -->
+  <path d="M110 205 v30 q0 8 8 8 h18 q6 0 6 -6 v-32 z" fill="#7b5533" class="ink"/>
+  <path d="M146 205 v30 q0 8 8 8 h18 q6 0 6 -6 v-32 z" fill="#7b5533" class="ink"/>
+  <path d="M118 210 q10 -6 20 0 M154 210 q10 -6 20 0" class="ink" opacity="0.5"/>
+  <!-- flowers -->
+  <g class="ink">
+    <path d="M300 240 v-25 M300 215 l-6 -6 M300 215 l6 -6 M320 250 v-20 M320 230 l-6 -6 M320 230 l6 -6"/>
+  </g>
+  <circle cx="300" cy="212" r="5" fill="#e8c35c" class="ink"/>
+  <circle cx="320" cy="227" r="5" fill="#e8c35c" class="ink"/>
+</svg>

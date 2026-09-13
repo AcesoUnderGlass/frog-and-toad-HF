@@ -1,0 +1,308 @@
+:root {
+  --paper: #f7f0dd;
+  --paper-edge: #e6dcc2;
+  --ink: #2c2519;
+  --ink-soft: #6a5d48;
+  --desk: #3f3225;
+  --page-w: 300px;
+  --page-h: 400px;
+  --turn-ms: 950ms;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; margin: 0; }
+
+body {
+  background: radial-gradient(ellipse at 50% 40%, #5a4a37 0%, var(--desk) 60%, #2b2118 100%);
+  color: var(--ink);
+  font-family: 'Libre Baskerville', 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.book-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav {
+  appearance: none;
+  border: 0;
+  background: rgba(255, 245, 220, 0.08);
+  color: #e9dcc0;
+  width: 40px;
+  height: 64px;
+  border-radius: 8px;
+  font: 32px/1 serif;
+  cursor: pointer;
+  transition: background .2s, opacity .2s;
+}
+.nav:hover { background: rgba(255, 245, 220, 0.18); }
+.nav:disabled { opacity: 0.2; cursor: default; }
+
+/* ---------- The book ---------- */
+
+.book {
+  position: relative;
+  height: var(--page-h);
+  perspective: 2600px;
+  cursor: pointer;
+}
+.book.spread { width: calc(var(--page-w) * 2); }
+.book.single { width: var(--page-w); }
+
+.page {
+  position: absolute;
+  top: 0;
+  width: var(--page-w);
+  height: 100%;
+  background: var(--paper);
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+.spread .page.left  { left: 0;  border-radius: 6px 0 0 6px; }
+.spread .page.right { right: 0; border-radius: 0 6px 6px 0; }
+.single .page.left  { display: none; }
+.single .page.right { left: 0; border-radius: 4px 6px 6px 4px; }
+
+/* spine shading */
+.spread .page.left::before,
+.spread .page.right::before,
+.spread .leaf .face::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 12%;
+  pointer-events: none;
+  z-index: 2;
+}
+.spread .page.left::before,
+.spread .leaf.back .face.front::before,
+.spread .leaf.fwd .face.back::before {
+  right: 0;
+  background: linear-gradient(to left, rgba(60, 40, 10, 0.22), rgba(60, 40, 10, 0) 100%);
+}
+.spread .page.right::before,
+.spread .leaf.fwd .face.front::before,
+.spread .leaf.back .face.back::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(60, 40, 10, 0.22), rgba(60, 40, 10, 0) 100%);
+}
+
+/* paper texture */
+.page::after, .leaf .face::after {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(0deg, rgba(120, 90, 40, 0.025) 0 2px, transparent 2px 5px),
+    radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.35), transparent 60%);
+  z-index: 1;
+}
+
+/* ---------- Page content ---------- */
+
+.page-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  padding: calc(var(--page-w) * 0.10) calc(var(--page-w) * 0.10) calc(var(--page-w) * 0.15);
+  font-size: calc(var(--page-w) * 0.046);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9em;
+  overflow: hidden;
+}
+.page-content p { margin: 0; text-indent: 0; }
+.page-content p + p { margin-top: 0; }
+.page-content.center { justify-content: center; text-align: center; }
+.page-content.center p { text-indent: 0; }
+
+.page-content figure {
+  margin: 0;
+  flex: 0 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35em;
+}
+.page-content figure img {
+  max-width: 100%;
+  max-height: calc(var(--page-h) * 0.72);
+  object-fit: contain;
+  display: block;
+}
+.page-content.has-text figure img { max-height: calc(var(--page-h) * 0.42); }
+.page-content.image-only figure { flex: 1 1 auto; justify-content: center; }
+.page-content figcaption {
+  font-style: italic;
+  font-size: 0.8em;
+  color: var(--ink-soft);
+  text-align: center;
+}
+.page-content .missing {
+  border: 2px dashed #b9a98a;
+  color: var(--ink-soft);
+  font-size: 0.7em;
+  padding: 1em;
+  text-align: center;
+  border-radius: 6px;
+  width: 80%;
+  word-break: break-all;
+}
+
+/* cover / chapter / special pages */
+.page-content.cover, .page-content.chapter {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.page-content.cover .title {
+  font-size: 1.7em;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+.page-content.cover .author {
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.page-content.cover figure img { max-height: calc(var(--page-h) * 0.4); }
+.page-content.cover .rule, .page-content.chapter .rule {
+  width: 30%;
+  border: 0;
+  border-top: 1px solid #b09c78;
+  margin: 0.2em 0;
+}
+.page-content.chapter h2 {
+  font-size: 1.45em;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.3;
+}
+.page-content.chapter .kicker {
+  font-size: 0.7em;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.page-content.contents h2 {
+  font-size: 1.2em;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0 0 0.5em;
+}
+.page-content.contents ol {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 0.5em;
+}
+.page-content.contents li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4em;
+  cursor: pointer;
+}
+.page-content.contents li:hover .name { text-decoration: underline; }
+.page-content.contents .dots {
+  flex: 1;
+  border-bottom: 1px dotted #a8977a;
+  transform: translateY(-0.3em);
+}
+
+.page-number {
+  position: absolute;
+  bottom: calc(var(--page-w) * 0.045);
+  left: 0; right: 0;
+  text-align: center;
+  font-size: calc(var(--page-w) * 0.036);
+  color: var(--ink-soft);
+  z-index: 3;
+}
+
+/* ---------- Turning leaf ---------- */
+
+.leaf {
+  position: absolute;
+  top: 0;
+  width: var(--page-w);
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform var(--turn-ms) cubic-bezier(0.42, 0.05, 0.3, 1);
+  z-index: 10;
+  will-change: transform;
+}
+.leaf .face {
+  position: absolute; inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: var(--paper);
+  overflow: hidden;
+}
+.leaf .face.back { transform: rotateY(180deg); }
+
+.spread .leaf.fwd  { right: 0; transform-origin: left center; }
+.spread .leaf.back { left: 0;  transform-origin: right center; }
+.spread .leaf.fwd  .face.front { border-radius: 0 6px 6px 0; }
+.spread .leaf.fwd  .face.back  { border-radius: 6px 0 0 6px; }
+.spread .leaf.back .face.front { border-radius: 6px 0 0 6px; }
+.spread .leaf.back .face.back  { border-radius: 0 6px 6px 0; }
+.spread .leaf.fwd.go  { transform: rotateY(-180deg); }
+.spread .leaf.back.go { transform: rotateY(180deg); }
+
+.single .leaf { left: 0; transform-origin: left center; border-radius: 4px 6px 6px 4px; }
+.single .leaf .face { border-radius: 4px 6px 6px 4px; }
+.single .leaf.fwd.go { transform: rotateY(-92deg); }
+.single .leaf.back { transform: rotateY(-92deg); }
+.single .leaf.back.go { transform: rotateY(0deg); }
+
+/* shadow that the moving leaf casts */
+.leaf .shade {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity calc(var(--turn-ms) * 0.5) ease-in;
+  background: linear-gradient(to right, rgba(0,0,0,0.0), rgba(0,0,0,0.28));
+}
+.leaf.fwd .face.front .shade { background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.3)); }
+.leaf.go .face.front .shade { opacity: 1; }
+
+/* ---------- Status ---------- */
+
+.status {
+  color: #cdbfa4;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+  min-height: 1.2em;
+  text-align: center;
+}
+.status .title { font-style: italic; }
+.status .sep { margin: 0 0.6em; opacity: 0.5; }
+
+@media (max-width: 520px) {
+  .nav { display: none; }
+  .book-wrap { gap: 0; }
+}

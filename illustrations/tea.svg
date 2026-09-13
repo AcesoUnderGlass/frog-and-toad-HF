@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs><style>.ink{fill:none;stroke:#3b3225;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}</style></defs>
+  <!-- table -->
+  <ellipse cx="200" cy="210" rx="150" ry="28" fill="#c9a35b"/>
+  <ellipse cx="200" cy="210" rx="150" ry="28" class="ink"/>
+  <path d="M200 238 v45 M170 283 h60" class="ink"/>
+  <path d="M120 232 l-20 40 M280 232 l20 40" class="ink"/>
+  <!-- teapot -->
+  <path d="M170 180 q-30 0 -30 -30 q0 -35 40 -45 h40 q40 10 40 45 q0 30 -30 30 z" fill="#8a9a56"/>
+  <path d="M170 180 q-30 0 -30 -30 q0 -35 40 -45 h40 q40 10 40 45 q0 30 -30 30 z" class="ink"/>
+  <path d="M258 125 q30 -8 32 -35 q0 -8 -6 -8" class="ink"/>
+  <path d="M142 128 q-22 -3 -30 15 q-5 16 12 30" class="ink"/>
+  <ellipse cx="200" cy="105" rx="30" ry="8" fill="#5f6d3a" class="ink"/>
+  <path d="M200 105 v-14" class="ink"/>
+  <circle cx="200" cy="88" r="5" fill="#3b3225"/>
+  <!-- cups -->
+  <path d="M60 178 h48 v18 q0 12 -12 12 h-24 q-12 0 -12 -12 z" fill="#e9dcb4" class="ink"/>
+  <path d="M108 184 q14 0 14 10 q0 10 -14 8" class="ink"/>
+  <path d="M292 178 h48 v18 q0 12 -12 12 h-24 q-12 0 -12 -12 z" fill="#e9dcb4" class="ink"/>
+  <path d="M340 184 q14 0 14 10 q0 10 -14 8" class="ink"/>
+  <!-- steam -->
+  <g class="ink" opacity="0.45">
+    <path d="M78 165 q6 -10 0 -20 q-6 -10 0 -20 M94 160 q6 -8 0 -16"/>
+    <path d="M310 165 q6 -10 0 -20 q-6 -10 0 -20 M326 160 q6 -8 0 -16"/>
+    <path d="M200 70 q6 -10 0 -20"/>
+  </g>
+</svg>
