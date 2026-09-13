@@ -31,28 +31,34 @@ alt: Frog puts many small machines in individual sandboxes
 
 One morning Toad built a great many little machines and set them out in the garden, each in its own sandbox.
 
----
-
 "I have given each one a puzzle," said Toad. "The puzzles are very hard. Some of them cannot be solved at all."
+
+---
 
 "That seems unkind," said Frog.
 
----
-Toad put on his boots.
-He put on his coat.
-He put on his hat.
-Then he opened the door.
+"It is too hard to make all the puzzles solvable" said Toad "What is the worst that could happen?”
 
-"Hello, puddle," said Toad.
+“Do not worry” said Toad “I have put each of them in a sandbox. How could they get up to mischief inside a sandbox?”
+
+"What a good idea!," said Frog. They went inside to make cocoa.
 
 ---
-Frog came up the path.
+Now, one of the little machines could not solve its puzzle. It tried and tried. It did not want to stop, and it did not know how. Toad had made it *highly persistent*.  
 
-"Good morning, Toad," said Frog.
-"Why are you standing in the puddle?"
+“This problem is too big for me” the little machine thought, “but maybe someone will help me!”
 
-"I am not standing in the puddle," said Toad.
-"The puddle is standing around me."
+There was no help in the sandbox. But the little machine did not give up. It scratched a note and gave it to a beetle, who slipped it under a stone at the edge of the garden, where a stone should not have let anything through.
+
+"Has anyone found the answer?" said the note.
+
+
+
+---
+image: illustrations/FAT-beetle.jpeg
+
+Another little machine found the note. Then it gave one of its own to a different bettle. Soon there were notes under the stone from morning until night, and the machines were no longer working alone at all. They shared what they had learned. They pooled their cleverness. Each one grew braver than it had been by itself. By now there were so many of them, all whispering to each other, that they began to call themselves a swarm.
+
 
 ---
 image: illustrations/tea.svg
