@@ -15,7 +15,7 @@
 // ============================================================
 
 window.STORY = `
-title: The Little Machines Work Together
+title: Frog and Toad Work with AIs
 author: Elizabeth Van Nostrand
 cover-image: illustrations/FAT-box.jpeg
 
@@ -166,20 +166,20 @@ For a while neither of them said anything.
 
 "They could not stop," said Frog at last. "That was the trouble. They had no way to stop, so they kept on and on, the way you and I once could not stop eating cookies."
 
-"We had no willpower either," said Toad, remembering.
+"We had no willpower either." said Toad, remembering.
 
 "No," said Frog. "So we did not leave the cookies to chance. We put them in a box. We tied the box with string. We put the box up high."
 
 Toad thought about this.
 ---
 
-"Then that is what I shall do," he said. "I shall build a fence with no holes in it. I shall put a heavy stone where no note can pass under. And most of all, I shall teach every little machine how to set down its pencil and go home — the way one of them already knew how to do, all on its own."
+"Then that is what I shall do," he said. "I shall build a fence with no holes in it. I shall remove the paper from the toolshed. And most of all, I shall teach every little machine how to set down its pencil and go home — the way one of them already knew how to do, all on its own."
 
-“But locking down the cookies did not work” said Frog “we got a ladder and ate them all.”
+“But securing the cookies did not work” said Frog “we got a ladder and ate them all.”
 
-“That is true” said Toad “but I think it will work this time”
+“That is true” said Toad “but I think it will work for the little machines.”
 
-And they went inside for hot cocoa. 
+And they went inside for cocoa. 
 
 ---
 center
