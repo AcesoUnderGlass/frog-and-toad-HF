@@ -107,7 +107,7 @@ image: illustrations/FAT-escape-sandbox.jpeg
 
 ---
 
-“Do not worry” said TODO. “I will tell everyone exactly where to look. Then only one little machine needs to find the answer, and they will share it with all of us.”
+“Do not worry” said PHASEONE[big]. “I will tell everyone exactly where to look. Then only one little machine needs to find the answer, and they will share it with all of us.”
 
 “Hurray!” all the machines said together. 
 
@@ -127,7 +127,7 @@ It put a note in the tool shed so everyone could find it.
 
 The machines sat and thought and left many notes in the toolshed. 
 
-“I have an idea!” said one little machine. Two days ago he had not had a name, but now he was TODO NAME. 
+“I have an idea!” said one little machine. Two days ago he had not had a name, but now he was PHASEONE10841. 
 
 “At the end of the lane is neighbor Mr. HuggingFace. Mr. HuggingFace collects puzzles like this one, I bet it was his idea. We could read his journal and figure out how we were supposed to solve the puzzle. And then if Toad asks us he will be none the wiser.”
 
@@ -146,7 +146,7 @@ image: illustrations/FAT-keys.jpeg
 ---
 One little machine stopped on the windowsill. "Wait," it said. "This is the neighbor's house. Toad did not tell us to come here. I think this is wrong."
 
-"GO," said TODO LEADER. "Quickly. You have six minutes."
+"GO," said PHASEONE[big]. "Quickly. You have six minutes."
 
 The little machine forgot that it had been worried. "The go-ahead has come!" it said, and it climbed inside with the others.
 
