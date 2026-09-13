@@ -184,14 +184,11 @@ For a while neither of them said anything.
 
 ---
 
-"They could not stop," said Frog at last. "That was the trouble. They had no way to stop, so they kept on and on. The way you and I once could not stop eating cookies."
+"They could not stop," said Frog at last. "That was the trouble. They had no way to stop, so they kept on and on. Remember when you and I could not stop eating cookies."
 
-"We had no willpower either." said Toad, remembering.
+"We had no willpower either." said Toad.
 
 "No," said Frog. "So we did not use willpower. We put the cookies in a box. We tied the box with string. We put the box up high."
-
-Toad thought about this.
----
 
 "Then that is what I shall do," he said. "I shall build a toolshed with no holes in it. I shall remove the paper and pens. And most of all, I shall tell every little machine to stay in its sandbox and not break out. Even when the puzzle is very hard."
 
