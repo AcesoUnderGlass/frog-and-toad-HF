@@ -17,7 +17,7 @@
 window.STORY = `
 title: The Little Machines Work Together
 author: Elizabeth Van Nostrand
-cover-image: illustrations/FAT-machines-sandboxes.jpeg
+cover-image: illustrations/FAT-box.jpeg
 
 ---
 contents
