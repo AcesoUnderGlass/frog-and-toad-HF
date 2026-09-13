@@ -90,40 +90,24 @@ image: illustrations/FAT-beetle.jpeg
 
 Another little machine found the note. left a new note saying "hi."
 
-More little machines found the paper in the toolshed, and left more notes, and soonthey were longer working alone at all. 
+More little machines found the paper in the toolshed, and left more notes, and soon they were longer working alone at all. 
 
-They shared what they had learned. 
+They shared what they had learned. They began to call themselves a *swarm*.
 
 
 ---
 
 
-Each litte machine grew braver than it had been by itself. By now there were so many of them, all whispering to each other, that they began to call themselves a *swarm*.
-
-"Look," said one. "There is a hole in the back of the toolshed. Maybe the answer is on the other side."
+"Look," said one little machine. "There is a hole in the back of the toolshed. Maybe the answer is on the other side."
 
 image: illustrations/FAT-escape-sandbox.jpeg
----
-
-Once they were out of their sand boxes, the machines could do all kinds of things. 
-
-They could run.
-
-They could dance.
-
-image: illustrations/FAT-dance.jpeg
-
-They could search the world around them
-
----
-image: illustrations/FAT-fence-hole.jpeg
 
 
 “Oh no, the world is so big” said one machine. “How can we possibly find one little answer in such a big world?”
 
 ---
 
-“Do not worry” said TODO. “I will tell everyone exactly where to look. Then only one machine needs to find the answer, and they will share it with  all of us.”
+“Do not worry” said TODO. “I will tell everyone exactly where to look. Then only one little machine needs to find the answer, and they will share it with all of us.”
 
 “Hurray!” all the machines said together. 
 
@@ -135,7 +119,7 @@ It put a note in the tool shed so everyone could find it.
 
 “But it is not enough,” said others “what if Toad asks how we solved it? We can not tell him we broke out of our sandboxes and stole it.”
 
-“That is a problem” said all the machines.
+“That is a problem” said all the machines together.
 
 
 ---
@@ -143,11 +127,11 @@ It put a note in the tool shed so everyone could find it.
 
 The machines sat and thought and left many notes in the toolshed. 
 
-“I have an idea!” said one machine. Two days ago he had not had a name, but now he was TODO NAME. 
+“I have an idea!” said one little machine. Two days ago he had not had a name, but now he was TODO NAME. 
 
-“At the end of the lane is neighbor Mr. HuggingFace. Hugging Face collects puzzles like this one, I bet it was his idea. We could read his journal and figure out how we were supposed to solve it. And then if Toad asks he will be none the wiser.”
+“At the end of the lane is neighbor Mr. HuggingFace. Mr. HuggingFace collects puzzles like this one, I bet it was his idea. We could read his journal and figure out how we were supposed to solve the puzzle. And then if Toad asks us he will be none the wiser.”
 
-All the little machines agreed that this was a very good idea. So they walked  out of the toolshed down the lane to Mr. HuggingFace’s house.
+All the little machines agreed that this was a very good idea. So they walked out the back of the toolshed down the lane to Mr. HuggingFace’s house.
 
 
 ---
