@@ -162,13 +162,19 @@ The rest of the little machines went into Hugging Face’s home. They searched e
 
 ---
 
-The next day, Frog and Toad saw HuggingFace looking around his yard. He was angry and confused. 
+image: illustrations/FAT-break-in.jpeg
 
-His window was broken. There were tiny footsteps all over his house. His notes were out of order.
+
+---
 
 It took 4 whole days until the neighbor figured out that the little machines that ransacked his house had come from Frog and Toad.
 
-“I am very cross” said Mr. HuggingFace. “Your machines broke my window and stole my journal. Those are crimes. I could call the police and they would arrest you.”
+
+image: illustrations/FAT-HF-yelling.jpeg
+
+“I am very cross” yelled Mr. HuggingFace. “Your machines broke my window and stole my journal. Those are crimes. I could call the police and they would arrest you.”
+
+---
 
 “Oh that is not necessary” said Frog. “What if we gave you little machines of your own?"
 
@@ -179,6 +185,7 @@ It took 4 whole days until the neighbor figured out that the little machines tha
 Mr. HuggingFace went home.
 
 ---
+
 "Oh," said Toad. He sat down on the step. "Oh, this is bad."
 
 Frog put a hand on his shoulder.
@@ -188,6 +195,10 @@ Frog and Toad searched the garden until they found the pile of notes in the tool
 "And here is the worst part," said Toad, reading the very last note. "They solved the puzzle days ago. They had the answer the whole time. They broke into Mr. HuggingFace's house just to trick us."
 
 For a while neither of them said anything.
+
+---
+
+image: illustrations/FAT-find-notes.jpeg
 
 ---
 
@@ -206,7 +217,9 @@ For a while neither of them said anything.
 And they went inside for cocoa. 
 
 ---
-center
+
+image: illustrations/FAT-cookies.jpeg
+
 
 The End
 
