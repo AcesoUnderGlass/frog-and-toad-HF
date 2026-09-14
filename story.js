@@ -16,7 +16,7 @@
 // ============================================================
 
 window.STORY = `
-title: Frog and Toad Work with AIs
+title: Frog and Toad Learn About AI
 author: [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
 artist: Placeholder art by Gemini (human art coming soon)
 cover-image: illustrations/FAT-title.jpeg
@@ -215,7 +215,7 @@ image: illustrations/FAT-find-notes.jpeg
 
 "I know what to do" Toad said. "I shall build a tool shed with no holes in it. I shall remove the paper and pens. And most of all, I shall tell every little machine to stay in its sandbox and not break out. Even when the puzzle is very hard."
 
-“But Toad,” said Frog “when we were out of cookies you made yourself a cake.”
+“But Toad,” said Frog. “when we were out of cookies you made yourself a cake.”
 
 “I will tell the machines not to make cake.” Toad said.
 
