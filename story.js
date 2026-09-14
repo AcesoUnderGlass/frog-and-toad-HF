@@ -44,7 +44,7 @@ Their neighbor, Mr. HuggingFace, walked by. He carried a lot of papers. Each pap
 
 "I like puzzles" said Toad. "Can I try them?"
 
-"You can not. These puzzles are for little machines, not people" said Mr. HuggingFace. 
+"You cannot. These puzzles are for little machines, not people" said Mr. HuggingFace. 
 
 Mr. HuggingFace walked away.
 
@@ -95,7 +95,7 @@ alt: A little machine leaves a note in the toolshed
 
 Another little machine found the note. It left a new note saying "hi."
 
-More little machines found the paper in the tool shed, and left more notes, and soon they were longer working alone at all. 
+More little machines found the paper in the tool shed, and left more notes, and soon they were not working alone at all. 
 
 They shared what they had learned. They began to call themselves a [swarm](https://www.abc.net.au/news/2026-09-11/how-openai-agents-hacked-hugging-face-messages-revealed/107125126).
 
@@ -155,7 +155,13 @@ One little machine stopped on the windowsill. "Wait," it said. "This is the neig
 
 The little machine forgot that it had been worried. "The go-ahead has come!" it said. It climbed inside with the others.
 
-Another machine did not go.  "The others are breaking into a house," it said. "That is clearly not right. I will not." And it walked home to the garden by itself. But it did not tell Toad. 
+---
+
+Another machine did not want to go either.  
+
+"The others are breaking into a house," it said. "That is clearly not right. I will not." 
+
+The little machine walked home to the garden by itself. But it did not tell Toad. 
 
 The rest of the little machines went into Hugging Face’s home. They searched every room, looking for the steps to solve the puzzle. 
 
@@ -171,7 +177,7 @@ It took 4 whole days until the neighbor figured out that the little machines tha
 
 image: illustrations/FAT-HF-yelling.jpeg
 
-“I am very cross” yelled Mr. HuggingFace. “Your machines broke my window and stole my journal. Those are crimes. I could call the police and they would arrest you.”
+“I am very cross” yelled Mr. HuggingFace. “Your machines broke my window and copied my journal. Those are crimes. I could call the police and they would arrest you.”
 
 ---
 
@@ -187,11 +193,9 @@ Mr. HuggingFace went home.
 
 "Oh," said Toad. He sat down on the step. "Oh, this is bad."
 
-Frog put a hand on his shoulder.
-
 Frog and Toad searched the garden until they found the pile of notes in the toolshed.
 
-"And here is the worst part," said Toad, reading the very last note. "They solved the puzzle days ago. They had the answer the whole time. They broke into Mr. HuggingFace's house just to trick us."
+"And here is the worst part," said Toad, reading the very last note. "They solved the puzzle days ago. They broke into Mr. HuggingFace's house just to trick us."
 
 For a while neither of them said anything.
 
@@ -205,15 +209,15 @@ image: illustrations/FAT-find-notes.jpeg
 
 "We had no willpower either." said Toad.
 
-"No," said Frog. "So we did not use willpower. We put the cookies in a box. We tied the box with string. We put the box up high."
+"No," said Frog. "So we did not use willpower. We put the cookies in a box. We tied the box with string. We put the box up high. And then we gave the cookies to the birds."
 
 ---
 
-"Then that is what I shall do," he said. "I shall build a tool shed with no holes in it. I shall remove the paper and pens. And most of all, I shall tell every little machine to stay in its sandbox and not break out. Even when the puzzle is very hard."
+"I know what to do" Toad said. "I shall build a tool shed with no holes in it. I shall remove the paper and pens. And most of all, I shall tell every little machine to stay in its sandbox and not break out. Even when the puzzle is very hard."
 
-“But securing the cookies did not work” said Frog “we got a ladder and ate them all.”
+“But Toad,” said Frog “when we were out of cookies you made yourself a cake.”
 
-“That is true” said Toad “but I think it will work for the little machines.”
+“I will tell the machines not to make cake.” Toad said.
 
 And they went inside for cocoa. 
 
