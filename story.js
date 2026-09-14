@@ -34,11 +34,11 @@ alt: Frog and Toad see their neighbor walk by with a pile of papers
 
 ---
 
-Frog and Toad sat on their front step. 
+Frog and Toad sat on their front porch. 
 
-Their neighbor Mr. HuggingFace walked by, carrying a lot of papers.
+Their neighbor, Mr. HuggingFace, walked by. He carried a lot of papers. Each paper had a puzzle on it.
 
-"Wow, you must be very busy" said Frog.
+"You must be very busy." said Frog.
 
 "Yes" said Mr. HuggingFace. "I have collected all these puzzles so I can share them."
 
@@ -57,10 +57,9 @@ alt: Frog puts many small machines in individual sandboxes
 
 The next morning Toad built a great many little machines and set them out in the garden, each in its own sandbox.
 
-"I have given each one a puzzle," said Toad. "The puzzles are very hard. Some of them cannot be solved at all."
+"I have given each little machine a puzzle," said Toad. "The puzzles are very hard. Some of them cannot be solved at all."
 
-
-"That seems unkind," said Frog.
+"That does not seem kind." said Frog.
 
 ---
 
