@@ -220,7 +220,6 @@
   const status = document.getElementById('status');
   const btnPrev = document.getElementById('btnPrev');
   const btnNext = document.getElementById('btnNext');
-  const storageKey = 'storybook:' + story.title;
 
   document.title = story.title;
 
@@ -246,9 +245,17 @@
       where = cur === 0 ? 'Cover' : `Page ${cur}`;
     }
     status.replaceChildren(el('span', 'title', story.title), el('span', 'sep', '·'), el('span', null, `${where} of ${N - 1}`));
-    try { localStorage.setItem(storageKey, String(mode === 'spread' ? Math.max(0, cur - 1) : cur)); } catch (e) {}
-    history.replaceState(null, '', '#p' + (mode === 'spread' ? Math.max(0, cur - 1) : cur));
+    // The address bar is never rewritten as the reader turns pages, so copying
+    // the URL shares the book from the cover, not whatever page they stopped on.
+    // A "#p7" deep link stays in the URL only while page 7 is actually showing;
+    // once the reader moves on it is dropped rather than left pointing at a stale page.
+    const linked = location.hash.match(/^#p(\d+)$/);
+    if (linked && !isShowing(+linked[1])) {
+      history.replaceState(null, '', location.pathname + location.search);
+    }
   }
+
+  function isShowing(i) { return i === cur || (mode === 'spread' && i === cur - 1); }
 
   function render() {
     if (mode === 'spread') {
@@ -441,10 +448,8 @@
 
   /* ---------------- Start ---------------- */
 
-  let start = 0;
+  // A bare URL always opens on the cover; "#p7" opens page 7.
   const hash = location.hash.match(/^#p(\d+)$/);
-  if (hash) start = +hash[1];
-  else { try { start = +(localStorage.getItem(storageKey) || 0); } catch (e) {} }
-  cur = clamp(start || 0);
+  cur = clamp(hash ? +hash[1] : 0);
   layout();
 })();
