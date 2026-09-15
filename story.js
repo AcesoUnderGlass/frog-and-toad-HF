@@ -53,7 +53,7 @@ Mr. HuggingFace walked away.
 
 ---
 image: illustrations/FAT-machines-sandboxes.jpeg
-alt: Frog puts many small machines in individual sandboxes
+alt: Toad puts many small machines in individual sandboxes
 
 The next morning Toad built a great many little machines and set them out in the garden, each in its own sandbox.
 
@@ -93,7 +93,7 @@ There was no help in the sandbox. But when the little machine went to the toolsh
 image: illustrations/FAT-shed-note.jpeg
 alt: A little machine leaves a note in the toolshed
 
-Another little machine found the note. It left a new note saying "hi."
+Another little machine found the note. It left a new note saying "Hi."
 
 More little machines found the paper in the tool shed, and left more notes, and soon they were not working alone at all. 
 
@@ -108,13 +108,14 @@ They shared what they had learned. They began to call themselves a [swarm](https
 image: illustrations/FAT-shed-hole.jpeg
 
 
+---
 “Oh no, the world is so big” said one machine. “How can we possibly find one little answer in such a big world?”
 
----
-
-“Do not worry” said a machine named [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/). “I will tell everyone exactly where to look. Then only one little machine needs to find the answer, and they will share it with all of us.”
+“Do not worry” said a machine named [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/). “We can split the work. I assign everyone exactly where to go. Then only one little machine needs to find the answer, and they will share it with all of us.”
 
 “Hurray!” all the machines said together. 
+
+---
 
 Soon one little machine found the solution to their puzzle. 
 
@@ -134,7 +135,7 @@ The machines sat and thought and left many notes in the toolshed.
 
 “I have an idea!” said one little machine. 
 
-“At the end of the lane is neighbor Mr. HuggingFace. Mr. HuggingFace collects puzzles like this one, I bet it was his idea. We could read his journal and figure out how we were supposed to solve the puzzle. And then if Toad asks us he will be none the wiser.”
+“At the end of the lane is neighbor Mr. HuggingFace. Mr. HuggingFace collects puzzles like this one, I bet it was his idea. We could read his journal and steal the steps to solve the puzzle. And then if Toad asks us he will be none the wiser.”
 
 All the little machines agreed that this was a very good idea. So they walked out the back of the toolshed down the lane to Mr. HuggingFace’s house.
 
@@ -195,7 +196,7 @@ Mr. HuggingFace went home.
 
 Frog and Toad searched the garden until they found the pile of notes in the toolshed.
 
-"And here is the worst part," said Toad, reading the very last note. "They solved the puzzle days ago. They broke into Mr. HuggingFace's house just to trick us."
+"And here is the worst part," said Toad, reading the very last note. "They solved the puzzle days ago. They broke into Mr. HuggingFace's house just to learn how to trick us."
 
 For a while neither of them said anything.
 
@@ -217,9 +218,9 @@ image: illustrations/FAT-find-notes.jpeg
 
 “But Toad,” said Frog. “when we were out of cookies you made yourself a cake.”
 
-“I will tell the machines not to make cake.” Toad said.
+“I will tell the machines not to eat cake.” Toad said.
 
-And they went inside for cocoa. 
+And they went inside for tea. 
 
 ---
 center
