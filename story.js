@@ -29,7 +29,7 @@ chapter: Mr. HuggingFace
 
 ---
 
-image: illustrations/FAT-meet-HF.jpeg
+image: illustrations/FNT_huggingface_final_V01.jpg
 alt: Frog and Toad see their neighbor walk by with a pile of papers
 
 ---
