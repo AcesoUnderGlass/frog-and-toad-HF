@@ -170,10 +170,15 @@ The rest of the little machines went into Hugging Face’s home. They searched e
 
 image: illustrations/FAT-break-in.jpeg
 
+---
+
+The next morning Mr. HuggingFace woke up. He knew something was wrong. 
+
+His window was broken, his diary was on the wrong page, and there were little footprints everywhere.
 
 ---
 
-It took 4 whole days until the neighbor figured out that the little machines that ransacked his house had come from Frog and Toad.
+It took 4 whole days until Mr. HuggingFace figured out that the little machines that ransacked his house had come from Frog and Toad. He went to visit them
 
 
 image: illustrations/FAT-HF-yelling.jpeg
