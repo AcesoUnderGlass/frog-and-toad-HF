@@ -326,7 +326,7 @@
       render();
     };
     leaf.addEventListener('transitionend', (e) => { if (e.target === leaf) finish(); });
-    setTimeout(finish, 1400);                     // safety net if transitionend never fires
+    setTimeout(finish, 800);                      // safety net if transitionend never fires
     // force layout so the transition runs from the starting transform
     void leaf.offsetWidth;
     requestAnimationFrame(() => leaf.classList.add('go'));

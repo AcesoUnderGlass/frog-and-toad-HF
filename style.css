@@ -6,7 +6,7 @@
   --desk: #3f3225;
   --page-w: 300px;
   --page-h: 400px;
-  --turn-ms: 950ms;
+  --turn-ms: 450ms;
 }
 
 * { box-sizing: border-box; }
