@@ -253,7 +253,13 @@
     } else {
       where = cur === 0 ? 'Cover' : `Page ${cur}`;
     }
-    status.replaceChildren(el('span', 'title', story.title), el('span', 'sep', '·'), el('span', null, `${where} of ${N - 1}`));
+    if (!status.querySelector('.jump')) {         // don't clobber a page number being typed
+      const whereBtn = el('button', 'where', `${where} of ${N - 1}`);
+      whereBtn.type = 'button';
+      whereBtn.title = 'Jump to a page (G)';
+      whereBtn.addEventListener('click', openJump);
+      status.replaceChildren(el('span', 'title', story.title), el('span', 'sep', '·'), whereBtn);
+    }
     // The address bar is never rewritten as the reader turns pages, so copying
     // the URL shares the book from the cover, not whatever page they stopped on.
     // A "#p7" deep link stays in the URL only while page 7 is actually showing;
@@ -262,6 +268,41 @@
     if (linked && !isShowing(+linked[1])) {
       history.replaceState(null, '', location.pathname + location.search);
     }
+  }
+
+  // Clicking the "Page X of N" indicator (or pressing G) swaps it for a
+  // number box; Enter jumps there, Escape or clicking away cancels.
+  function openJump() {
+    const whereBtn = status.querySelector('.where');
+    if (!whereBtn) return;
+    const form = el('form', 'jump');
+    const input = el('input');
+    input.type = 'number';
+    input.inputMode = 'numeric';
+    input.min = 0;
+    input.max = N - 1;
+    input.value = mode === 'spread' ? Math.max(1, cur - 1) : cur;
+    input.setAttribute('aria-label', `Page number, 0 to ${N - 1}`);
+    form.append(el('span', null, 'Page '), input, el('span', null, ` of ${N - 1}`));
+    let closed = false;
+    const close = () => {
+      if (closed) return;
+      closed = true;
+      form.remove();
+      updateChrome();
+    };
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const n = parseInt(input.value, 10);
+      closed = true;
+      form.remove();
+      if (Number.isFinite(n)) goTo(n); else updateChrome();
+    });
+    input.addEventListener('keydown', (e) => { if (e.key === 'Escape') { e.preventDefault(); close(); } });
+    input.addEventListener('blur', close);
+    whereBtn.replaceWith(form);
+    input.focus();
+    input.select();
   }
 
   function isShowing(i) { return i === cur || (mode === 'spread' && i === cur - 1); }
@@ -418,7 +459,9 @@
 
   window.addEventListener('keydown', (e) => {
     if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.target.closest && e.target.closest('input')) return;   // typing a page number
     switch (e.key) {
+      case 'g': case 'G': e.preventDefault(); openJump(); break;
       case 'ArrowRight': case 'ArrowDown': case 'PageDown': case ' ': case 'Enter': e.preventDefault(); turn(1); break;
       case 'ArrowLeft': case 'ArrowUp': case 'PageUp': case 'Backspace': e.preventDefault(); turn(-1); break;
       case 'Home': goTo(0); break;

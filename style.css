@@ -326,6 +326,34 @@ body {
 }
 .status .title { font-style: italic; }
 .status .sep { margin: 0 0.6em; opacity: 0.5; }
+.status .where {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 2px 4px;
+  margin: -2px -4px;
+  border-radius: 4px;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline dotted rgba(205, 191, 164, 0.5);
+  text-underline-offset: 0.25em;
+}
+.status .where:hover { background: rgba(255, 245, 220, 0.1); text-decoration-color: currentColor; }
+.status .jump { display: inline; margin: 0; }
+.status .jump input {
+  width: 3.5em;
+  font: inherit;
+  color: var(--ink);
+  background: var(--paper);
+  border: 0;
+  border-radius: 3px;
+  padding: 1px 4px;
+  text-align: center;
+  -webkit-user-select: text;
+  user-select: text;
+}
 
 @media (max-width: 520px) {
   .nav { display: none; }

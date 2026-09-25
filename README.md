@@ -21,6 +21,7 @@ then visit http://localhost:8000.
 - Click the left half or press `←` / `Backspace` to go back.
 - Swipe left/right on touch screens.
 - `Home` / `End` jump to the cover / last page.
+- Click the "Page X of N" line under the book (or press `G`), type a page number, and press `Enter` to jump there.
 - The book always opens on the cover. Add `#p7` to the URL to link straight to page 7.
 
 ## Writing the story
