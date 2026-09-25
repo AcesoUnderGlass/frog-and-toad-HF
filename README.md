@@ -74,3 +74,19 @@ Page numbers count from 1 on the first page after the cover. Chapter and content
 - Images can be `.png`, `.jpg`, `.svg`, `.webp`, or `.gif`. A missing image shows a dashed placeholder with the file name, so you can see what to fix.
 - Avoid backticks (`` ` ``) and `${` inside the story, because the story sits inside a JavaScript template string. If a line has to begin with a word like `image:`, put a backslash in front: `\image:`.
 - Fonts: the page loads Libre Baskerville from Google Fonts when online, and falls back to Palatino / Georgia offline.
+
+### Illustrations for the web
+
+The story points at `illustrations/web/`, which holds small WebP copies of the
+master art in `illustrations/`. The copies are downscaled and have their white
+turned into transparency, so the paper colour and texture show through the
+margins. Alongside them, `sizes.js` records each picture's pixel size so pages
+can be laid out (and text pages measured) before the pictures download.
+
+After changing a master, rebuild the copies with:
+
+```bash
+python3 tools/make-web-images.py
+```
+
+It needs Pillow, NumPy, and WebP support in Pillow.

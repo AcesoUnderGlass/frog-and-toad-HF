@@ -151,14 +151,20 @@ body {
   align-items: center;
   gap: 0.35em;
 }
-.page-content figure img {
+.page-content figure img,
+.page-content figure .img-placeholder {
+  width: auto;            /* the width/height attributes only set the aspect ratio */
+  height: auto;
   max-width: 100%;
   min-height: 0;
   max-height: calc(var(--page-h) * 0.72);
   object-fit: contain;
   display: block;
 }
-.page-content.has-text figure img { max-height: calc(var(--page-h) * 0.42); }
+/* Stand-in used while measuring text pages: same footprint as the picture, no fetch. */
+.page-content figure .img-placeholder { width: 100%; }
+.page-content.has-text figure img,
+.page-content.has-text figure .img-placeholder { max-height: calc(var(--page-h) * 0.42); }
 .page-content.image-only figure { flex: 1 1 auto; justify-content: center; }
 .page-content figcaption {
   font-style: italic;
