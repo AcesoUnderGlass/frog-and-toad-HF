@@ -121,10 +121,6 @@ body {
 .page-content {
   position: relative;
   z-index: 3;
-  /* The artwork is drawn on pure white. Multiplying the content onto the page
-     lets that white margin take on the paper colour, texture and shading
-     underneath instead of showing as a flat bright box. Ink is unaffected. */
-  mix-blend-mode: multiply;
   height: 100%;
   padding: calc(var(--page-w) * 0.10) calc(var(--page-w) * 0.10) calc(var(--page-w) * 0.15);
   font-size: calc(var(--page-w) * 0.046 * var(--fs-scale, 1));

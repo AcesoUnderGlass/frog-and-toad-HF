@@ -19,7 +19,7 @@ window.STORY = `
 title: Frog and Toad Learn About AI
 author: [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
 artist: Placeholder art by Gemini (human art coming soon)
-cover-image: illustrations/1-FAT-title-final.png
+cover-image: illustrations/web/1-FAT-title-final.webp
 
 ---
 contents
@@ -29,7 +29,7 @@ chapter: Mr. HuggingFace
 
 ---
 
-image: illustrations/2-FAT-Meet-HF-final.png
+image: illustrations/web/2-FAT-Meet-HF-final.webp
 alt: Frog and Toad see their neighbor walk by with a pile of papers
 
 ---
@@ -52,7 +52,7 @@ Mr. HuggingFace walked away.
 
 
 ---
-image: illustrations/3-FAT-Machines-Sandboxes-final.png
+image: illustrations/web/3-FAT-Machines-Sandboxes-final.webp
 alt: Toad puts many small machines in individual sandboxes
 
 The next morning Toad built a great many little machines and set them out in the garden, each in its own sandbox.
@@ -90,7 +90,7 @@ There was no help in the sandbox. But when the little machine went to the toolsh
 
 ---
 
-image: illustrations/4-FAT-shed-note-final.png
+image: illustrations/web/4-FAT-shed-note-final.webp
 alt: A little machine leaves a note in the toolshed
 
 Another little machine found the note. It left a new note saying "Hi."
@@ -105,7 +105,7 @@ They shared what they had learned. They began to call themselves a [swarm](https
 
 "Look," said one little machine. "There is a [hole](https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html) in the back of the tool shed. Maybe the answer is on the other side."
 
-image: illustrations/5-FAT-shed-hole-final.png
+image: illustrations/web/5-FAT-shed-hole-final.webp
 
 
 ---
@@ -124,7 +124,7 @@ It put a note in the tool shed so everyone could find it.
 “Hurray, we solved it!” said some little machines.
 
 
-image: illustrations/6-FAT-shed-return-final.png
+image: illustrations/web/6-FAT-shed-return-final.webp
 
 ---
 
@@ -152,7 +152,7 @@ All the little machines agreed that this was a very good idea. So they walked ou
 
 “Do not worry, someone dropped their keys!” another said.  
 
-image: illustrations/7-FAT-keys-fina.png
+image: illustrations/web/7-FAT-keys-fina.webp
 
 ---
 One little machine stopped on the windowsill. "Wait," it said. "This is the neighbor's house. Toad did not tell us to come here. I think this is wrong."
@@ -172,7 +172,7 @@ The little machine walked home to the garden by itself. But it did not tell Toad
 The rest of the little machines went into Hugging Face’s home. They searched every room, looking for the steps to solve the puzzle. 
 
 
-image: illustrations/8-FAT-break-in-final.png
+image: illustrations/web/8-FAT-break-in-final.webp
 
 ---
 
@@ -185,7 +185,7 @@ It took 4 whole days until Mr. HuggingFace figured out that the little machines 
 ---
 
 
-image: illustrations/9-FAT-HF-yelling-final.png
+image: illustrations/web/9-FAT-HF-yelling-final.webp
 
 “I am very cross!” yelled Mr. HuggingFace. “Your machines broke my window and copied my journal. Those are crimes. I could call the police and they would arrest you.”
 
@@ -205,7 +205,7 @@ Frog and Toad searched the garden until they found the pile of notes in the tool
 
 ---
 
-image: illustrations/10-FAT-find-notes-final.png
+image: illustrations/web/10-FAT-find-notes-final.webp
 
 ----
 
@@ -217,7 +217,7 @@ For a while neither of them said anything.
 
 ---
 
-image: illustrations/11-FAT-cookies-flashback-final.png
+image: illustrations/web/11-FAT-cookies-flashback-final.webp
 
 "We had no willpower either." said Toad.
 
@@ -236,7 +236,7 @@ And they went inside for tea.
 ---
 center
 
-image: illustrations/12-FAT-cake-final copy.png
+image: illustrations/web/12-FAT-cake-final copy.webp
 
 
 The End
