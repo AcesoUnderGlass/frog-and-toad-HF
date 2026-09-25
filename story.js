@@ -18,7 +18,7 @@
 window.STORY = `
 title: Frog and Toad and the Increasingly Capable Machines
 author: written by [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
-artist: drawn by HungerArtist
+artist: drawn by [HungerArtist](https://www.deviantart.com/hungerartist)
 cover-image: illustrations/web/1-FAT-title-final.webp
 
 ---
@@ -180,7 +180,7 @@ The next morning Mr. HuggingFace woke up. He knew something was wrong.
 
 His window was broken, his diary was on the wrong page, and there were little footprints everywhere.
 
-It took 4 whole days until Mr. HuggingFace figured out that the little machines that ransacked his house had come from Frog and Toad. He went to visit them
+It took 4 whole days until Mr. HuggingFace figured out that the little machines that ransacked his house had come from Frog and Toad. He went to visit them.
 
 ---
 
