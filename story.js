@@ -17,8 +17,8 @@
 
 window.STORY = `
 title: Frog and Toad and the Increasingly Capable Machines
-author: [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
-artist: HungerArtist
+author: written by [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
+artist: drawn by HungerArtist
 cover-image: illustrations/web/1-FAT-title-final.webp
 
 ---
