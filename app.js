@@ -113,11 +113,20 @@
   function renderPage(story, index) {
     const page = story.pages[index];
     const root = el('div', 'page-content');
+    const cover = story.pages[0];
+
+    // In a two-page spread the cover art fills the left page opposite the title.
+    if (index === -1 && mode === 'spread' && cover && cover.image) {
+      root.classList.add('cover-art');
+      root.appendChild(renderImage({ src: cover.image, alt: cover.title }));
+      return root;
+    }
+
     if (!page || page.kind === 'blank') { root.classList.add('blank'); return root; }
 
     if (page.kind === 'cover') {
       root.classList.add('cover');
-      if (page.image) root.appendChild(renderImage({ src: page.image, alt: page.title }));
+      if (page.image && mode !== 'spread') root.appendChild(renderImage({ src: page.image, alt: page.title }));
       root.appendChild(el('h1', 'title', page.title));
       root.appendChild(el('hr', 'rule'));
       if (page.author) root.appendChild(elText('p', 'author', page.author));
