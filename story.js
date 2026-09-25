@@ -16,7 +16,7 @@
 // ============================================================
 
 window.STORY = `
-title: Frog and Toad Learn About AI
+title: Frog and Toad and the Increasingly Capable Machines
 author: [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
 artist: Placeholder art by Gemini (human art coming soon)
 cover-image: illustrations/web/1-FAT-title-final.webp
