@@ -364,8 +364,10 @@
     const leaf = el('div', 'leaf ' + dir);
     const front = el('div', 'face front');
     const back = el('div', 'face back');
-    front.appendChild(renderPage(story, frontIdx));
-    back.appendChild(renderPage(story, backIdx));
+    // Same content (and page number) as the pages underneath, so the leaf
+    // landing and being removed changes nothing on screen.
+    fill(front, story, frontIdx);
+    fill(back, story, backIdx);
     front.appendChild(el('div', 'shade'));
     back.appendChild(el('div', 'shade'));
     leaf.append(front, back);

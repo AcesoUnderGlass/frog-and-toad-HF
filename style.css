@@ -290,6 +290,10 @@ body {
   background: var(--paper);
   overflow: hidden;
 }
+/* The front face needs an explicit 3D transform too. Without one, WebKit
+   (Safari) does not cull it when it faces away, and its text shows mirrored
+   over the back face for the second half of every turn. */
+.leaf .face.front { transform: rotateY(0deg); }
 .leaf .face.back { transform: rotateY(180deg); }
 
 .spread .leaf.fwd  { right: 0; transform-origin: left center; }
@@ -318,6 +322,15 @@ body {
 }
 .leaf.fwd .face.front .shade { background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.3)); }
 .leaf.go .face.front .shade { opacity: 1; }
+/* In the single-page layout a leaf turning back lands face-up, so its shade
+   holds for the first half of the turn and then fades as the leaf settles,
+   instead of vanishing abruptly when the leaf is removed. */
+.single .leaf.back .face.front .shade {
+  opacity: 1;
+  transition-timing-function: ease-out;
+  transition-delay: calc(var(--turn-ms) * 0.5);
+}
+.single .leaf.back.go .face.front .shade { opacity: 0; }
 
 /* ---------- Status ---------- */
 
