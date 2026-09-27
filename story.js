@@ -241,7 +241,7 @@ image: illustrations/web/12-FAT-cake-final copy.webp
 
 The End
 
-Learn more about the real-life HuggingFace attack [here](https://www.dwarkesh.com/p/openai-huggingface)
+Learn more about the real-life HuggingFace attack [here](/learn-more)
 
 For updates subscribe on [Substack](https://frogandtoadai.substack.com/?r=64iai2&utm_campaign=pub-share-checklist), [Twitter](https://x.com/frogandtoad_ai), [Facebook](https://www.facebook.com/people/Frog-and-Toad-Learn-About-AI/61594283794206/), or [Instagram](https://www.instagram.com/frogandtoad_ai/)
 `

@@ -75,7 +75,7 @@
   // mailto links are allowed, so odd story text can't smuggle in javascript: etc.
   // Link text may itself contain one level of [bracketed] text, e.g. a name
   // like "PHASEONE[big]".
-  const LINK_RE = /\[((?:[^\[\]]|\[[^\[\]]*\])+)\]\((https?:\/\/[^\s()]+|mailto:[^\s()]+)\)/g;
+  const LINK_RE = /\[((?:[^\[\]]|\[[^\[\]]*\])+)\]\((https?:\/\/[^\s()]+|mailto:[^\s()]+|\/[^\s()]+)\)/g;
 
   function elText(tag, cls, text) {
     const e = document.createElement(tag);
