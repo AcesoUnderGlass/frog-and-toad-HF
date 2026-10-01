@@ -2,6 +2,31 @@
 (function () {
   'use strict';
 
+  /* ---------------- Interface words ---------------- */
+
+  // The reader's own words (not the story's). A translation overrides any of
+  // these by setting window.STORY_UI in its story file; see story-de.js.
+  const UI = Object.assign({
+    chapter: 'Chapter {n}',
+    contents: 'Contents',
+    cover: 'Cover',
+    page: 'Page {n}',
+    pages: 'Pages {from}–{to}',
+    whereOfTotal: '{where} of {total}',
+    jumpBefore: 'Page ',
+    jumpAfter: ' of {total}',
+    jumpHint: 'Jump to a page (G)',
+    jumpLabel: 'Page number, 0 to {total}',
+    previous: 'Previous page',
+    next: 'Next page',
+    illustration: 'Illustration',
+    missing: 'Missing illustration: {src}',
+  }, window.STORY_UI);
+
+  function t(key, vars) {
+    return UI[key].replace(/\{(\w+)\}/g, (m, name) => (vars && name in vars ? vars[name] : m));
+  }
+
   /* ---------------- Parsing ---------------- */
 
   const KEY_RE = /^(image|alt|caption|chapter)\s*:\s*(.*)$/i;
@@ -113,11 +138,11 @@
       const img = el('img');
       if (dims) { img.width = dims[0]; img.height = dims[1]; }
       img.src = block.src;
-      img.alt = block.alt || block.caption || 'Illustration';
+      img.alt = block.alt || block.caption || t('illustration');
       img.draggable = false;
       if (!measuring) img.addEventListener('load', scheduleRefit);   // live images only, never the measuring pass
       img.addEventListener('error', () => {
-        fig.replaceChild(el('div', 'missing', 'Missing illustration: ' + block.src), img);
+        fig.replaceChild(el('div', 'missing', t('missing', { src: block.src })), img);
       });
       fig.appendChild(img);
     }
@@ -153,7 +178,7 @@
       root.classList.add('chapter');
       const chapters = story.pages.filter(p => p.kind === 'chapter');
       const n = chapters.indexOf(page) + 1;
-      if (chapters.length > 1) root.appendChild(el('div', 'kicker', 'Chapter ' + n));
+      if (chapters.length > 1) root.appendChild(el('div', 'kicker', t('chapter', { n })));
       root.appendChild(el('h2', null, page.chapter));
       root.appendChild(el('hr', 'rule'));
       for (const b of page.blocks) root.appendChild(b.type === 'image' ? renderImage(b) : elText('p', null, b.text));
@@ -162,7 +187,7 @@
 
     if (page.kind === 'contents') {
       root.classList.add('contents');
-      root.appendChild(el('h2', null, 'Contents'));
+      root.appendChild(el('h2', null, t('contents')));
       const ol = el('ol');
       story.pages.forEach((p, i) => {
         if (p.kind !== 'chapter') return;
@@ -246,6 +271,10 @@
   const btnNext = document.getElementById('btnNext');
 
   document.title = story.title;
+  btnPrev.setAttribute('aria-label', t('previous'));
+  btnPrev.title = t('previous') + ' (←)';
+  btnNext.setAttribute('aria-label', t('next'));
+  btnNext.title = t('next') + ' (→)';
 
   let mode = 'single';    // 'single' | 'spread'
   let cur = 0;            // single: the page shown.  spread: the RIGHT page (always even; left is cur-1)
@@ -264,14 +293,14 @@
     if (mode === 'spread') {
       const l = cur - 1, r = cur;
       const lOk = l >= 1, rOk = r >= 1 && r < N;
-      where = lOk && rOk ? `Pages ${l}–${r}` : lOk ? `Page ${l}` : rOk ? `Page ${r}` : 'Cover';
+      where = lOk && rOk ? t('pages', { from: l, to: r }) : lOk ? t('page', { n: l }) : rOk ? t('page', { n: r }) : t('cover');
     } else {
-      where = cur === 0 ? 'Cover' : `Page ${cur}`;
+      where = cur === 0 ? t('cover') : t('page', { n: cur });
     }
     if (!status.querySelector('.jump')) {         // don't clobber a page number being typed
-      const whereBtn = el('button', 'where', `${where} of ${N - 1}`);
+      const whereBtn = el('button', 'where', t('whereOfTotal', { where, total: N - 1 }));
       whereBtn.type = 'button';
-      whereBtn.title = 'Jump to a page (G)';
+      whereBtn.title = t('jumpHint');
       whereBtn.addEventListener('click', openJump);
       status.replaceChildren(el('span', 'title', story.title), el('span', 'sep', '·'), whereBtn);
     }
@@ -297,8 +326,8 @@
     input.min = 0;
     input.max = N - 1;
     input.value = mode === 'spread' ? Math.max(1, cur - 1) : cur;
-    input.setAttribute('aria-label', `Page number, 0 to ${N - 1}`);
-    form.append(el('span', null, 'Page '), input, el('span', null, ` of ${N - 1}`));
+    input.setAttribute('aria-label', t('jumpLabel', { total: N - 1 }));
+    form.append(el('span', null, t('jumpBefore')), input, el('span', null, t('jumpAfter', { total: N - 1 })));
     let closed = false;
     const close = () => {
       if (closed) return;

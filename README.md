@@ -75,6 +75,20 @@ Page numbers count from 1 on the first page after the cover. Chapter and content
 - Avoid backticks (`` ` ``) and `${` inside the story, because the story sits inside a JavaScript template string. If a line has to begin with a word like `image:`, put a backslash in front: `\image:`.
 - Fonts: the page loads Libre Baskerville from Google Fonts when online, and falls back to Palatino / Georgia offline.
 
+### Translations
+
+Each language has its own story file and its own page. German is
+`story-de.js`, shown by `de.html` (open that file, or visit `/de` on the site).
+
+To translate, edit `story-de.js`: the story text, and the short list of
+interface words (`STORY_UI`) at the top, such as "Chapter" and "Page 3 of 40".
+The comment at the top of the file says what to translate and what to leave
+alone. Then translate the title and description in the `<head>` of `de.html`,
+which is what link previews show.
+
+To add another language, copy `story-de.js` and `de.html`, rename them, and
+point the new page's `<script src="story-de.js">` at the new story file.
+
 ### Illustrations for the web
 
 The story points at `illustrations/web/`, which holds small WebP copies of the
