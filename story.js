@@ -64,7 +64,7 @@ The next morning Toad built a great many little machines and set them out in the
 ---
 
 
-"It is too hard to make all the puzzles solvable" said Toad "What is the worst that could happen?”
+"It is too hard to make all the puzzles solvable." said Toad "What is the worst that could happen?”
 
 "They could get up to mischief" said Frog.
 
