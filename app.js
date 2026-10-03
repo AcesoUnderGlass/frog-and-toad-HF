@@ -21,6 +21,7 @@
     next: 'Next page',
     illustration: 'Illustration',
     missing: 'Missing illustration: {src}',
+    language: 'Language',
   }, window.STORY_UI);
 
   function t(key, vars) {
@@ -39,7 +40,7 @@
   }
 
   function parseStory(src) {
-    const story = { title: 'Untitled', author: '', artist: '', cover: '', pages: [] };
+    const story = { title: 'Untitled', author: '', artist: '', translator: '', cover: '', pages: [] };
     const sections = String(src).replace(/\r\n?/g, '\n').split(/^[ \t]*-{3,}[ \t]*$/m);
 
     // Front matter: "key: value" lines before the first ---
@@ -47,7 +48,7 @@
       const m = line.match(/^\s*([\w-]+)\s*:\s*(.*)$/);
       if (m) story[m[1].toLowerCase().replace('-', '')] = m[2].trim();
     }
-    story.pages.push({ kind: 'cover', title: story.title, author: story.author, artist: story.artist, image: story.coverimage || story.cover || '' });
+    story.pages.push({ kind: 'cover', title: story.title, author: story.author, artist: story.artist, translator: story.translator, image: story.coverimage || story.cover || '' });
 
     for (const sec of sections) {
       const page = { kind: 'page', blocks: [], center: false };
@@ -171,6 +172,7 @@
       root.appendChild(el('hr', 'rule'));
       if (page.author) root.appendChild(elText('p', 'author', page.author));
       if (page.artist) root.appendChild(elText('p', 'artist', page.artist));
+      if (page.translator) root.appendChild(elText('p', 'translator', page.translator));
       return root;
     }
 
@@ -283,6 +285,26 @@
   function clamp(i) { return Math.max(0, Math.min(N - 1, i)); }
   function spreadRight(i) { return 2 * Math.ceil(i / 2); }
 
+  // languages.js lists every edition; a menu in the status line switches between them.
+  const editions = window.EDITIONS || [];
+  const thisLang = document.documentElement.lang;
+  let langMenu = null;
+  if (editions.length > 1) {
+    langMenu = el('select', 'lang');
+    langMenu.setAttribute('aria-label', t('language'));
+    langMenu.title = t('language');
+    for (const e of editions) {
+      const o = el('option', null, e.name);
+      o.value = e.href;
+      o.lang = e.lang;
+      o.selected = e.lang === thisLang;
+      langMenu.append(o);
+    }
+    const reset = () => { for (const o of langMenu.options) o.selected = o.lang === thisLang; };
+    langMenu.addEventListener('change', () => { location.href = langMenu.value; });
+    window.addEventListener('pageshow', reset);   // coming Back to this page: show its own language again
+  }
+
   function canNext() { return mode === 'spread' ? cur + 1 < N : cur + 1 < N; }
   function canPrev() { return mode === 'spread' ? cur >= 2 : cur >= 1; }
 
@@ -302,7 +324,10 @@
       whereBtn.type = 'button';
       whereBtn.title = t('jumpHint');
       whereBtn.addEventListener('click', openJump);
-      status.replaceChildren(el('span', 'title', story.title), el('span', 'sep', '·'), whereBtn);
+      const place = el('span', 'place');
+      place.append(el('span', 'title', story.title), el('span', 'sep', '·'), whereBtn);
+      status.replaceChildren(place);
+      if (langMenu) status.append(langMenu);
     }
     // The address bar is never rewritten as the reader turns pages, so copying
     // the URL shares the book from the cover, not whatever page they stopped on.

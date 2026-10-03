@@ -202,7 +202,7 @@ body {
   line-height: 1.25;
   margin: 0;
 }
-.page-content.cover .author, .page-content.cover .artist {
+.page-content.cover .author, .page-content.cover .artist, .page-content.cover .translator {
   font-style: italic;
   color: var(--ink-soft);
   margin: 0;
@@ -341,7 +341,16 @@ body {
   opacity: 0.85;
   min-height: 1.2em;
   text-align: center;
+  /* Title and page number centred under the book; the language menu at the
+     book's right edge. The side padding skips the page-turn buttons. */
+  align-self: stretch;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: baseline;
+  column-gap: 1em;
+  padding: 0 54px;
 }
+.status .place { grid-column: 2; }
 .status .title { font-style: italic; }
 .status .sep { margin: 0 0.6em; opacity: 0.5; }
 .status .where {
@@ -373,7 +382,28 @@ body {
   user-select: text;
 }
 
+.status .lang {
+  appearance: none;
+  border: 0;
+  border-radius: 4px;
+  grid-column: 3;
+  justify-self: end;
+  padding: 2px 1.3em 2px 4px;
+  margin: -2px 0;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  cursor: pointer;
+  /* a small down arrow at the right edge */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23cdbfa4' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 0.4em center / 0.6em auto;
+}
+.status .lang:hover { background-color: rgba(255, 245, 220, 0.1); }
+.status .lang option { color: var(--ink); background: var(--paper); }
+
 @media (max-width: 520px) {
   .nav { display: none; }
   .book-wrap { gap: 0; }
+  /* too narrow for a separate column: the menu follows the page number */
+  .status { display: block; padding: 0; }
+  .status .lang { margin-left: 0.8em; }
 }

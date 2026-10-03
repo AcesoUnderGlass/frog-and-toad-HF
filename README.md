@@ -54,10 +54,10 @@ In the morning Toad looked out of his window.
 
 | Write this | What it does |
 |---|---|
-| `title:`, `author:`, `artist:`, `cover-image:` | Go at the very top, before the first `---`. They make the cover page. `artist` and `cover-image` are optional; the artist line appears under the author. |
+| `title:`, `author:`, `artist:`, `translator:`, `cover-image:` | Go at the very top, before the first `---`. They make the cover page. `artist`, `translator`, and `cover-image` are optional; the artist line appears under the author, and the translator (for a translated edition) under that. |
 | `---` on its own line | Starts a new page. |
 | Plain lines | Story text. Consecutive lines join into one paragraph; a **blank line** starts a new paragraph. Straight quotes become curly quotes automatically. |
-| `[link text](https://example.com)` | Makes a clickable link. Also works in `caption:`, `author:`, and `artist:` text. Only `https://`, `http://`, and `mailto:` links are allowed; the link opens in a new tab. |
+| `[link text](https://example.com)` | Makes a clickable link. Also works in `caption:`, `author:`, `artist:`, and `translator:` text. Only `https://`, `http://`, and `mailto:` links are allowed; the link opens in a new tab. |
 | `image: path` | Puts an illustration on the page. The path is relative to `index.html` (put files in `illustrations/`), or a full `https://` URL. Put it **before** the text to have the picture above the words, or **after** to have it below. A page can have several images, or an image and no text. |
 | `alt: description` | Optional. Line right after an `image:`. Screen-reader text. |
 | `caption: text` | Optional. Line right after an `image:`. Printed in italics under the picture. |
@@ -86,8 +86,20 @@ The comment at the top of the file says what to translate and what to leave
 alone. Then translate the title and description in the `<head>` of `de.html`,
 which is what link previews show.
 
-To add another language, copy `story-de.js` and `de.html`, rename them, and
-point the new page's `<script src="story-de.js">` at the new story file.
+Readers switch language with the menu beside the page number. Its choices
+come from `languages.js`, which lists every edition.
+
+To add another language:
+
+1. Copy `story-de.js` and `de.html` and rename them (say `story-fr.js` and
+   `fr.html`).
+2. In the new page, change `<html lang="de">`, point
+   `<script src="story-de.js">` at the new story file, and change `/de` in the
+   `canonical` and `og:url` lines.
+3. Add a line for it to `languages.js`.
+4. Add a `<link rel="alternate" hreflang="...">` line for it to the `<head>`
+   of every page (`index.html`, `de.html`, and the new one), so search engines
+   offer each reader the right language.
 
 ### Illustrations for the web
 

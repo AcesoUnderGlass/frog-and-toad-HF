@@ -4,12 +4,13 @@
 //  Translate:
 //    - the story text (plain lines)
 //    - the words after  title:  chapter:  alt:  caption:
-//    - "written by" / "drawn by", and the words inside [square brackets]
+//    - "written by" / "drawn by" / "translated by", and the words inside
+//      [square brackets]
 //    - the interface words in STORY_UI just below
 //
 //  Leave exactly as they are:
 //    - the --- lines, and the words  contents  center  blank
-//    - the keywords themselves (title:, author:, artist:, cover-image:,
+//    - the keywords themselves (title:, author:, artist:, translator:, cover-image:,
 //      chapter:, image:, alt:, caption:)
 //    - everything after  image:  and  cover-image:
 //    - the (addresses in round brackets) after a link
@@ -38,12 +39,14 @@ window.STORY_UI = {
   next: 'Nächste Seite',
   illustration: 'Illustration',
   missing: 'Fehlende Illustration: {src}',
+  language: 'Sprache',
 };
 
 window.STORY = `
 title: Frosch und Kröte und die immer fähigeren Maschinen
 author: geschrieben von [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
 artist: gezeichnet von [HungerArtist](https://www.deviantart.com/hungerartist)
+translator: übersetzt von [Robert Herr](https://x.com/krherr)
 cover-image: illustrations/web/1-FAT-title-final.webp
 
 ---

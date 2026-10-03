@@ -3,6 +3,7 @@
 //  See README.md for the full format. Quick version:
 //
 //    title: / author: / artist: / cover-image:   at the top
+//    translator:                       (translations only) credits the translator
 //    ---                               starts a new page
 //    chapter: Name                     makes a chapter title page
 //    image: illustrations/file.png     puts a picture on the page
