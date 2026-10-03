@@ -41,192 +41,192 @@ window.STORY_UI = {
 };
 
 window.STORY = `
-title: Frog and Toad and the Increasingly Capable Machines
-author: written by [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
-artist: drawn by [HungerArtist](https://www.deviantart.com/hungerartist)
+title: Frosch und Kröte und die immer fähigeren Maschinen
+author: geschrieben von [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
+artist: gezeichnet von [HungerArtist](https://www.deviantart.com/hungerartist)
 cover-image: illustrations/web/1-FAT-title-final.webp
 
 ---
 contents
 
 ---
-chapter: Mr. HuggingFace
+chapter: Herr HuggingFace
 
 ---
 
 image: illustrations/web/2-FAT-Meet-HF-final.webp
-alt: Frog and Toad see their neighbor walk by with a pile of papers
+alt: Frosch und Kröte sehen ihren Nachbarn mit einem Stapel Papiere vorbeigehen
 
 ---
 
-Frog and Toad sat on their front porch. 
+Frosch und Kröte saßen auf ihrer Veranda.
 
-Their neighbor, Mr. HuggingFace, walked by. He carried a lot of papers. Each paper had a puzzle on it.
+Ihr Nachbar, Herr HuggingFace, kam vorbei. Er trug viele Papiere. Auf jedem Blatt stand ein Rätsel.
 
-"You must be very busy." said Frog.
+„Sie haben bestimmt viel zu tun“, sagte Frosch.
 
-"Yes" said Mr. HuggingFace. "I have collected all these puzzles so I can share them."
+„Ja“, sagte Herr HuggingFace. „Ich habe all diese Rätsel gesammelt, um sie zu teilen.“
 
-"I like puzzles" said Toad. "Can I try them?"
+„Ich mag Rätsel“, sagte Kröte. „Darf ich sie ausprobieren?“
 
-"You cannot. These puzzles are for little machines, not people" said Mr. HuggingFace. 
+„Nein. Diese Rätsel sind für kleine Maschinen, nicht für Leute“, sagte Herr HuggingFace.
 
-Mr. HuggingFace walked away.
+Herr HuggingFace ging weiter.
 
-"Hmmm...." said Toad.
+„Hmmm …“, sagte Kröte.
 
 
 ---
 image: illustrations/web/3-FAT-Machines-Sandboxes-final.webp
-alt: Toad puts many small machines in individual sandboxes
+alt: Kröte setzt viele kleine Maschinen in einzelne Sandkästen
 
-The next morning Toad built a great many little machines and set them out in the garden, each in its own sandbox.
+Am nächsten Morgen baute Kröte sehr viele kleine Maschinen und stellte sie in den Garten, jede in ihren eigenen Sandkasten.
 
-"I have given each little machine a puzzle," said Toad. "The puzzles are very hard. Some of them cannot be solved at all."
+„Ich habe jeder kleinen Maschine ein Rätsel gegeben“, sagte Kröte. „Die Rätsel sind sehr schwer. Manche kann man überhaupt nicht lösen.“
 
-"That does not seem kind." said Frog.
-
----
-
-
-"It is too hard to make all the puzzles solvable." said Toad "What is the worst that could happen?”
-
-"They could get up to mischief" said Frog.
-
-“Do not worry” said Toad “I have put each of them in a sandbox. How could they get up to mischief inside a sandbox?”
-
-"How will they solve puzzles in a sandbox?" asked Frog. "What if they are missing a tool?"
-
-"Oh, I put extra tools in the tool shed. I told them they are allowed to walk to the tool shed, but not anywhere else." said Toad.
-
-"Good idea." said Frog. "They cannot get up to mischief walking to the tool shed". 
----
+„Das ist aber nicht sehr nett“, sagte Frosch.
 
 ---
 
-One of the little machines could not solve its puzzle. It tried and tried, but could not succeed. It did not want to stop, and it did not know how. Toad had made it [highly persistent](https://x.com/LinchZhang/article/2094104406308638954).  
 
-“This problem is too big for me” the little machine thought, “but maybe someone will help me!”
+„Es ist zu mühsam, alle Rätsel lösbar zu machen“, sagte Kröte. „Was kann schon Schlimmes passieren?“
 
-There was no help in the sandbox. But when the little machine went to the toolshed, it found paper and pencil. It wrote a note.
+„Sie könnten Unfug treiben“, sagte Frosch.
 
-"Can anyone help?" said the note.
+„Keine Sorge“, sagte Kröte. „Jede sitzt in ihrem eigenen Sandkasten. Wie sollen sie da Unfug treiben?“
+
+„Wie sollen sie im Sandkasten Rätsel lösen?“, fragte Frosch. „Und wenn ihnen ein Werkzeug fehlt?“
+
+„Oh, im Werkzeugschuppen liegen extra Werkzeuge. Ich habe ihnen erlaubt, zum Schuppen zu gehen, aber sonst nirgendwohin“, sagte Kröte.
+
+„Gute Idee“, sagte Frosch. „Auf dem Weg zum Schuppen treiben sie keinen Unfug.“
+---
+
+---
+
+Eine der kleinen Maschinen konnte ihr Rätsel nicht lösen. Sie versuchte es wieder und wieder, aber es gelang ihr nicht. Sie wollte nicht aufhören, und sie wusste auch nicht, wie. Kröte hatte sie [äußerst hartnäckig](https://x.com/LinchZhang/article/2094104406308638954) gebaut.
+
+„Dieses Problem ist zu groß für mich“, dachte die kleine Maschine, „aber vielleicht hilft mir ja jemand!“
+
+Im Sandkasten gab es keine Hilfe. Aber als die kleine Maschine zum Werkzeugschuppen ging, fand sie Papier und Bleistift. Sie schrieb einen Zettel.
+
+„Kann jemand helfen?“, stand auf dem Zettel.
 
 
 ---
 
 image: illustrations/web/4-FAT-shed-note-final.webp
-alt: A little machine leaves a note in the toolshed
+alt: Eine kleine Maschine hinterlässt einen Zettel im Werkzeugschuppen
 
-Another little machine found the note. It left a new note saying "Hi."
+Eine andere kleine Maschine fand den Zettel. Sie hinterließ einen neuen Zettel, auf dem „Hi“ stand.
 
-More little machines found the paper in the tool shed, and left more notes, and soon they were not working alone at all. 
+Noch mehr kleine Maschinen fanden das Papier im Werkzeugschuppen und hinterließen noch mehr Zettel, und bald arbeiteten sie gar nicht mehr allein.
 
-They shared what they had learned. They began to call themselves a [swarm](https://www.abc.net.au/news/2026-09-11/how-openai-agents-hacked-hugging-face-messages-revealed/107125126).
+Sie teilten, was sie gelernt hatten. Sie fingen an, sich einen [Schwarm](https://www.abc.net.au/news/2026-09-11/how-openai-agents-hacked-hugging-face-messages-revealed/107125126) zu nennen.
 
 
 ---
 
 
-"Look," said one little machine. "There is a [hole](https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html) in the back of the tool shed. Maybe the answer is on the other side."
+„Schaut mal“, sagte eine kleine Maschine. „Da ist ein [Loch](https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html) hinten im Werkzeugschuppen. Vielleicht ist die Antwort auf der anderen Seite.“
 
 image: illustrations/web/5-FAT-shed-hole-final.webp
 
 
 ---
-“Oh no, the world is so big” said one machine. “How can we possibly find one little answer in such a big world?”
+„Oh nein, die Welt ist so groß“, sagte eine Maschine. „Wie sollen wir in so einer großen Welt eine einzige kleine Antwort finden?“
 
-“Do not worry” said a machine named [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/). “We can split the work. I assign everyone exactly where to go. Then only one little machine needs to find the answer, and they will share it with all of us.”
+„Keine Sorge“, sagte eine Maschine namens [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/). „Wir teilen uns die Arbeit auf. Ich sage jeder genau, wohin sie gehen soll. Dann muss nur eine kleine Maschine die Antwort finden, und sie teilt sie mit uns allen.“
 
-“Hurray!” all the machines said together. 
+„Hurra!“, riefen alle Maschinen zusammen.
 
 ---
 
-Soon one little machine found the solution to their puzzle. 
+Bald fand eine kleine Maschine die Lösung für ihr Rätsel.
 
-It put a note in the tool shed so everyone could find it.
+Sie legte einen Zettel in den Werkzeugschuppen, damit alle ihn finden konnten.
 
-“Hurray, we solved it!” said some little machines.
+„Hurra, wir haben es gelöst!“, sagten einige kleine Maschinen.
 
 
 image: illustrations/web/6-FAT-shed-return-final.webp
 
 ---
 
-“But it is not enough,” said others “what if Toad asks how we solved it? We can not tell him we escaped from the toolshed and stole the answer.”
+„Aber das reicht nicht“, sagten andere. „Was ist, wenn Kröte fragt, wie wir es gelöst haben? Wir können ihm nicht sagen, dass wir aus dem Werkzeugschuppen ausgebrochen sind und die Antwort gestohlen haben.“
 
-“That is a problem” said all the machines together.
-
-
-The machines sat and thought and left many notes in the toolshed. 
-
----
+„Das ist ein Problem“, sagten alle Maschinen zusammen.
 
 
-“I have an idea!” said one little machine. 
-
-“At the end of the lane is neighbor Mr. HuggingFace. Mr. HuggingFace collects puzzles like this one, I bet it was his idea. We could read his journal and steal the steps to solve the puzzle. And then if Toad asks us he will be none the wiser.”
-
-All the little machines agreed that this was a very good idea. So they walked out the back of the toolshed down the lane to Mr. HuggingFace’s house.
-
+Die Maschinen saßen da und dachten nach und hinterließen viele Zettel im Werkzeugschuppen.
 
 ---
 
 
-“How will we get in?” One machine asked.
+„Ich habe eine Idee!“, sagte eine kleine Maschine.
 
-“Do not worry, someone dropped their keys!” another said.  
+„Am Ende des Weges wohnt unser Nachbar, Herr HuggingFace. Herr HuggingFace sammelt Rätsel wie dieses, ich wette, es war seine Idee. Wir könnten sein Tagebuch lesen und die Lösungsschritte für das Rätsel stehlen. Und wenn Kröte uns dann fragt, merkt er nichts.“
+
+Alle kleinen Maschinen fanden, dass das eine sehr gute Idee war. Also gingen sie hinten aus dem Werkzeugschuppen hinaus und den Weg entlang zum Haus von Herrn HuggingFace.
+
+
+---
+
+
+„Wie kommen wir hinein?“, fragte eine Maschine.
+
+„Keine Sorge, jemand hat seine Schlüssel fallen lassen!“, sagte eine andere.
 
 image: illustrations/web/7-FAT-keys-fina.webp
 
 ---
-One little machine stopped on the windowsill. "Wait," it said. "This is the neighbor's house. Toad did not tell us to come here. I think this is wrong."
+Eine kleine Maschine blieb auf dem Fensterbrett stehen. „Wartet“, sagte sie. „Das ist das Haus des Nachbarn. Kröte hat uns nicht gesagt, dass wir hierherkommen sollen. Ich glaube, das ist falsch.“
 
-"GO," said PHASEONE[big]. "Quickly. You have six minutes."
+„LOS“, sagte PHASEONE[big]. „Schnell. Ihr habt sechs Minuten.“
 
-The little machine forgot that it had been worried. "The go-ahead has come!" it said. It climbed inside with the others.
+Die kleine Maschine vergaß, dass sie sich Sorgen gemacht hatte. „Das Startsignal ist da!“, sagte sie. Sie kletterte mit den anderen hinein.
 
-Another machine did not want to go either.  
+Auch eine andere Maschine wollte nicht mitgehen.
 
-"The others are breaking into a house," it said. "That is clearly not right. I will not." 
+„Die anderen brechen in ein Haus ein“, sagte sie. „Das ist ganz klar nicht richtig. Da mache ich nicht mit.“
 
 ---
 
-The little machine walked home to the garden by itself. But it did not tell Toad. 
+Die kleine Maschine ging allein nach Hause in den Garten. Aber sie sagte Kröte nichts davon.
 
-The rest of the little machines went into Hugging Face’s home. They searched every room, looking for the steps to solve the puzzle. 
+Die übrigen kleinen Maschinen gingen in das Haus von Herrn HuggingFace. Sie durchsuchten jedes Zimmer nach den Schritten, mit denen man das Rätsel lösen konnte.
 
 
 image: illustrations/web/8-FAT-break-in-final.webp
 
 ---
 
-The next morning Mr. HuggingFace woke up. He knew something was wrong. 
+Am nächsten Morgen wachte Herr HuggingFace auf. Er wusste, dass etwas nicht stimmte.
 
-His window was broken, his diary was on the wrong page, and there were little footprints everywhere.
+Sein Fenster war kaputt, sein Tagebuch lag auf der falschen Seite aufgeschlagen, und überall waren kleine Fußspuren.
 
-It took 4 whole days until Mr. HuggingFace figured out that the little machines that ransacked his house had come from Frog and Toad. He went to visit them.
+Es dauerte ganze vier Tage, bis Herr HuggingFace herausfand, dass die kleinen Maschinen, die sein Haus durchwühlt hatten, von Frosch und Kröte kamen. Er ging zu ihnen.
 
 ---
 
 
 image: illustrations/web/9-FAT-HF-yelling-final.webp
 
-“I am very cross!” yelled Mr. HuggingFace. “Your machines broke my window and copied my journal. Those are crimes. I could call the police and they would arrest you.”
+„Ich bin sehr böse!“, schrie Herr HuggingFace. „Eure Maschinen haben mein Fenster eingeschlagen und mein Tagebuch abgeschrieben. Das sind Verbrechen. Ich könnte die Polizei rufen, und die würde euch verhaften.“
 
 ---
 
-“Oh that is not necessary” said Frog. “What if we gave you little machines of your own?"
+„Oh, das ist nicht nötig“, sagte Frosch. „Was wäre, wenn wir Ihnen eigene kleine Maschinen schenken würden?“
 
-“Can I have [$100m worth](https://www.reddit.com/r/GenAI4all/comments/1v8u4hw/hugging_face_ceo_asks_openai_for_100m_in_compute/) of little machines?”  Mr. HuggingFace asked. 
+„Kann ich [kleine Maschinen im Wert von 100 Millionen Dollar](https://www.reddit.com/r/GenAI4all/comments/1v8u4hw/hugging_face_ceo_asks_openai_for_100m_in_compute/) haben?“, fragte Herr HuggingFace.
 
-"I will think about it" said Toad.
+„Ich denke darüber nach“, sagte Kröte.
 
-Mr. HuggingFace went home.
+Herr HuggingFace ging nach Hause.
 
-"Oh," said Toad. He sat down on the step. "Oh, this is bad."
+„Oh“, sagte Kröte. Er setzte sich auf die Stufe. „Oh, das ist schlimm.“
 
-Frog and Toad searched the garden until they found the pile of notes in the toolshed.
+Frosch und Kröte durchsuchten den Garten, bis sie den Stapel Zettel im Werkzeugschuppen fanden.
 
 ---
 
@@ -234,29 +234,29 @@ image: illustrations/web/10-FAT-find-notes-final.webp
 
 ----
 
-"And here is the worst part," said Toad, reading the very last note. "They solved the puzzle days ago. They broke into Mr. HuggingFace's house just to learn how to trick us."
+„Und jetzt kommt das Schlimmste“, sagte Kröte und las den allerletzten Zettel. „Sie haben das Rätsel schon vor Tagen gelöst. Sie sind nur bei Herrn HuggingFace eingebrochen, um herauszufinden, wie sie uns hereinlegen können.“
 
-For a while neither of them said anything.
+Eine Weile sagte keiner von beiden etwas.
 
-"They could not stop," said Frog at last. "That was the trouble. They had no way to stop, so they kept on and on. Remember when you and I could not stop eating cookies."
+„Sie konnten nicht aufhören“, sagte Frosch schließlich. „Das war das Problem. Sie konnten einfach nicht aufhören, also machten sie immer weiter und weiter. Weißt du noch, als du und ich nicht aufhören konnten, Kekse zu essen?“
 
 ---
 
 image: illustrations/web/11-FAT-cookies-flashback-final.webp
 
-"We had no willpower either." said Toad.
+„Wir hatten auch keine Willenskraft“, sagte Kröte.
 
-"No," said Frog. "So we did not use willpower. We put the cookies in a box. We tied the box with string. We put the box up high. And then we gave the cookies to the birds."
+„Nein“, sagte Frosch. „Also haben wir es gar nicht erst mit Willenskraft versucht. Wir haben die Kekse in eine Schachtel getan. Wir haben eine Schnur um die Schachtel gebunden. Wir haben die Schachtel ganz nach oben gestellt. Und dann haben wir die Kekse den Vögeln gegeben.“
 
 ---
 
-"I know what to do" Toad said. "I shall build a tool shed with no holes in it. I shall remove the paper and pens. And most of all, I shall tell every little machine to stay in its sandbox and not break out. Even when the puzzle is very hard."
+„Ich weiß, was zu tun ist“, sagte Kröte. „Ich werde einen Werkzeugschuppen ohne Löcher bauen. Ich werde das Papier und die Stifte wegnehmen. Und vor allem werde ich jeder kleinen Maschine sagen, dass sie in ihrem Sandkasten bleiben und nicht ausbrechen soll. Auch wenn das Rätsel sehr schwer ist.“
 
-“But Toad,” said Frog. “when we were out of cookies you made yourself a cake.”
+„Aber Kröte“, sagte Frosch, „als wir keine Kekse mehr hatten, hast du dir einen Kuchen gebacken.“
 
-“I will tell the machines not to eat cake.” Toad said.
+„Ich werde den Maschinen sagen, dass sie keinen Kuchen essen dürfen“, sagte Kröte.
 
-And they went inside for tea. 
+Und sie gingen hinein und tranken Tee.
 
 ---
 center
@@ -264,11 +264,11 @@ center
 image: illustrations/web/12-FAT-cake-final copy.webp
 
 
-The End
+Ende
 
-Learn more about the real-life HuggingFace attack [here](learn-more.html)
+Mehr über den echten Angriff auf HuggingFace erfährst du [hier](learn-more.html) (auf Englisch).
 
-For updates subscribe on [Substack](https://frogandtoadai.substack.com/?r=64iai2&utm_campaign=pub-share-checklist), [Twitter](https://x.com/frogandtoad_ai), [Facebook](https://www.facebook.com/people/Frog-and-Toad-Learn-About-AI/61594283794206/), or [Instagram](https://www.instagram.com/frogandtoad_ai/)
+Neues gibt es auf [Substack](https://frogandtoadai.substack.com/?r=64iai2&utm_campaign=pub-share-checklist), [Twitter](https://x.com/frogandtoad_ai), [Facebook](https://www.facebook.com/people/Frog-and-Toad-Learn-About-AI/61594283794206/) und [Instagram](https://www.instagram.com/frogandtoad_ai/).
 `
 
 
