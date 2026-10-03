@@ -246,7 +246,7 @@ image: illustrations/web/11-FAT-cookies-flashback-final.webp
 
 „Wir hatten auch keine Willenskraft“, sagte Kröte.
 
-„Nein“, sagte Frosch. „Also haben wir es gar nicht erst mit Willenskraft versucht. Wir haben die Kekse in eine Schachtel getan. Wir haben eine Schnur um die Schachtel gebunden. Wir haben die Schachtel ganz nach oben gestellt. Und dann haben wir die Kekse den Vögeln gegeben.“
+„Nein“, sagte Frosch. „Also haben wir es gar nicht erst mit Willenskraft versucht. Erst haben wir die Kekse in eine Schachtel getan. Dann haben wir eine Schnur um die Schachtel gebunden. Danach haben wir die Schachtel ganz nach oben gestellt. Und am Ende haben wir die Kekse den Vögeln gegeben.“
 
 ---
 
