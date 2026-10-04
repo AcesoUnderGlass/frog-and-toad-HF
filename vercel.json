@@ -1,5 +1,8 @@
 {
   "cleanUrls": true,
+  "rewrites": [
+    { "source": "/learn-more/:source", "destination": "/learn-more" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -103,6 +103,35 @@
   // like "PHASEONE[big]".
   const LINK_RE = /\[((?:[^\[\]]|\[[^\[\]]*\])+)\]\((https?:\/\/[^\s()]+|mailto:[^\s()]+|[^\s()]+\.html)\)/g;
 
+  // Where this reader came from: a utm_source if the link carried one, else the
+  // referring site, else "direct". Remembered for the tab, so switching
+  // language (which makes this site its own referrer) doesn't lose it.
+  const SOURCE = (function () {
+    const clean = (s) => (s || '').toLowerCase().replace(/^www\./, '').replace(/[^a-z0-9.-]/g, '').slice(0, 60);
+    let source = clean(new URLSearchParams(location.search).get('utm_source'));
+    if (!source) {
+      try {
+        const host = new URL(document.referrer).hostname;
+        if (host !== location.hostname) source = clean(host);
+      } catch (e) { /* no referrer */ }
+    }
+    try {
+      if (source) sessionStorage.setItem('source', source);
+      else source = sessionStorage.getItem('source');
+    } catch (e) { /* storage unavailable */ }
+    return source || 'direct';
+  })();
+
+  // The "learn more" link carries the source in its path, e.g.
+  // /learn-more/news.ycombinator.com, so Vercel Web Analytics shows which
+  // referrers led to clicks. vercel.json serves learn-more.html for all of
+  // them; a plain local server can't, so there the link is left alone.
+  const LOCAL = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+
+  function linkHref(href) {
+    return href === 'learn-more.html' && !LOCAL ? '/learn-more/' + SOURCE : href;
+  }
+
   function elText(tag, cls, text) {
     const e = document.createElement(tag);
     if (cls) e.className = cls;
@@ -111,7 +140,7 @@
     while ((m = LINK_RE.exec(text))) {
       if (m.index > last) e.appendChild(document.createTextNode(text.slice(last, m.index)));
       const a = el('a', null, m[1]);
-      a.href = m[2];
+      a.href = linkHref(m[2]);
       a.target = '_blank';
       a.rel = 'noopener noreferrer';
       e.appendChild(a);
