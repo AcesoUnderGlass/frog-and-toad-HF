@@ -414,6 +414,22 @@
     }
     updateChrome();
     prefetchNeighbours();
+    trackProgress();
+  }
+
+  // Tell Vercel Web Analytics how far readers get: one "Reached page" event
+  // for every fifth page and for the last page, each sent once per visit.
+  // A jump or deep link past several milestones counts all of them, so each
+  // number reads as "got at least this far".
+  let furthest = 0;
+  function trackProgress() {
+    const now = Math.min(cur, N - 1);
+    for (let i = furthest + 1; i <= now; i++) {
+      if (i % 5 && i !== N - 1) continue;
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+      window.va('event', { name: 'Reached page', data: { page: i, source: SOURCE } });
+    }
+    furthest = Math.max(furthest, now);
   }
 
   // Fetch the pictures on the next and previous spreads in the background so
