@@ -22,6 +22,8 @@
     illustration: 'Illustration',
     missing: 'Missing illustration: {src}',
     language: 'Language',
+    about: 'About',
+    contact: 'Contact',
   }, window.STORY_UI);
 
   function t(key, vars) {
@@ -355,7 +357,13 @@
       whereBtn.addEventListener('click', openJump);
       const place = el('span', 'place');
       place.append(el('span', 'title', story.title), el('span', 'sep', '·'), whereBtn);
-      status.replaceChildren(place);
+      const about = el('a', null, t('about'));
+      about.href = 'about.html';
+      const contact = el('a', null, t('contact'));
+      contact.href = 'contact.html';
+      const links = el('span', 'links');
+      links.append(about, el('span', 'sep', '·'), contact);
+      status.replaceChildren(links, place);
       if (langMenu) status.append(langMenu);
     }
     // The address bar is never rewritten as the reader turns pages, so copying

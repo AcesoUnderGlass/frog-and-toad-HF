@@ -351,6 +351,13 @@ body {
   padding: 0 54px;
 }
 .status .place { grid-column: 2; }
+.status .links { grid-column: 1; justify-self: start; }
+.status .links a {
+  color: inherit;
+  text-decoration: underline dotted rgba(205, 191, 164, 0.5);
+  text-underline-offset: 0.25em;
+}
+.status .links a:hover { text-decoration-color: currentColor; }
 .status .title { font-style: italic; }
 .status .sep { margin: 0 0.6em; opacity: 0.5; }
 .status .where {
@@ -406,4 +413,75 @@ body {
   /* too narrow for a separate column: the menu follows the page number */
   .status { display: block; padding: 0; }
   .status .lang { margin-left: 0.8em; }
+  .status .links { display: block; margin-top: 0.6em; }
+}
+
+/* ---------- About page: one sheet of the book's paper, free to scroll ---------- */
+
+body.about-page {
+  display: block;
+  height: auto;
+  min-height: 100%;
+  overflow: auto;
+  padding: 32px 16px;
+  -webkit-user-select: text;
+  user-select: text;
+  touch-action: auto;
+}
+.sheet {
+  max-width: 34em;
+  margin: 0 auto;
+  padding: 2.5em 2.5em 2em;
+  background: var(--paper);
+  border-radius: 6px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.sheet h1 { font-size: 1.5em; font-weight: 700; text-align: center; margin: 0; }
+.sheet .rule { width: 30%; border: 0; border-top: 1px solid #b09c78; margin: 1em auto 1.5em; }
+.sheet h2 {
+  font-size: 0.8em;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 2em 0 0.5em;
+}
+.sheet p { margin: 0 0 0.7em; }
+.sheet a { color: inherit; text-decoration: underline; text-decoration-color: var(--ink-soft); text-underline-offset: 0.15em; }
+.sheet a:hover { text-decoration-color: var(--ink); }
+.contact-form { display: flex; flex-direction: column; gap: 1em; }
+.contact-form label { display: flex; flex-direction: column; gap: 0.3em; font-size: 0.85em; color: var(--ink-soft); }
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  font: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #b09c78;
+  border-radius: 4px;
+  padding: 0.5em 0.7em;
+  resize: vertical;
+}
+.contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--ink-soft); outline-offset: 1px; }
+.contact-form .botcheck { display: none; }
+.contact-form button {
+  align-self: flex-start;
+  font: inherit;
+  color: var(--paper);
+  background: var(--desk);
+  border: 0;
+  border-radius: 4px;
+  padding: 0.5em 1.6em;
+  cursor: pointer;
+}
+.contact-form button:hover { background: var(--ink); }
+.contact-form button:disabled { opacity: 0.5; cursor: default; }
+.contact-form .form-note { margin: 0; min-height: 1.7em; font-style: italic; }
+.contact-form .form-note.error { color: #8a2f1d; }
+.sheet .back { margin: 2.2em 0 0; text-align: center; font-style: italic; }
+@media (max-width: 520px) {
+  .sheet { padding: 1.8em 1.4em 1.5em; }
 }
