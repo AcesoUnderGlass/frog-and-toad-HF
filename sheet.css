@@ -1,0 +1,156 @@
+/* The site's other pages (About, Contact, Learn more): one sheet of the
+   book's paper lying on the same desk, set in the book's Fraunces. The
+   colours and textures are the reader's (reader.css). */
+
+:root {
+  --paper: #f5eedd;
+  --paper-hi: #faf6ea;
+  --ink: #2a2318;
+  --ink-soft: #7b6c55;
+  --green: #5c6b2f;
+  --green-deep: #3f4b25;
+  --shade: 40, 26, 10;
+}
+
+* { box-sizing: border-box; }
+
+html { min-height: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 48px 16px;
+  background-color: #3b2819;
+  background-image:
+    radial-gradient(ellipse 70% 60% at 50% 42%, rgba(255, 214, 160, 0.10), rgba(10, 5, 0, 0.55) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='660' height='660'%3E%3Cfilter id='w'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.045 .0035' numOctaves='4' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .12 0 0 0 0 .07 0 0 0 0 .03 .25 0 0 0 -.06'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23w)'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: 'Fraunces', Georgia, serif;
+  font-variation-settings: 'SOFT' 100, 'WONK' 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- The sheet ---------- */
+
+.sheet {
+  position: relative;
+  isolation: isolate;
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 3.2em 3.4em 2.6em;
+  background: linear-gradient(180deg, var(--paper-hi), var(--paper) 30%, var(--paper) 85%, #f0e8d4);
+  border-radius: 3px;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 14px 28px -6px rgba(0, 0, 0, 0.55),
+    0 40px 90px -20px rgba(0, 0, 0, 0.6);
+  font-size: 17px;
+  line-height: 1.6;
+}
+/* Paper grain, as on the book's pages. */
+.sheet::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: 0.55;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .36 0 0 0 0 .22 1.1 0 0 0 -.48'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='700'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.006' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .45 0 0 0 0 .28 .9 0 0 0 -.38'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)'/%3E%3C/svg%3E");
+}
+
+/* Headings in the book's chapter-title green; the rule under the title like
+   the book's ornament, a short line with a small diamond. */
+.sheet h1 {
+  margin: 0;
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--green-deep);
+  text-wrap: balance;
+}
+.sheet .rule {
+  width: 34%;
+  height: 0.54em;
+  margin: 1em auto 1.8em;
+  border: 0;
+  opacity: 0.8;
+  background:
+    linear-gradient(var(--green), var(--green)) left center / calc(50% - 0.87em) 1px no-repeat,
+    linear-gradient(var(--green), var(--green)) right center / calc(50% - 0.87em) 1px no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M5 0L10 5L5 10L0 5Z' fill='%235c6b2f'/%3E%3C/svg%3E") center / 0.54em 0.54em no-repeat;
+}
+.sheet h2 {
+  margin: 2em 0 0.5em;
+  font-size: 0.75em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.sheet p { margin: 0 0 0.8em; text-wrap: pretty; }
+.sheet a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(var(--shade), 0.4);
+  text-underline-offset: 0.18em;
+}
+.sheet a:hover { text-decoration-color: currentColor; }
+.sheet .back { margin: 2.4em 0 0; text-align: center; font-style: italic; color: var(--ink-soft); }
+.sheet .back a { color: var(--ink); }
+
+/* ---------- Contact form ---------- */
+
+.contact-form { display: flex; flex-direction: column; gap: 1em; }
+.contact-form label { display: flex; flex-direction: column; gap: 0.3em; font-size: 0.85em; color: var(--ink-soft); }
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  font: inherit;
+  font-size: 16px;   /* no zooming in on phones */
+  color: var(--ink);
+  background: rgba(255, 252, 244, 0.6);
+  border: 1px solid rgba(var(--shade), 0.28);
+  border-radius: 3px;
+  padding: 0.5em 0.7em;
+  resize: vertical;
+}
+.contact-form input:focus,
+.contact-form textarea:focus { outline: 2px solid rgba(92, 107, 47, 0.55); outline-offset: 1px; border-color: transparent; }
+.contact-form .botcheck { display: none; }
+.contact-form button {
+  align-self: flex-start;
+  font: inherit;
+  font-weight: 600;
+  color: var(--paper-hi);
+  background: var(--green-deep);
+  border: 0;
+  border-radius: 3px;
+  padding: 0.5em 1.6em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.contact-form button:hover { background: #323d1d; }
+.contact-form button:focus-visible { outline: 2px solid rgba(92, 107, 47, 0.55); outline-offset: 2px; }
+.contact-form button:disabled { opacity: 0.5; cursor: default; }
+.contact-form .form-note { margin: 0; min-height: 1.6em; font-style: italic; }
+.contact-form .form-note.error { color: #8a2f1d; }
+
+/* ---------- Learn more: a short note while it forwards ---------- */
+
+.sheet.note { max-width: 26rem; margin-top: 18vh; text-align: center; }
+.sheet.note p { margin: 0; }
+
+/* ---------- Phones ---------- */
+
+@media (max-width: 560px) {
+  body { padding: 16px 8px; }
+  .sheet { padding: 2.2em 1.4em 1.8em; font-size: 16px; }
+  .sheet h1 { font-size: 1.75em; }
+}
