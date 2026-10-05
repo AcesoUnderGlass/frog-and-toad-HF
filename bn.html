@@ -37,24 +37,42 @@
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..600,100,0..1;1,9..144,400..600,100,0..1&display=swap" rel="stylesheet">
+<!-- The cover art, fetched first thing: the closed book shows it. AVIF at
+     two sizes (illustrations/web/cover-*.avif, made by
+     tools/make-web-images.py from the picture named in data-cover), chosen by
+     its width on screen (see layout() in reader.js; the art is about 1.19
+     pages wide). reader.js takes the cover's srcset and sizes from here. -->
+<link rel="preload" id="coverArt" as="image" type="image/avif" fetchpriority="high"
+  imagesrcset="illustrations/web/cover-1200.avif 1200w, illustrations/web/cover-1600.avif 1600w"
+  imagesizes="(max-width: 560px) min(119vw - 12px, 89vh - 48px), (max-width: 759px) or (max-aspect-ratio: 21/20) min(119vw - 291px, 89vh - 66px), min(60vw - 134px, 89vh - 66px)"
+  data-cover="illustrations/web/1-FAT-title-final.webp">
+<link rel="stylesheet" href="pageturn.css">
+<link rel="stylesheet" href="reader.css">
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
-<main id="app">
-  <div class="book-wrap">
-    <button class="nav prev" id="btnPrev" aria-label="Previous page" title="Previous page (←)">&#8249;</button>
-    <div class="book single" id="book" aria-live="polite">
-      <div class="page left" id="pageL"></div>
-      <div class="page right" id="pageR"></div>
-    </div>
-    <button class="nav next" id="btnNext" aria-label="Next page" title="Next page (→)">&#8250;</button>
+<main class="desk">
+  <button class="nav prev" id="btnPrev" type="button" aria-label="Previous page" title="Previous page (←)">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <div class="book spread" id="book" aria-live="polite">
+    <div class="page-block" aria-hidden="true"></div>
+    <div class="page left" id="pageL"></div>
+    <div class="page right" id="pageR"></div>
   </div>
-  <div class="status" id="status"></div>
+  <button class="nav next" id="btnNext" type="button" aria-label="Next page" title="Next page (→)">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+  <footer class="status" id="status"></footer>
+  <button class="fullscreen" id="btnFull" type="button" aria-label="Full screen" title="Full screen (F)" hidden>
+    <svg class="enter" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg>
+    <svg class="exit" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M20 9h-5V4M15 20v-5h5M4 15h5v5"/></svg>
+  </button>
 </main>
 <script src="story-bn.js"></script>
 <script src="illustrations/web/sizes.js"></script>
-<script src="app.js"></script>
+<script src="pageturn.js"></script>
+<script src="reader.js"></script>
 </body>
 </html>
