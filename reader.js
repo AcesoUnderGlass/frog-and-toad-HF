@@ -802,8 +802,8 @@
   cur = clamp(hash ? +hash[1] : 0);
   if (skipped(cur)) cur = FIRST;
   mode = '';
-  // Under the closed cover: the edges of the pages and the book's shadow on the
-  // desk. It fades as the cover lifts (see .cover-edge).
+  // Under the closed cover: the edges of the pages. They fade as the cover
+  // lifts (see .cover-edge).
   const coverEdge = el('div', 'cover-edge');
   coverEdge.setAttribute('aria-hidden', 'true');
   book.append(coverEdge);

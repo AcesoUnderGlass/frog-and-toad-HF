@@ -99,10 +99,7 @@ body {
     var(--cloth);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.06),
-    inset 0 0 0 1px rgba(0, 0, 0, 0.25),
-    0 1px 2px rgba(0, 0, 0, 0.5),
-    0 14px 28px -6px rgba(0, 0, 0, 0.55),
-    0 40px 90px -20px rgba(0, 0, 0, 0.6);
+    inset 0 0 0 1px rgba(0, 0, 0, 0.25);
 }
 .book.single { --board-spine: 6px; }
 .book.single::before {
@@ -770,8 +767,8 @@ body {
   background-size: 100% var(--edge), 100% var(--edge), 0 0, var(--edge) 100%, auto;
 }
 
-/* Under the closed cover: the fore-edge, seen a little from the right, and
-   the book's shadow on the desk. Gone as soon as the cover lifts. As on a
+/* Under the closed cover: the fore-edge, seen a little from the right. Gone
+   as soon as the cover lifts. As on a
    real hardcover (and as the open book shows), the boards overhang the pages,
    so the page block shows only between the front and back boards' edges,
    set back from the top and bottom by the overhang. */
@@ -787,14 +784,11 @@ body {
     /* Each page line is shrunk by 4px all round (the overhang) and shifted
        right by 4px more, so it shows as a strip set back top and bottom. */
     6px 0 0 -4px #ebe2cb, 7px 0 0 -4px #cbbd9d, 8px 0 0 -4px #e6dbc2, 9px 0 0 -4px #c6b896, 10px 0 0 -4px #e0d4b8,
-    7px 0 0 #222b19, 8px 0 0 #2a3420,
-    0 1px 2px rgba(0, 0, 0, 0.5),
-    4px 16px 28px -6px rgba(0, 0, 0, 0.55),
-    4px 44px 90px -20px rgba(0, 0, 0, 0.6);
+    7px 0 0 #222b19, 8px 0 0 #2a3420;
 }
 .book.single .cover-edge { left: calc(-1 * var(--board-spine)); }
 
-/* The status line and the arrows sit above the book's shadow on the desk. */
+/* The status line and the arrows sit above the book. */
 .status,
 .nav { position: relative; z-index: 1; }
 
@@ -837,8 +831,6 @@ body {
     box-shadow:
       1px 1px 0 #2b2618,
       2px 2px 0 #e6dbc2, 3px 3px 0 #c6b896,
-      4px 4px 0 #222b19,
-      0 1px 2px rgba(0, 0, 0, 0.5),
-      2px 12px 24px -6px rgba(0, 0, 0, 0.55);
+      4px 4px 0 #222b19;
   }
 }
