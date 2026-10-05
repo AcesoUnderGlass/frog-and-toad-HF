@@ -606,11 +606,15 @@ body {
    turns), and the slide, the status line and the arrows all follow it. */
 .desk { --open: 1; }
 :root {
-  /* The front board is a page wide plus the overhang at the fore-edge. Shut,
-     the book slides left by half a page plus half of that overhang and of the
-     page edges showing beneath, so the cover is centred on the desk. */
+  /* Shut, the book takes up just what the open book's boards do: the front
+     board is set in from the back board's edges (--cover-in, at the
+     fore-edge; on phones at the foot too) by the page edges and the strip of
+     back board showing beyond it (see .cover-edge). The book slides left by
+     half a page and half the overhang, so the cover is centred on the desk. */
+  --cover-in: 8px;
+  --cover-in-foot: 0px;
   --cover-w: calc(var(--page-w) + var(--board-side));
-  --closed-shift: calc(var(--page-w) / -2 - 12px);
+  --closed-shift: calc(var(--page-w) / -2 - var(--board-side) / 2);
   --cloth-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9 .45' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.2 0 0 0 -.45'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E");
 }
 
@@ -635,7 +639,7 @@ body {
    cropped a little at the sides. */
 .cover-front {
   position: absolute;
-  inset: calc(-1 * var(--board-top)) calc(-1 * var(--board-side)) calc(-1 * var(--board-bottom)) calc(-1 * var(--board-spine, 0px));
+  inset: calc(-1 * var(--board-top)) calc(var(--cover-in) - var(--board-side)) calc(var(--cover-in-foot) - var(--board-bottom)) calc(-1 * var(--board-spine, 0px));
   overflow: hidden;
   container-type: size;
   isolation: isolate;
@@ -775,7 +779,7 @@ body {
 .cover-edge {
   position: absolute;
   z-index: 1;
-  inset: calc(-1 * var(--board-top)) calc(-1 * var(--board-side)) calc(-1 * var(--board-bottom)) 50%;
+  inset: calc(-1 * var(--board-top)) calc(var(--cover-in) - var(--board-side)) calc(var(--cover-in-foot) - var(--board-bottom)) 50%;
   border-radius: 2px 5px 5px 2px;
   pointer-events: none;
   opacity: clamp(0, 1 - 8 * var(--open), 1);
@@ -817,11 +821,21 @@ body {
      the language menu and the counter beneath it. */
   pointer-events: none;
 }
-.book.spread ~ .nav.next { translate: calc((1 - var(--open)) * (var(--closed-shift) + 8px)) 0; }
+.book.spread ~ .nav.next { translate: calc((1 - var(--open)) * var(--closed-shift)) 0; }
 .desk:has(.book.spread) .nav.prev { translate: calc((1 - var(--open)) * (var(--closed-shift) + var(--page-w) + var(--board-side))) 0; }
+
+/* The front board as it lifts: the leaf is the boards' full size (so it
+   lands exactly on the open book's left board, inside up), but the front is
+   drawn set in, as it is shut, so lifting it changes nothing. (Its width and
+   height are set inline by pageturn.js, hence !important.) */
+.pt-leaf .cover-front {
+  width: calc(100% - var(--cover-in)) !important;
+  height: calc(100% - var(--cover-in-foot)) !important;
+}
 
 /* Phones: thin boards (see --board-* above) and a thinner book. */
 @media (max-width: 560px) {
+  :root { --cover-in: 4px; --cover-in-foot: 4px; }
   .cover-front { border-radius: 1px 3px 3px 1px; }
   .cover-edge {
     border-radius: 1px 3px 3px 1px;
