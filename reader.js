@@ -691,9 +691,13 @@
       // reader.css), so the type can be as large as possible.
       w = Math.min(vw - 16, (vh - 62) * 0.75);
     } else {
-      const availW = vw - 200 - 64;     // both arrows and their margins
-      const availH = vh - 100;          // boards, status line and breathing room
+      // Both arrows and their margins. On one page they're narrow and close
+      // in (26px wide, 10px from the window's edge, 8px clear of the boards'
+      // wider overhang, 15px; see .desk:has(.book.single) .nav in
+      // reader.css), so the page stays large.
       const pagesAcross = newMode === 'spread' ? 2 : 1;
+      const availW = vw - (pagesAcross === 2 ? 200 + 64 : 2 * (26 + 10 + 8 + 15));
+      const availH = vh - 100;          // boards, status line and breathing room
       w = Math.min(availW / pagesAcross, availH * 0.75);
     }
     // A leaf is sized for the old layout; if that changes, finish the turn.

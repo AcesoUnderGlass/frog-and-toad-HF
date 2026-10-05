@@ -433,6 +433,12 @@ body {
 }
 .nav.prev { grid-column: 1; justify-self: end; margin-right: 34px; }
 .nav.next { grid-column: 3; justify-self: start; margin-left: 34px; }
+/* On one page, narrow upright pills close in, each the same distance from
+   the page (8px clear of the boards' wider overhang, at the fore-edge), so
+   the page can take the width. layout() in reader.js reserves exactly this. */
+.desk:has(.book.single) .nav { width: 26px; height: 52px; border-radius: 13px; }
+.desk:has(.book.single) .nav.prev { margin-right: calc(var(--board-side) + 8px); }
+.desk:has(.book.single) .nav.next { margin-left: calc(var(--board-side) + 8px); }
 .nav svg {
   width: 20px;
   height: 20px;
