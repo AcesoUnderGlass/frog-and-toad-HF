@@ -654,8 +654,12 @@
       // On one page the back of the sheet is blank, the print showing through.
       return { front, back, through: mode === 'spread' ? 0 : 0.07 };
     },
+    // The book only starts sliding once the cover is properly turning: lifting
+    // a corner (a hover peek at either end) leaves it where it is.
     onProgress(p, { lo }) {
-      if (lo === 0) desk.style.setProperty('--open', p.toFixed(4));
+      if (lo !== 0) return;
+      const k = Math.min(1, Math.max(0, (p - 0.1) / 0.8));
+      desk.style.setProperty('--open', (k * k * (3 - 2 * k)).toFixed(4));
     },
     onChange(o) {
       cur = o;
