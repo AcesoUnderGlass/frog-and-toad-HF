@@ -29,6 +29,7 @@ German edition).
 | `pageturn.js`, `pageturn.css` | The page turns (the leaf, its shading and shadows, dragging). Knows nothing of the story. |
 | `about.html`, `contact.html`, `learn-more.html`, `sheet.css` | The other pages, each a sheet of the book's paper on the same desk. |
 | `illustrations/` | The pictures (see "Illustrations for the web"). |
+| `tests/` | Browser tests for the reader (see `tests/README.md`). |
 
 ## Turning pages
 
@@ -153,3 +154,9 @@ It needs Pillow, NumPy, and WebP support in Pillow, and for the cover AVIFs
 a new `COVER_PLACEHOLDER` for `reader.js`. If the cover art changes, check the
 cover too: how the art is cropped to the board, and where the title and
 credits sit on it, are set for this picture in `reader.css` (`.cover-front`).
+
+## Testing
+
+`tests/` has browser tests for the reader (page turns, the cover, the
+editions), run with Playwright against the site served from this folder. They
+aren't part of the site; see `tests/README.md`.
