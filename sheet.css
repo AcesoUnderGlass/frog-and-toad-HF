@@ -147,10 +147,45 @@ body {
 .sheet.note { max-width: 26rem; margin-top: 18vh; text-align: center; }
 .sheet.note p { margin: 0; }
 
+/* ---------- The plain edition: the whole story down one sheet ---------- */
+
+.sheet.story { max-width: 40rem; font-size: 19px; }
+.sheet.story .byline { margin: 0.8em 0 0; text-align: center; font-style: italic; color: var(--ink-soft); }
+.sheet.story .byline p { margin: 0; }
+.sheet.story .byline a { color: var(--ink); }
+.sheet.story p { margin: 0 0 0.9em; }
+.sheet.story figure { margin: 1.8em 0; text-align: center; }
+.sheet.story figure img { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+.sheet.story figcaption { margin-top: 0.5em; font-size: 0.85em; font-style: italic; color: var(--ink-soft); }
+.sheet.story .missing {
+  padding: 2em 1em;
+  border: 1px dashed rgba(var(--shade), 0.4);
+  font-size: 0.85em;
+  color: var(--ink-soft);
+}
+.sheet.story .chapter { margin: 3em 0 1.6em; text-align: center; }
+.sheet.story .chapter .kicker {
+  font-size: 0.75em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.sheet.story .chapter h2 {
+  margin: 0.2em 0 0;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--green-deep);
+}
+.sheet.story .center { margin-top: 2em; text-align: center; }
+.sheet.story .center figure + p { font-weight: 600; font-size: 1.25em; }
+
 /* ---------- Phones ---------- */
 
 @media (max-width: 560px) {
   body { padding: 16px 8px; }
   .sheet { padding: 2.2em 1.4em 1.8em; font-size: 16px; }
   .sheet h1 { font-size: 1.75em; }
+  .sheet.story { font-size: 17px; }
 }

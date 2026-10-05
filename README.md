@@ -27,6 +27,7 @@ German edition).
 | `languages.js` | The editions, for the language menu. |
 | `reader.js`, `reader.css` | The reader: the desk, the book and its cover, laying out the pages, the status line under the book. |
 | `pageturn.js`, `pageturn.css` | The page turns (the leaf, its shading and shadows, dragging). Knows nothing of the story. |
+| `simple.html`, `simple.js` | The plain edition (`/simple` on the site): the whole English story down one sheet, with no book, cover or page turns. Reads the same `story.js`. |
 | `about.html`, `contact.html`, `learn-more.html`, `sheet.css` | The other pages, each a sheet of the book's paper on the same desk. |
 | `illustrations/` | The pictures (see "Illustrations for the web"). |
 | `tests/` | Browser tests for the reader (see `tests/README.md`). |

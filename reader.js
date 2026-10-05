@@ -470,15 +470,17 @@
       const o = el('option', null, e.name);
       o.value = e.href;
       o.lang = e.lang;
-      o.selected = e.lang === LANG;
+      // The plain edition (simple.html) is never the page being read here.
+      o.dataset.plain = e.plain ? '1' : '';
+      o.selected = e.lang === LANG && !e.plain;
       langMenu.append(o);
     }
     langMenu.addEventListener('change', () => {
-      const page = shownPage();
+      const page = langMenu.selectedOptions[0].dataset.plain ? 0 : shownPage();   // the plain edition has no pages
       location.href = langMenu.value + (page ? '#p' + page : '');
     });
     // Coming Back to this page: show its own language again.
-    window.addEventListener('pageshow', () => { for (const o of langMenu.options) o.selected = o.lang === LANG; });
+    window.addEventListener('pageshow', () => { for (const o of langMenu.options) o.selected = o.lang === LANG && !o.dataset.plain; });
   }
 
   // The arrows, the status line (links, title, page counter) and the address
