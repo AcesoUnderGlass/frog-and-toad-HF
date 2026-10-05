@@ -62,6 +62,11 @@ body {
   grid-template-rows: 1fr auto;
   align-items: center;
   padding: 20px 0 14px;
+  /* Nothing may reach past the window: on a phone, anything wider (the
+     status line's title, before reader.js has measured it) makes the
+     browser lay the page out wider and zoom it out, and the book is then
+     sized for that wider page. */
+  overflow: hidden;
 }
 
 /* ---------- Book ---------- */

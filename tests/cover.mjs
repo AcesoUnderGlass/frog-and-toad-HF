@@ -104,8 +104,12 @@ await p.keyboard.press('End');
 t.state('End', await settled(p), 'Pages 23–24');
 
 // A phone: one page at a time; the cover lifts off to the left like a page.
-p = await book({ page: 0, width: 390, height: 844 });
+p = await book({ page: 0, width: 390, height: 844, isMobile: true, hasTouch: true });
 t.state('phone: shut', await settled(p), 'Cover');
+// Anything wider than the phone makes the browser lay the page out wider and
+// zoom it out (the book is then sized for the wider page).
+const phoneWidth = await p.evaluate(() => [innerWidth, document.documentElement.scrollWidth]);
+t.check('phone: laid out at the phone\'s width, not zoomed out', phoneWidth.every(v => v === 390), JSON.stringify(phoneWidth));
 await p.keyboard.press('ArrowRight');
 t.state('phone: opens onto the first page', await settled(p), 'Page 3');
 await p.keyboard.press('ArrowLeft');
