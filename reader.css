@@ -324,6 +324,9 @@ body {
 
 /* Centred pages centre everything on them, pictures included. */
 .page-content.center { justify-content: center; text-align: center; }
+/* The line under the last page's picture ("The End", "Ende") stands out a
+   little: the body face, a touch larger and semibold. */
+.page-content.center figure + p { font-weight: 600; font-size: 1.25em; margin-block: 0.15em 0.3em; }
 
 /* Ornament: a short rule with a small diamond. */
 .ornament {
