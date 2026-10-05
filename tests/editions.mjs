@@ -156,5 +156,22 @@ for (const [url, page, width, height] of [[BASE, 0, 1440, 820], [BASE, 6, 1440, 
   t.check(`status line clickable (${new URL(url).pathname} p${page}, ${width}px)`, !blocked.length, JSON.stringify(blocked));
 }
 
+// Narrowing the window, the title gives way before it reaches the parts
+// beside it (a resize measures it twice; hidden, it must not seem to fit).
+p = await openBook(browser, { page: 4, width: 1500, height: 820 });
+pages.push(p);
+const overlaps = [];
+for (let w = 1500; w >= 780; w -= 40) {
+  await p.setViewportSize({ width: w, height: 820 });
+  await p.waitForTimeout(120);
+  if (await p.evaluate(() => {
+    const s = document.getElementById('status'), title = s.querySelector('.title');
+    if (!title || getComputedStyle(title).display === 'none') return false;
+    const r = new Range(); r.selectNodeContents(title); const tr = r.getBoundingClientRect();
+    return [...s.children].filter(c => c !== title).some(c => { const o = c.getBoundingClientRect(); return o.right > tr.left && o.left < tr.right; });
+  })) overlaps.push(w);
+}
+t.check('title never overlaps while narrowing the window', !overlaps.length, JSON.stringify(overlaps));
+
 t.done(...pages);
 await browser.close();

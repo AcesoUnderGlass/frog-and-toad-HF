@@ -543,6 +543,8 @@
     const sides = [...status.children].filter(c => c !== title).map(c => c.getBoundingClientRect().width);
     const gap = parseFloat(getComputedStyle(status).columnGap) || 0;
     if (mode === 'spread') {
+      // Measured shown: hidden, it has no width, and would seem to fit.
+      status.classList.remove('no-title');
       const text = document.createRange();
       text.selectNodeContents(title);
       // (Measured against the open book: shut, the title isn't shown.)
