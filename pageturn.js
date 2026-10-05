@@ -427,9 +427,9 @@ function createPageTurner(root, options) {
   // Which way the page under a mouse pointer would turn if dragged: 1 from the
   // outer edge of the right-hand page, -1 from that of the left-hand page (or,
   // on one page, from the spine), otherwise 0. While a page is already lifted
-  // (held = its direction) the zone reaches a third further in, so a pointer
-  // resting on the boundary doesn't flick the page up and down. The grab
-  // cursor shows exactly where this says a page can be taken.
+  // (held = its direction) the zone reaches nearly half again further in, so
+  // a pointer resting on the boundary doesn't flick the page up and down. The
+  // grab cursor shows exactly where this says a page can be taken.
   function grabZone(e, held = anim?.peek || 0) {
     const r = root.getBoundingClientRect(), W = pageW();
     const x = e.clientX - r.left;

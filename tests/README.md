@@ -27,7 +27,7 @@ Vercel, is stubbed out.
 | `cover.mjs` | The closed book: opening and shutting, turning back mid-way, dragging the cover open and shut, rapid input across it; `--open` and what follows it (the book's slide, the status line); the reading order (contents and title pages skipped, `#pN` links); a phone. |
 | `flash.mjs` | No dark flashes: a leaf's shadow is never drawn without a leaf showing over it, watched on every DOM change, frame by frame, while the mouse jiggles over the edges where pages and the cover lift, and through turns. |
 | `landing.mjs` | Every frame of a turn: the print on the leaf (projected on screen) must end exactly where the page it becomes is drawn, so the swap is invisible. Spreads and a phone, both ways, and the cover. |
-| `editions.mjs` | The German edition: its cover title ("Frosch und Kröte" on one line) and translator credit, its interface words, its „ quotes hanging in the margin. The language menu keeps the page being read (both ways, and on a phone). About and Contact open from under both books and lead back. The book also works opened straight from a file. |
+| `editions.mjs` | The German edition: its cover title ("Frosch und Kröte" on one line) and translator credit, its interface words, its „ quotes (not hung in the margin). The language menu keeps the page being read (both ways, and on a phone). About and Contact open from under both books and lead back. The book also works opened straight from a file. |
 
 Options, as environment variables:
 

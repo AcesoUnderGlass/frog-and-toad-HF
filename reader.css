@@ -24,6 +24,8 @@
   --board-top: 9px;
   --board-side: 15px;
   --board-bottom: 17px;
+  /* The boards' cloth: a fine woven grain, laid over --cloth. */
+  --cloth-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9 .45' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.2 0 0 0 -.45'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E");
 }
 
 * { box-sizing: border-box; }
@@ -93,7 +95,7 @@ body {
   border-radius: 5px;
   background:
     linear-gradient(90deg, transparent 47%, rgba(0, 0, 0, 0.35) 50%, transparent 53%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9 .45' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.2 0 0 0 -.45'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E"),
+    var(--cloth-grain),
     var(--cloth);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.06),
@@ -107,7 +109,7 @@ body {
   inset: calc(-1 * var(--board-top)) calc(-1 * var(--board-side)) calc(-1 * var(--board-bottom)) calc(-1 * var(--board-spine));
   background:
     linear-gradient(90deg, rgba(0, 0, 0, 0.35), transparent 4%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9 .45' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.2 0 0 0 -.45'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E"),
+    var(--cloth-grain),
     var(--cloth);
 }
 
@@ -231,16 +233,13 @@ body {
   left: 0;
   right: auto;
   visibility: hidden;
-  pointer-events: none;
-  z-index: 1;
-  box-shadow: none;
 }
 
 /* ---------- Page content ---------- */
 
 .page-content {
-  /* No z-index here: the content must share the page's stacking context so
-     the illustrations can multiply onto the paper beneath. */
+  /* No z-index here: the content shares the page's stacking context, so
+     the gutter shading (.page::after, z-index 2) draws over it. */
   position: relative;
   height: 100%;
   padding: 11% 11% 15%;
@@ -545,11 +544,10 @@ body {
    reader.js), with thin boards, tighter margins and a larger base type
    size, so the type can be as big as the longest page allows. */
 @media (max-width: 560px) {
-  :root { --fs-base: 0.045; }
+  :root { --fs-base: 0.045; --board-top: 3px; --board-side: 4px; --board-bottom: 5px; }
   /* Book and status line centred together, the status right under the page. */
   .desk { padding: 10px 0 calc(10px + env(safe-area-inset-bottom)); grid-template-rows: auto auto; align-content: center; }
   .nav { display: none; }
-  :root { --board-top: 3px; --board-side: 4px; --board-bottom: 5px; }
   .book.single { --board-spine: 3px; }
   .book::before, .book.single::before { border-radius: 3px; }
   .single .page.right { border-radius: 0 2px 2px 0; }
@@ -617,7 +615,6 @@ body {
   --cover-in-foot: 0px;
   --cover-w: calc(var(--page-w) + var(--board-side));
   --closed-shift: calc(var(--page-w) / -2 - var(--board-side) / 2);
-  --cloth-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9 .45' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.2 0 0 0 -.45'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E");
 }
 
 .book.spread { translate: calc((1 - var(--open)) * var(--closed-shift)) 0; }
@@ -629,7 +626,7 @@ body {
 
 /* The front board in the right-hand page's place: board-sized, so it covers
    the boards' overhang too, and printed rather than paper. */
-.page:has(> .cover-front) { overflow: visible; background: none; box-shadow: none; }
+.page:has(> .cover-front) { overflow: visible; background: none; }
 .page:has(> .cover-front)::before,
 .page:has(> .cover-front)::after { content: none; }
 

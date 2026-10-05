@@ -38,10 +38,6 @@
     return UI[key].replace(/\{(\w+)\}/g, (m, name) => (vars && name in vars ? vars[name] : m));
   }
 
-  // The book is set in one family, Fraunces (loaded in index.html), scaled so
-  // its lowercase is as tall as the original site's Libre Baskerville's
-  // (x-heights 0.530 and 0.468 of the size): --x-scale in reader.css.
-
   // Each illustration's drawn frame sits inside a transparent margin. This is
   // that margin's left width, as a percent of the image width (measured from
   // the alpha channel), so a picture can be shifted to line its frame up with
@@ -485,9 +481,8 @@
     window.addEventListener('pageshow', () => { for (const o of langMenu.options) o.selected = o.lang === LANG; });
   }
 
-  // Three parts across the width of the book: About, Contact and the language
-  // menu at its left edge, the title centred, the page counter at its right
-  // edge.
+  // The arrows, the status line (links, title, page counter) and the address
+  // bar, for the page now showing or being turned to.
   function updateChrome() {
     btnPrev.disabled = neighbour(cur, -1) == null;
     btnNext.disabled = neighbour(cur, 1) == null;
@@ -521,7 +516,7 @@
   }
 
   // On a narrow spread the title would run into the parts beside it, so it
-  // goes (as it does on one page); on a narrow phone, the page counter goes
+  // goes (as it does on one page); on a narrow page, the page counter goes
   // under the links.
   function fitStatus() {
     const title = status.querySelector('.title');
@@ -547,7 +542,7 @@
     const form = el('form', 'jump');
     const input = el('input');
     Object.assign(input, { type: 'number', inputMode: 'numeric', min: 0, max: N - 1 });
-    input.value = mode === 'spread' ? Math.max(0, cur - 1) : cur;
+    input.value = shownPage();
     input.setAttribute('aria-label', t('jumpLabel', { total: N - 1 }));
     form.append(t('jumpBefore'), input, t('jumpAfter', { total: N - 1 }));
     let closed = false;
@@ -617,12 +612,14 @@
 
   const turn = (dir, opts) => turner.turn(dir, opts);
 
+  // A length set in CSS (a custom property or a property), in px.
+  const cssPx = (cs, name) => parseFloat(cs.getPropertyValue(name)) || 0;
+
   // How far the boards reach beyond the pages (custom properties in
   // reader.css): the front board turns as one stiff, board-sized leaf.
   function boardOverhang() {
     const cs = getComputedStyle(book);
-    const px = name => parseFloat(cs.getPropertyValue(name)) || 0;
-    return { top: px('--board-top'), right: px('--board-side'), bottom: px('--board-bottom'), left: mode === 'spread' ? 0 : px('--board-spine') };
+    return { top: cssPx(cs, '--board-top'), right: cssPx(cs, '--board-side'), bottom: cssPx(cs, '--board-bottom'), left: mode === 'spread' ? 0 : cssPx(cs, '--board-spine') };
   }
 
   const turner = createPageTurner(book, {
@@ -687,11 +684,10 @@
       // includes the iPhone's safe area at the bottom), the boards and the
       // status line, so nothing ever has to scroll.
       newMode = 'single';
-      const px = (cs, name) => parseFloat(cs.getPropertyValue(name)) || 0;
       const d = getComputedStyle(desk), root = getComputedStyle(document.documentElement);
-      const room = Math.min(vh, desk.clientHeight) - px(d, 'padding-top') - px(d, 'padding-bottom')
-        - px(root, '--board-top') - px(root, '--board-bottom')
-        - statusH - px(getComputedStyle(status), 'margin-top') - 2;
+      const room = Math.min(vh, desk.clientHeight) - cssPx(d, 'padding-top') - cssPx(d, 'padding-bottom')
+        - cssPx(root, '--board-top') - cssPx(root, '--board-bottom')
+        - statusH - cssPx(getComputedStyle(status), 'margin-top') - 2;
       w = Math.min(vw - 16, room * 0.75);
     } else {
       // Room for both arrows: on one page they're narrow pills close in (26px
