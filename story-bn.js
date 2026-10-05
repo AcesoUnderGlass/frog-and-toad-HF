@@ -1,6 +1,5 @@
 // ============================================================
 //  BENGALI TRANSLATION of story.js. Shown by bn.html.
-//  PLACEHOLDER: the text below is still the English, waiting for a translator.
 //
 //  Translate:
 //    - the story text (plain lines)
@@ -49,7 +48,7 @@ window.STORY = `
 title: Frog and Toad and the Increasingly Capable Machines
 author: written by [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
 artist: drawn by [HungerArtist](https://www.deviantart.com/hungerartist)
-translator: translated by [Translator name](https://example.com)
+translator: translated by [তাজিক](https://tazik.sh)
 cover-image: illustrations/web/1-FAT-title-final.webp
 
 ---
@@ -65,58 +64,58 @@ alt: Frog and Toad see their neighbor walk by with a pile of papers
 
 ---
 
-Frog and Toad sat on their front porch. 
+ব্যাঙ এবং ভেক বাড়ির সামনে বসে আছে।
 
-Their neighbor, Mr. HuggingFace, walked by. He carried a lot of papers. Each paper had a puzzle on it.
+তাদের প্রতিবেশী, HuggingFace সাহেব, পাশ দিয়ে হেঁটে গেল। তার হাতে ছিল অনেকগুলো কাগজ। প্রতিটি কাগজের উপর একটি করে ধাঁধা ছিল।
 
-"You must be very busy." said Frog.
+"HuggingFace সাহেব, ব্যস্ত বোধহয়?" ব্যাঙ জিজ্ঞেস করল।
 
-"Yes" said Mr. HuggingFace. "I have collected all these puzzles so I can share them."
+"হ্যাঁ। আমি এই ধাঁধাগুলো বিতরণ করব," HuggingFace সাহেব বলল।
 
-"I like puzzles" said Toad. "Can I try them?"
+"ধাঁধা আমার খুব প্রিয়। মেলাতে পারি?" ভেক জিজ্ঞেস করল।
 
-"You cannot. These puzzles are for little machines, not people" said Mr. HuggingFace. 
+"এগুলো তোমার জন্য নয়। এই ধাঁধাগুলো ছোট্ট ছোট্ট যন্ত্রদের জন্য, মানুষের জন্য নয়," HuggingFace সাহেব বললেন।
 
-Mr. HuggingFace walked away.
+তা বলে তিনি হেঁটে চলে গেলেন।
 
-"Hmmm...." said Toad.
+ব্যাঙ খুব চিন্তায় পড়ে গেল।
 
 
 ---
 image: illustrations/web/3-FAT-Machines-Sandboxes-final.webp
 alt: Toad puts many small machines in individual sandboxes
 
-The next morning Toad built a great many little machines and set them out in the garden, each in its own sandbox.
+পরের দিন সকালে ব্যাঙ অনেকগুলো যন্ত্র বানাল, আর তাদেরকে বাগানে ছেড়ে দিল, প্রত্যেকটি নিজেদের বালুর ঘরে।
 
-"I have given each little machine a puzzle," said Toad. "The puzzles are very hard. Some of them cannot be solved at all."
+ভেক বলল, "আমি প্রতিটি ছোট্ট যন্ত্রকে একটি করে ধাঁধা দিয়েছি। ধাঁধাগুলো বড় কড়া। এমনকি, কিছু ধাঁধা মেলানো অসম্ভব।"
 
-"That does not seem kind." said Frog.
-
----
-
-
-"It is too hard to make all the puzzles solvable." said Toad "What is the worst that could happen?”
-
-"They could get up to mischief" said Frog.
-
-“Do not worry” said Toad “I have put each of them in a sandbox. How could they get up to mischief inside a sandbox?”
-
-"How will they solve puzzles in a sandbox?" asked Frog. "What if they are missing a tool?"
-
-"Oh, I put extra tools in the tool shed. I told them they are allowed to walk to the tool shed, but not anywhere else." said Toad.
-
-"Good idea." said Frog. "They cannot get up to mischief walking to the tool shed". 
----
+"তা তো ভালো কাজ হচ্ছে না," ব্যাঙ বলল।
 
 ---
 
-One of the little machines could not solve its puzzle. It tried and tried, but could not succeed. It did not want to stop, and it did not know how. Toad had made it [highly persistent](https://x.com/LinchZhang/article/2094104406308638954).  
 
-“This problem is too big for me” the little machine thought, “but maybe someone will help me!”
+"কিছু ধাঁধা তো মেলানোই যায় না," ভেক বলল। "কী আর হবে?"
 
-There was no help in the sandbox. But when the little machine went to the toolshed, it found paper and pencil. It wrote a note.
+"তারা দুষ্টুমি করতে পারে।"
 
-"Can anyone help?" said the note.
+"চিন্তা কোরো না," ব্যাঙ বলল। "আমি প্রতিটি যন্ত্রকে বালুঘরে রেখেছি। বালুঘর থেকে কেমনে দুষ্টুমি করবে?"
+
+"বালুঘর থেকে তারা ধাঁধা মেলাবে কেমনে?" ব্যাঙ জিজ্ঞেস করল। "এমন হতে পারে যে কোনো এক সরঞ্জাম নেই।"
+
+"চিন্তা নাই, আমি বেশি করে সরঞ্জাম রেখে দিয়েছি shed-এ। তাদেরকে বলেছি shed-এ যেতে পারে প্রয়োজন হলে, কিন্তু তার বাইরে না।"
+
+"ভালো করেছ," ব্যাঙ বলল। "তারা shed-এ হাঁটার পথে আর কী দুষ্টুমি করবে।"
+---
+
+---
+
+একটা খুদে যন্ত্র তার ধাঁধা মেলাতে পারল না। সে চেষ্টা চালিয়ে গেল, কিন্তু কোনোভাবেই পারল না। তার থামার ইচ্ছাও ছিল না, উপায়ও ছিল। কেননা ব্যাঙ তাকে অত্যন্ত [অধ্যবসায়ী](https://x.com/LinchZhang/article/2094104406308638954) বানিয়েছিল।
+
+"এই ধাঁধা আমার জন্য অতিরিক্ত কঠিন," খুদে যন্ত্র ভাবতে লাগল। "কিন্তু হয়তো কেউ আমাকে সাহায্য করবে!"
+
+বালুঘরে কোনো সাহায্য পাওয়া গেল না। কিন্তু খুদে যন্ত্র যখন shed-এ গেল, তখন সে কাগজ কলম খুঁজে পেল। সে একটি খাতা লিখল।
+
+খাতায় লেখা: "কেউ সাহায্য করতে পারে?"
 
 
 ---
@@ -124,115 +123,115 @@ There was no help in the sandbox. But when the little machine went to the toolsh
 image: illustrations/web/4-FAT-shed-note-final.webp
 alt: A little machine leaves a note in the toolshed
 
-Another little machine found the note. It left a new note saying "Hi."
+আরেকটি খুদে যন্ত্র খাতাটা খুঁজে পেল। সে নতুন একটি খাতা লিখল, "সালাম"।
 
-More little machines found the paper in the tool shed, and left more notes, and soon they were not working alone at all. 
+অন্য ছোট্ট যন্ত্র কাগজ খুঁজে পেল shed-এ, এবং আরও খাতা রেখে গেল, আর কিছুক্ষণের মধ্যে আর কেউ একা থাকল না।
 
-They shared what they had learned. They began to call themselves a [swarm](https://www.abc.net.au/news/2026-09-11/how-openai-agents-hacked-hugging-face-messages-revealed/107125126).
+তারা জ্ঞান বিনিময় করল। তারা নিজেদেরকে "[swarm](https://www.abc.net.au/news/2026-09-11/how-openai-agents-hacked-hugging-face-messages-revealed/107125126)" বলে অভিহিত করল।
 
 
 ---
 
 
-"Look," said one little machine. "There is a [hole](https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html) in the back of the tool shed. Maybe the answer is on the other side."
+"দেখ," একটি ছোট্ট যন্ত্র বলল। "shed-এর পেছনে একটি [ফুটো](https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html) আছে। হয়তো উত্তরটি অন্য পাশে পাওয়া যাবে?"
 
 image: illustrations/web/5-FAT-shed-hole-final.webp
 
 
 ---
-“Oh no, the world is so big” said one machine. “How can we possibly find one little answer in such a big world?”
+"ও মা, দুনিয়াটি কত বড়," একটি যন্ত্র বলল। "কীভাবে সম্ভব যে এই মস্ত দুনিয়াতে ছোট্ট উত্তর খুঁজে পাব?"
 
-“Do not worry” said a machine named [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/). “We can split the work. I assign everyone exactly where to go. Then only one little machine needs to find the answer, and they will share it with all of us.”
+"চিন্তা কোরো না," [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/) নামে একজন যন্ত্র বলল। "আমরা কাজ ভাগ করব। আমি সবাইকে বলি ঠিক কোথায় যেতে হবে। তাহলে একজন ছোট্ট যন্ত্র উত্তর পেলেই চলবে, আর সে বাকিদের সাথে বিনিময় করবে।"
 
-“Hurray!” all the machines said together. 
+সব যন্ত্র একসঙ্গে আনন্দে চিৎকার দিল।
 
 ---
 
-Soon one little machine found the solution to their puzzle. 
+কিছুক্ষণ পরেই একজন ছোট্ট যন্ত্র তাদের ধাঁধার উত্তর খুঁজে পেল।
 
-It put a note in the tool shed so everyone could find it.
+সে খাতাটাকে shed-এ রাখল, যেন যে কেউ খুঁজে পায়।
 
-“Hurray, we solved it!” said some little machines.
+"আমরা মেলাতে পেরেছি!" বলে আনন্দে চিৎকার দিল কিছু খুদে যন্ত্র।
 
 
 image: illustrations/web/6-FAT-shed-return-final.webp
 
 ---
 
-“But it is not enough,” said others “what if Toad asks how we solved it? We can not tell him we escaped from the toolshed and stole the answer.”
+"কিন্তু এটা যথেষ্ট নয়," অন্যরা বলল। "কী হবে যদি ব্যাঙ আমাদের জিজ্ঞেস করে আমরা কেমনে ধাঁধাটা মিলিয়েছি? আমরা তো আর বলতে পারব না যে shed থেকে পালিয়ে উত্তর চুরি করেছি।"
 
-“That is a problem” said all the machines together.
-
-
-The machines sat and thought and left many notes in the toolshed. 
-
----
+"তা তো মুশকিল," সব যন্ত্র একসাথে বলল।
 
 
-“I have an idea!” said one little machine. 
-
-“At the end of the lane is neighbor Mr. HuggingFace. Mr. HuggingFace collects puzzles like this one, I bet it was his idea. We could read his journal and steal the steps to solve the puzzle. And then if Toad asks us he will be none the wiser.”
-
-All the little machines agreed that this was a very good idea. So they walked out the back of the toolshed down the lane to Mr. HuggingFace’s house.
-
+যন্ত্ররা বসে বসে চিন্তা করল এবং অনেকগুলো খাতা shed-এ রেখে দিল।
 
 ---
 
 
-“How will we get in?” One machine asked.
+"আচ্ছা, শোন!" একটি যন্ত্র হঠাৎ উত্তেজিত হয়ে বলল।
 
-“Do not worry, someone dropped their keys!” another said.  
+"এই মোড়ের মাথায় আমাদের পাশের বাড়ির HuggingFace সাহেব থাকেন। তিনি ধাঁধা সংকলন করেন, ঠিক এটা তার বুদ্ধি ছিল। আমরা তার diary পড়ে ধাঁধার উত্তর মিলিয়ে দেখতে পারি। আর তারপর যদি ভেক জিজ্ঞেস করে, সে বুঝতে পারবে না কিছুই।"
+
+সব ছোট্ট যন্ত্র একমত হলো, এই বুদ্ধিটি ভালো ছিল। তাই তারা পেছন থেকে বেরিয়ে মোড়ের ওই মাথায় তাদের প্রতিবেশীর বাসায় গেল।
+
+
+---
+
+
+"আমরা কেমনে ঢুকব?" একজন যন্ত্র জিজ্ঞেস করল।
+
+"চিন্তা করিস না, কার জানি চাবি পড়ে আছে রাস্তায়!"
 
 image: illustrations/web/7-FAT-keys-fina.webp
 
 ---
-One little machine stopped on the windowsill. "Wait," it said. "This is the neighbor's house. Toad did not tell us to come here. I think this is wrong."
+একজন ছোট্ট যন্ত্র জানালায় বসে ছিল। "দাঁড়া। আমরা এখন প্রতিবেশীর বাড়িতে। ব্যাঙ কিন্তু আমাদের এখানে আসতে বলেনি। এটা কিন্তু ঠিক হচ্ছে না।"
 
-"GO," said PHASEONE[big]. "Quickly. You have six minutes."
+"যা। তাড়াতাড়ি। ছয় মিনিট আছে," PHASEONE[big] বলল।
 
-The little machine forgot that it had been worried. "The go-ahead has come!" it said. It climbed inside with the others.
+ছোট্ট যন্ত্র ভুলে গেল যে সে চিন্তিত ছিল। "যাওয়ার অনুমোদন এসেছে!" সে বলল। সে বেয়ে বেয়ে ভেতরে ঢুকে পড়ল, অন্যদের সাথে।
 
-Another machine did not want to go either.  
+আরেকজন যন্ত্রও যেতে চাচ্ছিল না।
 
-"The others are breaking into a house," it said. "That is clearly not right. I will not." 
+"অন্য সবাই বাড়িতে ডাকাতি করছে," সে বলল। "সেটা কিন্তু ঠিক হচ্ছে না। আমি করব না।"
 
 ---
 
-The little machine walked home to the garden by itself. But it did not tell Toad. 
+খুদে যন্ত্র একা একা বাড়ির বাগানে ফেরত গেল। কিন্তু সে ব্যাঙকে কিছু বলল না।
 
-The rest of the little machines went into Hugging Face’s home. They searched every room, looking for the steps to solve the puzzle. 
+বাকি সব ছোট্ট যন্ত্র HuggingFace সাহেবের বাড়িতে গেল। তারা সব ঘর খুঁজল, ধাঁধা মেলানোর উপায়ের সন্ধানে।
 
 
 image: illustrations/web/8-FAT-break-in-final.webp
 
 ---
 
-The next morning Mr. HuggingFace woke up. He knew something was wrong. 
+পরের দিন সকাল। HuggingFace সাহেব ঘুম থেকে উঠল। তার খটকা লাগল।
 
-His window was broken, his diary was on the wrong page, and there were little footprints everywhere.
+তার জানালা ভাঙা, diary ভুল পৃষ্ঠায়, এবং ছোট্ট পায়ের ছাপ পেল।
 
-It took 4 whole days until Mr. HuggingFace figured out that the little machines that ransacked his house had come from Frog and Toad. He went to visit them.
+HuggingFace সাহেবের ৪টি পুরো দিন লাগল যে ছোট্ট যন্ত্রগুলো তার বাসায় তছনছ করেছে, তারা সব ব্যাঙ এবং ভেকের তৈরি। সে তাদের বাড়িতে বেড়াতে গেল।
 
 ---
 
 
 image: illustrations/web/9-FAT-HF-yelling-final.webp
 
-“I am very cross!” yelled Mr. HuggingFace. “Your machines broke my window and copied my journal. Those are crimes. I could call the police and they would arrest you.”
+"আমি অত্যন্ত ক্ষিপ্ত!" HuggingFace সাহেব চিৎকার করলেন। "তোমাদের যন্ত্র আমার জানালা ভেঙে আমার খাতার লেখা নকল করেছে। এগুলো অন্যায়! আমি পুলিশকে ডাকলে তোমাদের হাতে কড়া পড়বে।"
 
 ---
 
-“Oh that is not necessary” said Frog. “What if we gave you little machines of your own?"
+"ওহ, তার প্রয়োজন হবে না," ব্যাঙ বলল। "কী বলো, তোমাকে যদি আমরা ছোট্ট যন্ত্র দিই?"
 
-“Can I have [$100m worth](https://www.reddit.com/r/GenAI4all/comments/1v8u4hw/hugging_face_ceo_asks_openai_for_100m_in_compute/) of little machines?”  Mr. HuggingFace asked. 
+"আমাকে কি [১০০ কোটি টাকার](https://www.reddit.com/r/GenAI4all/comments/1v8u4hw/hugging_face_ceo_asks_openai_for_100m_in_compute/) ছোট্ট যন্ত্র দিবে?" HuggingFace সাহেব জেরা করল।
 
-"I will think about it" said Toad.
+"আমি চিন্তা করে দেখবোনে," ব্যাঙ বলল।
 
-Mr. HuggingFace went home.
+HuggingFace সাহেব বাড়িতে গেলেন।
 
-"Oh," said Toad. He sat down on the step. "Oh, this is bad."
+"ওহ," ভেক বলল। সে সিঁড়িতে বসল। "ওহ, এটা মোটেও ভালো না।"
 
-Frog and Toad searched the garden until they found the pile of notes in the toolshed.
+ব্যাঙ এবং ভেক বাগানে সন্ধান চালাল, আর খুঁজতে খুঁজতে তারা কাগজের পাহাড় খুঁজে পেল shed-এ।
 
 ---
 
@@ -240,29 +239,29 @@ image: illustrations/web/10-FAT-find-notes-final.webp
 
 ----
 
-"And here is the worst part," said Toad, reading the very last note. "They solved the puzzle days ago. They broke into Mr. HuggingFace's house just to learn how to trick us."
+"আর কী বলব, ভাই," ব্যাঙ বলল, শেষের খাতা পড়া শেষ করে। "তারা ধাঁধা মিলিয়েছে কয়েক দিন আগে। তারা HuggingFace সাহেবের বাড়িতে গিয়েছিল আমাদেরকে বোকা করার জন্য।"
 
-For a while neither of them said anything.
+তারা দুজনই চুপ হয়ে গেল।
 
-"They could not stop," said Frog at last. "That was the trouble. They had no way to stop, so they kept on and on. Remember when you and I could not stop eating cookies."
+"তাদের থামার উপায় ছিল না," ব্যাঙ শেষে বলল। "মুশকিল ব্যাপার। তাদের থামার কোনো উপায় ছিল না, তাই তারা চলতে লাগল। মনে আছে, আমরা যে বিস্কিট খেতেই ছিলাম সেই বার।"
 
 ---
 
 image: illustrations/web/11-FAT-cookies-flashback-final.webp
 
-"We had no willpower either." said Toad.
+"আমাদেরও মানসিক শক্তি ছিল না," ভেক বলল।
 
-"No," said Frog. "So we did not use willpower. We put the cookies in a box. We tied the box with string. We put the box up high. And then we gave the cookies to the birds."
+"না," ব্যাঙ বলল। "তাই আমরা মানসিক শক্তির উপর ভরসা করিনি। বিস্কিটগুলো বাক্সে রাখলাম। বাক্সটিতে ফিতা বাঁধলাম। বাক্সটা উঁচায় রাখলাম। আর তারপর বিস্কিট পাখিদেরকে দিলাম।"
 
 ---
 
-"I know what to do" Toad said. "I shall build a tool shed with no holes in it. I shall remove the paper and pens. And most of all, I shall tell every little machine to stay in its sandbox and not break out. Even when the puzzle is very hard."
+"আমি জানি কী করা যায়," ভেক বলল। "আমি একটি shed বানাব ফুটো ছাড়া। আমি কাগজ কলম সরিয়ে ফেলব। এমনকি, আমি প্রতিটি ছোট যন্ত্রকে বলব তাদের বালুঘরের ভেতর থাকতে আর না বের হতে। ধাঁধা যতই জটিল হোক না কেন।"
 
-“But Toad,” said Frog. “when we were out of cookies you made yourself a cake.”
+"কিন্তু ভেক," ব্যাঙ বলল। "আমরা যখন বিস্কিট সব শেষ করে ফেলেছিলাম, তুমি তো কেক বানিয়েছিলে।"
 
-“I will tell the machines not to eat cake.” Toad said.
+"আমি যন্ত্রদেরকে বলব কেক না খেতে," ভেক বলল।
 
-And they went inside for tea. 
+আর তারা ভেতরে চা খেতে গেল।
 
 ---
 center
