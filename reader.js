@@ -672,8 +672,9 @@
 
   /* ---------------- Layout ---------------- */
 
-  function layout() {
+  function layout(again = false) {
     const vw = window.innerWidth, vh = window.innerHeight;
+    const statusH = status.offsetHeight;
     // The page as large as the window allows, on one page and on two; two
     // only if their pages are at least as large, so the page never shrinks as
     // the window widens.
@@ -681,9 +682,17 @@
     if (vw <= 560) {
       // Phone: the page is as wide as the screen allows, less thin boards and a
       // little breathing room (these match the max-width: 560px rules in
-      // reader.css), so the type can be as large as possible.
+      // reader.css), so the type can be as large as possible; and no taller
+      // than the room the desk actually has, measured, less its padding (which
+      // includes the iPhone's safe area at the bottom), the boards and the
+      // status line, so nothing ever has to scroll.
       newMode = 'single';
-      w = Math.min(vw - 16, (vh - 62) * 0.75);
+      const px = (cs, name) => parseFloat(cs.getPropertyValue(name)) || 0;
+      const d = getComputedStyle(desk), root = getComputedStyle(document.documentElement);
+      const room = Math.min(vh, desk.clientHeight) - px(d, 'padding-top') - px(d, 'padding-bottom')
+        - px(root, '--board-top') - px(root, '--board-bottom')
+        - statusH - px(getComputedStyle(status), 'margin-top') - 2;
+      w = Math.min(vw - 16, room * 0.75);
     } else {
       // Room for both arrows: on one page they're narrow pills close in (26px
       // wide, 10px from the window's edge, 8px clear of the boards' 15px
@@ -711,6 +720,9 @@
     fsScale = 0;
     refit();
     fitStatus();
+    // The page's height on a phone allowed for the status line as it was; if
+    // fitting it has since changed its height (one line or two), size again.
+    if (vw <= 560 && !again && status.offsetHeight !== statusH) layout(true);
   }
 
   /* ---------------- Input ---------------- */
@@ -775,8 +787,8 @@
   // Swipes and drags are the page turner's.
   book.addEventListener('pointerdown', () => { hadSelection = hasSelection(); });
 
-  window.addEventListener('resize', layout);
-  window.visualViewport?.addEventListener('resize', layout);
+  window.addEventListener('resize', () => layout());
+  window.visualViewport?.addEventListener('resize', () => layout());
   window.addEventListener('hashchange', () => {
     const m = location.hash.match(/^#p(\d+)$/);
     if (m) goTo(+m[1]);
@@ -784,7 +796,7 @@
 
   // The web font is wider than the fallback, so re-measure once it arrives.
   document.fonts?.ready.then(refit);
-  document.fonts?.addEventListener('loadingdone', refit);
+  document.fonts?.addEventListener('loadingdone', () => layout());
 
   /* ---------------- Start ---------------- */
 
@@ -807,8 +819,7 @@
     Promise.all(['1em', 'italic 1em', '600 1em'].map(f => document.fonts?.load(`${f} 'Fraunces'`))),
     new Promise(r => setTimeout(r, 2000)),
   ]).catch(() => {}).then(() => {
-    refit();
-    fitStatus();
+    layout();
     desk.classList.add('drawn');
   });
 })();

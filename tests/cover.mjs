@@ -110,6 +110,8 @@ t.state('phone: shut', await settled(p), 'Cover');
 // zoom it out (the book is then sized for the wider page).
 const phoneWidth = await p.evaluate(() => [innerWidth, document.documentElement.scrollWidth]);
 t.check('phone: laid out at the phone\'s width, not zoomed out', phoneWidth.every(v => v === 390), JSON.stringify(phoneWidth));
+const phoneHeight = await p.evaluate(() => [innerHeight, document.documentElement.scrollHeight, Math.round(document.querySelector('.status').getBoundingClientRect().bottom)]);
+t.check('phone: the book and status line fit the screen, nothing scrolls', phoneHeight[1] <= phoneHeight[0] && phoneHeight[2] <= phoneHeight[0], JSON.stringify(phoneHeight));
 await p.keyboard.press('ArrowRight');
 t.state('phone: opens onto the first page', await settled(p), 'Page 3');
 await p.keyboard.press('ArrowLeft');

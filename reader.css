@@ -56,7 +56,10 @@ body {
 .desk:not(.drawn) > * { visibility: hidden; }
 
 .desk {
-  height: 100dvh;
+  /* Pinned to the window, so there's nothing for the page to scroll (iOS
+     Safari would otherwise scroll a desk sized taller than it shows). */
+  position: fixed;
+  inset: 0;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   grid-template-rows: 1fr auto;
