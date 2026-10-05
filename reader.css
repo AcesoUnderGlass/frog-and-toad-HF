@@ -1,0 +1,822 @@
+/* The reader: the desk, the book and its pages, the closed book's cover,
+   and the status line. The page turns' own styles are in pageturn.css. */
+
+:root {
+  --text: 'Fraunces', Georgia, serif;   /* one family throughout */
+  /* Fraunces at the visible size of the original site's Libre Baskerville:
+     the ratio of their x-heights (0.530 / 0.468 of the size). */
+  --x-scale: 1.132;
+
+  --paper: #f5eedd;
+  --paper-hi: #faf6ea;
+  --paper-lo: #ece3cc;
+  --ink: #2a2318;
+  --ink-soft: #7b6c55;
+  --green: #5c6b2f;          /* the olive of the back-cover lettering */
+  --green-deep: #3f4b25;
+  --cloth: #323d27;          /* the dark green boards */
+  --shade: 40, 26, 10;       /* rgb of shadows cast on paper */
+
+  --page-w: 300px;
+  --page-h: 400px;
+  /* How far the boards reach beyond the pages: top, fore-edge, bottom, and
+     (one page wide, where the boards' spine shows) the spine. */
+  --board-top: 9px;
+  --board-side: 15px;
+  --board-bottom: 17px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+
+/* ---------- Desk ---------- */
+
+body {
+  background-color: #3b2819;
+  background-image:
+    radial-gradient(ellipse 70% 60% at 50% 42%, rgba(255, 214, 160, 0.10), rgba(10, 5, 0, 0.55) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='660' height='660'%3E%3Cfilter id='w'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.045 .0035' numOctaves='4' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .12 0 0 0 0 .07 0 0 0 0 .03 .25 0 0 0 -.06'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23w)'/%3E%3C/svg%3E");
+  color: var(--ink);
+  font-family: var(--text);
+  /* Fraunces' softer, rounder terminals; no wonky leaning letters. Optical
+     size follows the font size, so body text gets the sturdier text cut.
+     WONK 0 only holds if the font link keeps the WONK axis (0..1): pinned
+     to 0 there, the axis is dropped and Fraunces swaps in its leaning h, m
+     and n at large sizes regardless. */
+  font-variation-settings: 'SOFT' 100, 'WONK' 0;
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: pan-y;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Until the reader has drawn it (and sized it: see layout() in reader.js),
+   the book is an empty, wrongly sized shell, so it isn't shown. */
+.desk:not(.drawn) > * { visibility: hidden; }
+
+.desk {
+  height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  padding: 20px 0 14px;
+}
+
+/* ---------- Book ---------- */
+
+.book {
+  grid-column: 2;
+  position: relative;
+  height: var(--page-h);
+  cursor: pointer;
+}
+.book.spread { width: calc(var(--page-w) * 2); }
+/* Turning pages (pageturn.js) shade in the paper's own warm brown. */
+.book { --pt-shadow: var(--shade); --pt-light: 255, 249, 234; }
+.book.single { width: var(--page-w); }
+
+/* Cloth-covered boards, a little larger than the pages. */
+.book::before {
+  content: "";
+  position: absolute;
+  inset: calc(-1 * var(--board-top)) calc(-1 * var(--board-side)) calc(-1 * var(--board-bottom));
+  border-radius: 5px;
+  background:
+    linear-gradient(90deg, transparent 47%, rgba(0, 0, 0, 0.35) 50%, transparent 53%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9 .45' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.2 0 0 0 -.45'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E"),
+    var(--cloth);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.25),
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 14px 28px -6px rgba(0, 0, 0, 0.55),
+    0 40px 90px -20px rgba(0, 0, 0, 0.6);
+}
+.book.single { --board-spine: 6px; }
+.book.single::before {
+  inset: calc(-1 * var(--board-top)) calc(-1 * var(--board-side)) calc(-1 * var(--board-bottom)) calc(-1 * var(--board-spine));
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.35), transparent 4%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9 .45' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.2 0 0 0 -.45'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E"),
+    var(--cloth);
+}
+
+/* ---------- Pages ---------- */
+
+.page {
+  position: absolute;
+  top: 0;
+  width: var(--page-w);
+  height: 100%;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Paper colour, lifted where the page bows up out of the gutter and falling
+   off slightly toward the fore-edge. */
+.page.right {
+  right: 0;
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(90deg, var(--paper-lo) 0%, var(--paper-hi) 8%, var(--paper) 26%, var(--paper) 72%, #f0e8d4 100%);
+}
+.page.left {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+  background: linear-gradient(270deg, var(--paper-lo) 0%, var(--paper-hi) 8%, var(--paper) 26%, var(--paper) 72%, #f0e8d4 100%);
+}
+
+/* The block of pages beneath, its edges showing as thin stacked lines below
+   and beside the open pages. One piece across the spine, so the two halves
+   meet with no gap, and its bottom edge falls into the same gutter shadow as
+   the page on top (see .page::after). */
+.page-block {
+  --edge: 6px;
+  --lines: #efe6d1 0 1px, #d6caae 1px 2px, #ebe1ca 2px 3px, #d1c4a7 3px 4px, #e6dbc2 4px 5px, #c9bb9c 5px 6px;
+  --gutter-at: 50%;
+  --g: var(--page-w);
+  position: absolute;
+  inset: 1px calc(-1 * var(--edge)) calc(-1 * var(--edge));
+  border-radius: 3px;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg,
+      rgba(var(--shade), 0) calc(var(--gutter-at) - var(--g) * 0.15),
+      rgba(var(--shade), 0.06) calc(var(--gutter-at) - var(--g) * 0.045),
+      rgba(var(--shade), 0.13) calc(var(--gutter-at) - var(--g) * 0.018),
+      rgba(var(--shade), 0.24) calc(var(--gutter-at) - var(--g) * 0.006),
+      rgba(var(--shade), 0.42) var(--gutter-at),
+      rgba(var(--shade), 0.24) calc(var(--gutter-at) + var(--g) * 0.006),
+      rgba(var(--shade), 0.13) calc(var(--gutter-at) + var(--g) * 0.018),
+      rgba(var(--shade), 0.06) calc(var(--gutter-at) + var(--g) * 0.045),
+      rgba(var(--shade), 0) calc(var(--gutter-at) + var(--g) * 0.15)) bottom / 100% var(--edge) no-repeat,
+    linear-gradient(180deg, var(--lines)) bottom / 100% var(--edge) no-repeat,
+    linear-gradient(90deg, var(--lines)) right / var(--edge) 100% no-repeat,
+    linear-gradient(270deg, var(--lines)) left / var(--edge) 100% no-repeat,
+    var(--paper-lo);   /* behind the pages, filling their rounded corners */
+}
+/* On one page, the spine is at the left. */
+.single > .page-block { left: 0; --gutter-at: 0%; background-size: 100% var(--edge), 100% var(--edge), var(--edge) 100%, 0 0, auto; }
+/* Shut, the page edges under the cover are drawn by .cover-edge; as the
+   cover opens, the block comes in under the right-hand page. */
+.book.closed > .page-block { left: 50%; --gutter-at: 0%; opacity: clamp(0, 8 * var(--open), 1); }
+.book.single.closed > .page-block { left: 0; }
+.single > .page.left { display: none; }
+.single > .page.right { left: 0; right: auto; }
+
+/* Paper grain: fine tooth plus faint large-scale mottling. */
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: 0.55;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .36 0 0 0 0 .22 1.1 0 0 0 -.48'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='700'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.006' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .45 0 0 0 0 .28 .9 0 0 0 -.38'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)'/%3E%3C/svg%3E");
+}
+
+/* Gutter: a tight dark fold where the pages meet, easing out over the curve
+   of the page. Drawn over the content so pictures near the spine fall into
+   shadow too. A page being turned loses it as it lifts out of the fold
+   (--pt-flat, from pageturn.js). */
+.page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: var(--pt-flat, 1);
+}
+.page.right::after {
+  background:
+    linear-gradient(90deg,
+      rgba(var(--shade), 0.42) 0%,
+      rgba(var(--shade), 0.24) 0.6%,
+      rgba(var(--shade), 0.13) 1.8%,
+      rgba(var(--shade), 0.06) 4.5%,
+      rgba(var(--shade), 0.02) 9%,
+      rgba(var(--shade), 0) 15%,
+      rgba(var(--shade), 0) 90%,
+      rgba(var(--shade), 0.05) 100%),
+    linear-gradient(180deg, rgba(var(--shade), 0) 70%, rgba(var(--shade), 0.035) 100%);
+}
+.page.left::after {
+  background:
+    linear-gradient(270deg,
+      rgba(var(--shade), 0.42) 0%,
+      rgba(var(--shade), 0.24) 0.6%,
+      rgba(var(--shade), 0.13) 1.8%,
+      rgba(var(--shade), 0.06) 4.5%,
+      rgba(var(--shade), 0.02) 9%,
+      rgba(var(--shade), 0) 15%,
+      rgba(var(--shade), 0) 90%,
+      rgba(var(--shade), 0.05) 100%),
+    linear-gradient(180deg, rgba(var(--shade), 0) 70%, rgba(var(--shade), 0.035) 100%);
+}
+
+.page.measure {
+  left: 0;
+  right: auto;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 1;
+  box-shadow: none;
+}
+
+/* ---------- Page content ---------- */
+
+.page-content {
+  /* No z-index here: the content must share the page's stacking context so
+     the illustrations can multiply onto the paper beneath. */
+  position: relative;
+  height: 100%;
+  padding: 11% 11% 15%;
+  font-size: calc(var(--page-w) * var(--fs-base, 0.0375) * var(--x-scale, 1) * var(--fs-scale, 1));
+  line-height: 1.42;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  overflow: hidden;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-user-select: text;
+  user-select: text;
+  cursor: text;
+}
+/* Leave a little extra room on the gutter side, where the page curves away. */
+.page.right .page-content { padding-left: 12%; padding-right: 10%; }
+.page.left .page-content { padding-left: 10%; padding-right: 12%; }
+
+.page-content p {
+  margin: 0;
+  text-wrap: pretty;
+}
+/* Hanging punctuation (see renderParagraph): the zero-width, right-to-left
+   box pushes the quote out to the left by exactly its own width. Not on
+   centred pages, where a hung quote would throw the line off centre. */
+.page-content .hang-lead { white-space: nowrap; }
+.page-content .hang { display: inline-block; width: 0; direction: rtl; }
+.page-content.center .hang { display: inline; direction: ltr; }
+.page-content a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(var(--shade), 0.4);
+  text-underline-offset: 0.18em;
+  cursor: pointer;
+}
+.page-content a:hover { text-decoration-color: currentColor; }
+
+.page-content figure {
+  margin: 0;
+  flex: 0 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4em;
+}
+.page-content figure img,
+.page-content figure .img-placeholder {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  min-height: 0;
+  max-height: calc(var(--page-h) * 0.72);
+  object-fit: contain;
+  /* Let the paper show through the illustration's lightest washes. */
+  mix-blend-mode: multiply;
+}
+.page-content figure .img-placeholder { width: 100%; }
+.page-content.mixed figure img,
+.page-content.mixed figure .img-placeholder { max-height: calc(var(--page-h) * 0.44); }
+.page-content.image-only { justify-content: center; }
+/* Pages with text are centred on the page, as in most picture books: with
+   little text, top-aligned pages look unfinished. The deeper bottom margin
+   (room for the folio) puts the block a little above true centre. */
+.page-content.has-text { justify-content: center; }
+.page-content.image-only figure { flex: 1 1 auto; justify-content: center; }
+.page-content figcaption {
+  font-style: italic;
+  font-size: 0.8em;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+/* A picture that can't be found: its name, so it can be put right. */
+.page-content .missing {
+  align-self: center;
+  width: 80%;
+  padding: 1em;
+  border: 2px dashed rgba(var(--shade), 0.3);
+  border-radius: 6px;
+  font-size: 0.7em;
+  color: var(--ink-soft);
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Centred pages centre everything on them, pictures included. */
+.page-content.center { justify-content: center; text-align: center; }
+
+/* Ornament: a short rule with a small diamond. */
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  width: 34%;
+  color: var(--green);
+  opacity: 0.8;
+}
+.ornament::before, .ornament::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid currentColor;
+}
+.ornament span {
+  width: 0.38em;
+  height: 0.38em;
+  background: currentColor;
+  transform: rotate(45deg);
+}
+
+/* Chapter opening */
+.page-content.chapter {
+  justify-content: center;
+  align-items: center;
+  gap: 0.9em;
+  text-align: center;
+}
+.page-content.chapter h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: calc(1.9em / var(--x-scale, 1));
+  line-height: 1.15;
+  color: var(--green-deep);
+  text-wrap: balance;
+}
+.page-content.chapter .kicker {
+  font-size: 0.72em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* Contents */
+.page-content.contents { justify-content: flex-start; padding-top: 22%; }
+.page-content.contents h2 {
+  margin: 0 0 1.2em;
+  font-weight: 600;
+  font-size: calc(1.35em / var(--x-scale, 1));
+  text-align: center;
+  color: var(--green-deep);
+}
+.page-content.contents ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+.page-content.contents li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+  cursor: pointer;
+}
+.page-content.contents li:hover .name { color: var(--green-deep); }
+.page-content.contents .dots {
+  flex: 1;
+  border-bottom: 1.5px dotted rgba(123, 108, 85, 0.6);
+  transform: translateY(-0.28em);
+}
+
+/* Page number */
+.folio {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(var(--page-w) * 0.06);
+  z-index: 1;
+  text-align: center;
+  font-size: calc(var(--page-w) * 0.032);
+  font-variant-numeric: lining-nums;
+  color: var(--ink-soft);
+}
+
+/* ---------- Navigation ---------- */
+
+.nav {
+  appearance: none;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 236, 205, 0.16);
+  background: rgba(20, 12, 4, 0.18);
+  color: rgba(255, 238, 210, 0.72);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s;
+}
+.nav.prev { grid-column: 1; justify-self: end; margin-right: 34px; }
+.nav.next { grid-column: 3; justify-self: start; margin-left: 34px; }
+.nav svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.nav:hover { background: rgba(255, 236, 205, 0.1); border-color: rgba(255, 236, 205, 0.3); color: #fff4e0; }
+.nav:focus-visible { outline: 2px solid rgba(255, 236, 205, 0.6); outline-offset: 2px; }
+.nav:disabled { opacity: 0.18; cursor: default; background: none; }
+
+/* ---------- Status line ---------- */
+
+/* Three parts across the width of the book: About, Contact and the language
+   menu at its left edge, the title centred, the page counter at its right
+   edge. The outer columns are equal, so the title stays centred whatever is
+   beside it. */
+.status {
+  grid-column: 2;
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: baseline;
+  column-gap: 1.5em;
+  font-size: 13.5px;
+  color: rgba(244, 230, 206, 0.62);
+  min-height: 1.4em;
+  font-variant-numeric: lining-nums tabular-nums;
+  white-space: nowrap;
+}
+.status .links { grid-column: 1; justify-self: start; }
+.status .title { grid-column: 2; font-style: italic; }
+.status .where, .status .jump { grid-column: 3; justify-self: end; }
+.status .links a {
+  color: inherit;
+  text-decoration: underline 1px rgba(244, 230, 206, 0.3);
+  text-underline-offset: 0.25em;
+}
+.status .links a:hover { color: rgba(255, 244, 224, 0.9); text-decoration-color: currentColor; }
+.status .sep { margin: 0 0.6em; opacity: 0.5; }
+.status .where {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 2px 6px;
+  margin: -2px -6px;
+  border-radius: 4px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.status .where:hover { background: rgba(255, 236, 205, 0.08); color: rgba(255, 244, 224, 0.9); }
+.status .jump { margin: 0; }
+.status .jump input {
+  width: 3em;
+  font: inherit;
+  color: var(--ink);
+  background: var(--paper);
+  border: 0;
+  border-radius: 3px;
+  padding: 0 2px;
+  text-align: center;
+  -moz-appearance: textfield;
+  -webkit-user-select: text;
+  user-select: text;
+}
+.status .jump input::-webkit-inner-spin-button,
+.status .jump input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+
+/* The language menu (from languages.js): set like the page counter, with a
+   small arrow. */
+.status .lang {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  border-radius: 4px;
+  padding: 2px 1.25em 2px 6px;
+  margin: -2px -6px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23f4e6ce' stroke-opacity='.62' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 0.35em center / 0.6em auto;
+}
+.status .lang:hover { background-color: rgba(255, 236, 205, 0.08); color: rgba(255, 244, 224, 0.9); }
+.status .lang:focus-visible { outline: 2px solid rgba(255, 236, 205, 0.6); outline-offset: 0; }
+.status .lang option { color: var(--ink); background: var(--paper); }
+
+/* One page wide, there's no room for the title between the other two; nor
+   on a narrow spread (see fitStatus in reader.js). */
+.book.single ~ .status .title,
+.status.no-title .title { display: none; }
+/* One page wide, the status line is as wide as the page (whatever is in it),
+   and if the links and the counter don't fit side by side, one goes under
+   the other (see fitStatus in reader.js). */
+.book.single ~ .status { width: var(--page-w); }
+.status.stacked { grid-template-columns: minmax(0, 1fr); row-gap: 6px; justify-items: center; }
+.status.stacked > * { grid-column: 1; justify-self: center; }
+
+/* Phones: the page is as wide as the screen allows (see layout() in
+   reader.js), with thin boards, tighter margins and a larger base type
+   size, so the type can be as big as the longest page allows. */
+@media (max-width: 560px) {
+  :root { --fs-base: 0.045; }
+  /* Book and status line centred together, the status right under the page. */
+  .desk { padding: 10px 0 calc(10px + env(safe-area-inset-bottom)); grid-template-rows: auto auto; align-content: center; }
+  .nav { display: none; }
+  :root { --board-top: 3px; --board-side: 4px; --board-bottom: 5px; }
+  .book.single { --board-spine: 3px; }
+  .book::before, .book.single::before { border-radius: 3px; }
+  .single .page.right { border-radius: 0 2px 2px 0; }
+  .page-block { --edge: 3px; --lines: #efe6d1 0 1px, #d1c4a7 1px 2px, #c9bb9c 2px 3px; border-radius: 2px; }
+  .page.right .page-content { padding: 7% 6% 11% 6%; gap: 0.55em; }
+  .status { margin-top: 12px; font-size: 12px; }
+}
+
+/* On text pages that aren't centred, a picture is usually narrower than the
+   measure, so line the left edge of its frame up with the text. */
+.page-content.mixed:not(.center) figure { align-items: flex-start; }
+.page-content.mixed:not(.center) figure img { transform: translateX(calc(-1 * var(--inset-l, 0%))); }
+
+/* ---------- Full-screen toggle ---------- */
+
+.fullscreen {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  appearance: none;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: rgba(244, 230, 206, 0.55);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+.fullscreen[hidden] { display: none; }
+.fullscreen:hover { background: rgba(255, 236, 205, 0.08); color: rgba(255, 244, 224, 0.9); }
+.fullscreen:focus-visible { outline: 2px solid rgba(255, 236, 205, 0.6); outline-offset: 2px; }
+.fullscreen svg {
+  grid-area: 1 / 1;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.fullscreen .exit, .fullscreen.on .enter { display: none; }
+.fullscreen.on .exit { display: block; }
+
+/* ---------- Closed book: the front cover ---------- */
+
+/* Page 0 shows the book shut. In spread mode only the right half of the book
+   is there (the front board lies over it), slid left so the cover sits in the
+   middle of the desk. Opening it turns the board over to the left around the
+   spine (pageturn.js) while the book slides back. --open says how open the
+   book is (0 shut, 1 open; reader.js sets it, following the board as it
+   turns), and the slide, the status line and the arrows all follow it. */
+.desk { --open: 1; }
+:root {
+  /* The front board is a page wide plus the overhang at the fore-edge. Shut,
+     the book slides left by half a page plus half of that overhang and of the
+     page edges showing beneath, so the cover is centred on the desk. */
+  --cover-w: calc(var(--page-w) + var(--board-side));
+  --closed-shift: calc(var(--page-w) / -2 - 12px);
+  --cloth-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9 .45' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.2 0 0 0 -.45'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E");
+}
+
+.book.spread { translate: calc((1 - var(--open)) * var(--closed-shift)) 0; }
+
+/* The left half of the boards and pages isn't there while the book is shut,
+   or while its front board is turning (it brings the left-hand page with it). */
+.book.spread.closed::before { left: 50%; border-top-left-radius: 0; border-bottom-left-radius: 0; }
+.book.closed > .page.left { visibility: hidden; }
+
+/* The front board in the right-hand page's place: board-sized, so it covers
+   the boards' overhang too, and printed rather than paper. */
+.page:has(> .cover-front) { overflow: visible; background: none; box-shadow: none; }
+.page:has(> .cover-front)::before,
+.page:has(> .cover-front)::after { content: none; }
+
+/* Outside: a printed case. The art is painted in washes that let the paper
+   show through; the AVIFs have it printed onto this cover stock already
+   (opaque, so nothing depends on blending, which some browsers get wrong
+   while the cover is lifted in 3D). It's scaled so that its painted area
+   (inside the drawn frame line and rounded corners) fills the board,
+   cropped a little at the sides. */
+.cover-front {
+  position: absolute;
+  inset: calc(-1 * var(--board-top)) calc(-1 * var(--board-side)) calc(-1 * var(--board-bottom)) calc(-1 * var(--board-spine, 0px));
+  overflow: hidden;
+  container-type: size;
+  isolation: isolate;
+  border-radius: 2px 5px 5px 2px;
+  background: var(--paper);
+}
+.cover-front .art {
+  position: absolute;
+  z-index: 1;
+  /* The painted area runs from 62 to 1726 of the image's 1800px height. */
+  top: calc(-100% * 62 / 1664);
+  height: calc(100% * 1800 / 1664);
+  /* Centred a little right of the middle, so the machine cut by the left
+     edge goes off it entirely rather than leaving a sliver. */
+  left: 50%;
+  translate: -48.4% 0;
+  width: auto;
+  max-width: none;
+}
+/* Until the art arrives: a tiny copy of it, blurred (see renderCover). */
+.cover-front .placeholder { filter: blur(1.5cqw); }
+.cover-front.art-ready .placeholder { display: none; }
+/* Light falling from the top left; the spine rounding away at the left edge,
+   then the groove of the hinge pressed into the board; the board's edges. */
+.cover-front::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(90deg,
+      rgba(20, 14, 4, 0.5) 0,
+      rgba(20, 14, 4, 0.16) 0.9%,
+      rgba(255, 250, 235, 0.1) 2%,
+      rgba(255, 250, 235, 0) 2.8%,
+      rgba(20, 14, 4, 0.3) 3.6%,
+      rgba(20, 14, 4, 0.05) 4.3%,
+      rgba(255, 250, 235, 0.1) 4.9%,
+      rgba(255, 250, 235, 0) 6.5%),
+    linear-gradient(150deg, rgba(255, 250, 235, 0.07), rgba(255, 250, 235, 0) 40%, rgba(20, 14, 4, 0) 60%, rgba(20, 14, 4, 0.1));
+  box-shadow:
+    inset 0 0 0 1px rgba(20, 14, 4, 0.3),
+    inset 0 1px 0 1px rgba(255, 250, 235, 0.08),
+    inset 0 0 5px rgba(20, 14, 4, 0.2);
+}
+
+/* The title, printed on the gable wall: same treatment as the title page
+   (both halves alike but for size, the second line two thirds of the first,
+   "Frog and Toad" kept whole). Sizes are in cqw of the board so the cover
+   scales as one piece from phone to desktop. */
+.cover-front .title {
+  position: absolute;
+  z-index: 2;
+  top: 16.9cqw;
+  left: 15%;
+  right: 15%;
+  margin: 0;
+  font-size: 6.4cqw;
+  font-weight: 600;
+  line-height: 1.05;
+  color: var(--green-deep);
+  text-align: center;
+  text-wrap: balance;
+}
+.cover-front .title .main {
+  display: block;
+  margin: 0 -12cqw;
+  font-size: 1.5em;
+  white-space: nowrap;
+}
+.cover-front .title .sub {
+  display: block;
+  margin-top: 0.3em;
+  font-size: 0.9em;
+  line-height: 1.15;
+}
+
+/* The byline, small, on the quiet floor at the foot of the picture. */
+/* Labels ("written by") light and soft, names semibold and dark, so the eye
+   lands on the names. */
+.cover-front .byline {
+  position: absolute;
+  z-index: 2;
+  left: 8%;
+  right: 4%;
+  bottom: 3.4%;
+  font-size: 3.9cqw;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #47402a;
+  text-align: center;
+}
+.cover-front .byline p { margin: 0; }
+/* "Written by", "Drawn by": the story file has them in lower case. */
+.cover-front .byline p::first-letter { text-transform: uppercase; }
+.cover-front .byline a {
+  font-weight: 600;
+  color: #2a2414;
+  text-decoration: underline 1px rgba(58, 52, 32, 0.45);
+  text-underline-offset: 0.18em;
+}
+.cover-front .byline a:hover { text-decoration-color: currentColor; }
+
+/* Inside: the turned-in cloth and the first left-hand page, laid out like
+   the left half of the open boards so it lands exactly on page L (the back
+   of the board as it turns, see renderInside in reader.js). */
+.cover-inside {
+  position: absolute;
+  inset: 0;
+  border-radius: 5px 2px 2px 5px;
+  background:
+    linear-gradient(270deg, rgba(0, 0, 0, 0.35), transparent 32px),
+    var(--cloth-grain),
+    var(--cloth);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), inset 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+.cover-inside .page.left { top: var(--board-top); left: var(--board-side); height: var(--page-h); }
+/* The left half of .page-block, ending at the spine. */
+.cover-inside .page-block {
+  inset: auto;
+  top: calc(var(--board-top) + 1px);
+  left: calc(var(--board-side) - var(--edge));
+  width: calc(var(--page-w) + var(--edge));
+  height: calc(var(--page-h) - 1px + var(--edge));
+  border-radius: 3px 0 0 3px;
+  --gutter-at: 100%;
+  background-size: 100% var(--edge), 100% var(--edge), 0 0, var(--edge) 100%, auto;
+}
+
+/* Under the closed cover: the fore-edge, seen a little from the right, and
+   the book's shadow on the desk. Gone as soon as the cover lifts. As on a
+   real hardcover (and as the open book shows), the boards overhang the pages,
+   so the page block shows only between the front and back boards' edges,
+   set back from the top and bottom by the overhang. */
+.cover-edge {
+  position: absolute;
+  z-index: 1;
+  inset: calc(-1 * var(--board-top)) calc(-1 * var(--board-side)) calc(-1 * var(--board-bottom)) 50%;
+  border-radius: 2px 5px 5px 2px;
+  pointer-events: none;
+  opacity: clamp(0, 1 - 8 * var(--open), 1);
+  box-shadow:
+    1px 0 0 #2b2618,
+    /* Each page line is shrunk by 4px all round (the overhang) and shifted
+       right by 4px more, so it shows as a strip set back top and bottom. */
+    6px 0 0 -4px #ebe2cb, 7px 0 0 -4px #cbbd9d, 8px 0 0 -4px #e6dbc2, 9px 0 0 -4px #c6b896, 10px 0 0 -4px #e0d4b8,
+    7px 0 0 #222b19, 8px 0 0 #2a3420,
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    4px 16px 28px -6px rgba(0, 0, 0, 0.55),
+    4px 44px 90px -20px rgba(0, 0, 0, 0.6);
+}
+.book.single .cover-edge { left: calc(-1 * var(--board-spine)); }
+
+/* The status line and the arrows sit above the book's shadow on the desk. */
+.status,
+.nav { position: relative; z-index: 1; }
+
+/* The status line spans the pages when the book is open and the cover when
+   it's shut, and the arrows sit beside it; both travel with the book as it
+   opens. The title, which only fits the open book, sits out of the flow
+   (centred, as the grid would put it) and comes up as the book lies open. */
+.book.spread ~ .status {
+  justify-self: start;
+  margin-left: calc((1 - var(--open)) * (var(--page-w) + var(--closed-shift)));
+  width: calc(var(--cover-w) + var(--open) * (2 * var(--page-w) - var(--cover-w)));
+}
+/* (An absolutely placed grid item is placed within its grid area, hence
+   spanning them all.) */
+.book.spread ~ .status .title {
+  grid-column: 1 / -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: clamp(0, 4 * var(--open) - 3, 1);
+}
+.book.spread ~ .nav.next { translate: calc((1 - var(--open)) * (var(--closed-shift) + 8px)) 0; }
+.desk:has(.book.spread) .nav.prev { translate: calc((1 - var(--open)) * (var(--closed-shift) + var(--page-w) + var(--board-side))) 0; }
+
+/* Phones: thin boards (see --board-* above) and a thinner book. */
+@media (max-width: 560px) {
+  .cover-front { border-radius: 1px 3px 3px 1px; }
+  .cover-edge {
+    border-radius: 1px 3px 3px 1px;
+    box-shadow:
+      1px 1px 0 #2b2618,
+      2px 2px 0 #e6dbc2, 3px 3px 0 #c6b896,
+      4px 4px 0 #222b19,
+      0 1px 2px rgba(0, 0, 0, 0.5),
+      2px 12px 24px -6px rgba(0, 0, 0, 0.55);
+  }
+}

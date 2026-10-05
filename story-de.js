@@ -37,6 +37,8 @@ window.STORY_UI = {
   jumpLabel: 'Seitenzahl, 0 bis {total}',
   previous: 'Vorherige Seite',
   next: 'Nächste Seite',
+  fullscreen: 'Vollbild',
+  exitFullscreen: 'Vollbild beenden',
   illustration: 'Illustration',
   missing: 'Fehlende Illustration: {src}',
   language: 'Sprache',

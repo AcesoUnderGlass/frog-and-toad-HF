@@ -1,0 +1,70 @@
+/* Styles for pageturn.js. Theme on the book element:
+     --pt-shadow  rgb triple for shading and cast shadows
+     --pt-light   rgb triple for the gloss on a page tipped toward the light
+   On a turning leaf, pageturn.js also sets --pt-flat (1 lying flat, 0
+   upright at the spine) for the pages' own styles to use, e.g. to fade fold
+   shading drawn at the gutter. */
+
+.pt-book {
+  --pt-shadow: 0, 0, 0;
+  --pt-light: 255, 255, 255;
+  perspective: var(--pt-perspective, 2400px);
+}
+
+/* The leaf: a strip of segments hinged one to the next (each nested in the
+   last), so it can bow as it lifts. Every segment shows its slice of one page
+   on the front and of the next on the back. pageturn.js sizes and poses the
+   segments and sets the shading every frame. */
+.pt-leaf,
+.pt-seg {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transform-origin: 0 50%;
+  transform-style: preserve-3d;
+}
+.pt-leaf { z-index: 5; pointer-events: none; }
+.pt-seg .pt-seg { left: 100%; }
+.pt-face {
+  position: absolute;
+  inset: 0;
+  /* Overlap the next segment by a hair so no seam opens along the hinge
+     (whole pixels, so the print isn't resampled; OVERLAP in pageturn.js). */
+  right: -2px;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  opacity: var(--pt-fade, 1);
+}
+/* An explicit transform on the front too, or Safari won't cull it when it
+   faces away. */
+.pt-front { transform: rotateY(0deg); }
+.pt-back { transform: rotateY(180deg); }
+/* The back is mirrored about its own middle, so its hair of overlap goes on
+   its left: that lands beyond the hinge it shares with the next segment,
+   leaving its print exactly in register with the page it lands on. */
+.pt-face.pt-back { left: -2px; right: 0; }
+.pt-shade,
+.pt-through {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.pt-shade { z-index: 10; }
+/* A blank back shows the print on the other side faintly through it. */
+.pt-through { transform: scaleX(-1); }
+
+/* Shadow cast by the leaf on the pages beneath it. */
+.pt-cast {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* The outer edges of the pages can be picked up and dragged. */
+.pt-book.pt-grab,
+.pt-book.pt-grab * { cursor: grab; }
+.pt-book.pt-dragging,
+.pt-book.pt-dragging * { cursor: grabbing; }
