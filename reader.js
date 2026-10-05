@@ -688,22 +688,27 @@
 
   function layout() {
     const vw = window.innerWidth, vh = window.innerHeight;
-    const newMode = vw < 760 || vw < vh * 1.05 ? 'single' : 'spread';
-    let w;
+    // The page as large as the window allows, on one page and on two; two
+    // only if their pages are at least as large, so the page never shrinks as
+    // the window widens.
+    let w, newMode;
     if (vw <= 560) {
       // Phone: the page is as wide as the screen allows, less thin boards and a
       // little breathing room (these match the max-width: 560px rules in
       // reader.css), so the type can be as large as possible.
+      newMode = 'single';
       w = Math.min(vw - 16, (vh - 62) * 0.75);
     } else {
-      // Both arrows and their margins. On one page they're narrow and close
-      // in (26px wide, 10px from the window's edge, 8px clear of the boards'
-      // wider overhang, 15px; see .desk:has(.book.single) .nav in
-      // reader.css), so the page stays large.
-      const pagesAcross = newMode === 'spread' ? 2 : 1;
-      const availW = vw - (pagesAcross === 2 ? 200 + 64 : 2 * (26 + 10 + 8 + 15));
+      // Room for both arrows: on one page they're narrow pills close in (26px
+      // wide, 10px from the window's edge, 8px clear of the boards' 15px
+      // overhang; see .desk:has(.book.single) .nav in reader.css); beside a
+      // spread, 46px rounds 34px out from the pages and at least 16px from
+      // the window's edge.
       const availH = vh - 100;          // boards, status line and breathing room
-      w = Math.min(availW / pagesAcross, availH * 0.75);
+      const one = Math.min(vw - 2 * (26 + 10 + 8 + 15), availH * 0.75);
+      const two = Math.min((vw - 2 * (46 + 34 + 16)) / 2, availH * 0.75);
+      newMode = two >= one ? 'spread' : 'single';
+      w = newMode === 'spread' ? two : one;
     }
     // A leaf is sized for the old layout; if that changes, finish the turn.
     if (turner.busy && (newMode !== mode || Math.floor(w) !== pageR.offsetWidth)) turner.finish();
