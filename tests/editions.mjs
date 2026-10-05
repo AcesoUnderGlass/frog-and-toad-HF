@@ -1,5 +1,5 @@
 // The editions: the German book's cover (title split, translator credit),
-// its hanging „ quotes and interface words; the language menu, which keeps
+// its „ quotes and interface words; the language menu, which keeps
 // the page being read; the About and Contact links and their way back; and
 // the book opened straight from a file.
 import { BASE, launch, newContext, openBook, watchErrors, tally } from './lib.mjs';
@@ -68,21 +68,16 @@ await p.keyboard.press('Escape');
 const opened = await p.evaluate(() => document.querySelector('.status .where').textContent);
 t.check('German page counter and jump box', opened === 'Seiten 3–4 von 24' && jump === 'Seite  von 24', JSON.stringify({ opened, jump }));
 
-// Hanging „: on page 4 the quote sits in the margin, so the letters after it
-// line up with those of a paragraph without one.
-const hang = await p.evaluate(() => {
+// Quotes aren't hung in the margin (only a paragraph's first could be, which
+// looks odd beside one that falls at the start of a later line): on page 4 a
+// paragraph opening with „ starts where one without it does.
+const quoteAt = await p.evaluate(() => {
   const ps = [...document.querySelectorAll('#pageR .page-content p')];
-  const start = el => { const r = new Range(); r.setStart(el, 0); r.setEnd(el, 1); return r.getBoundingClientRect().left; };
-  const plain = ps.find(x => !x.querySelector('.hang'));
-  const hung = ps.find(x => x.querySelector('.hang'));
-  const firstText = n => { const w = document.createTreeWalker(n, NodeFilter.SHOW_TEXT); let x; while ((x = w.nextNode())) if (!x.parentElement.closest('.hang') && x.data.trim()) return x; };
-  return {
-    quote: hung?.querySelector('.hang').textContent,
-    plain: start(firstText(plain)), letter: start(firstText(hung)),
-    quoteLeft: start(hung.querySelector('.hang').firstChild),
-  };
+  const left = p => { const r = new Range(); r.setStart(p.firstChild, 0); r.setEnd(p.firstChild, 1); return r.getBoundingClientRect().left; };
+  const quoted = ps.find(x => x.textContent.startsWith('„')), plain = ps.find(x => !/^[„“‚‘»«]/.test(x.textContent));
+  return { quoted: quoted && left(quoted), plain: plain && left(plain) };
 });
-t.check('German „ hangs in the margin', hang.quote === '„' && Math.abs(hang.letter - hang.plain) < 0.5 && hang.quoteLeft < hang.plain - 2, JSON.stringify(hang));
+t.check('German „ starts the line like any letter, not hung', quoteAt.quoted != null && Math.abs(quoteAt.quoted - quoteAt.plain) < 0.5, JSON.stringify(quoteAt));
 
 // The language menu keeps the page being read, both ways, and on a phone.
 async function switchTo(p, lang) {

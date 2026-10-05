@@ -261,12 +261,6 @@ body {
   margin: 0;
   text-wrap: pretty;
 }
-/* Hanging punctuation (see renderParagraph): the zero-width, right-to-left
-   box pushes the quote out to the left by exactly its own width. Not on
-   centred pages, where a hung quote would throw the line off centre. */
-.page-content .hang-lead { white-space: nowrap; }
-.page-content .hang { display: inline-block; width: 0; direction: rtl; }
-.page-content.center .hang { display: inline; direction: ltr; }
 .page-content a {
   color: inherit;
   text-decoration: underline;

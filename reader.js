@@ -192,22 +192,8 @@
     return parent;
   }
 
-  // Hanging punctuation: an opening quote at the start of a paragraph sits in
-  // the margin, so the letters line up with the lines below. (CSS
-  // `hanging-punctuation` does this only in Safari.) The quote goes in a
-  // zero-width box that overflows to the left by exactly its own width, kept
-  // on one line with the first word. English and German quotes, and
-  // guillemets either way round.
-  const HANG_RE = /^([“‘„‚»«›‹])([^\s\[]+)/;
-
   function renderParagraph(block) {
-    const p = el('p');
-    const m = block.text.match(HANG_RE);
-    if (!m) return appendText(p, block.text);
-    const lead = el('span', 'hang-lead');
-    lead.append(el('span', 'hang', m[1]), m[2]);
-    p.append(lead);
-    return appendText(p, block.text.slice(m[0].length));
+    return appendText(el('p'), block.text);
   }
 
   function renderImage(block, measuring) {
