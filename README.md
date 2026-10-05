@@ -27,7 +27,7 @@ German edition).
 | `languages.js` | The editions, for the language menu. |
 | `reader.js`, `reader.css` | The reader: the desk, the book and its cover, laying out the pages, the status line under the book. |
 | `pageturn.js`, `pageturn.css` | The page turns (the leaf, its shading and shadows, dragging). Knows nothing of the story. |
-| `about.html`, `contact.html`, `learn-more.html` | The other pages. |
+| `about.html`, `contact.html`, `learn-more.html`, `sheet.css` | The other pages, each a sheet of the book's paper on the same desk. |
 | `illustrations/` | The pictures (see "Illustrations for the web"). |
 
 ## Turning pages
