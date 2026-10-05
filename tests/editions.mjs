@@ -142,5 +142,19 @@ if (process.env.SKIP_FILE !== '1') {
   t.check('opens from a file', where === 'Seiten 5–6 von 24' && !errors.length, JSON.stringify({ where, errors }));
 }
 
+// Everything in the status line can be clicked: nothing (such as the title,
+// laid over the whole line) sits on top of the links, the language menu or
+// the page counter. Shut and open, a spread and a phone, both editions.
+for (const [url, page, width, height] of [[BASE, 0, 1440, 820], [BASE, 6, 1440, 820], [DE, 6, 1440, 820], [BASE, 6, 390, 844]]) {
+  p = await openBook(browser, { url, page, width, height });
+  pages.push(p);
+  const blocked = await p.evaluate(() => [...document.querySelectorAll('#status a, #status button, #status select')].filter(el => {
+    const r = el.getBoundingClientRect();
+    const hit = document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2);
+    return !(hit && (hit === el || el.contains(hit)));
+  }).map(el => (el.textContent || el.value).trim()));
+  t.check(`status line clickable (${new URL(url).pathname} p${page}, ${width}px)`, !blocked.length, JSON.stringify(blocked));
+}
+
 t.done(...pages);
 await browser.close();

@@ -803,6 +803,9 @@ body {
   right: 0;
   text-align: center;
   opacity: clamp(0, 4 * var(--open) - 3, 1);
+  /* Laid over the whole line, so it must let clicks through to the links,
+     the language menu and the counter beneath it. */
+  pointer-events: none;
 }
 .book.spread ~ .nav.next { translate: calc((1 - var(--open)) * (var(--closed-shift) + 8px)) 0; }
 .desk:has(.book.spread) .nav.prev { translate: calc((1 - var(--open)) * (var(--closed-shift) + var(--page-w) + var(--board-side))) 0; }
