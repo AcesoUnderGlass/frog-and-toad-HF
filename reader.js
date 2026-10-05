@@ -640,6 +640,9 @@
   }
 
   const turner = createPageTurner(book, {
+    // No gloss: a page lifting toward the light would brighten, which reads
+    // as a flash when the pointer merely lifts a page's edge.
+    gloss: 0,
     mode: () => mode,
     neighbour,
     render: draw,

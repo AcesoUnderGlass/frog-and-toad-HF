@@ -290,8 +290,9 @@ body {
   min-height: 0;
   max-height: calc(var(--page-h) * 0.72);
   object-fit: contain;
-  /* Let the paper show through the illustration's lightest washes. */
-  mix-blend-mode: multiply;
+  /* No blending: the washes are translucent, so the paper shows through
+     anyway, and a blend mode is dropped by some browsers once a page is
+     lifted into 3D (the picture then jumped lighter). */
 }
 .page-content figure .img-placeholder { width: 100%; }
 .page-content.mixed figure img,
