@@ -550,7 +550,10 @@
       if (closed) return;
       closed = true;
       form.remove();
-      if (Number.isFinite(target)) goTo(target); else updateChrome();
+      if (Number.isFinite(target)) goTo(target);
+      // Put the page counter back (a turn would too, but going to the page
+      // already showing starts none).
+      updateChrome();
     };
     form.addEventListener('submit', (e) => { e.preventDefault(); close(parseInt(input.value, 10)); });
     input.addEventListener('keydown', (e) => { if (e.key === 'Escape') { e.preventDefault(); close(); } });

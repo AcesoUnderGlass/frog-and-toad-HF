@@ -41,6 +41,10 @@ t.state('thirty random presses', await settled(p));
 
 await p.keyboard.press('g'); await p.keyboard.type('20'); await p.keyboard.press('Enter');
 t.state('jump with G', await settled(p), 'Pages 19–20');
+// G then Enter on the number it starts with (the page showing): no turn,
+// and the page counter comes back.
+await p.keyboard.press('g'); await p.keyboard.press('Enter');
+t.state('G, then Enter on the page showing', await settled(p), 'Pages 19–20');
 await p.keyboard.press('ArrowLeft'); await p.waitForTimeout(60);
 await p.keyboard.press('Home');
 t.state('Home mid-turn', await settled(p), 'Cover');
