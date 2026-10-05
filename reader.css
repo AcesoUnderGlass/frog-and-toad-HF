@@ -825,13 +825,9 @@ body {
 .desk:has(.book.spread) .nav.prev { translate: calc((1 - var(--open)) * (var(--closed-shift) + var(--page-w) + var(--board-side))) 0; }
 
 /* The front board as it lifts: the leaf is the boards' full size (so it
-   lands exactly on the open book's left board, inside up), but the front is
-   drawn set in, as it is shut, so lifting it changes nothing. (Its width and
-   height are set inline by pageturn.js, hence !important.) */
-.pt-leaf .cover-front {
-  width: calc(100% - var(--cover-in)) !important;
-  height: calc(100% - var(--cover-in-foot)) !important;
-}
+   lands exactly on the open book's left board, inside up), and the cover
+   is set in within it exactly as it is shut, so lifting it changes nothing. */
+.cover-lift > .cover-front { inset: 0 var(--cover-in) var(--cover-in-foot) 0; }
 
 /* Phones: thin boards (see --board-* above) and a thinner book. */
 @media (max-width: 560px) {

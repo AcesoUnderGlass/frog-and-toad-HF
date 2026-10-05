@@ -649,7 +649,12 @@
     faces(lo, hi) {
       // Opening and shutting the book turns its front board.
       if (lo === 0) {
-        return { hard: true, outset: boardOverhang(), front: renderPage(story, 0), back: renderInside(mode === 'spread' ? hi - 1 : null) };
+        // The leaf is the boards' full size, so it lands exactly on the open
+        // book's left board; its front, the cover, is set in from the edges
+        // as it is shut (see .cover-lift).
+        const front = el('div', 'cover-lift');
+        front.append(renderPage(story, 0));
+        return { hard: true, outset: boardOverhang(), front, back: renderInside(mode === 'spread' ? hi - 1 : null) };
       }
       const front = el('div', 'page right'), back = el('div', 'page left');
       fill(front, lo);

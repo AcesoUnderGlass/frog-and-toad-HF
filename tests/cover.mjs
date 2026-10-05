@@ -19,10 +19,20 @@ const openness = p => p.evaluate(() => {
   return { open, slide: Math.round(slide), status: Math.round(status) };
 });
 
+// The right-hand boards' outer edges: shut, the cover and the page edges
+// beside it take up just what the open book's boards do.
+const boards = p => p.evaluate(() => {
+  const b = document.getElementById('book'), r = b.getBoundingClientRect(), cs = getComputedStyle(b, '::before');
+  const edge = document.querySelector('.cover-edge').getBoundingClientRect();
+  return { right: Math.round(r.right - parseFloat(cs.right) - r.left), top: Math.round(r.top + parseFloat(cs.top)), bottom: Math.round(r.bottom - parseFloat(cs.bottom)),
+    coverRight: Math.round(edge.right - r.left), coverTop: Math.round(edge.top), coverBottom: Math.round(edge.bottom) };
+});
+
 let p = await book({ page: 0 });
 const shut = await openness(p);
 t.state('opens shut', await settled(p), 'Cover');
 t.check('shut: slid left, status line the width of the cover', shut.open === 0 && shut.slide < -100 && shut.status < 600, JSON.stringify(shut));
+const shutBoards = await boards(p);
 
 await p.keyboard.press('ArrowRight');
 const during = [];
@@ -30,6 +40,10 @@ for (let i = 0; i < 6; i++) { await p.waitForTimeout(40); during.push(await open
 t.state('opens onto the first page of the story', await settled(p), 'Pages 3–4');
 const open = await openness(p);
 t.check('open: no slide, status line the width of the spread', open.open === 1 && open.slide === 0 && open.status > 1000, JSON.stringify(open));
+const openBoards = await boards(p);
+// The page edges and back board show 8px beyond the cover (.cover-edge's box-shadow).
+t.check('shut, the book is no larger than the open boards', shutBoards.coverRight + 8 === openBoards.right &&
+  shutBoards.coverTop === openBoards.top && shutBoards.coverBottom <= openBoards.bottom, JSON.stringify({ shutBoards, openBoards }));
 const mid = during.filter(d => d.open > 0.05 && d.open < 0.95);
 t.check('--open, the slide and the status line move with the cover', mid.length > 0 &&
   mid.every(d => d.slide < 0 && d.slide > shut.slide && d.status > shut.status && d.status < open.status),
@@ -51,11 +65,21 @@ t.state('rapid presses across the cover', await settled(p));
 // Dragging the cover open and shut with the mouse.
 await p.keyboard.press('Home');
 t.state('Home shuts the book', await settled(p), 'Cover');
+// The cover as laid out (before any lift's transform): its size, and where
+// its title, byline and art sit in it.
+const coverLayout = (p, sel) => p.evaluate(s => {
+  const c = document.querySelector(s);
+  return c && [c.offsetWidth, c.offsetHeight, ...[...c.querySelectorAll('.title, .byline, .art:not(.placeholder)')]
+    .map(e => [e.offsetLeft, e.offsetTop, e.offsetWidth, e.offsetHeight].join(','))].join(' ');
+}, sel);
+const atRest = await coverLayout(p, '#book > .page.right .cover-front');
 let box = await p.locator('#book').boundingBox();
 const y = box.y + box.height * 0.6;
 await p.mouse.move(box.x + box.width - 150, y); await p.waitForTimeout(100);
 await p.mouse.move(box.x + box.width - 12, y, { steps: 3 }); await p.waitForTimeout(300);
 t.check('the cover lifts under the pointer at its edge', await p.evaluate(() => !!document.querySelector('.pt-leaf')));
+const lifted = await coverLayout(p, '.pt-leaf .pt-front .cover-front');
+t.check('the lifted cover is laid out exactly as it is at rest', lifted === atRest, `rest ${atRest} / lifted ${lifted}`);
 await p.mouse.down();
 for (let i = 1; i <= 12; i++) { await p.mouse.move(box.x + box.width - 12 - i * 70, y); await p.waitForTimeout(20); }
 await p.mouse.up();
