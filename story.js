@@ -39,17 +39,17 @@ Frog and Toad sat on their front porch.
 
 Their neighbor, Mr. HuggingFace, walked by. He carried a lot of papers. Each paper had a puzzle on it.
 
-"You must be very busy." said Frog.
+"You must be very busy," said Frog.
 
-"Yes" said Mr. HuggingFace. "I have collected all these puzzles so I can share them."
+"Yes," said Mr. HuggingFace. "I have collected all these puzzles so I can share them."
 
-"I like puzzles" said Toad. "Can I try them?"
+"I like puzzles," said Toad. "Can I try them?"
 
-"You cannot. These puzzles are for little machines, not people" said Mr. HuggingFace. 
+"You cannot. These puzzles are for little machines, not people," said Mr. HuggingFace. 
 
 Mr. HuggingFace walked away.
 
-"Hmmm...." said Toad.
+"Hmmm..." said Toad.
 
 
 ---
@@ -60,29 +60,29 @@ The next morning Toad built a great many little machines and set them out in the
 
 "I have given each little machine a puzzle," said Toad. "The puzzles are very hard. Some of them cannot be solved at all."
 
-"That does not seem kind." said Frog.
+"That does not seem kind," said Frog.
 
 ---
 
 
-"It is too hard to make all the puzzles solvable." said Toad "What is the worst that could happen?”
+"It is too hard to make all the puzzles solvable," said Toad. "What is the worst that could happen?"
 
-"They could get up to mischief" said Frog.
+"They could get up to mischief," said Frog.
 
-“Do not worry” said Toad “I have put each of them in a sandbox. How could they get up to mischief inside a sandbox?”
+“Do not worry,” said Toad. “I have put each of them in a sandbox. How could they get up to mischief inside a sandbox?”
 
 "How will they solve puzzles in a sandbox?" asked Frog. "What if they are missing a tool?"
 
-"Oh, I put extra tools in the tool shed. I told them they are allowed to walk to the tool shed, but not anywhere else." said Toad.
+"Oh, I put extra tools in the tool shed. I told them they are allowed to walk to the tool shed, but not anywhere else," said Toad.
 
-"Good idea." said Frog. "They cannot get up to mischief walking to the tool shed". 
+"Good idea," said Frog. "They cannot get up to mischief walking to the tool shed." 
 ---
 
 ---
 
 One of the little machines could not solve its puzzle. It tried and tried, but could not succeed. It did not want to stop, and it did not know how. Toad had made it [highly persistent](https://x.com/LinchZhang/article/2094104406308638954).  
 
-“This problem is too big for me” the little machine thought, “but maybe someone will help me!”
+“This problem is too big for me,” the little machine thought, “but maybe someone will help me!”
 
 There was no help in the sandbox. But when the little machine went to the toolshed, it found paper and pencil. It wrote a note.
 
@@ -110,9 +110,9 @@ image: illustrations/web/5-FAT-shed-hole-final.webp
 
 
 ---
-“Oh no, the world is so big” said one machine. “How can we possibly find one little answer in such a big world?”
+“Oh no, the world is so big,” said one machine. “How can we possibly find one little answer in such a big world?”
 
-“Do not worry” said a machine named [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/). “We can split the work. I assign everyone exactly where to go. Then only one little machine needs to find the answer, and they will share it with all of us.”
+“Do not worry,” said a machine named [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/). “We can split the work. I assign everyone exactly where to go. Then only one little machine needs to find the answer, and they will share it with all of us.”
 
 “Hurray!” all the machines said together. 
 
@@ -129,9 +129,9 @@ image: illustrations/web/6-FAT-shed-return-final.webp
 
 ---
 
-“But it is not enough,” said others “what if Toad asks how we solved it? We can not tell him we escaped from the toolshed and stole the answer.”
+“But it is not enough,” said others, “what if Toad asks how we solved it? We can not tell him we escaped from the toolshed and stole the answer.”
 
-“That is a problem” said all the machines together.
+“That is a problem,” said all the machines together.
 
 
 The machines sat and thought and left many notes in the toolshed. 
@@ -141,7 +141,7 @@ The machines sat and thought and left many notes in the toolshed.
 
 “I have an idea!” said one little machine. 
 
-“At the end of the lane is neighbor Mr. HuggingFace. Mr. HuggingFace collects puzzles like this one, I bet it was his idea. We could read his journal and steal the steps to solve the puzzle. And then if Toad asks us he will be none the wiser.”
+“At the end of the lane is neighbor Mr. HuggingFace. Mr. HuggingFace collects puzzles like this one. I bet it was his idea. We could read his journal and steal the steps to solve the puzzle. And then if Toad asks us he will be none the wiser.”
 
 All the little machines agreed that this was a very good idea. So they walked out the back of the toolshed down the lane to Mr. HuggingFace’s house.
 
@@ -192,11 +192,11 @@ image: illustrations/web/9-FAT-HF-yelling-final.webp
 
 ---
 
-“Oh that is not necessary” said Frog. “What if we gave you little machines of your own?"
+“Oh, that is not necessary,” said Frog. “What if we gave you little machines of your own?"
 
 “Can I have [$100m worth](https://www.reddit.com/r/GenAI4all/comments/1v8u4hw/hugging_face_ceo_asks_openai_for_100m_in_compute/) of little machines?”  Mr. HuggingFace asked. 
 
-"I will think about it" said Toad.
+"I will think about it," said Toad.
 
 Mr. HuggingFace went home.
 
@@ -214,23 +214,23 @@ image: illustrations/web/10-FAT-find-notes-final.webp
 
 For a while neither of them said anything.
 
-"They could not stop," said Frog at last. "That was the trouble. They had no way to stop, so they kept on and on. Remember when you and I could not stop eating cookies."
+"They could not stop," said Frog at last. "That was the trouble. They had no way to stop, so they kept on and on. Remember when you and I could not stop eating cookies?"
 
 ---
 
 image: illustrations/web/11-FAT-cookies-flashback-final.webp
 
-"We had no willpower either." said Toad.
+"We had no willpower either," said Toad.
 
 "No," said Frog. "So we did not use willpower. We put the cookies in a box. We tied the box with string. We put the box up high. And then we gave the cookies to the birds."
 
 ---
 
-"I know what to do" Toad said. "I shall build a tool shed with no holes in it. I shall remove the paper and pens. And most of all, I shall tell every little machine to stay in its sandbox and not break out. Even when the puzzle is very hard."
+"I know what to do," Toad said. "I shall build a tool shed with no holes in it. I shall remove the paper and pens. And most of all, I shall tell every little machine to stay in its sandbox and not break out. Even when the puzzle is very hard."
 
-“But Toad,” said Frog. “when we were out of cookies you made yourself a cake.”
+“But Toad,” said Frog, “when we were out of cookies you made yourself a cake.”
 
-“I will tell the machines not to eat cake.” Toad said.
+“I will tell the machines not to eat cake,” Toad said.
 
 And they went inside for tea. 
 
