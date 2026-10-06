@@ -14,5 +14,8 @@
 window.EDITIONS = [
   { lang: 'en', name: 'English', href: 'index.html' },
   { lang: 'de', name: 'Deutsch', href: 'de.html' },
+  // Russian: a stub so far (story-ru.js is still the English text). Uncomment
+  // once it is translated.
+  // { lang: 'ru', name: 'Русский', href: 'ru.html' },
   { lang: 'en', name: 'English (Simple UI)', href: 'simple.html', plain: true },
 ];

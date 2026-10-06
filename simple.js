@@ -21,7 +21,7 @@
   const KEY_RE = /^(image|alt|caption|chapter)\s*:\s*(.*)$/i;
   const FLAG_RE = /^(contents|blank|center)\s*$/i;
   const LANG = document.documentElement.lang || 'en';
-  const QUOTES = { de: ['„', '“', '‚', '’'] }[LANG.slice(0, 2)] || ['“', '”', '‘', '’'];
+  const QUOTES = { de: ['„', '“', '‚', '’'], ru: ['«', '»', '„', '“'] }[LANG.slice(0, 2)] || ['“', '”', '‘', '’'];
 
   function smartQuotes(s) {
     return s
