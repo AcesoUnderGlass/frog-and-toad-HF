@@ -155,4 +155,6 @@
   a.href = 'index.html';
   back.append(a);
   root.append(back);
+
+  root.append(el('p', 'copyright', '\u00a9 2026 Elizabeth Van Nostrand'));
 })();
