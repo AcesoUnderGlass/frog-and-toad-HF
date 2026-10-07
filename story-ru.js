@@ -1,25 +1,62 @@
 // ============================================================
-//  YOUR STORY GOES HERE.
-//  See README.md for the full format. Quick version:
+//  RUSSIAN TRANSLATION of story.js. Shown by ru.html.
 //
-//    title: / author: / artist: / cover-image:   at the top
-//    translator:                       (translations only) credits the translator
-//    ---                               starts a new page
-//    chapter: Name                     makes a chapter title page
-//    image: illustrations/file.png     puts a picture on the page
-//    alt: / caption:                   (optional, right after an image)
-//    contents                          makes a table of contents page
-//    center                            centers the text on this page
-//    blank                             an empty page
-//    plain lines                       are the story text; a blank line
-//                                      starts a new paragraph
-//    [link text](https://example.com) makes a clickable link (http/https/mailto only)
+//  THIS IS A STUB: the text below is still the English original, copied
+//  from story.js. Replace it with the Russian, then take the Russian
+//  edition live (see "Translations" in README.md).
+//
+//  Translate:
+//    - the story text (plain lines)
+//    - the words after  title:  chapter:  alt:  caption:
+//    - "written by" / "drawn by" / "translated by", and the words inside
+//      [square brackets]; put the translator's name and link on the
+//      translator: line
+//    - the interface words in STORY_UI just below
+//
+//  Leave exactly as they are:
+//    - the --- lines, and the words  contents  center  blank
+//    - the keywords themselves (title:, author:, artist:, translator:, cover-image:,
+//      chapter:, image:, alt:, caption:)
+//    - everything after  image:  and  cover-image:
+//    - the (addresses in round brackets) after a link
+//
+//  Keep the pages in the same order as story.js so they line up with
+//  the pictures. Avoid backticks and ${ in the text. If a page has too
+//  much text the whole book's type shrinks, so split a long page in two
+//  with a new --- line. Straight "quotes" become «…» automatically (and
+//  straight 'quotes' „…“); curly quotes typed in the text are left alone.
+//  See README.md for the full format.
 // ============================================================
+
+// Words the reader itself shows. Translate the right-hand side only;
+// keep the {curly} placeholders as they are. (Still English: to translate.)
+window.STORY_UI = {
+  chapter: 'Chapter {n}',
+  contents: 'Contents',
+  cover: 'Cover',
+  page: 'Page {n}',
+  pages: 'Pages {from}–{to}',
+  whereOfTotal: '{where} of {total}',
+  jumpBefore: 'Page ',
+  jumpAfter: ' of {total}',
+  jumpHint: 'Jump to a page (G)',
+  jumpLabel: 'Page number, 0 to {total}',
+  previous: 'Previous page',
+  next: 'Next page',
+  fullscreen: 'Full screen',
+  exitFullscreen: 'Exit full screen',
+  illustration: 'Illustration',
+  missing: 'Missing illustration: {src}',
+  language: 'Language',
+  about: 'About',
+  contact: 'Contact',
+};
 
 window.STORY = `
 title: Frog and Toad and the Increasingly Capable Machines
 author: written by [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
 artist: drawn by [HungerArtist](https://www.deviantart.com/hungerartist)
+translator: translated by [TRANSLATOR'S NAME](https://example.com/)
 cover-image: illustrations/web/1-FAT-title-final.webp
 
 ---
