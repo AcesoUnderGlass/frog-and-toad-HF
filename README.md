@@ -108,11 +108,9 @@ language menu or the `hreflang` lines. To finish it, translate the two files
 as described below, then uncomment its line in `languages.js` and the
 `hreflang="ru"` line in the `<head>` of `index.html`, `de.html` and `bn.html`.
 
-Bengali (`story-bn.js`, `bn.html`) has its story text translated and is in
-the language menu, but is still being checked: its title, credits, picture
-descriptions, interface words and the `<head>` of `bn.html` are still
-English, and `bn.html` is marked `noindex`. To take it live, translate
-those, remove the `noindex` line, and uncomment the `hreflang="bn"` line in
+Bengali (`story-bn.js`, `bn.html`) is translated and in the language menu,
+but is still being checked, so `bn.html` is marked `noindex`. To take it
+live, remove the `noindex` line, and uncomment the `hreflang="bn"` line in
 the `<head>` of `index.html`, `de.html` and `ru.html`. Bengali keeps
 English-style curly quotes, so it needs no entry in the quote styles.
 

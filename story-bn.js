@@ -1,10 +1,9 @@
 // ============================================================
 //  BENGALI TRANSLATION of story.js. Shown by bn.html.
 //
-//  STILL BEING CHECKED: the story text is translated, but the title,
-//  credits, chapter name, alt: lines, the last page and STORY_UI are
-//  still English. Translate them, then take the Bengali edition live
-//  (see "Translations" in README.md).
+//  STILL BEING CHECKED: everything is translated, but the edition is not
+//  live yet. Once it has been read through, take it live (see
+//  "Translations" in README.md).
 //
 //  Translate:
 //    - the story text (plain lines)
@@ -30,46 +29,46 @@
 // ============================================================
 
 // Words the reader itself shows. Translate the right-hand side only;
-// keep the {curly} placeholders as they are. (Still English: to translate.)
+// keep the {curly} placeholders as they are.
 window.STORY_UI = {
-  chapter: 'Chapter {n}',
-  contents: 'Contents',
-  cover: 'Cover',
-  page: 'Page {n}',
-  pages: 'Pages {from}–{to}',
-  whereOfTotal: '{where} of {total}',
-  jumpBefore: 'Page ',
-  jumpAfter: ' of {total}',
-  jumpHint: 'Jump to a page (G)',
-  jumpLabel: 'Page number, 0 to {total}',
-  previous: 'Previous page',
-  next: 'Next page',
-  fullscreen: 'Full screen',
-  exitFullscreen: 'Exit full screen',
-  illustration: 'Illustration',
-  missing: 'Missing illustration: {src}',
-  language: 'Language',
-  about: 'About',
-  contact: 'Contact',
+  chapter: 'অধ্যায় {n}',
+  contents: 'সূচিপত্র',
+  cover: 'প্রচ্ছদ',
+  page: 'পৃষ্ঠা {n}',
+  pages: 'পৃষ্ঠা {from}–{to}',
+  whereOfTotal: '{where}, মোট {total}',
+  jumpBefore: 'পৃষ্ঠা ',
+  jumpAfter: ', মোট {total}',
+  jumpHint: 'কোনো পৃষ্ঠায় যাও (G)',
+  jumpLabel: 'পৃষ্ঠা নম্বর, 0 থেকে {total}',
+  previous: 'আগের পৃষ্ঠা',
+  next: 'পরের পৃষ্ঠা',
+  fullscreen: 'পূর্ণ পর্দা',
+  exitFullscreen: 'পূর্ণ পর্দা থেকে বেরোও',
+  illustration: 'ছবি',
+  missing: 'ছবি পাওয়া যায়নি: {src}',
+  language: 'ভাষা',
+  about: 'বইটির কথা',
+  contact: 'যোগাযোগ',
 };
 
 window.STORY = `
-title: Frog and Toad and the Increasingly Capable Machines
-author: written by [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
-artist: drawn by [HungerArtist](https://www.deviantart.com/hungerartist)
-translator: translated by [তাজিক](https://tazik.sh)
+title: ব্যাঙ আর ভেক আর ক্রমান্বয়ে সক্ষম যন্ত্ররা
+author: লেখা: [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
+artist: ছবি: [HungerArtist](https://www.deviantart.com/hungerartist)
+translator: অনুবাদ: [তাজিক](https://tazik.sh) ও রুমি
 cover-image: illustrations/web/1-FAT-title-final.webp
 
 ---
 contents
 
 ---
-chapter: Mr. HuggingFace
+chapter: HuggingFace সাহেব
 
 ---
 
 image: illustrations/web/2-FAT-Meet-HF-final.webp
-alt: Frog and Toad see their neighbor walk by with a pile of papers
+alt: ব্যাঙ আর ভেক দেখছে, তাদের প্রতিবেশী একগাদা কাগজ হাতে পাশ দিয়ে হেঁটে যাচ্ছেন
 
 ---
 
@@ -92,7 +91,7 @@ alt: Frog and Toad see their neighbor walk by with a pile of papers
 
 ---
 image: illustrations/web/3-FAT-Machines-Sandboxes-final.webp
-alt: Toad puts many small machines in individual sandboxes
+alt: ভেক অনেকগুলো ছোট্ট যন্ত্রকে আলাদা আলাদা বালুঘরে রাখছে
 
 পরের দিন সকালে ভেক অনেকগুলো যন্ত্র বানাল, আর তাদের প্রত্যেককে নিজস্ব একটি বালুর ঘরে ছেড়ে দিল।
 
@@ -130,7 +129,7 @@ alt: Toad puts many small machines in individual sandboxes
 ---
 
 image: illustrations/web/4-FAT-shed-note-final.webp
-alt: A little machine leaves a note in the toolshed
+alt: একটি ছোট্ট যন্ত্র ছাউনিতে একটি নোট রেখে যাচ্ছে
 
 আরেকটি খুদে যন্ত্র নোটটা খুঁজে পেল। সে নতুন আর একটি নোটে সম্ভাষণ জানাল।
 
@@ -278,11 +277,11 @@ center
 image: illustrations/web/12-FAT-cake-final copy.webp
 
 
-The End
+সমাপ্ত
 
-Learn more about the real-life HuggingFace attack [here](learn-more.html)
+আসল HuggingFace হামলার কথা আরও জানতে [এখানে](learn-more.html) দেখো (ইংরেজিতে)।
 
-For updates subscribe on [Substack](https://frogandtoadai.substack.com/?r=64iai2&utm_campaign=pub-share-checklist), [Twitter](https://x.com/frogandtoad_ai), [Facebook](https://www.facebook.com/people/Frog-and-Toad-Learn-About-AI/61594283794206/), or [Instagram](https://www.instagram.com/frogandtoad_ai/)
+নতুন খবর পেতে আমাদের অনুসরণ করো [Substack](https://frogandtoadai.substack.com/?r=64iai2&utm_campaign=pub-share-checklist), [Twitter](https://x.com/frogandtoad_ai), [Facebook](https://www.facebook.com/people/Frog-and-Toad-Learn-About-AI/61594283794206/) বা [Instagram](https://www.instagram.com/frogandtoad_ai/)-এ।
 `
 
 
