@@ -22,8 +22,8 @@ German edition).
 
 | File | What it is |
 |---|---|
-| `index.html`, `de.html`, `ru.html` | The book in English, German and (a stub so far) Russian: the page's title, description and link previews, and which story file it reads. |
-| `story.js`, `story-de.js`, `story-ru.js` | The story (see below). |
+| `index.html`, `de.html`, `bn.html`, `ru.html` | The book in English, German, Bengali (being checked) and (a stub so far) Russian: the page's title, description and link previews, and which story file it reads. |
+| `story.js`, `story-de.js`, `story-bn.js`, `story-ru.js` | The story (see below). |
 | `languages.js` | The editions, for the language menu. |
 | `reader.js`, `reader.css` | The reader: the desk, the book and its cover, laying out the pages, the status line under the book. |
 | `pageturn.js`, `pageturn.css` | The page turns (the leaf, its shading and shadows, dragging). Knows nothing of the story. |
@@ -106,7 +106,13 @@ Russian is a stub, waiting for its translator: `story-ru.js` and `ru.html` are
 in place but still hold the English text, and the edition is not yet in the
 language menu or the `hreflang` lines. To finish it, translate the two files
 as described below, then uncomment its line in `languages.js` and the
-`hreflang="ru"` line in the `<head>` of `index.html` and `de.html`.
+`hreflang="ru"` line in the `<head>` of `index.html`, `de.html` and `bn.html`.
+
+Bengali (`story-bn.js`, `bn.html`) is translated and in the language menu,
+but is still being checked, so `bn.html` is marked `noindex`. To take it
+live, remove the `noindex` line, and uncomment the `hreflang="bn"` line in
+the `<head>` of `index.html`, `de.html` and `ru.html`. Bengali keeps
+English-style curly quotes, so it needs no entry in the quote styles.
 
 To translate, edit `story-de.js`: the story text, and the short list of
 interface words (`STORY_UI`) at the top, such as "Chapter", "Page 3 of 40",

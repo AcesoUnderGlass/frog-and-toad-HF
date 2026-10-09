@@ -14,6 +14,9 @@
 window.EDITIONS = [
   { lang: 'en', name: 'English', href: 'index.html' },
   { lang: 'de', name: 'Deutsch', href: 'de.html' },
+  // Bengali: story text translated, still being checked. bn.html stays
+  // noindex until then; comment this line out to hide it from the menu.
+  { lang: 'bn', name: 'বাংলা', href: 'bn.html' },
   // Russian: a stub so far (story-ru.js is still the English text). Uncomment
   // once it is translated.
   // { lang: 'ru', name: 'Русский', href: 'ru.html' },
