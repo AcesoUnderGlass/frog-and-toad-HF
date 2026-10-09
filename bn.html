@@ -44,7 +44,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..600,100,0..1;1,9..144,400..600,100,0..1&family=Noto+Serif+Bengali:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..600,100,0..1;1,9..144,400..600,100,0..1&family=Baloo+Da+2:wght@400..700&display=swap" rel="stylesheet">
 <!-- The cover art, fetched first thing: the closed book shows it. AVIF at
      two sizes (illustrations/web/cover-*.avif, made by
      tools/make-web-images.py from the picture named in data-cover), chosen by
@@ -57,7 +57,9 @@
 <link rel="stylesheet" href="pageturn.css">
 <link rel="stylesheet" href="reader.css">
 <style>
-  :root { --text: 'Fraunces', Georgia, 'Noto Serif Bengali', serif; }
+  :root { --text: 'Fraunces', Georgia, 'Baloo Da 2', serif; }
+  /* Baloo has no italic; a slanted Bengali looks wrong, so set it upright. */
+  .status .title { font-style: normal; }
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
