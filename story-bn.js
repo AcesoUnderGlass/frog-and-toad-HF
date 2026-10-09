@@ -1,11 +1,17 @@
 // ============================================================
 //  BENGALI TRANSLATION of story.js. Shown by bn.html.
 //
+//  STILL BEING CHECKED: the story text is translated, but the title,
+//  credits, chapter name, alt: lines, the last page and STORY_UI are
+//  still English. Translate them, then take the Bengali edition live
+//  (see "Translations" in README.md).
+//
 //  Translate:
 //    - the story text (plain lines)
 //    - the words after  title:  chapter:  alt:  caption:
 //    - "written by" / "drawn by" / "translated by", and the words inside
-//      [square brackets]
+//      [square brackets]; put the translator's name and link on the
+//      translator: line
 //    - the interface words in STORY_UI just below
 //
 //  Leave exactly as they are:
@@ -18,12 +24,13 @@
 //  Keep the pages in the same order as story.js so they line up with
 //  the pictures. Avoid backticks and ${ in the text. If a page has too
 //  much text the whole book's type shrinks, so split a long page in two
-//  with a new --- line.
+//  with a new --- line. Straight "quotes" become “…” automatically, as in
+//  English; curly quotes typed in the text are left alone.
 //  See README.md for the full format.
 // ============================================================
 
 // Words the reader itself shows. Translate the right-hand side only;
-// keep the {curly} placeholders as they are.
+// keep the {curly} placeholders as they are. (Still English: to translate.)
 window.STORY_UI = {
   chapter: 'Chapter {n}',
   contents: 'Contents',
