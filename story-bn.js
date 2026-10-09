@@ -36,9 +36,9 @@ window.STORY_UI = {
   cover: 'প্রচ্ছদ',
   page: 'পৃষ্ঠা {n}',
   pages: 'পৃষ্ঠা {from}–{to}',
-  whereOfTotal: '{where}, মোট {total}',
+  whereOfTotal: '{where} / {total}',
   jumpBefore: 'পৃষ্ঠা ',
-  jumpAfter: ', মোট {total}',
+  jumpAfter: ' / {total}',
   jumpHint: 'কোনো পৃষ্ঠায় যাও (G)',
   jumpLabel: 'পৃষ্ঠা নম্বর, 0 থেকে {total}',
   previous: 'আগের পৃষ্ঠা',
@@ -48,7 +48,7 @@ window.STORY_UI = {
   illustration: 'ছবি',
   missing: 'ছবি পাওয়া যায়নি: {src}',
   language: 'ভাষা',
-  about: 'বইটির কথা',
+  about: 'পরিচিতি',
   contact: 'যোগাযোগ',
 };
 
