@@ -177,3 +177,13 @@ credits sit on it, are set for this picture in `reader.css` (`.cover-front`).
 `tests/` has browser tests for the reader (page turns, the cover, the
 editions), run with Playwright against the site served from this folder. They
 aren't part of the site; see `tests/README.md`.
+
+## License
+
+The book, text and illustrations, is &copy; 2026 Elizabeth Van Nostrand
+(text) and HungerArtist (illustrations), and is released under the
+[Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+License](https://creativecommons.org/licenses/by-nc-nd/4.0/) (CC BY-NC-ND
+4.0). You may copy and share it with credit, but not sell it or make changes
+to it. The reader (the code in this folder) is not part of the book: do
+whatever you like with it.

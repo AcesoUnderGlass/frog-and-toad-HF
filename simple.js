@@ -156,5 +156,10 @@
   back.append(a);
   root.append(back);
 
-  root.append(el('p', 'copyright', '\u00a9 2026 Elizabeth Van Nostrand'));
+  const copyright = el('p', 'copyright', '\u00a9 2026 Elizabeth Van Nostrand \u00b7 ');
+  const lic = el('a', null, 'CC BY-NC-ND 4.0');
+  lic.href = 'https://creativecommons.org/licenses/by-nc-nd/4.0/';
+  lic.rel = 'license';
+  copyright.append(lic);
+  root.append(copyright);
 })();
