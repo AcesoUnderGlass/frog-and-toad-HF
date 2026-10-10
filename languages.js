@@ -12,15 +12,17 @@
 // ============================================================
 
 window.EDITIONS = [
-  { lang: 'en', name: 'English', href: 'index.html' },
+  // In alphabetical order of each language's own name, Latin alphabet first,
+  // then Cyrillic, then other scripts; the plain edition last.
   { lang: 'de', name: 'Deutsch', href: 'de.html' },
-  // Bengali: story text translated, still being checked. bn.html stays
-  // noindex until then; comment this line out to hide it from the menu.
-  { lang: 'bn', name: 'বাংলা', href: 'bn.html' },
+  { lang: 'en', name: 'English', href: 'index.html' },
+  { lang: 'eo', name: 'Esperanto', href: 'eo.html' },
+  { lang: 'sk', name: 'Slovenčina', href: 'sk.html' },
   // Russian: a stub so far (story-ru.js is still the English text). Uncomment
   // once it is translated.
   // { lang: 'ru', name: 'Русский', href: 'ru.html' },
-  { lang: 'sk', name: 'Slovenčina', href: 'sk.html' },
-  { lang: 'eo', name: 'Esperanto', href: 'eo.html' },
+  // Bengali: story text translated, still being checked. bn.html stays
+  // noindex until then; comment this line out to hide it from the menu.
+  { lang: 'bn', name: 'বাংলা', href: 'bn.html' },
   { lang: 'en', name: 'English (Simple UI)', href: 'simple.html', plain: true },
 ];
