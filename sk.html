@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<!-- Slovak edition. The story text and interface words live in story-sk.js. -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kvak a Čľup a čoraz schopnejšie stroje</title>
+<meta name="description" content="Kvak a Čľup čelia najmodernejšiemu problému">
+<link rel="canonical" href="https://www.frogandtoad.ai/de">
+<link rel="alternate" hreflang="en" href="https://www.frogandtoad.ai/">
+<link rel="alternate" hreflang="de" href="https://www.frogandtoad.ai/de">
+<!-- Russian edition, once story-ru.js is translated:
+<link rel="alternate" hreflang="ru" href="https://www.frogandtoad.ai/ru">
+-->
+<!-- Bengali edition, once story-bn.js is checked and bn.html's noindex is removed:
+<link rel="alternate" hreflang="bn" href="https://www.frogandtoad.ai/bn">
+-->
+<link rel="alternate" hreflang="x-default" href="https://www.frogandtoad.ai/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.frogandtoad.ai/sk">
+<meta property="og:locale" content="sk_SK">
+<meta property="og:site_name" content="Kvak a Čľup a čoraz schopnejšie stroje">
+<meta property="og:title" content="Kvak a Čľup a čoraz schopnejšie stroje">
+<meta property="og:description" content="Kvak a Čľup čelia najmodernejšiemu problému">
+<meta property="og:image" content="https://www.frogandtoad.ai/illustrations/FAT-social-card.jpg">
+<meta property="og:image:secure_url" content="https://www.frogandtoad.ai/illustrations/FAT-social-card.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="654">
+<meta property="og:image:alt" content="content="Kvak a Čľup vo svojej dielni obklopení malými robotickými pomocníkmi z príbehu „Kvak a Čľup a čoraz schopnejšie stroje“">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kvak a Čľup a čoraz schopnejšie stroje">
+<meta name="twitter:description" content="Kvak a Čľup čelia najmodernejšiemu problému">
+<meta name="twitter:image" content="https://www.frogandtoad.ai/illustrations/FAT-social-card.jpg">
+<meta name="twitter:image:alt" content="Kvak a Čľup vo svojej dielni obklopení malými robotickými pomocníkmi z príbehu „Kvak a Čľup a čoraz schopnejšie stroje“">
+<link rel="icon" href="favicon.ico" sizes="48x48 32x32 16x16">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..600,100,0..1;1,9..144,400..600,100,0..1&display=swap" rel="stylesheet">
+<!-- The cover art, fetched first thing: the closed book shows it. AVIF at
+     two sizes (illustrations/web/cover-*.avif, made by
+     tools/make-web-images.py from the picture named in data-cover), chosen by
+     its width on screen (see layout() in reader.js; the art is about 1.19
+     pages wide). reader.js takes the cover's srcset and sizes from here. -->
+<link rel="preload" id="coverArt" as="image" type="image/avif" fetchpriority="high"
+  imagesrcset="illustrations/web/cover-1200.avif 1200w, illustrations/web/cover-1600.avif 1600w"
+  imagesizes="(max-width: 560px) min(119vw - 12px, 89vh - 48px), (max-width: 759px) or (max-aspect-ratio: 21/20) min(119vw - 291px, 89vh - 66px), min(60vw - 134px, 89vh - 66px)"
+  data-cover="illustrations/web/1-FAT-title-final.webp">
+<link rel="stylesheet" href="pageturn.css">
+<link rel="stylesheet" href="reader.css">
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<main class="desk">
+  <button class="nav prev" id="btnPrev" type="button" aria-label="Predchádzajúca strana" title="Predchádzajúca strana (←)">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <div class="book spread" id="book" aria-live="polite">
+    <div class="page-block" aria-hidden="true"></div>
+    <div class="page left" id="pageL"></div>
+    <div class="page right" id="pageR"></div>
+  </div>
+  <button class="nav next" id="btnNext" type="button" aria-label="Nasledujúca strana" title="Nasledujúca strana (→)">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+  <footer class="status" id="status"></footer>
+  <button class="fullscreen" id="btnFull" type="button" aria-label="Celá obrazovka" title="Celá obrazovka (F)" hidden>
+    <svg class="enter" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg>
+    <svg class="exit" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M20 9h-5V4M15 20v-5h5M4 15h5v5"/></svg>
+  </button>
+</main>
+<script src="story-sk.js"></script>
+<script src="illustrations/web/sizes.js"></script>
+<script src="languages.js"></script>
+<script src="pageturn.js"></script>
+<script src="reader.js"></script>
+</body>
+</html>
