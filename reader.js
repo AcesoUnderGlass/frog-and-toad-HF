@@ -63,10 +63,10 @@
   const FLAG_RE = /^(contents|blank|center)\s*$/i;
 
   // Straight quotes become curly ones in the edition's own style: “…” and
-  // ‘…’ in English, „…“ in German (where a straight ' is taken for an
-  // apostrophe; type ‚…‘ as they are), «…» and „…“ in Russian. Curly quotes
-  // in the story are left as they are.
-  const QUOTES = { de: ['„', '“', '‚', '’'], ru: ['«', '»', '„', '“'] }[LANG.slice(0, 2)] || ['“', '”', '‘', '’'];
+  // ‘…’ in English, „…“ in German and Slovak (where a straight ' is taken
+  // for an apostrophe; type ‚…‘ as they are), «…» and „…“ in Russian. Curly
+  // quotes in the story are left as they are.
+  const QUOTES = { de: ['„', '“', '‚', '’'], sk: ['„', '“', '‚', '’'], ru: ['«', '»', '„', '“'] }[LANG.slice(0, 2)] || ['“', '”', '‘', '’'];
 
   function smartQuotes(s) {
     return s
