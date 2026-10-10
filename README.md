@@ -172,6 +172,23 @@ a new `COVER_PLACEHOLDER` for `reader.js`. If the cover art changes, check the
 cover too: how the art is cropped to the board, and where the title and
 credits sit on it, are set for this picture in `reader.css` (`.cover-front`).
 
+### The print edition
+
+`tools/make-print-pdf.py` makes the PDFs for a physical copy of the English
+book: the interior (one PDF page per story page, with bleed) and the front
+cover, back cover and spine as separate files, named
+`Frog-and-Toad-and-Mr-HuggingFace-*.pdf` in this folder. It reads `story.js`
+and the master art in `illustrations/`, and ends the book with QR codes for
+the site (`?source=book`, which the reader counts as its source) and the
+book's accounts. Run it with the spine width the printer quotes:
+
+```bash
+python3 tools/make-print-pdf.py --spine 0.35
+```
+
+It needs reportlab, qrcode and Pillow, and the Mac's Georgia fonts. The PDFs
+and its cache (`tools/.print-cache/`) are generated, so they're not tracked.
+
 ## Testing
 
 `tests/` has browser tests for the reader (page turns, the cover, the
