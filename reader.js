@@ -129,12 +129,14 @@
 
   /* ---------------- Links ---------------- */
 
-  // Where this reader came from: a utm_source if the link carried one, else the
-  // referring site, else "direct". Remembered for the tab, so switching
-  // language (which makes this site its own referrer) doesn't lose it.
+  // Where this reader came from: a ?source= (or utm_source) if the link carried
+  // one (the printed book's QR code uses ?source=book), else the referring
+  // site, else "direct". Remembered for the tab, so switching language (which
+  // makes this site its own referrer) doesn't lose it.
   const SOURCE = (function () {
     const clean = (s) => (s || '').toLowerCase().replace(/^www\./, '').replace(/[^a-z0-9.-]/g, '').slice(0, 60);
-    let source = clean(new URLSearchParams(location.search).get('utm_source'));
+    const params = new URLSearchParams(location.search);
+    let source = clean(params.get('source') || params.get('utm_source'));
     if (!source) {
       try {
         const host = new URL(document.referrer).hostname;
