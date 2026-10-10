@@ -1,7 +1,8 @@
 // The editions: the German book's cover (title split, translator credit),
 // its „ quotes and interface words; the language menu, which keeps
-// the page being read; the About and Contact links and their way back; and
-// the book opened straight from a file.
+// the page being read; the "Simplified" box and the plain edition; the About
+// and Contact links and their way back; and the book opened straight from a
+// file.
 import { BASE, launch, newContext, openBook, watchErrors, tally } from './lib.mjs';
 
 const t = tally('Editions');
@@ -104,6 +105,27 @@ pages.push(p);
 to = await switchTo(p, 'Deutsch');
 t.check('the cover to German', to.where === 'Titelseite von 24' && !to.url.includes('#'), JSON.stringify(to));
 
+// The "Simplified" box under the book opens the plain edition of the same
+// language; its menu switches language there, and unticking the box opens
+// the book again.
+p = await openGerman({ page: 6 });
+await Promise.all([p.waitForNavigation(), p.click('.status .simple input')]);
+await p.waitForFunction(() => document.querySelector('.sheet.story h1'));
+let sheet = await p.evaluate(() => ({ url: location.pathname + location.search, lang: document.documentElement.lang, h1: document.querySelector('.sheet h1').textContent, box: document.querySelector('.sheet .simple input').checked, label: document.querySelector('.sheet .simple').textContent.trim(), menu: document.querySelector('.sheet .lang').value, back: document.querySelector('.back a').getAttribute('href') }));
+t.check('German book → simplified German', /simple(\.html)?$/.test(sheet.url.split('?')[0]) && sheet.url.endsWith('?lang=de') && sheet.lang === 'de' && sheet.h1.startsWith('Frosch und Kröte') && sheet.box && sheet.label === 'Vereinfacht' && sheet.menu === 'de' && sheet.back === 'de.html', JSON.stringify(sheet));
+await Promise.all([p.waitForNavigation(), p.selectOption('.sheet .lang', { label: 'English' })]);
+await p.waitForFunction(() => document.querySelector('.sheet.story h1'));
+sheet = await p.evaluate(() => ({ url: location.search, lang: document.documentElement.lang, h1: document.querySelector('.sheet h1').textContent, label: document.querySelector('.sheet .simple').textContent.trim() }));
+t.check('simplified German → simplified English', sheet.url === '?lang=en' && sheet.lang === 'en' && sheet.h1.startsWith('Frog and Toad') && sheet.label === 'Simplified', JSON.stringify(sheet));
+await Promise.all([p.waitForNavigation(), p.click('.sheet .simple input')]);
+await p.waitForFunction(() => document.querySelector('.desk.drawn'), null, { timeout: 8000 }).catch(() => {});
+sheet = await p.evaluate(() => ({ path: location.pathname, cover: !!document.querySelector('#book .cover-front'), box: document.querySelector('.status .simple input')?.checked }));
+t.check('unticked: the English book', sheet.path.endsWith('index.html') && sheet.cover && sheet.box === false, JSON.stringify(sheet));
+await p.goto(new URL('simple.html?lang=xx', BASE).href);
+await p.waitForFunction(() => document.querySelector('.sheet.story h1'));
+sheet = await p.evaluate(() => ({ lang: document.documentElement.lang, h1: document.querySelector('.sheet h1').textContent }));
+t.check('an unknown language falls back to English', sheet.lang === 'en' && sheet.h1.startsWith('Frog and Toad'), JSON.stringify(sheet));
+
 // About and Contact: the links under the book lead to them, and they lead
 // back to the book.
 for (const book of [BASE, DE]) {
@@ -143,7 +165,7 @@ if (process.env.SKIP_FILE !== '1') {
 for (const [url, page, width, height] of [[BASE, 0, 1440, 820], [BASE, 6, 1440, 820], [DE, 6, 1440, 820], [BASE, 6, 390, 844]]) {
   p = await openBook(browser, { url, page, width, height });
   pages.push(p);
-  const blocked = await p.evaluate(() => [...document.querySelectorAll('#status a, #status button, #status select')].filter(el => {
+  const blocked = await p.evaluate(() => [...document.querySelectorAll('#status a, #status button, #status select, #status input')].filter(el => {
     const r = el.getBoundingClientRect();
     const hit = document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2);
     return !(hit && (hit === el || el.contains(hit)));

@@ -48,6 +48,8 @@ window.STORY_UI = {
   illustration: 'Illustration',
   missing: 'Missing illustration: {src}',
   language: 'Language',
+  simplified: 'Simplified',
+  book: 'Read it as a book',
   about: 'About',
   contact: 'Contact',
 };

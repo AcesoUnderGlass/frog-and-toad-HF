@@ -526,6 +526,26 @@ body {
 .status .lang:focus-visible { outline: 2px solid rgba(255, 236, 205, 0.6); outline-offset: 0; }
 .status .lang option { color: var(--ink); background: var(--paper); }
 
+/* The "Simplified" box beside it: ticked, the plain edition. */
+.status .simple { cursor: pointer; white-space: nowrap; }
+.status .simple:hover { color: rgba(255, 244, 224, 0.9); }
+.status .simple input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 0.85em;
+  height: 0.85em;
+  margin: 0 0.1em 0 0;
+  vertical-align: -0.08em;
+  border: 1px solid rgba(244, 230, 206, 0.5);
+  border-radius: 2px;
+  background: none;
+  cursor: pointer;
+}
+.status .simple input:checked {
+  background: rgba(244, 230, 206, 0.85) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 5.2l2.2 2.2L8 3' fill='none' stroke='%233b2819' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 80% no-repeat;
+}
+.status .simple input:focus-visible { outline: 2px solid rgba(255, 236, 205, 0.6); outline-offset: 1px; }
+
 /* One page wide, there's no room for the title between the other two; nor
    on a narrow spread (see fitStatus in reader.js). */
 .book.single ~ .status .title,

@@ -48,6 +48,8 @@ window.STORY_UI = {
   illustration: 'ছবি',
   missing: 'ছবি পাওয়া যায়নি: {src}',
   language: 'ভাষা',
+  simplified: 'সরল',
+  book: 'বই হিসেবে পড়ুন',
   about: 'পরিচিতি',
   contact: 'যোগাযোগ',
 };

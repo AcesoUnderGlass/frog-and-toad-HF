@@ -30,6 +30,7 @@
     illustration: 'Illustration',
     missing: 'Missing illustration: {src}',
     language: 'Language',
+    simplified: 'Simplified',
     about: 'About',
     contact: 'Contact',
   }, window.STORY_UI);
@@ -461,7 +462,9 @@
   }
 
   // languages.js lists every edition; a menu in the status line switches
-  // between them, staying on the page being read.
+  // between them, staying on the page being read. Beside it, a "Simplified"
+  // box: ticked, it opens the plain edition (simple.html) of the same
+  // language, the whole story down one sheet with no book.
   const editions = window.EDITIONS || [];
   let langMenu = null;
   if (editions.length > 1) {
@@ -472,17 +475,24 @@
       const o = el('option', null, e.name);
       o.value = e.href;
       o.lang = e.lang;
-      // The plain edition (simple.html) is never the page being read here.
-      o.dataset.plain = e.plain ? '1' : '';
-      o.selected = e.lang === LANG && !e.plain;
+      o.selected = e.lang === LANG;
       langMenu.append(o);
     }
     langMenu.addEventListener('change', () => {
-      const page = langMenu.selectedOptions[0].dataset.plain ? 0 : shownPage();   // the plain edition has no pages
+      const page = shownPage();
       location.href = langMenu.value + (page ? '#p' + page : '');
     });
     // Coming Back to this page: show its own language again.
-    window.addEventListener('pageshow', () => { for (const o of langMenu.options) o.selected = o.lang === LANG && !o.dataset.plain; });
+    window.addEventListener('pageshow', () => { for (const o of langMenu.options) o.selected = o.lang === LANG; });
+  }
+  let simpleBox = null;
+  if (editions.some(e => e.lang === LANG)) {
+    simpleBox = el('label', 'simple');
+    const box = el('input');
+    box.type = 'checkbox';
+    simpleBox.append(box, ' ' + t('simplified'));
+    box.addEventListener('change', () => { if (box.checked) location.href = 'simple.html?lang=' + encodeURIComponent(LANG); });
+    window.addEventListener('pageshow', () => { box.checked = false; });
   }
 
   // The arrows, the status line (links, title, page counter) and the address
@@ -515,6 +525,7 @@
     contact.href = 'contact.html';
     links.append(about, el('span', 'sep', '·'), contact);
     if (langMenu) links.append(el('span', 'sep', '·'), langMenu);
+    if (simpleBox) links.append(el('span', 'sep', '·'), simpleBox);
     status.replaceChildren(links, el('span', 'title', story.title), whereBtn);
     fitStatus();
   }

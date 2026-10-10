@@ -150,6 +150,52 @@ body {
 /* ---------- The plain edition: the whole story down one sheet ---------- */
 
 .sheet.story { max-width: 40rem; font-size: 19px; }
+/* The language menu and the "Simplified" box (ticked here; unticking it opens
+   the book), as under the book but in the paper's ink, at the top right. */
+.sheet.story .controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 0.6em;
+  margin: -1.6em 0 1.2em;
+  font-size: 0.75em;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.sheet.story .controls .sep { opacity: 0.5; }
+.sheet.story .lang {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  border-radius: 4px;
+  padding: 2px 1.25em 2px 6px;
+  margin: -2px -6px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%237b6c55' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 0.35em center / 0.6em auto;
+}
+.sheet.story .lang:hover { background-color: rgba(var(--shade), 0.06); color: var(--ink); }
+.sheet.story .lang:focus-visible { outline: 2px solid rgba(92, 107, 47, 0.55); outline-offset: 0; }
+.sheet.story .simple { cursor: pointer; }
+.sheet.story .simple:hover { color: var(--ink); }
+.sheet.story .simple input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 0.85em;
+  height: 0.85em;
+  margin: 0 0.1em 0 0;
+  vertical-align: -0.08em;
+  border: 1px solid rgba(var(--shade), 0.45);
+  border-radius: 2px;
+  background: none;
+  cursor: pointer;
+}
+.sheet.story .simple input:checked {
+  background: var(--green-deep) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 5.2l2.2 2.2L8 3' fill='none' stroke='%23faf6ea' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 80% no-repeat;
+  border-color: var(--green-deep);
+}
+.sheet.story .simple input:focus-visible { outline: 2px solid rgba(92, 107, 47, 0.55); outline-offset: 1px; }
 .sheet.story .byline { margin: 0.8em 0 0; text-align: center; font-style: italic; color: var(--ink-soft); }
 .sheet.story .byline p { margin: 0; }
 .sheet.story .byline a { color: var(--ink); }
@@ -189,4 +235,5 @@ body {
   .sheet { padding: 2.2em 1.4em 1.8em; font-size: 16px; }
   .sheet h1 { font-size: 1.75em; }
   .sheet.story { font-size: 17px; }
+  .sheet.story .controls { margin-top: -0.8em; }
 }

@@ -20,6 +20,8 @@ window.STORY_UI = {
   illustration: 'Ilustraĵo',
   missing: 'Mankanta ilustraĵo: {src}',
   language: 'Lingvo',
+  simplified: 'Simpligita',
+  book: 'Legi kiel libron',
   about: 'Pri la libro',
   contact: 'Kontakto',
 };

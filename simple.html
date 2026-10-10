@@ -34,12 +34,14 @@
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body class="simple-page">
-<!-- The whole story on one sheet, top to bottom, with no book around it.
-     simple.js fills it in from story.js. -->
+<!-- The whole story on one sheet, top to bottom, with no book around it, in
+     any of the languages in languages.js: ?lang=de for the German, none
+     for the English. simple.js loads that edition's story file and fills
+     the sheet in. -->
 <main class="sheet story" id="story">
   <noscript><p>This page needs JavaScript to show the story.</p></noscript>
 </main>
-<script src="story.js"></script>
+<script src="languages.js"></script>
 <script src="illustrations/web/sizes.js"></script>
 <script src="simple.js"></script>
 </body>

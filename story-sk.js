@@ -20,6 +20,8 @@ window.STORY_UI = {
   illustration: 'Ilustrácia',
   missing: 'Chýba ilustrácia: {src}',
   language: 'Jazyk',
+  simplified: 'Zjednodušené',
+  book: 'Čítať ako knihu',
   about: 'O tejto knihe',
   contact: 'Kontakt',
 };

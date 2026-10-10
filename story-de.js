@@ -42,6 +42,8 @@ window.STORY_UI = {
   illustration: 'Illustration',
   missing: 'Fehlende Illustration: {src}',
   language: 'Sprache',
+  simplified: 'Vereinfacht',
+  book: 'Als Buch lesen',
   about: 'Über das Buch',
   contact: 'Kontakt',
 };

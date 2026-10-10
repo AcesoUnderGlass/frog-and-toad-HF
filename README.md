@@ -24,10 +24,10 @@ German edition).
 |---|---|
 | `index.html`, `de.html`, `sk.html`, `eo.html`, `bn.html`, `ru.html` | The book in English, German, Slovak, Esperanto, Bengali (being checked) and (a stub so far) Russian: the page's title, description and link previews, and which story file it reads. |
 | `story.js`, `story-de.js`, `story-sk.js`, `story-eo.js`, `story-bn.js`, `story-ru.js` | The story (see below). |
-| `languages.js` | The editions, for the language menu. |
+| `languages.js` | The editions, for the language menu and the plain edition. |
 | `reader.js`, `reader.css` | The reader: the desk, the book and its cover, laying out the pages, the status line under the book. |
 | `pageturn.js`, `pageturn.css` | The page turns (the leaf, its shading and shadows, dragging). Knows nothing of the story. |
-| `simple.html`, `simple.js` | The plain edition (`/simple` on the site): the whole English story down one sheet, with no book, cover or page turns. Reads the same `story.js`. |
+| `simple.html`, `simple.js` | The plain edition (`/simple` on the site, `/simple?lang=de` for the German): the whole story down one sheet, with no book, cover or page turns, in any language in `languages.js`. Reads the same story files. |
 | `about.html`, `contact.html`, `learn-more.html`, `sheet.css` | The other pages, each a sheet of the book's paper on the same desk. |
 | `illustrations/` | The pictures (see "Illustrations for the web"). |
 | `tests/` | Browser tests for the reader (see `tests/README.md`). |
@@ -128,8 +128,12 @@ which is what link previews show.
 
 Readers switch language with the menu under the book, beside About and
 Contact; the other edition opens on the same page. Its choices come from
-`languages.js`, which lists every edition. (About and Contact are in English
-only, for every edition.)
+`languages.js`, which lists every edition. Beside the menu, a "Simplified"
+box: ticked, it opens the plain edition of the same language, the whole
+story down one sheet (`simple.html?lang=de`; `simple.js` loads the story
+file named in `languages.js`). The plain edition has the same menu and box,
+and unticking the box opens the book again. (About and Contact are in
+English only, for every edition.)
 
 To add another language:
 
@@ -138,7 +142,8 @@ To add another language:
 2. In the new page, change `<html lang="de">`, point
    `<script src="story-de.js">` at the new story file, and change `/de` in the
    `canonical` and `og:url` lines.
-3. Add a line for it to `languages.js`.
+3. Add a line for it to `languages.js`, naming the page and the story file;
+   that puts it in the language menu and gives it a plain edition.
 4. Add a `<link rel="alternate" hreflang="...">` line for it to the `<head>`
    of every page (`index.html`, `de.html`, `sk.html`, `eo.html`, and the new
    one), so search engines offer each reader the right language.
