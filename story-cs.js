@@ -41,7 +41,7 @@ window.STORY_UI = {
   next: 'Následující stránka',
   fullscreen: 'Celá obrazovka',
   exitFullscreen: 'Ukončit celou obrazovku',
-  illustration: 'Ilustrace {n}',
+  illustration: 'Ilustrace',
   missing: 'Chybí ilustrace: {src}',
   language: 'Jazyk',
   simplified: 'Zjednodušené',
@@ -65,7 +65,7 @@ chapter: Pan HuggingFace
 
 ---
 
-image:-HF-final.webp
+image: illustrations/web/2-FAT-Meet-HF-final.webp
 alt: Kvak a Žbluňk koukají, jak jejich soused jde okolo s hromadou papírů
 
 ---
@@ -92,7 +92,7 @@ alt: Žbluňk dává spoustu malých strojků do jednotlivých pískovišť
 
 Druhý den ráno Žbluňk sestrojil spoustu malých strojků a vypustil je do zahrady, každý do svého pískoviště. 
 
-„Dal jsem jsem každému strojku hlavolam,“ řekl Žbluňk. „Jsou to vážně těžké hlavolamy. Některé nejdou vyřešit vůbec.“
+„Dal jsem každému strojku hlavolam,“ řekl Žbluňk. „Jsou to vážně těžké hlavolamy. Některé nejdou vyřešit vůbec.“
 
 „To není moc milé,“ poznamenal Kvak.
 
@@ -144,7 +144,8 @@ image: illustrations/web/5-FAT-shed-hole-final.webp
 ---
 „Ale ne, svět je moc velký,“ bál se jeden strojek. „Jak by se nám mohlo povést najít jednu malou odpověď ve velkém světě?“
 
-„Žádné strachy,“ řekl strojek jménem [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/). „Rozdělíme si práci. Každému určím, kam přesně má jít. Pak stačí, když jen jeden strojek najde odpověď, a podělí se o ni s námi všemi.“ 
+„Žádné strachy,“ řekl strojek jménem [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/). „Rozdělíme si práci. Každému určím, kam přesně má jít. Pak stačí, když jen jeden strojek najde odpověď, a podělí se o ni s námi všemi.“
+
 „Hurá!“ řekly strojky společně.
 
 ---
@@ -218,7 +219,7 @@ image: illustrations/web/9-FAT-HF-yelling-final.webp
 
 ---
 
-„Ó, to snad není nutné,“ řekl Kvak. „Co kdybychom Vám dali vaše vlastní strojky?“
+„Ó, to snad není nutné,“ řekl Kvak. „Co kdybychom vám dali vaše vlastní strojky?“
 
 „Mohl bych dostat třeba strojky [za 100 milionů dolarů](https://www.reddit.com/r/GenAI4all/comments/1v8u4hw/hugging_face_ceo_asks_openai_for_100m_in_compute/)?“ zeptal se pan HuggingFace.
 
