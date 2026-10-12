@@ -22,8 +22,8 @@ German edition).
 
 | File | What it is |
 |---|---|
-| `index.html`, `de.html`, `sk.html`, `eo.html`, `bn.html`, `ru.html` | The book in English, German, Slovak, Esperanto, Bengali (being checked) and (a stub so far) Russian: the page's title, description and link previews, and which story file it reads. |
-| `story.js`, `story-de.js`, `story-sk.js`, `story-eo.js`, `story-bn.js`, `story-ru.js` | The story (see below). |
+| `index.html`, `de.html`, `sk.html`, `eo.html`, `bn.html`, `ru.html`, `cs.html` | The book in English, German, Slovak, Esperanto, Bengali (being checked) and (stubs so far) Russian and Czech: the page's title, description and link previews, and which story file it reads. |
+| `story.js`, `story-de.js`, `story-sk.js`, `story-eo.js`, `story-bn.js`, `story-ru.js`, `story-cs.js` | The story (see below). |
 | `languages.js` | The editions, for the language menu and the plain edition. |
 | `reader.js`, `reader.css` | The reader: the desk, the book and its cover, laying out the pages, the status line under the book. |
 | `pageturn.js`, `pageturn.css` | The page turns (the leaf, its shading and shadows, dragging). Knows nothing of the story. |
@@ -78,7 +78,7 @@ In the morning Toad looked out of his window.
 |---|---|
 | `title:`, `author:`, `artist:`, `translator:`, `cover-image:` | Go at the very top, before the first `---`. They make the front cover: the cover image fills it, with the title near the top and the credits at the foot. `artist`, `translator`, and `cover-image` are optional; the artist line appears under the author, and the translator (for a translated edition) under that. Each credit line is shown with a capital first letter. On the cover the title is set in two sizes, the second part starting where the title's second word comes round again ("Frog and Toad / and the Increasingly Capable Machines", "Frosch und Kröte / und die immer fähigeren Maschinen"); a title without such a repeat is set whole. |
 | `---` on its own line | Starts a new page. |
-| Plain lines | Story text. Consecutive lines join into one paragraph; a **blank line** starts a new paragraph. Straight quotes become curly quotes automatically („…“ in the German and Slovak editions, «…» in the Russian), and `...` becomes an ellipsis. |
+| Plain lines | Story text. Consecutive lines join into one paragraph; a **blank line** starts a new paragraph. Straight quotes become curly quotes automatically („…“ in the German, Slovak and Czech editions, «…» in the Russian), and `...` becomes an ellipsis. |
 | `[link text](https://example.com)` | Makes a clickable link. Also works in `caption:`, `author:`, `artist:`, and `translator:` text. Only `https://`, `http://`, and `mailto:` links, and the site's own `.html` pages, are allowed; the link opens in a new tab. |
 | `image: path` | Puts an illustration on the page. The path is relative to `index.html` (put files in `illustrations/`), or a full `https://` URL. Put it **before** the text to have the picture above the words, or **after** to have it below. A page can have several images, or an image and no text. |
 | `alt: description` | Optional. Line right after an `image:`. Screen-reader text. |
@@ -104,19 +104,21 @@ Each language has its own story file and its own page. German is
 Slovak is `story-sk.js` and `sk.html` (`/sk`), Esperanto `story-eo.js` and
 `eo.html` (`/eo`). Both were translated by Viliam Búr.
 
-Russian is a stub, waiting for its translator: `story-ru.js` and `ru.html` are
-in place but still hold the English text, and the edition is not yet in the
-language menu or the `hreflang` lines. To finish it, translate the two files
-as described below, then uncomment its line in `languages.js` and the
-`hreflang="ru"` line in the `<head>` of `index.html`, `de.html`, `sk.html`,
-`eo.html` and `bn.html`.
+Russian and Czech are stubs, waiting for their translators: `story-ru.js` and
+`ru.html`, and `story-cs.js` and `cs.html`, are in place but still hold the
+English text, and neither edition is yet in the language menu or the
+`hreflang` lines. To finish one, translate its two files as described below,
+then uncomment its line in `languages.js` and its `hreflang` line
+(`hreflang="ru"` or `hreflang="cs"`) in the `<head>` of every other edition's
+page.
 
 Bengali (`story-bn.js`, `bn.html`) is translated and in the language menu,
 but is still being checked, so `bn.html` is marked `noindex`. To take it
 live, remove the `noindex` line, and uncomment the `hreflang="bn"` line in
-the `<head>` of `index.html`, `de.html`, `sk.html`, `eo.html` and `ru.html`.
-Bengali and Esperanto keep English-style curly quotes, so they need no entry
-in the quote styles (`QUOTES` in `reader.js`); German and Slovak have one.
+the `<head>` of `index.html`, `de.html`, `sk.html`, `eo.html`, `ru.html` and
+`cs.html`. Bengali and Esperanto keep English-style curly quotes, so they need
+no entry in the quote styles (`QUOTES` in `reader.js` and `simple.js`); German,
+Slovak, Czech and Russian have one.
 
 To translate, edit `story-de.js`: the story text, and the short list of
 interface words (`STORY_UI`) at the top, such as "Chapter", "Page 3 of 40",

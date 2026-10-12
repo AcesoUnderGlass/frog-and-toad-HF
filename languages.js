@@ -16,6 +16,9 @@
 window.EDITIONS = [
   // In alphabetical order of each language's own name, Latin alphabet first,
   // then Cyrillic, then other scripts.
+  // Czech: a stub so far (story-cs.js is still the English text). Uncomment
+  // once it is translated.
+  // { lang: 'cs', name: 'Čeština', href: 'cs.html', story: 'story-cs.js' },
   { lang: 'de', name: 'Deutsch', href: 'de.html', story: 'story-de.js' },
   { lang: 'en', name: 'English', href: 'index.html', story: 'story.js' },
   { lang: 'eo', name: 'Esperanto', href: 'eo.html', story: 'story-eo.js' },
