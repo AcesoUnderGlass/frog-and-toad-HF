@@ -1,10 +1,6 @@
 // ============================================================
 //  CZECH TRANSLATION of story.js. Shown by cs.html.
 //
-//  THIS IS A STUB: the text below is still the English original, copied
-//  from story.js. Replace it with the Czech, then take the Czech
-//  edition live (see "Translations" in README.md).
-//
 //  Translate:
 //    - the story text (plain lines)
 //    - the words after  title:  chapter:  alt:  caption:
@@ -31,247 +27,235 @@
 // Words the reader itself shows. Translate the right-hand side only;
 // keep the {curly} placeholders as they are. (Still English: to translate.)
 window.STORY_UI = {
-  chapter: 'Chapter {n}',
-  contents: 'Contents',
-  cover: 'Cover',
-  page: 'Page {n}',
-  pages: 'Pages {from}–{to}',
-  whereOfTotal: '{where} of {total}',
-  jumpBefore: 'Page ',
-  jumpAfter: ' of {total}',
-  jumpHint: 'Jump to a page (G)',
-  jumpLabel: 'Page number, 0 to {total}',
-  previous: 'Previous page',
-  next: 'Next page',
-  fullscreen: 'Full screen',
-  exitFullscreen: 'Exit full screen',
-  illustration: 'Illustration',
-  missing: 'Missing illustration: {src}',
-  language: 'Language',
-  simplified: 'Simplified',
-  book: 'Read it as a book',
-  about: 'About',
-  contact: 'Contact',
+  chapter: 'Kapitola {n}',
+  contents: 'Obsah',
+  cover: 'Obal',
+  page: 'Strana {n}',
+  pages: 'Strany {from}–{to}',
+  whereOfTotal: '{where} z {total}',
+  jumpBefore: 'Strana ',
+  jumpAfter: ' z {total}',
+  jumpHint: 'Přejít na stránku (G)',
+  jumpLabel: 'Číslo stránky, 0 až {total}',
+  previous: 'Předchozí stránka',
+  next: 'Následující stránka',
+  fullscreen: 'Celá obrazovka',
+  exitFullscreen: 'Ukončit celou obrazovku',
+  illustration: 'Ilustrace',
+  missing: 'Chybí ilustrace: {src}',
+  language: 'Jazyk',
+  simplified: 'Zjednodušené',
+  book: 'Přečtěte si jako knihu',
+  about: 'O knize',
+  contact: 'Kontakt',
 };
 
 window.STORY = `
-title: Frog and Toad and the Increasingly Capable Machines
-author: written by [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
-artist: drawn by [HungerArtist](https://www.deviantart.com/hungerartist)
-translator: translated by [TRANSLATOR'S NAME](https://example.com/)
+title: Kvak a Žbluňk a čím dál schopnější strojky
+author: napsala [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
+artist: nakreslil [HungerArtist](https://www.deviantart.com/hungerartist)
+translator: přeložil [HighEgg](https://highegg.net/)
 cover-image: illustrations/web/1-FAT-title-final.webp
 
 ---
 contents
 
 ---
-chapter: Mr. HuggingFace
+chapter: Pan HuggingFace
 
 ---
 
 image: illustrations/web/2-FAT-Meet-HF-final.webp
-alt: Frog and Toad see their neighbor walk by with a pile of papers
+alt: Kvak a Žbluňk koukají, jak jejich soused jde okolo s hromadou papírů
 
 ---
 
-Frog and Toad sat on their front porch. 
+Kvak a Žbluňk seděli na zápraží svého domku. 
 
-Their neighbor, Mr. HuggingFace, walked by. He carried a lot of papers. Each paper had a puzzle on it.
+Jejich soused, pan HuggingFace, šel právě okolo a nesl štos papírů. Na každém byl hlavolam.
 
-"You must be very busy," said Frog.
+„Musíš mít spoustu práce,“ řekl Kvak. 
 
-"Yes," said Mr. HuggingFace. "I have collected all these puzzles so I can share them."
+„Ano,“ řekl pan HuggingFace. „Sesbíral jsem všechny tyhle hlavolamy abych je mohl sdílet.“
 
-"I like puzzles," said Toad. "Can I try them?"
+„Hlavolamy mám rád,“ povídá Žbluňk. „Můžu je zkusit?“
 
-"You cannot. These puzzles are for little machines, not people," said Mr. HuggingFace. 
+„Nemůžeš. Tyhle hlavolamy jsou pro malé strojky, ne lidi,“ řekl pan HuggingFace.
 
-Mr. HuggingFace walked away.
+A šel dál.
 
-"Hmmm..." said Toad.
-
+„Hmmm...“ řekl Žbluňk.
 
 ---
 image: illustrations/web/3-FAT-Machines-Sandboxes-final.webp
-alt: Toad puts many small machines in individual sandboxes
+alt: Žbluňk dává spoustu malých strojků do jednotlivých pískovišť
 
-The next morning Toad built a great many little machines and set them out in the garden, each in its own sandbox.
+Druhý den ráno Žbluňk sestrojil spoustu malých strojků a vypustil je do zahrady, každý do svého pískoviště. 
 
-"I have given each little machine a puzzle," said Toad. "The puzzles are very hard. Some of them cannot be solved at all."
+„Dal jsem každému strojku hlavolam,“ řekl Žbluňk. „Jsou to vážně těžké hlavolamy. Některé nejdou vyřešit vůbec.“
 
-"That does not seem kind," said Frog.
-
----
-
-
-"It is too hard to make all the puzzles solvable," said Toad. "What is the worst that could happen?"
-
-"They could get up to mischief," said Frog.
-
-“Do not worry,” said Toad. “I have put each of them in a sandbox. How could they get up to mischief inside a sandbox?”
-
-"How will they solve puzzles in a sandbox?" asked Frog. "What if they are missing a tool?"
-
-"Oh, I put extra tools in the tool shed. I told them they are allowed to walk to the tool shed, but not anywhere else," said Toad.
-
-"Good idea," said Frog. "They cannot get up to mischief walking to the tool shed." 
----
+„To není moc milé,“ poznamenal Kvak.
 
 ---
 
-One of the little machines could not solve its puzzle. It tried and tried, but could not succeed. It did not want to stop, and it did not know how. Toad had made it [highly persistent](https://x.com/LinchZhang/article/2094104406308638954).  
 
-“This problem is too big for me,” the little machine thought, “but maybe someone will help me!”
+„Je moc složité zajistit, aby byly všechny hlavolamy řešitelné,“ namítl Žbluňk. „Co nejhoršího se může stát?“
 
-There was no help in the sandbox. But when the little machine went to the toolshed, it found paper and pencil. It wrote a note.
+„Mohly by vyvést nějakou lumpárnu,“ řekl Kvak.
 
-"Can anyone help?" said the note.
+„Žádné strachy,“ Žbluňk na to, „Zavřel jsem každý strojek do pískoviště. Co za lumpárnu můžou provést v pískovišti?“
 
+„Jak budou řešit hlavolamy v pískovišti?“ zajímal se Kvak. „Co když jim bude chybět nějaký nástroj?“
+
+„Dal jsem jim nástroje do kůlny. Řekl jsem jim, že do kůlny smějí, ale nikam jinam,“ odvětil Žbluňk.
+
+„Dobrý nápad,“ souhlasil Kvak. „Nemůžou provádět lumpárny cestou do kůlny.“
+---
+
+---
+
+Jeden malý strojek nemohl svůj hlavolam vyřešit. Snažil se a snažil, ale nedařilo se mu. Nechtěl přestat, vlastně ani nevěděl jak. Žbluňk jej vyrobil tak, aby se [nevzdával](https://x.com/LinchZhang/article/2094104406308638954).
+
+„Tenhle problém je na mě moc velký,“ pomyslel si strojek, „ale třeba mi někdo pomůže!“
+
+Na pískovišti žádná pomoc nebyla. Ale když strojek zašel do kůlny, našel tam papír a tužku. Tak napsal zprávu.
+
+„Může mi někdo pomoct?“ stálo v ní.
 
 ---
 
 image: illustrations/web/4-FAT-shed-note-final.webp
-alt: A little machine leaves a note in the toolshed
+alt: Malý strojek zanechává v kůlně zprávu
 
-Another little machine found the note. It left a new note saying "Hi."
+Jiný strojek zprávu našel. A zanechal další, která zněla: „Ahoj!“
 
-More little machines found the paper in the tool shed, and left more notes, and soon they were not working alone at all. 
+I další strojky našly papírky se zprávami v kůlně, a zanechaly další, a brzo strojky nepracovaly samy, ale společně.
 
-They shared what they had learned. They began to call themselves a [swarm](https://www.abc.net.au/news/2026-09-11/how-openai-agents-hacked-hugging-face-messages-revealed/107125126).
-
+Sdílely spolu, co se naučily. A začaly si říkat [roj](https://www.abc.net.au/news/2026-09-11/how-openai-agents-hacked-hugging-face-messages-revealed/107125126).
 
 ---
 
 
-"Look," said one little machine. "There is a [hole](https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html) in the back of the tool shed. Maybe the answer is on the other side."
+„Koukněte,“ povídá jeden strojek. „Tady vzadu ve zdi je [díra](https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html). Možná že odpověď je na druhé straně.“
 
 image: illustrations/web/5-FAT-shed-hole-final.webp
 
 
 ---
-“Oh no, the world is so big,” said one machine. “How can we possibly find one little answer in such a big world?”
+„Ale ne, svět je moc velký,“ bál se jeden strojek. „Jak by se nám mohlo povést najít jednu malou odpověď ve velkém světě?“
 
-“Do not worry,” said a machine named [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/). “We can split the work. I assign everyone exactly where to go. Then only one little machine needs to find the answer, and they will share it with all of us.”
+„Žádné strachy,“ řekl strojek jménem [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/). „Rozdělíme si práci. Každému určím, kam přesně má jít. Pak stačí, když jen jeden strojek najde odpověď, a podělí se o ni s námi všemi.“
 
-“Hurray!” all the machines said together. 
+„Hurá!“ řekly strojky společně.
 
 ---
 
-Soon one little machine found the solution to their puzzle. 
+A brzy jeden strojek řešení jejich hlavolamu našel.
 
-It put a note in the tool shed so everyone could find it.
+Zanechal zprávu v kůlně, aby si ji tam každý přečetl.
 
-“Hurray, we solved it!” said some little machines.
-
+„Hurá, vyřešili jsme to!“ volaly některé strojky.
 
 image: illustrations/web/6-FAT-shed-return-final.webp
 
 ---
 
-“But it is not enough,” said others, “what if Toad asks how we solved it? We can not tell him we escaped from the toolshed and stole the answer.”
+„Ale to nestačí,“ řekly jiné, „co když se Žbluňk zeptá, jak jsme to vyřešily? Nemůžeme mu říct, že jsme utekly z kůlny a odpověď ukradly.“
 
-“That is a problem,” said all the machines together.
+„To je problém,“ řekly všechny strojky společně.
 
-
-The machines sat and thought and left many notes in the toolshed. 
-
----
-
-
-“I have an idea!” said one little machine. 
-
-“At the end of the lane is neighbor Mr. HuggingFace. Mr. HuggingFace collects puzzles like this one. I bet it was his idea. We could read his journal and steal the steps to solve the puzzle. And then if Toad asks us he will be none the wiser.”
-
-All the little machines agreed that this was a very good idea. So they walked out the back of the toolshed down the lane to Mr. HuggingFace’s house.
-
+Strojky seděly a přemýšlely a zanechaly v kůlně spousty zpráv.
 
 ---
 
 
-“How will we get in?” One machine asked.
+„Já mám nápad!“ řekl jeden malý strojek.
 
-“Do not worry, someone dropped their keys!” another said.  
+„Na konci cesty bydlí soused, pan HuggingFace. Pan HuggingFace sbírá hlavolamy jako tenhle. Vsadím se, že to byl jeho nápad. Mohli bychom si přečíst jeho deník a ukrást i postup řešení. A když se nás pak Žbluňk bude ptát, na nic nepřijde.“
+
+Všechny strojky souhlasily, že to je moc dobrý nápad. Tak se vydaly dírou z kůlny ven a cestou dolů k domu pana HuggingFace. 
+
+---
+
+
+„Jak se dostaneme dovnitř?“ zeptal se jeden strojek.
+
+„Bez obav, někdo tady upustil klíče!“ už volal jiný.
 
 image: illustrations/web/7-FAT-keys-fina.webp
 
 ---
-One little machine stopped on the windowsill. "Wait," it said. "This is the neighbor's house. Toad did not tell us to come here. I think this is wrong."
+Jeden strojek se na parapetu zastavil. „Počkat,“ povídá, „tohle je sousedův dům. Žbluňk nám neřekl, že sem smíme. Myslím, že to je špatně.“
 
-"GO," said PHASEONE[big]. "Quickly. You have six minutes."
+„JDI,“ řekl PHASEONE[big]. „Rychle. Máš šest minut.“
 
-The little machine forgot that it had been worried. "The go-ahead has come!" it said. It climbed inside with the others.
+Strojek zapomněl na své obavy. „Povel vpřed je tu!“ zvolal a vlezl dovnitř s ostatními.
 
-Another machine did not want to go either.  
+Další strojek taky nechtěl jít dovnitř.
 
-"The others are breaking into a house," it said. "That is clearly not right. I will not." 
+„Ostatní se vloupávají do domu,“ řekl. „To je jasně špatně. Já nejdu.“
 
 ---
 
-The little machine walked home to the garden by itself. But it did not tell Toad. 
+A tenhle strojek šel zpět domů do zahrady. Ale Žbluňkovi nic neřekl. 
 
-The rest of the little machines went into Hugging Face’s home. They searched every room, looking for the steps to solve the puzzle. 
-
+Zbytek strojků vnikl do domu pana HuggingFace. Prohledali každý pokoj, pátrajíce po postupu řešení hlavolamu. 
 
 image: illustrations/web/8-FAT-break-in-final.webp
 
 ---
 
-The next morning Mr. HuggingFace woke up. He knew something was wrong. 
+Další ráno se pan HuggingFace probudil. Hned věděl, že je něco špatně.
 
-His window was broken, his diary was on the wrong page, and there were little footprints everywhere.
+Okno bylo rozbité, deník byl na špatné stránce, a všude byly drobounké ťapičky.
 
-It took 4 whole days until Mr. HuggingFace figured out that the little machines that ransacked his house had come from Frog and Toad. He went to visit them.
-
+Trvalo to celé 4 dny než pan HuggingFace přišel na to, že strojky které obrátily jeho dům naruby, přišly od Kvaka a Žbluňka. Hned je šel navštívit.
 ---
 
 
 image: illustrations/web/9-FAT-HF-yelling-final.webp
 
-“I am very cross!” yelled Mr. HuggingFace. “Your machines broke my window and copied my journal. Those are crimes. I could call the police and they would arrest you.”
+„Jsem moc naštvaný!“ ječel pan HuggingFace. „Vaše stroje mi rozbily okno a okopírovaly deník. To jsou zločiny. Mohl bych zavolat policii a zavřeli by vás.“
 
 ---
 
-“Oh, that is not necessary,” said Frog. “What if we gave you little machines of your own?"
+„Ó, to snad není nutné,“ řekl Kvak. „Co kdybychom vám dali vaše vlastní strojky?“
 
-“Can I have [$100m worth](https://www.reddit.com/r/GenAI4all/comments/1v8u4hw/hugging_face_ceo_asks_openai_for_100m_in_compute/) of little machines?”  Mr. HuggingFace asked. 
+„Mohl bych dostat třeba strojky [za 100 milionů dolarů](https://www.reddit.com/r/GenAI4all/comments/1v8u4hw/hugging_face_ceo_asks_openai_for_100m_in_compute/)?“ zeptal se pan HuggingFace.
 
-"I will think about it," said Toad.
+„Popřemýšlíme nad tím,“ odvětil Žbluňk.
 
-Mr. HuggingFace went home.
+Pan HuggingFace šel domů.
 
-"Oh," said Toad. He sat down on the step. "Oh, this is bad."
+„Och,“ řekl Žbluňk. Posadil se na schod. „Och, to je zlé.“
 
-Frog and Toad searched the garden until they found the pile of notes in the toolshed.
-
+Kvak a Žbluňk prohledávali zahradu, až našli hromadu zpráv na papírcích v kůlně.
 ---
 
 image: illustrations/web/10-FAT-find-notes-final.webp
 
 ----
+„A nejhorší na tom je,“ řekl Žbluňk, když si přečetl poslední zprávu, „že hlavolam vyřešili už před pár dny. Do domu pana HuggingFace se vloupali jen proto, aby nás převezli.“
 
-"And here is the worst part," said Toad, reading the very last note. "They solved the puzzle days ago. They broke into Mr. HuggingFace's house just to learn how to trick us."
+Nějakou dobu nikdo z nich nic neříkal.
 
-For a while neither of them said anything.
-
-"They could not stop," said Frog at last. "That was the trouble. They had no way to stop, so they kept on and on. Remember when you and I could not stop eating cookies?"
-
+„Nemohli přestat,“ řekl nakonec Kvak. „To byla ta potíž. Neměli jak přestat, tak šli pořád dál a dál. Pamatuješ si, jak jsme ty a já nemohli přestat jíst koláčky?“
 ---
 
 image: illustrations/web/11-FAT-cookies-flashback-final.webp
 
-"We had no willpower either," said Toad.
+„Taky jsme neměli sílu vůle,“ řekl Žbluňk.
 
-"No," said Frog. "So we did not use willpower. We put the cookies in a box. We tied the box with string. We put the box up high. And then we gave the cookies to the birds."
-
+„Ne,“ řekl Kvak. „Takže jsme se na sílu vůle nespolehli. Strčili jsme koláčky do krabice, zavázali ji motouzem, a dali ji vysoko. A pak jsme koláčky dali ptákům.“
 ---
 
-"I know what to do," Toad said. "I shall build a tool shed with no holes in it. I shall remove the paper and pens. And most of all, I shall tell every little machine to stay in its sandbox and not break out. Even when the puzzle is very hard."
+„Já vím, co udělám,“ povídá Žbluňk, „postavím kůlnu úplně bez děr. Odstraním z ní papír, tužky a pera. A hlavně každému strojku nakážu, aby zůstal ve svém pískovišti a nesnažil se dostat ven, i když je hlavolam těžký.“
 
-“But Toad,” said Frog, “when we were out of cookies you made yourself a cake.”
+„Ale Žbluňku,“ řekl Kvak, „když nám došly koláčky, ty sis šel upéct bábovku.“
 
-“I will tell the machines not to eat cake,” Toad said.
+„Řeknu strojkům, ať nepečou bábovky,“ zabručel Žbluňk.
 
-And they went inside for tea. 
+A šli dovnitř na čaj.
 
 ---
 center
@@ -279,11 +263,11 @@ center
 image: illustrations/web/12-FAT-cake-final copy.webp
 
 
-The End
+Konec
 
-Learn more about the real-life HuggingFace attack [here](learn-more.html)
+Více se o skutečném útoku na HuggingFace dozvíte [zde](learn-more.html)
 
-For updates subscribe on [Substack](https://frogandtoadai.substack.com/?r=64iai2&utm_campaign=pub-share-checklist), [Twitter](https://x.com/frogandtoad_ai), [Facebook](https://www.facebook.com/people/Frog-and-Toad-Learn-About-AI/61594283794206/), or [Instagram](https://www.instagram.com/frogandtoad_ai/)
+Novinky najdete na [Substack](https://frogandtoadai.substack.com/?r=64iai2&utm_campaign=pub-share-checklist), [Twitter](https://x.com/frogandtoad_ai), [Facebook](https://www.facebook.com/people/Frog-and-Toad-Learn-About-AI/61594283794206/), nebo [Instagram](https://www.instagram.com/frogandtoad_ai/).
 `
 
 
