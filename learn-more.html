@@ -11,6 +11,15 @@
 
   gtag('config', 'AW-18494574819');
 </script>
+<!-- Event snippet for Page view conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18494574819/7Li_CObWn5EdEOOh8_JE',
+      'value': 1.0,
+      'currency': 'USD',
+      'event_callback': function () { if (window.leaveForArticle) window.leaveForArticle(); }
+  });
+</script>
 <title>Frog and Toad · Learn more</title>
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,10 +38,20 @@
 <p>Taking you to the article… <a href="https://huggingface.wtf">Continue</a></p>
 </main>
 <script>
-  // Give the analytics beacon a moment to send before leaving.
-  setTimeout(function () {
+  // Leave once the Google Ads conversion has been sent (its event_callback,
+  // declared in the head, calls this), or after a timeout if Google never
+  // answers, e.g. because an ad blocker stopped gtag.js. Either way the
+  // Vercel analytics beacon gets a moment to send first.
+  var left = false;
+  var openedAt = Date.now();
+  window.leaveForArticle = function () {
+    if (left) return;
+    var wait = 400 - (Date.now() - openedAt);
+    if (wait > 0) return setTimeout(window.leaveForArticle, wait);
+    left = true;
     location.replace('https://huggingface.wtf');
-  }, 400);
+  };
+  setTimeout(window.leaveForArticle, 1500);
 </script>
 </body>
 </html>
