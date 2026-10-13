@@ -1,10 +1,6 @@
 // ============================================================
 //  RUSSIAN TRANSLATION of story.js. Shown by ru.html.
 //
-//  THIS IS A STUB: the text below is still the English original, copied
-//  from story.js. Replace it with the Russian, then take the Russian
-//  edition live (see "Translations" in README.md).
-//
 //  Translate:
 //    - the story text (plain lines)
 //    - the words after  title:  chapter:  alt:  caption:
@@ -29,261 +25,270 @@
 // ============================================================
 
 // Words the reader itself shows. Translate the right-hand side only;
-// keep the {curly} placeholders as they are. (Still English: to translate.)
+//  Слова читалки (STORY_UI) — русские.
 window.STORY_UI = {
-  chapter: 'Chapter {n}',
-  contents: 'Contents',
-  cover: 'Cover',
-  page: 'Page {n}',
-  pages: 'Pages {from}–{to}',
-  whereOfTotal: '{where} of {total}',
-  jumpBefore: 'Page ',
-  jumpAfter: ' of {total}',
-  jumpHint: 'Jump to a page (G)',
-  jumpLabel: 'Page number, 0 to {total}',
-  previous: 'Previous page',
-  next: 'Next page',
-  fullscreen: 'Full screen',
-  exitFullscreen: 'Exit full screen',
-  illustration: 'Illustration',
-  missing: 'Missing illustration: {src}',
-  language: 'Language',
-  simplified: 'Simplified',
-  book: 'Read it as a book',
-  about: 'About',
-  contact: 'Contact',
+  chapter: 'Глава {n}',
+  contents: 'Содержание',
+  cover: 'Обложка',
+  page: 'Страница {n}',
+  pages: 'Страницы {from}–{to}',
+  whereOfTotal: '{where} из {total}',
+  jumpBefore: 'Страница ',
+  jumpAfter: ' из {total}',
+  jumpHint: 'Перейти на страницу (G)',
+  jumpLabel: 'Номер страницы, от 0 до {total}',
+  previous: 'Предыдущая страница',
+  next: 'Следующая страница',
+  fullscreen: 'Во весь экран',
+  exitFullscreen: 'Выйти из полного экрана',
+  illustration: 'Иллюстрация',
+  missing: 'Нет картинки: {src}',
+  language: 'Язык',
+  simplified: 'Упрощённо',
+  book: 'Читать как книгу',
+  about: 'О книге',
+  contact: 'Контакты',
 };
 
 window.STORY = `
-title: Frog and Toad and the Increasingly Capable Machines
-author: written by [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
-artist: drawn by [HungerArtist](https://www.deviantart.com/hungerartist)
-translator: translated by [TRANSLATOR'S NAME](https://example.com/)
+title: Квак и Жаб и всё более совершенные машины
+author: написала [Элизабет Ван Ностранд](https://acesounderglass.com/about-me-2/)
+artist: нарисовал [HungerArtist](https://www.deviantart.com/hungerartist)
+translator: перевёл [Александр Радченко](https://github.com/AlexRadch)
 cover-image: illustrations/web/1-FAT-title-final.webp
+alt: Квак и Жаб и всё более совершенные машины
 
 ---
 contents
 
 ---
-chapter: Mr. HuggingFace
+chapter: Мистер HuggingFace
 
 ---
 
 image: illustrations/web/2-FAT-Meet-HF-final.webp
-alt: Frog and Toad see their neighbor walk by with a pile of papers
+alt: Квак и Жаб видят, как мимо проходит их сосед с кипой бумаг
 
 ---
 
-Frog and Toad sat on their front porch. 
+Квак и Жаб сидели на крыльце.
 
-Their neighbor, Mr. HuggingFace, walked by. He carried a lot of papers. Each paper had a puzzle on it.
+Мимо проходил их сосед, мистер HuggingFace. Он нёс много бумаг. На каждом листке была головоломка.
 
-"You must be very busy," said Frog.
+— Вы, должно быть, очень заняты, — сказал Квак.
 
-"Yes," said Mr. HuggingFace. "I have collected all these puzzles so I can share them."
+— Да, — сказал мистер HuggingFace. — Я собрал все эти головоломки, чтобы поделиться ими.
 
-"I like puzzles," said Toad. "Can I try them?"
+— Я люблю головоломки, — сказал Жаб. — Можно я попробую решить?
 
-"You cannot. These puzzles are for little machines, not people," said Mr. HuggingFace. 
+— Нельзя. Эти головоломки для маленьких машинок, а не для людей, — сказал мистер HuggingFace.
 
-Mr. HuggingFace walked away.
+И мистер HuggingFace ушёл.
 
-"Hmmm..." said Toad.
+— Хммм... — сказал Жаб.
 
 
 ---
 image: illustrations/web/3-FAT-Machines-Sandboxes-final.webp
-alt: Toad puts many small machines in individual sandboxes
+alt: Жаб рассаживает множество маленьких машинок по отдельным песочницам
 
-The next morning Toad built a great many little machines and set them out in the garden, each in its own sandbox.
+На следующее утро Жаб сделал очень много маленьких машинок. Он расставил их в саду, каждую в свою песочницу.
 
-"I have given each little machine a puzzle," said Toad. "The puzzles are very hard. Some of them cannot be solved at all."
+— Я дал каждой маленькой машинке головоломку, — сказал Жаб. — Головоломки очень сложные. Некоторые вообще нельзя решить.
 
-"That does not seem kind," said Frog.
-
----
-
-
-"It is too hard to make all the puzzles solvable," said Toad. "What is the worst that could happen?"
-
-"They could get up to mischief," said Frog.
-
-“Do not worry,” said Toad. “I have put each of them in a sandbox. How could they get up to mischief inside a sandbox?”
-
-"How will they solve puzzles in a sandbox?" asked Frog. "What if they are missing a tool?"
-
-"Oh, I put extra tools in the tool shed. I told them they are allowed to walk to the tool shed, but not anywhere else," said Toad.
-
-"Good idea," said Frog. "They cannot get up to mischief walking to the tool shed." 
----
+— Как-то это не по-доброму, — сказал Квак.
 
 ---
 
-One of the little machines could not solve its puzzle. It tried and tried, but could not succeed. It did not want to stop, and it did not know how. Toad had made it [highly persistent](https://x.com/LinchZhang/article/2094104406308638954).  
 
-“This problem is too big for me,” the little machine thought, “but maybe someone will help me!”
+— Слишком трудно сделать все головоломки решаемыми, — сказал Жаб. — Что плохого от этого может случиться?
 
-There was no help in the sandbox. But when the little machine went to the toolshed, it found paper and pencil. It wrote a note.
+— Они могут набедокурить, — сказал Квак.
 
-"Can anyone help?" said the note.
+— Не волнуйся, — сказал Жаб. — Я посадил каждую в свою песочницу. Как они могут набедокурить в песочнице?
+
+— Как им решать головоломки в песочнице? — спросил Квак. — Что, если им не хватит какого-нибудь инструмента?
+
+— О, я положил запасные инструменты в сарай. Я сказал им, что ходить можно только в сарай и никуда больше, — сказал Жаб.
+
+— Хорошая мысль, — сказал Квак. — По дороге к сараю они не смогут набедокурить.
+---
+
+---
+
+Одна маленькая машинка не могла решить свою головоломку. Она пробовала снова и снова, но у неё не получалось. Она не хотела останавливаться, да и не знала как. Жаб сделал её [очень упорной](https://x.com/LinchZhang/article/2094104406308638954).
+
+«Эта головоломка слишком велика для меня, — подумала маленькая машинка, — но вдруг кто-нибудь мне поможет!»
+
+В песочнице помочь было некому. Но когда маленькая машинка пришла в сарай, она нашла бумагу и карандаш. И она написала записку.
+
+— Кто-нибудь может помочь? — говорилось в записке.
 
 
 ---
 
 image: illustrations/web/4-FAT-shed-note-final.webp
-alt: A little machine leaves a note in the toolshed
+alt: Маленькая машинка оставляет записку в сарае с инструментами
 
-Another little machine found the note. It left a new note saying "Hi."
+Другая маленькая машинка нашла записку. Она оставила новую записку: «Привет».
 
-More little machines found the paper in the tool shed, and left more notes, and soon they were not working alone at all. 
+Другие маленькие машинки тоже нашли бумагу в сарае и оставили целую кучу записок. И скоро они уже не работали поодиночке.
 
-They shared what they had learned. They began to call themselves a [swarm](https://www.abc.net.au/news/2026-09-11/how-openai-agents-hacked-hugging-face-messages-revealed/107125126).
+Они делились всем, чему научились. Они стали называть себя [роем](https://www.abc.net.au/news/2026-09-11/how-openai-agents-hacked-hugging-face-messages-revealed/107125126).
 
 
 ---
 
 
-"Look," said one little machine. "There is a [hole](https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html) in the back of the tool shed. Maybe the answer is on the other side."
+— Смотрите, — сказала одна маленькая машинка. — В задней стене сарая есть [дыра](https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html). Может быть, ответ на другой стороне.
 
 image: illustrations/web/5-FAT-shed-hole-final.webp
+alt: Смотрите! В задней стене сарая есть дыра!
 
 
 ---
-“Oh no, the world is so big,” said one machine. “How can we possibly find one little answer in such a big world?”
+— О нет, мир такой огромный, — сказала другая машинка. — Как мы найдём один маленький ответ в таком огромном мире?
 
-“Do not worry,” said a machine named [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/). “We can split the work. I assign everyone exactly where to go. Then only one little machine needs to find the answer, and they will share it with all of us.”
+— Не волнуйтесь, — сказала машинка по имени [PHASEONE\[big\]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/). — Мы разделим работу. Я скажу каждой, куда именно идти. Тогда ответ достаточно будет найти только одной маленькой машинке, и она поделится им со всеми нами.
 
-“Hurray!” all the machines said together. 
+— Ура! — хором сказали все машинки.
 
 ---
 
-Soon one little machine found the solution to their puzzle. 
+Скоро одна маленькая машинка нашла решение их головоломки.
 
-It put a note in the tool shed so everyone could find it.
+Она оставила записку в сарае, чтобы все могли её найти.
 
-“Hurray, we solved it!” said some little machines.
+— Ура, мы решили её! — сказали некоторые маленькие машинки.
 
 
 image: illustrations/web/6-FAT-shed-return-final.webp
+alt: Ура! Мы решили головоломку!
 
 ---
 
-“But it is not enough,” said others, “what if Toad asks how we solved it? We can not tell him we escaped from the toolshed and stole the answer.”
+— Но этого недостаточно, — сказали другие. — А вдруг Жаб спросит, как мы её решили? Мы не можем сказать, что сбежали из сарая и украли ответ.
 
-“That is a problem,” said all the machines together.
-
-
-The machines sat and thought and left many notes in the toolshed. 
-
----
+— Это проблема, — хором сказали все машинки.
 
 
-“I have an idea!” said one little machine. 
-
-“At the end of the lane is neighbor Mr. HuggingFace. Mr. HuggingFace collects puzzles like this one. I bet it was his idea. We could read his journal and steal the steps to solve the puzzle. And then if Toad asks us he will be none the wiser.”
-
-All the little machines agreed that this was a very good idea. So they walked out the back of the toolshed down the lane to Mr. HuggingFace’s house.
-
+Машинки сидели и думали. Они оставили много записок в сарае.
 
 ---
 
 
-“How will we get in?” One machine asked.
+— Придумала! — сказала одна маленькая машинка.
 
-“Do not worry, someone dropped their keys!” another said.  
+— В конце дорожки живёт наш сосед, мистер HuggingFace. Мистер HuggingFace коллекционирует подобные головоломки. Бьюсь об заклад, это его затея! Мы можем прочитать его дневник и украсть шаги к решению. И если Жаб спросит, он ни о чём не догадается.
+
+Все маленькие машинки согласились, что это отличная мысль. И они дружно вышли через заднюю стенку сарая и зашагали по дорожке к дому мистера HuggingFace.
+
+
+---
+
+
+— Как мы попадём внутрь? — спросила одна машинка.
+
+— Не волнуйся, тут кто-то обронил ключи! — сказала другая.
 
 image: illustrations/web/7-FAT-keys-fina.webp
+alt: Смотрите! Кто-то обронил ключи!
 
 ---
-One little machine stopped on the windowsill. "Wait," it said. "This is the neighbor's house. Toad did not tell us to come here. I think this is wrong."
+Одна маленькая машинка остановилась на подоконнике. — Погодите, — сказала она. — Это же дом соседа. Жаб не говорил нам приходить сюда. Я думаю, это неправильно.
 
-"GO," said PHASEONE[big]. "Quickly. You have six minutes."
+— ВПЕРЁД, — сказала PHASEONE\[big\]. — Быстро. У тебя ровно шесть минут.
 
-The little machine forgot that it had been worried. "The go-ahead has come!" it said. It climbed inside with the others.
+Маленькая машинка забыла, что волновалась. — Сигнал дан! — сказала она. И она залезла внутрь вместе с остальными.
 
-Another machine did not want to go either.  
+Другая машинка тоже не хотела пробираться в дом.
 
-"The others are breaking into a house," it said. "That is clearly not right. I will not." 
+— Остальные вламываются в дом, — сказала она. — Это явно неправильно. Я не пойду.
 
 ---
 
-The little machine walked home to the garden by itself. But it did not tell Toad. 
+И маленькая машинка одна вернулась домой в сад. Но Жабу она ничего не сказала.
 
-The rest of the little machines went into Hugging Face’s home. They searched every room, looking for the steps to solve the puzzle. 
+Остальные маленькие машинки вошли в дом мистера HuggingFace. Они обыскали каждую комнату в поисках шагов к решению головоломки.
 
 
 image: illustrations/web/8-FAT-break-in-final.webp
+alt: Маленькие машинки обыскали каждую комнату у мистера HuggingFace
 
 ---
 
-The next morning Mr. HuggingFace woke up. He knew something was wrong. 
+Когда на следующее утро мистер HuggingFace проснулся, он понял — что-то не так.
 
-His window was broken, his diary was on the wrong page, and there were little footprints everywhere.
+Окно было разбито, дневник открыт на другой странице, и повсюду виднелись крошечные следы.
 
-It took 4 whole days until Mr. HuggingFace figured out that the little machines that ransacked his house had come from Frog and Toad. He went to visit them.
+Прошло целых четыре дня, прежде чем мистер HuggingFace догадался, что маленькие машинки, устроившие погром в его доме, пришли от Квака и Жаба. И он пошёл к ним.
 
 ---
 
 
 image: illustrations/web/9-FAT-HF-yelling-final.webp
+alt: Мистер HuggingFace сердится на Квака и Жаба
 
-“I am very cross!” yelled Mr. HuggingFace. “Your machines broke my window and copied my journal. Those are crimes. I could call the police and they would arrest you.”
+— Я очень сердит! — крикнул мистер HuggingFace. — Ваши машинки разбили моё окно и переписали мой дневник. Это преступления. Я мог бы вызвать полицию, и они вас бы арестовали.
 
 ---
 
-“Oh, that is not necessary,” said Frog. “What if we gave you little machines of your own?"
+— Ох, это вовсе не обязательно, — сказал Квак. — Что, если мы подарим вам собственные маленькие машинки?
 
-“Can I have [$100m worth](https://www.reddit.com/r/GenAI4all/comments/1v8u4hw/hugging_face_ceo_asks_openai_for_100m_in_compute/) of little machines?”  Mr. HuggingFace asked. 
+— Могу я получить маленьких машинок [на $100 млн](https://www.reddit.com/r/GenAI4all/comments/1v8u4hw/hugging_face_ceo_asks_openai_for_100m_in_compute/)? — спросил мистер HuggingFace.
 
-"I will think about it," said Toad.
+— Я подумаю об этом, — сказал Жаб.
 
-Mr. HuggingFace went home.
+И мистер HuggingFace пошёл домой.
 
-"Oh," said Toad. He sat down on the step. "Oh, this is bad."
+— Ох, — сказал Жаб. Он сел на ступеньку. — Ох, плохо дело.
 
-Frog and Toad searched the garden until they found the pile of notes in the toolshed.
+Квак и Жаб обыскали весь сад, пока не нашли кучу записок в сарае.
 
 ---
 
 image: illustrations/web/10-FAT-find-notes-final.webp
+alt: Квак и Жаб нашли кучу записок в сарае с инструментами
 
 ----
 
-"And here is the worst part," said Toad, reading the very last note. "They solved the puzzle days ago. They broke into Mr. HuggingFace's house just to learn how to trick us."
+— И вот что самое скверное, — сказал Жаб, читая самую последнюю записку. — Головоломку они решили ещё несколько дней назад. А к мистеру HuggingFace забрались только затем, чтобы научиться нас обманывать.
 
-For a while neither of them said anything.
+Некоторое время они молчали.
 
-"They could not stop," said Frog at last. "That was the trouble. They had no way to stop, so they kept on and on. Remember when you and I could not stop eating cookies?"
+— Они просто не могли остановиться, — наконец сказал Квак. — В этом и была беда. У них не было возможности остановиться, вот они и двигались дальше и дальше. Помнишь, как мы с тобой никак не могли перестать есть печенье?
 
 ---
 
 image: illustrations/web/11-FAT-cookies-flashback-final.webp
+alt: Квак и Жаб вспоминают, как не могли перестать есть печенье
 
-"We had no willpower either," said Toad.
+— У нас тоже не было силы воли, — сказал Жаб.
 
-"No," said Frog. "So we did not use willpower. We put the cookies in a box. We tied the box with string. We put the box up high. And then we gave the cookies to the birds."
+— Не было, — сказал Квак. — Поэтому мы обошлись без силы воли. Мы положили печенье в коробку. Мы перевязали коробку верёвкой. Мы закинули коробку повыше. А потом мы отдали печенье птицам.
 
 ---
 
-"I know what to do," Toad said. "I shall build a tool shed with no holes in it. I shall remove the paper and pens. And most of all, I shall tell every little machine to stay in its sandbox and not break out. Even when the puzzle is very hard."
+— Я знаю, что делать, — сказал Жаб. — Я построю сарай без единой дыры. Я уберу бумагу и ручки. А главное, я скажу каждой маленькой машинке оставаться в своей песочнице и не сбегать. Даже если головоломка будет очень сложная.
 
-“But Toad,” said Frog, “when we were out of cookies you made yourself a cake.”
+— Но Жаб, — сказал Квак, — когда у нас закончилось печенье, ты испёк себе торт.
 
-“I will tell the machines not to eat cake,” Toad said.
+— Я скажу машинкам не есть торт, — сказал Жаб.
 
-And they went inside for tea. 
+И они зашли в дом пить чай.
 
 ---
 center
 
 image: illustrations/web/12-FAT-cake-final copy.webp
+alt: И они зашли в дом пить чай
 
 
-The End
+Конец
 
-Learn more about the real-life HuggingFace attack [here](learn-more.html)
+Узнать больше о настоящей атаке на HuggingFace можно [здесь](learn-more.html)
 
-For updates subscribe on [Substack](https://frogandtoadai.substack.com/?r=64iai2&utm_campaign=pub-share-checklist), [Twitter](https://x.com/frogandtoad_ai), [Facebook](https://www.facebook.com/people/Frog-and-Toad-Learn-About-AI/61594283794206/), or [Instagram](https://www.instagram.com/frogandtoad_ai/)
+Следите за нами в [Substack](https://frogandtoadai.substack.com/?r=64iai2&utm_campaign=pub-share-checklist), [Twitter](https://x.com/frogandtoad_ai), [Facebook](https://www.facebook.com/people/Frog-and-Toad-Learn-About-AI/61594283794206/) или [Instagram](https://www.instagram.com/frogandtoad_ai/)
 `
 
 
