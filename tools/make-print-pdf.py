@@ -5,6 +5,7 @@ Reads the story from story.js (the same file the website reads) and lays it
 out page for page, with the master illustrations from illustrations/.
 
     python3 tools/make-print-pdf.py --spine 0.35      (spine width in inches, from the Mixam cart)
+                                    [--trim 5.5x8.5]  (trim size in inches; this is the default)
         -> Frog-and-Toad-and-Mr-HuggingFace-interior.pdf      (every page, 0.125 in bleed)
         -> Frog-and-Toad-and-Mr-HuggingFace-cover-front.pdf   (0.8 in bleed all round)
         -> Frog-and-Toad-and-Mr-HuggingFace-cover-back.pdf    (0.8 in bleed all round)
@@ -68,19 +69,24 @@ SOCIALS = [
     ('Instagram', 'https://www.instagram.com/frogandtoad_ai/', '@frogandtoad_ai'),
 ]
 
-# Trim size and margins. 8.5 x 11 in portrait.
+# Trim size and margins. 5.5 x 8.5 in portrait by default (--trim for another).
 # Set up for a Mixam hardcover (case bound): every inner page carries
-# 0.125 in of bleed on all four sides (the PDF page is 8.75 x 11.25) with the
-# trim box set to the 8.5 x 11 trim. The cover is a separate file with 0.8 in
+# 0.125 in of bleed on all four sides (the PDF page is 5.75 x 8.75) with the
+# trim box set to the 5.5 x 8.5 trim. The cover is a separate file with 0.8 in
 # of bleed to wrap the boards, as three files: front, back, and the spine
 # (its width, from the Mixam cart, given with --spine).
-PAGE_W, PAGE_H = 8.5 * IN, 11 * IN
+# The layout was tuned on an 8.5 x 11 page; S scales those tuned inch and
+# point values to the trim in use. (Type size is fitted to the page anyway.)
+PAGE_W, PAGE_H = 5.5 * IN, 8.5 * IN
+if '--trim' in sys.argv:
+    PAGE_W, PAGE_H = (float(v) * IN for v in sys.argv[sys.argv.index('--trim') + 1].lower().split('x'))
+S = PAGE_W / (8.5 * IN)
 BLEED = 0.125 * IN
 COVER_BLEED = 0.8 * IN
 HINGE = 0.2 * IN
 COVER_PAPER = '#f3ecd9'   # the back and spine: the cream of the painting's lights
-MARGIN_TOP, MARGIN_BOTTOM = 0.8 * IN, 0.9 * IN
-MARGIN_OUTER, MARGIN_INNER = 0.75 * IN, 0.95 * IN   # a little extra at the spine
+MARGIN_TOP, MARGIN_BOTTOM = 0.8 * IN * S, 0.9 * IN * S
+MARGIN_OUTER, MARGIN_INNER = 0.75 * IN * S, 0.95 * IN * S   # a little extra at the spine
 
 INK = '#2a2318'
 INK_SOFT = '#7b6c55'
@@ -99,8 +105,8 @@ pdfmetrics.registerFontFamily('Georgia', normal='Georgia', bold='Georgia-Bold',
 body = ParagraphStyle('body', fontName='Georgia', fontSize=16, leading=25,
                       textColor=INK, spaceAfter=11)
 centered = ParagraphStyle('centered', parent=body, alignment=TA_CENTER)
-the_end = ParagraphStyle('end', parent=centered, fontName='Georgia-Bold', fontSize=22,
-                         leading=28, textColor=GREEN_DEEP, spaceBefore=18)
+the_end = ParagraphStyle('end', parent=centered, fontName='Georgia-Bold', fontSize=22 * S,
+                         leading=28 * S, textColor=GREEN_DEEP, spaceBefore=18 * S)
 chapter_num = ParagraphStyle('chnum', parent=centered, fontSize=13, leading=18,
                              textColor=INK_SOFT, spaceAfter=6)
 chapter_name = ParagraphStyle('chname', parent=centered, fontName='Georgia-Bold',
@@ -111,7 +117,7 @@ title_rest = ParagraphStyle('trest', parent=centered, fontName='Georgia-Bold',
                             fontSize=27, leading=34, textColor=GREEN_DEEP, spaceAfter=0)
 credit = ParagraphStyle('credit', parent=centered, fontSize=14, leading=20,
                         textColor=INK, spaceAfter=0)
-small = ParagraphStyle('small', parent=centered, fontSize=10.5, leading=15,
+small = ParagraphStyle('small', parent=centered, fontSize=max(8, 10.5 * S), leading=max(11.5, 15 * S),
                        textColor=INK_SOFT, spaceAfter=0)
 qr_head = ParagraphStyle('qrhead', parent=centered, fontName='Georgia-Bold',
                          fontSize=22, leading=28, textColor=GREEN_DEEP, spaceAfter=4)
@@ -256,7 +262,7 @@ def fit_type_size(pages):
 
 PICTURE_SHARE = 0.56      # of the page height, when a picture shares the page with text
 PICTURE_FLOOR = 0.40      # it will shrink to this to make room for the text, no further
-COMFORT = 0.4 * IN        # left clear at the foot of every text page
+COMFORT = 0.4 * IN * S    # left clear at the foot of every text page
 
 
 def story_flowables(page, number):
@@ -270,7 +276,7 @@ def story_flowables(page, number):
     text_h = sum(t.wrap(CONTENT_W, CONTENT_H)[1] + t.getSpaceAfter() for t in texts)
     n_images = sum(1 for k, _ in items if k == 'image')
     if texts:
-        room = CONTENT_H - COMFORT - text_h - 14 * n_images
+        room = CONTENT_H - COMFORT - text_h - 14 * S * n_images
         max_h = max(min(PICTURE_SHARE * CONTENT_H, room / max(n_images, 1)),
                     PICTURE_FLOOR * CONTENT_H)
     else:
@@ -280,7 +286,7 @@ def story_flowables(page, number):
         if kind == 'image':
             out.append(picture(val, CONTENT_W, max_h))
             if i < len(items) - 1:
-                out.append(Spacer(1, 14))
+                out.append(Spacer(1, 14 * S))
         else:
             out.append(texts.pop())
     return out
@@ -379,7 +385,7 @@ def build_covers(spine):
     c.setFillColor(COVER_PAPER)
     c.rect(0, 0, spine, media_h, stroke=0, fill=1)
     # The title reading down the spine, if the spine is wide enough for it.
-    size = min(spine * 0.55, 20)
+    size = min(spine * 0.55, 20 * S)
     if size >= 8:
         c.saveState()
         c.setFillColor(GREEN_DEEP)
@@ -390,6 +396,23 @@ def build_covers(spine):
         c.rotate(-90)
         c.drawCentredString(0, 0, TITLE)
         c.restoreState()
+    # The site's favicon (Toad's face) at the foot of the spine, clear of
+    # the trim by about the width of the spine. The PNG has an opaque white
+    # square behind the face, so white is knocked out and the face laid on
+    # the cover cream here rather than left to PDF transparency.
+    from reportlab.lib.utils import ImageReader
+    with PILImage.open(os.path.join(ROOT, 'favicon-192.png')) as im:
+        im = im.convert('RGBA')
+        px = im.load()
+        for y in range(im.height):
+            for x in range(im.width):
+                r, g, b, a = px[x, y]
+                if min(r, g, b) > 225:
+                    px[x, y] = (r, g, b, 0)
+        flat = PILImage.new('RGBA', im.size, COVER_PAPER)
+        flat.alpha_composite(im)
+    iw = spine * 0.8
+    c.drawImage(ImageReader(flat.convert('RGB')), (spine - iw) / 2, B + spine, iw, iw)
     c.showPage(); c.save()
 
 
@@ -411,9 +434,9 @@ def build(pages):
         n = getattr(canvas, '_folio', None)
         if n is not None:
             canvas.saveState()
-            canvas.setFont('Georgia', 10.5)
+            canvas.setFont('Georgia', max(8, 10.5 * S))
             canvas.setFillColor(INK_SOFT)
-            canvas.drawCentredString(BLEED + PAGE_W / 2, BLEED + 0.5 * IN, str(n))
+            canvas.drawCentredString(BLEED + PAGE_W / 2, BLEED + 0.5 * IN * S, str(n))
             canvas.restoreState()
             canvas._folio = None
 
@@ -439,18 +462,18 @@ def build(pages):
     # 1. Copyright page, the first leaf (the cover file has the title).
     pageno[0] = 1
     flow.append(NextPageTemplate('even'))     # for the page after this one
-    flow.append(Spacer(1, CONTENT_H - 2.4 * IN))
+    flow.append(Spacer(1, CONTENT_H - 2.4 * IN * S))
     flow.append(Paragraph(COPYRIGHT, small))
     flow.append(Paragraph('Illustrations \u00a9 2026 HungerArtist', small))
-    flow.append(Spacer(1, 8))
+    flow.append(Spacer(1, 8 * S))
     flow.append(Paragraph('Licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 '
                           'International License (CC BY-NC-ND 4.0). You may copy and share this book with '
                           'credit, but not sell it or change it. creativecommons.org/licenses/by-nc-nd/4.0',
                           small))
-    flow.append(Spacer(1, 8))
+    flow.append(Spacer(1, 8 * S))
     flow.append(Paragraph('A satire of Arnold Lobel\u2019s Frog and Toad books, with no connection to or '
                           'endorsement from Lobel\u2019s estate or publishers.', small))
-    flow.append(Spacer(1, 8))
+    flow.append(Spacer(1, 8 * S))
     flow.append(Paragraph('frogandtoad.ai', small))
     end_page()
 
@@ -469,8 +492,8 @@ def build(pages):
         elif is_last:
             # The end: the picture and "The End", nothing else.
             img = next(v for k, v in page['items'] if k == 'image')
-            flow.append(Spacer(1, 0.4 * IN))
-            flow.append(picture(img, CONTENT_W, CONTENT_H - 1.6 * IN))
+            flow.append(Spacer(1, 0.4 * IN * S))
+            flow.append(picture(img, CONTENT_W, CONTENT_H - 1.6 * IN * S))
             flow.append(Paragraph('The End', the_end))
         else:
             folio_n += 1
@@ -521,45 +544,45 @@ def draw_back_cover(canvas, left, bottom):
     cx = left + PAGE_W / 2
 
     def heading(x, y, text, sub):
-        canvas.setFillColor(GREEN_DEEP); canvas.setFont('Georgia-Bold', 22)
+        canvas.setFillColor(GREEN_DEEP); canvas.setFont('Georgia-Bold', 22 * S)
         canvas.drawCentredString(x, y, text)
-        canvas.setFillColor(INK_SOFT); canvas.setFont('Georgia-Italic', 12)
-        canvas.drawCentredString(x, y - 20, sub)
+        canvas.setFillColor(INK_SOFT); canvas.setFont('Georgia-Italic', 12 * S)
+        canvas.drawCentredString(x, y - 20 * S, sub)
 
     def code(x, y, url, size, label):
         canvas.drawImage(ImageReader(qr_png(url, COVER_PAPER)), x - size / 2, y - size, size, size)
-        canvas.setFillColor(INK); canvas.setFont('Georgia-Bold', 13)
-        canvas.drawCentredString(x, y - size - 19, label)
+        canvas.setFillColor(INK); canvas.setFont('Georgia-Bold', 13 * S)
+        canvas.drawCentredString(x, y - size - 19 * S, label)
 
     # The site and the real story, side by side.
-    y = bottom + PAGE_H - 1.4 * IN
-    col = 2.9 * IN
-    size = 2 * IN
+    y = bottom + PAGE_H - 1.4 * IN * S
+    col = 2.9 * IN * S
+    size = 2 * IN * S
     for i, (head, sub, url, label) in enumerate((
             ('Read it online', 'The book, free, in every edition', BOOK_URL, 'frogandtoad.ai'),
             ('Learn more', 'The real story behind the book', LEARN_MORE_URL, 'frogandtoad.ai/learn-more'))):
         x = cx + (i - 0.5) * col
         heading(x, y, head, sub)
-        code(x, y - 0.5 * IN, url, size, label)
+        code(x, y - 0.5 * IN * S, url, size, label)
 
     # The accounts in a 2 x 2 grid.
-    y -= 0.5 * IN + size + 1.1 * IN
+    y -= 0.5 * IN * S + size + 1.1 * IN * S
     heading(cx, y, 'Follow along', 'Updates from Frog and Toad')
-    size = 1.25 * IN
-    col = 2.4 * IN
-    row = size + 0.6 * IN
-    y -= 0.45 * IN
+    size = 1.25 * IN * S
+    col = 2.4 * IN * S
+    row = size + 0.6 * IN * S
+    y -= 0.45 * IN * S
     for i, (name, url, shown) in enumerate(SOCIALS):
         x = cx + (i % 2 - 0.5) * col
         yy = y - (i // 2) * row
         code(x, yy, url, size, name)
-        canvas.setFillColor(INK_SOFT); canvas.setFont('Georgia', 8)
-        canvas.drawCentredString(x, yy - size - 31, shown)
+        canvas.setFillColor(INK_SOFT); canvas.setFont('Georgia', max(6.5, 8 * S))
+        canvas.drawCentredString(x, yy - size - 31 * S, shown)
 
 
 if __name__ == '__main__':
     if '--spine' not in sys.argv:
-        sys.exit('usage: make-print-pdf.py --spine WIDTH   (inches, from the Mixam cart)')
+        sys.exit('usage: make-print-pdf.py --spine WIDTH [--trim WxH]   (inches; spine from the Mixam cart)')
     spine = float(sys.argv[sys.argv.index('--spine') + 1]) * IN
     pages = parse_pages(read_story())
     total = build(pages)

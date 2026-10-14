@@ -184,7 +184,8 @@ credits sit on it, are set for this picture in `reader.css` (`.cover-front`).
 `tools/make-print-pdf.py` makes the PDFs for a physical copy of the English
 book: the interior (one PDF page per story page, with bleed) and the front
 cover, back cover and spine as separate files, named
-`Frog-and-Toad-and-Mr-HuggingFace-*.pdf` in this folder. It reads `story.js`
+`Frog-and-Toad-and-Mr-HuggingFace-*.pdf` in this folder, at a 5.5 x 8.5 in
+trim (`--trim 8.5x11` for another). It reads `story.js`
 and the master art in `illustrations/`, and ends the book with QR codes for
 the site (`?source=book`, which the reader counts as its source) and the
 book's accounts. Run it with the spine width the printer quotes:
