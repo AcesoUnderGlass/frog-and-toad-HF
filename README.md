@@ -22,8 +22,8 @@ German edition).
 
 | File | What it is |
 |---|---|
-| `index.html`, `de.html`, `sk.html`, `eo.html`, `bn.html`, `ru.html`, `cs.html` | The book in English, German, Slovak, Esperanto, Bengali, Russian and Czech: the page's title, description and link previews, and which story file it reads. |
-| `story.js`, `story-de.js`, `story-sk.js`, `story-eo.js`, `story-bn.js`, `story-ru.js`, `story-cs.js` | The story (see below). |
+| `index.html`, `de.html`, `sk.html`, `eo.html`, `bn.html`, `ru.html`, `cs.html`, `hi.html` | The book in English, German, Slovak, Esperanto, Bengali, Russian and Czech (and a Hindi stub, see Translations): the page's title, description and link previews, and which story file it reads. |
+| `story.js`, `story-de.js`, `story-sk.js`, `story-eo.js`, `story-bn.js`, `story-ru.js`, `story-cs.js`, `story-hi.js` | The story (see below). |
 | `languages.js` | The editions, for the language menu and the plain edition. |
 | `reader.js`, `reader.css` | The reader: the desk, the book and its cover, laying out the pages, the status line under the book. |
 | `pageturn.js`, `pageturn.css` | The page turns (the leaf, its shading and shadows, dragging). Knows nothing of the story. |
@@ -107,6 +107,11 @@ Slovak is `story-sk.js` and `sk.html` (`/sk`), Esperanto `story-eo.js` and
 is `story-cs.js` and `cs.html` (`/cs`), translated by HighEgg; Bengali is
 `story-bn.js` and `bn.html` (`/bn`), translated by Tazik and Rumi.
 
+Hindi is a stub: `story-hi.js` and `hi.html` (`/hi`) exist but still hold
+the English text. The page is `noindex` and its lines in `languages.js` and
+the `hreflang` lists are commented out, so it is reachable but unlisted
+until it is translated.
+
 Every edition is listed in `languages.js` (the language menu) and in the
 `hreflang` lines in the `<head>` of every other edition's page. A new edition
 needs its line in both. Bengali and Esperanto keep English-style curly quotes,
@@ -118,7 +123,8 @@ Cyrillic and Greek. A language in another script needs that script's font
 from the table `FONTS` at the top of `languages.js`: Simplified Chinese is
 Noto Serif SC, Traditional Chinese Noto Serif TC, Japanese Noto Serif JP,
 Korean Noto Serif KR, and there are Noto Serif Hebrew and Noto Serif Thai
-(Bengali, already there, uses Baloo Da 2). To add one, do as `bn.html` does:
+(Bengali, already there, uses Baloo Da 2; Hindi, Noto Serif Devanagari). To
+add one, do as `bn.html` does:
 add its family to the Google Fonts link in the page's `<head>`, set `--text`
 in the `<style>` there to `'Noto Serif', '<the font>', Georgia, serif`, and
 name it as `font:` on the language's line in `languages.js`, so the plain
