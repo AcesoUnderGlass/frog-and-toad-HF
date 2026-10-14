@@ -22,7 +22,7 @@ German edition).
 
 | File | What it is |
 |---|---|
-| `index.html`, `de.html`, `sk.html`, `eo.html`, `bn.html`, `ru.html`, `cs.html` | The book in English, German, Slovak, Esperanto, Bengali (being checked) and (stubs so far) Russian and Czech: the page's title, description and link previews, and which story file it reads. |
+| `index.html`, `de.html`, `sk.html`, `eo.html`, `bn.html`, `ru.html`, `cs.html` | The book in English, German, Slovak, Esperanto, Bengali, Russian and Czech: the page's title, description and link previews, and which story file it reads. |
 | `story.js`, `story-de.js`, `story-sk.js`, `story-eo.js`, `story-bn.js`, `story-ru.js`, `story-cs.js` | The story (see below). |
 | `languages.js` | The editions, for the language menu and the plain edition. |
 | `reader.js`, `reader.css` | The reader: the desk, the book and its cover, laying out the pages, the status line under the book. |
@@ -95,30 +95,34 @@ Page numbers count from 1 on the first page after the cover. Chapter and content
 - The whole book uses one type size, the largest at which every page fits, so one long page makes all the type smaller. If a page is still too long (the browser's console says which), split it across two pages. Lobel's pages run about 40 to 80 words, and short lines look best.
 - Images can be `.png`, `.jpg`, `.svg`, `.webp`, or `.gif`. A missing image shows a dashed placeholder with the file name, so you can see what to fix.
 - Avoid backticks (`` ` ``) and `${` inside the story, because the story sits inside a JavaScript template string. If a line has to begin with a word like `image:`, put a backslash in front: `\image:`.
-- Fonts: the book is set in Fraunces, from Google Fonts; offline it falls back to Georgia.
+- Fonts: the book is set in Noto Serif, from Google Fonts; offline it falls back to Georgia. Other scripts have their own Noto Serif, see Translations below.
 
 ### Translations
 
 Each language has its own story file and its own page. German is
 `story-de.js`, shown by `de.html` (open that file, or visit `/de` on the site);
 Slovak is `story-sk.js` and `sk.html` (`/sk`), Esperanto `story-eo.js` and
-`eo.html` (`/eo`). Both were translated by Viliam Búr.
+`eo.html` (`/eo`). Both were translated by Viliam Búr. Russian is
+`story-ru.js` and `ru.html` (`/ru`), translated by Alexander Radchenko; Czech
+is `story-cs.js` and `cs.html` (`/cs`), translated by HighEgg; Bengali is
+`story-bn.js` and `bn.html` (`/bn`), translated by Tazik and Rumi.
 
-Russian and Czech are stubs, waiting for their translators: `story-ru.js` and
-`ru.html`, and `story-cs.js` and `cs.html`, are in place but still hold the
-English text, and neither edition is yet in the language menu or the
-`hreflang` lines. To finish one, translate its two files as described below,
-then uncomment its line in `languages.js` and its `hreflang` line
-(`hreflang="ru"` or `hreflang="cs"`) in the `<head>` of every other edition's
-page.
+Every edition is listed in `languages.js` (the language menu) and in the
+`hreflang` lines in the `<head>` of every other edition's page. A new edition
+needs its line in both. Bengali and Esperanto keep English-style curly quotes,
+so they need no entry in the quote styles (`QUOTES` in `reader.js` and
+`simple.js`); German, Slovak, Czech and Russian have one.
 
-Bengali (`story-bn.js`, `bn.html`) is translated and in the language menu,
-but is still being checked, so `bn.html` is marked `noindex`. To take it
-live, remove the `noindex` line, and uncomment the `hreflang="bn"` line in
-the `<head>` of `index.html`, `de.html`, `sk.html`, `eo.html`, `ru.html` and
-`cs.html`. Bengali and Esperanto keep English-style curly quotes, so they need
-no entry in the quote styles (`QUOTES` in `reader.js` and `simple.js`); German,
-Slovak, Czech and Russian have one.
+Fonts: Noto Serif, which every page links in its `<head>`, covers Latin,
+Cyrillic and Greek. A language in another script needs that script's font
+from the table `FONTS` at the top of `languages.js`: Simplified Chinese is
+Noto Serif SC, Traditional Chinese Noto Serif TC, Japanese Noto Serif JP,
+Korean Noto Serif KR, and there are Noto Serif Hebrew and Noto Serif Thai
+(Bengali, already there, uses Baloo Da 2). To add one, do as `bn.html` does:
+add its family to the Google Fonts link in the page's `<head>`, set `--text`
+in the `<style>` there to `'Noto Serif', '<the font>', Georgia, serif`, and
+name it as `font:` on the language's line in `languages.js`, so the plain
+edition loads it too.
 
 To translate, edit `story-de.js`: the story text, and the short list of
 interface words (`STORY_UI`) at the top, such as "Chapter", "Page 3 of 40",

@@ -828,9 +828,12 @@
   layout();
   trackProgress();
   // Show the book once its font has arrived, so it never appears set in the
-  // fallback and then reflows; if the font is slow, show it anyway.
+  // fallback and then reflows; if the font is slow, show it anyway. The font
+  // is the first family in --text (Noto Serif, or the edition's own: see
+  // reader.css), so the page's <head> can swap it without touching this.
+  const textFont = () => getComputedStyle(document.body).fontFamily.split(',')[0].trim();
   Promise.race([
-    Promise.all(['1em', 'italic 1em', '600 1em'].map(f => document.fonts?.load(`${f} 'Fraunces'`))),
+    Promise.all(['1em', 'italic 1em', '600 1em'].map(f => document.fonts?.load(`${f} ${textFont()}`))),
     new Promise(r => setTimeout(r, 2000)),
   ]).catch(() => {}).then(() => {
     layout();

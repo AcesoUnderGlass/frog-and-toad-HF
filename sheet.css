@@ -1,5 +1,5 @@
 /* The site's other pages (About, Contact, Learn more): one sheet of the
-   book's paper lying on the same desk, set in the book's Fraunces. The
+   book's paper lying on the same desk, set in the book's Noto Serif. The
    colours and textures are the reader's (reader.css). */
 
 :root {
@@ -26,8 +26,7 @@ body {
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='660' height='660'%3E%3Cfilter id='w'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.045 .0035' numOctaves='4' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .12 0 0 0 0 .07 0 0 0 0 .03 .25 0 0 0 -.06'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23w)'/%3E%3C/svg%3E");
   background-attachment: fixed;
   color: var(--ink);
-  font-family: 'Fraunces', Georgia, serif;
-  font-variation-settings: 'SOFT' 100, 'WONK' 0;
+  font-family: var(--text, 'Noto Serif', Georgia, serif);
   -webkit-font-smoothing: antialiased;
 }
 

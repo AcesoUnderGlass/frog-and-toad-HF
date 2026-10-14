@@ -18,7 +18,7 @@ node tests/editions.mjs
 
 Each prints a line per check and exits non-zero if any fail. They need Google
 Chrome (or set `BROWSER=webkit`, see below) and network access for the font
-(Fraunces, from Google Fonts). Vercel's analytics script, which only exists on
+(Noto Serif, from Google Fonts). Vercel's analytics script, which only exists on
 Vercel, is stubbed out.
 
 | Test | Checks |

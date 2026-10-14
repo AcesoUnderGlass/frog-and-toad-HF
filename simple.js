@@ -25,8 +25,24 @@
   }
   load(edition, () => (edition === ENGLISH ? show(ENGLISH) : load(ENGLISH, () => show(ENGLISH))));
 
+  // The edition's typeface (see FONTS in languages.js): Noto Serif, which
+  // simple.html links, for Latin and Cyrillic; another script's font is
+  // linked here and put before the fallbacks in the sheet's font stack.
+  function setFont(e) {
+    const FONTS = window.FONTS || {};
+    const font = e.font || 'Noto Serif';
+    if (font !== 'Noto Serif' && FONTS[font]) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://fonts.googleapis.com/css2?family=' + FONTS[font] + '&display=swap';
+      document.head.append(link);
+      document.documentElement.style.setProperty('--text', `'Noto Serif', '${font}', Georgia, serif`);
+    }
+  }
+
   function show(e) {
     document.documentElement.lang = e.lang;
+    setFont(e);
     const UI = Object.assign({
       chapter: 'Chapter {n}',
       illustration: 'Illustration',
