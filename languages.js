@@ -29,6 +29,7 @@ window.FONTS = {
   'Noto Serif Hebrew': 'Noto+Serif+Hebrew:wght@400..600',
   'Noto Serif Thai':   'Noto+Serif+Thai:wght@400..600',
   'Baloo Da 2':        'Baloo+Da+2:wght@400..700',                    // Bengali
+  'Noto Serif Devanagari': 'Noto+Serif+Devanagari:wght@400..600',    // Hindi, Marathi, Nepali
 };
 
 window.EDITIONS = [
@@ -41,4 +42,7 @@ window.EDITIONS = [
   { lang: 'sk', name: 'Slovenčina', href: 'sk.html', story: 'story-sk.js' },
   { lang: 'ru', name: 'Русский', href: 'ru.html', story: 'story-ru.js' },
   { lang: 'bn', name: 'বাংলা', href: 'bn.html', story: 'story-bn.js', font: 'Baloo Da 2' },
+  // Hindi: a stub so far (story-hi.js is still the English text). Uncomment
+  // once it is translated and hi.html's noindex is removed.
+  // { lang: 'hi', name: 'हिन्दी', href: 'hi.html', story: 'story-hi.js', font: 'Noto Serif Devanagari' },
 ];
