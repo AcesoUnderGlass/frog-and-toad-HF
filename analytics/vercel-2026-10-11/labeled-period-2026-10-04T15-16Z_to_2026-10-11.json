@@ -1,0 +1,2283 @@
+{
+ "labeled_referrers": {
+  "data": [
+   {
+    "key": "news.ycombinator.com",
+    "total": 613,
+    "devices": 534
+   },
+   {
+    "key": "instagram.com",
+    "total": 449,
+    "devices": 429
+   },
+   {
+    "key": "gigazine.net",
+    "total": 413,
+    "devices": 362
+   },
+   {
+    "key": "google.com",
+    "total": 422,
+    "devices": 319
+   },
+   {
+    "key": "t.co",
+    "total": 319,
+    "devices": 275
+   },
+   {
+    "key": "lesswrong.com",
+    "total": 283,
+    "devices": 253
+   },
+   {
+    "key": "teams.public.onecdn.static.microsoft",
+    "total": 452,
+    "devices": 252
+   },
+   {
+    "key": "metafilter.com",
+    "total": 183,
+    "devices": 170
+   },
+   {
+    "key": "m.facebook.com",
+    "total": 165,
+    "devices": 148
+   },
+   {
+    "key": "com.slack",
+    "total": 165,
+    "devices": 144
+   },
+   {
+    "key": "l.facebook.com",
+    "total": 107,
+    "devices": 93
+   },
+   {
+    "key": "substack.com",
+    "total": 63,
+    "devices": 54
+   },
+   {
+    "key": "linkedin.com",
+    "total": 57,
+    "devices": 53
+   },
+   {
+    "key": "trade.padre.gg",
+    "total": 61,
+    "devices": 53
+   },
+   {
+    "key": "thezvi.substack.com",
+    "total": 46,
+    "devices": 43
+   },
+   {
+    "key": "facebook.com",
+    "total": 36,
+    "devices": 34
+   },
+   {
+    "key": "lm.facebook.com",
+    "total": 27,
+    "devices": 26
+   },
+   {
+    "key": "pinboard.in",
+    "total": 28,
+    "devices": 25
+   },
+   {
+    "key": "duckduckgo.com",
+    "total": 31,
+    "devices": 24
+   },
+   {
+    "key": "statics.gov.teams.microsoft.us",
+    "total": 27,
+    "devices": 21
+   },
+   {
+    "key": "hckrnews.com",
+    "total": 23,
+    "devices": 20
+   },
+   {
+    "key": "com.google.android.gm",
+    "total": 24,
+    "devices": 19
+   },
+   {
+    "key": "forum.effectivealtruism.org",
+    "total": 19,
+    "devices": 18
+   },
+   {
+    "key": "astralcodexten.com",
+    "total": 16,
+    "devices": 16
+   },
+   {
+    "key": "com.google.android.googlequicksearchbox",
+    "total": 21,
+    "devices": 16
+   },
+   {
+    "key": "daemonology.net",
+    "total": 11,
+    "devices": 11
+   },
+   {
+    "key": "go.bsky.app",
+    "total": 11,
+    "devices": 11
+   },
+   {
+    "key": "msn.com",
+    "total": 11,
+    "devices": 11
+   },
+   {
+    "key": "bing.com",
+    "total": 11,
+    "devices": 9
+   },
+   {
+    "key": "frogandtoad.ai",
+    "total": 10,
+    "devices": 9
+   },
+   {
+    "key": "hn.algolia.com",
+    "total": 10,
+    "devices": 9
+   },
+   {
+    "key": "l.workplace.com",
+    "total": 9,
+    "devices": 9
+   },
+   {
+    "key": "org.telegram.messenger",
+    "total": 9,
+    "devices": 9
+   },
+   {
+    "key": "agifriday.substack.com",
+    "total": 8,
+    "devices": 8
+   },
+   {
+    "key": "l.instagram.com",
+    "total": 8,
+    "devices": 8
+   },
+   {
+    "key": "com.reddit.frontpage",
+    "total": 6,
+    "devices": 6
+   },
+   {
+    "key": "hcker.news",
+    "total": 6,
+    "devices": 6
+   },
+   {
+    "key": "mail.google.com",
+    "total": 7,
+    "devices": 6
+   },
+   {
+    "key": "messages.google.com",
+    "total": 7,
+    "devices": 6
+   },
+   {
+    "key": "smartnews.com",
+    "total": 8,
+    "devices": 6
+   },
+   {
+    "key": "thezvi.wordpress.com",
+    "total": 7,
+    "devices": 6
+   },
+   {
+    "key": "inoreader.com",
+    "total": 5,
+    "devices": 5
+   },
+   {
+    "key": "photon-sol.tinyastro.io",
+    "total": 5,
+    "devices": 5
+   },
+   {
+    "key": "reddit.com",
+    "total": 5,
+    "devices": 5
+   },
+   {
+    "key": "supertechfans.com",
+    "total": 5,
+    "devices": 5
+   },
+   {
+    "key": "hntoplinks.com",
+    "total": 4,
+    "devices": 4
+   },
+   {
+    "key": "127.0.0.1",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "acesounderglass.com",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "com.linkedin.android",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "dsext001-eu1-215dsi0708-ifwe.3dexperience.3ds.com",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "news.hada.io",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "search.brave.com",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "tvtropes.org",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "b3s.me",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "bluedwarf.top",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "dsext001-eu1-215dsi0708-3dswym.3dexperience.3ds.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "ecosia.org",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "gmgn.ai",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "hndigest.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "l.messenger.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "patreon.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "pseudosean.github.io",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "search.yahoo.co.jp",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "security.feishu.cn",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "statics.dod.teams.microsoft.us",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "steamcommunity.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "vercel.com",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "web.telegram.org",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "66.33.60.129",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "acesounderglass.wordpress.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "aotter.github.io",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "app.mailbrew.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "articles.thufir.sylvainchevalier.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "av-eu1.startpage.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "axiom.trade",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "bazqux.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "com.slack.intune",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "discuss.systems",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "elizabethvannostrand.substack.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "erdekesdolgok.substack.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "frogandtoadai.substack.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "gemini.google.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "google.co.uk",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "greaterwrong.com",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "homepage.stugendron.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "infosec.exchange",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "innoreader.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "io.github.hidroh.materialistic",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "ios.feeddler.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "justme.website",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "l.meta.ai",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "links.us1.defend.egress.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "lm.workplace.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mail.telenet.be",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mastodon.social",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mevx.io",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "news-not-paper.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "nitter.perennialte.ch",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "noscroll.devazuka.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "old.reddit.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "perplexity.ai",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "pulsinio.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "read.readwise.io",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "safe.menlosecurity.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "sanet.lc",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "scissor.studio",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "slowjournal.googleplex.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "statics.gov.teams.microsoft.us.mcas-gov.us",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "statics.teams.cdn.office.net",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "subium.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "teams.df.onecdn.static.microsoft",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "telegram.me",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "theoldreader.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "thetower.is",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "thoughttrain.app",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "vely.io",
+    "total": 1,
+    "devices": 1
+   }
+  ]
+ },
+ "labeled_paths": {
+  "data": [
+   {
+    "key": "/",
+    "total": 16077,
+    "devices": 12671
+   },
+   {
+    "key": "/learn-more/direct",
+    "total": 405,
+    "devices": 388
+   },
+   {
+    "key": "/simple",
+    "total": 445,
+    "devices": 367
+   },
+   {
+    "key": "/about",
+    "total": 401,
+    "devices": 357
+   },
+   {
+    "key": "/de",
+    "total": 367,
+    "devices": 293
+   },
+   {
+    "key": "/learn-more",
+    "total": 123,
+    "devices": 119
+   },
+   {
+    "key": "/contact",
+    "total": 112,
+    "devices": 100
+   },
+   {
+    "key": "/learn-more/teams.public.onecdn.static.microsoft",
+    "total": 34,
+    "devices": 26
+   },
+   {
+    "key": "/learn-more/google.com",
+    "total": 20,
+    "devices": 20
+   },
+   {
+    "key": "/bn",
+    "total": 22,
+    "devices": 16
+   },
+   {
+    "key": "/eo",
+    "total": 19,
+    "devices": 16
+   },
+   {
+    "key": "/learn-more/gigazine.net",
+    "total": 17,
+    "devices": 16
+   },
+   {
+    "key": "/sk",
+    "total": 19,
+    "devices": 15
+   },
+   {
+    "key": "/learn-more/lesswrong.com",
+    "total": 14,
+    "devices": 14
+   },
+   {
+    "key": "/learn-more/news.ycombinator.com",
+    "total": 14,
+    "devices": 13
+   },
+   {
+    "key": "/learn-more/com.slack",
+    "total": 10,
+    "devices": 10
+   },
+   {
+    "key": "/learn-more/l.facebook.com",
+    "total": 6,
+    "devices": 6
+   },
+   {
+    "key": "/learn-more/t.co",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "/learn-more/aug",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more/book",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more/facebook.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more/hckrnews.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more/justapeck",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more/metafilter.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more/news.hada.io",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more/statics.gov.teams.microsoft.us",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more/trade.padre.gg",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more/bing.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/bluedwarf.top",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/com.google.android.googlequicksearchbox",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/com.reddit.frontpage",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/dsext001-eu1-215dsi0708-ifwe.3dexperience.3ds.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/linkedin.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/msn.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/pinboard.in",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/slowjournal.googleplex.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/statics.dod.teams.microsoft.us",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/ru",
+    "total": 1,
+    "devices": 1
+   }
+  ]
+ },
+ "labeled_overview": {
+  "total": 18139,
+  "devices": 13236,
+  "queryResults": {
+   "summary": [
+    {
+     "total": 18139,
+     "devices": 13236
+    }
+   ],
+   "query": {
+    "limitRanking": "single_pass",
+    "summaryOnly": true,
+    "scope": {
+     "type": "project",
+     "ownerId": "team_bRewK1GOru7pg4m7pyxQEZYz",
+     "projectIds": [
+      "prj_aq11s0jRAcgbBXx4gIxkPSM0eVJN"
+     ]
+    },
+    "reason": "web_analytics_dashboard",
+    "event": "analyticsPageview",
+    "rollups": {
+     "total": {
+      "measure": "count",
+      "aggregation": "sum"
+     },
+     "devices": {
+      "measure": "count",
+      "aggregation": "unique",
+      "dimensions": [
+       "visitorId"
+      ]
+     }
+    },
+    "filter": "(environment eq 'production' or environment eq '')",
+    "startTime": "2026-10-04T00:00:00.000Z",
+    "endTime": "2026-10-12T00:00:00.000Z",
+    "granularity": {
+     "days": 1
+    },
+    "bucketTimezone": "UTC"
+   },
+   "statistics": {
+    "rowsRead": 101598,
+    "bytesRead": 12376520,
+    "dbTimeSeconds": 0.07596135139465332,
+    "engineTimeSeconds": 0.14480871599912643,
+    "queryTable": "Vercel_Observability__ep_web_analytics_pageview_agg_hourly_v1"
+   },
+   "queryId": "3717504033"
+  }
+ },
+ "pre_overview": {
+  "total": 42927,
+  "devices": 32339,
+  "queryResults": {
+   "summary": [
+    {
+     "total": 42927,
+     "devices": 32339
+    }
+   ],
+   "query": {
+    "limitRanking": "single_pass",
+    "summaryOnly": true,
+    "scope": {
+     "type": "project",
+     "ownerId": "team_bRewK1GOru7pg4m7pyxQEZYz",
+     "projectIds": [
+      "prj_aq11s0jRAcgbBXx4gIxkPSM0eVJN"
+     ]
+    },
+    "reason": "web_analytics_dashboard",
+    "event": "analyticsPageview",
+    "rollups": {
+     "total": {
+      "measure": "count",
+      "aggregation": "sum"
+     },
+     "devices": {
+      "measure": "count",
+      "aggregation": "unique",
+      "dimensions": [
+       "visitorId"
+      ]
+     }
+    },
+    "filter": "(environment eq 'production' or environment eq '')",
+    "startTime": "2026-09-12T00:00:00.000Z",
+    "endTime": "2026-10-05T00:00:00.000Z",
+    "granularity": {
+     "days": 1
+    },
+    "bucketTimezone": "UTC"
+   },
+   "statistics": {
+    "rowsRead": 94044,
+    "bytesRead": 10864326,
+    "dbTimeSeconds": 0.07484221458435059,
+    "engineTimeSeconds": 0.1475542399995029,
+    "queryTable": "Vercel_Observability__ep_web_analytics_pageview_agg_hourly_v1"
+   },
+   "queryId": "3646181897"
+  }
+ },
+ "pre_referrers": {
+  "data": [
+   {
+    "key": "news.ycombinator.com",
+    "total": 11463,
+    "devices": 9872
+   },
+   {
+    "key": "metafilter.com",
+    "total": 750,
+    "devices": 686
+   },
+   {
+    "key": "t.co",
+    "total": 739,
+    "devices": 682
+   },
+   {
+    "key": "lesswrong.com",
+    "total": 637,
+    "devices": 569
+   },
+   {
+    "key": "facebook.com",
+    "total": 444,
+    "devices": 410
+   },
+   {
+    "key": "google.com",
+    "total": 433,
+    "devices": 331
+   },
+   {
+    "key": "m.facebook.com",
+    "total": 334,
+    "devices": 303
+   },
+   {
+    "key": "hckrnews.com",
+    "total": 319,
+    "devices": 282
+   },
+   {
+    "key": "com.slack",
+    "total": 283,
+    "devices": 246
+   },
+   {
+    "key": "com.google.android.gm",
+    "total": 227,
+    "devices": 192
+   },
+   {
+    "key": "l.facebook.com",
+    "total": 216,
+    "devices": 186
+   },
+   {
+    "key": "teams.public.onecdn.static.microsoft",
+    "total": 233,
+    "devices": 184
+   },
+   {
+    "key": "thezvi.substack.com",
+    "total": 144,
+    "devices": 134
+   },
+   {
+    "key": "lm.facebook.com",
+    "total": 103,
+    "devices": 92
+   },
+   {
+    "key": "linkedin.com",
+    "total": 93,
+    "devices": 77
+   },
+   {
+    "key": "go.bsky.app",
+    "total": 80,
+    "devices": 71
+   },
+   {
+    "key": "frogandtoad.ai",
+    "total": 61,
+    "devices": 59
+   },
+   {
+    "key": "l.instagram.com",
+    "total": 37,
+    "devices": 37
+   },
+   {
+    "key": "brutalist.report",
+    "total": 36,
+    "devices": 35
+   },
+   {
+    "key": "hn.algolia.com",
+    "total": 31,
+    "devices": 29
+   },
+   {
+    "key": "hackerweb.app",
+    "total": 31,
+    "devices": 25
+   },
+   {
+    "key": "hcker.news",
+    "total": 27,
+    "devices": 25
+   },
+   {
+    "key": "substack.com",
+    "total": 29,
+    "devices": 23
+   },
+   {
+    "key": "com.google.android.googlequicksearchbox",
+    "total": 29,
+    "devices": 22
+   },
+   {
+    "key": "forum.effectivealtruism.org",
+    "total": 24,
+    "devices": 21
+   },
+   {
+    "key": "duckduckgo.com",
+    "total": 25,
+    "devices": 20
+   },
+   {
+    "key": "io.github.hidroh.materialistic",
+    "total": 19,
+    "devices": 19
+   },
+   {
+    "key": "daemonology.net",
+    "total": 18,
+    "devices": 18
+   },
+   {
+    "key": "hn.premii.com",
+    "total": 16,
+    "devices": 15
+   },
+   {
+    "key": "disq.us",
+    "total": 14,
+    "devices": 14
+   },
+   {
+    "key": "inoreader.com",
+    "total": 13,
+    "devices": 13
+   },
+   {
+    "key": "thezvi.wordpress.com",
+    "total": 15,
+    "devices": 13
+   },
+   {
+    "key": "mastodon.social",
+    "total": 12,
+    "devices": 12
+   },
+   {
+    "key": "slowjournal.googleplex.com",
+    "total": 12,
+    "devices": 12
+   },
+   {
+    "key": "org.telegram.messenger",
+    "total": 11,
+    "devices": 11
+   },
+   {
+    "key": "b3s.me",
+    "total": 12,
+    "devices": 10
+   },
+   {
+    "key": "bing.com",
+    "total": 12,
+    "devices": 10
+   },
+   {
+    "key": "mail.google.com",
+    "total": 10,
+    "devices": 10
+   },
+   {
+    "key": "l.workplace.com",
+    "total": 11,
+    "devices": 9
+   },
+   {
+    "key": "news.hada.io",
+    "total": 10,
+    "devices": 9
+   },
+   {
+    "key": "pinboard.in",
+    "total": 9,
+    "devices": 9
+   },
+   {
+    "key": "com.linkedin.android",
+    "total": 7,
+    "devices": 7
+   },
+   {
+    "key": "hackurls.com",
+    "total": 7,
+    "devices": 7
+   },
+   {
+    "key": "jimmyr.com",
+    "total": 7,
+    "devices": 7
+   },
+   {
+    "key": "messages.google.com",
+    "total": 7,
+    "devices": 7
+   },
+   {
+    "key": "disqus.com",
+    "total": 7,
+    "devices": 6
+   },
+   {
+    "key": "statics.gov.teams.microsoft.us",
+    "total": 10,
+    "devices": 6
+   },
+   {
+    "key": "lm.workplace.com",
+    "total": 6,
+    "devices": 5
+   },
+   {
+    "key": "thetower.is",
+    "total": 6,
+    "devices": 5
+   },
+   {
+    "key": "buzzing.cc",
+    "total": 4,
+    "devices": 4
+   },
+   {
+    "key": "hackernews.betacat.io",
+    "total": 4,
+    "devices": 4
+   },
+   {
+    "key": "sanet.st",
+    "total": 4,
+    "devices": 4
+   },
+   {
+    "key": "76.76.21.98",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "bazqux.com",
+    "total": 5,
+    "devices": 3
+   },
+   {
+    "key": "claireberlinski.substack.com",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "freshnews.org",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "hacker-news.firebaseio.com",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "l.messenger.com",
+    "total": 4,
+    "devices": 3
+   },
+   {
+    "key": "org.joinmastodon.android",
+    "total": 4,
+    "devices": 3
+   },
+   {
+    "key": "reddit.com",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "safe.menlosecurity.com",
+    "total": 6,
+    "devices": 3
+   },
+   {
+    "key": "skimfeed.com",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "spike.news",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "vercel.com",
+    "total": 4,
+    "devices": 3
+   },
+   {
+    "key": "114.114.114.114",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "127.0.0.1",
+    "total": 4,
+    "devices": 2
+   },
+   {
+    "key": "66.33.60.129",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "66.33.60.194",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "76.76.21.142",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "bigpinekey.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "com.reddit.frontpage",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "dickssportinggoods.com",
+    "total": 4,
+    "devices": 2
+   },
+   {
+    "key": "greaterwrong.com",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "hackernewz.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "haxplore.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "hn.buzzing.cc",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "infosec.exchange",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "ios.feeddler.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "l.meta.ai",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "newsblur.com",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "readspike.com",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "statics.dod.teams.microsoft.us",
+    "total": 6,
+    "devices": 2
+   },
+   {
+    "key": "steamcommunity.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "teams.df.onecdn.static.microsoft",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "unityriskresearch.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "universeodon.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "web.telegram.org",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "66.33.60.130",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "66.33.60.34",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "66.33.60.66",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "66.33.60.67",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "76.76.21.22",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "76.76.21.61",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "agifriday.substack.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "anchor-app.fly.dev",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "angular2-hn.firebaseapp.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "apexoo.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "away.vk.ru",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "cn.bing.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "com.growse.android.io.github.hidroh.materialistic",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "com.jiaqifeng.hacki",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "counter.social",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "cvirtue.dreamwidth.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "d7op4x9cinqh8.cloudfront.net",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "darkhn.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "desireearmfeldt.dreamwidth.org",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "diary.ritiksingla28.workers.dev",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "districtlms.seattleschools.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "email.seznam.cz",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "fm-prod.effectivealtruism.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "fosstodon.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "fredrikegerman.dreamwidth.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "frirss.lumsden.uk",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "fullhn.com",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "gaea.taild86ab6.ts.net",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "github.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "google.co.uk",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "hacker-news.news",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hackerer.news",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hakkernieuws.vercel.app",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "henrik-ch.github.io",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hn-focus-reader.boundsj.chatgpt.site",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hn-summary.k-ui.jp",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hn.cxjs.io",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hn.pfalke.com",
+    "total": 3,
+    "devices": 1
+   },
+   {
+    "key": "hn.ryanross.net",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "hn.svelte.dev",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hnews.bonnissent.fr",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hnews.jdd.dev",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hns.local",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hntoplinks.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "indieweb.social",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "io.syncapps.lemmy_sync",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "jducoeur.dreamwidth.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "kagi.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "l33tminion.dreamwidth.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "lauradi7dw.dreamwidth.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "lehser.dreamwidth.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "lei-ai.cloud",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "m.baidu.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "martin-walls.github.io",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mas.to",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mastodon.me.uk",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mastodon.online",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mastodon.pnpde.social",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mastodon.scot",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mastodon.uno",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mathstodon.xyz",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mstdn.social",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "nerdculture.de",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "news.facts.dev",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "news.social-protocols.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "news.uetzhome.cloud",
+    "total": 4,
+    "devices": 1
+   },
+   {
+    "key": "newshacker.me",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "noscroll.devazuka.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "now.hackertab.dev",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "old.reddit.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "org.telegram.messenger.web",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "outlook.live.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "patreon.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "perplexity.ai",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "phanpy.social",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "read.readwise.io",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "reader-bootstrap.invalid",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "rngreader.appspot.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "rss.xiffy.nl",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "runbox.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "s.muz.li",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "sanet.download",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "sanet.lc",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "search.brave.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "server.tailba6d00.ts.net",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "sms.localhost",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "softarchive.is",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "supertechfans.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "swisscows.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "synth-reader.pages.dev",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "theoldreader.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "toot.lv",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "tophub.today",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "tumblr.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "vely.io",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "wispfox.dreamwidth.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "x.com",
+    "total": 1,
+    "devices": 1
+   }
+  ]
+ },
+ "labeled_event_source": {
+  "data": [
+   {
+    "key": "direct",
+    "total": 18779,
+    "devices": 4548
+   },
+   {
+    "key": "gigazine.net",
+    "total": 1086,
+    "devices": 270
+   },
+   {
+    "key": "google.com",
+    "total": 1262,
+    "devices": 238
+   },
+   {
+    "key": "teams.public.onecdn.static.microsoft",
+    "total": 1372,
+    "devices": 213
+   },
+   {
+    "key": "news.ycombinator.com",
+    "total": 769,
+    "devices": 190
+   },
+   {
+    "key": "t.co",
+    "total": 471,
+    "devices": 153
+   },
+   {
+    "key": "lesswrong.com",
+    "total": 623,
+    "devices": 149
+   },
+   {
+    "key": "com.slack",
+    "total": 331,
+    "devices": 82
+   },
+   {
+    "key": "metafilter.com",
+    "total": 293,
+    "devices": 69
+   },
+   {
+    "key": "l.facebook.com",
+    "total": 274,
+    "devices": 61
+   },
+   {
+    "key": "trade.padre.gg",
+    "total": 101,
+    "devices": 33
+   },
+   {
+    "key": "linkedin.com",
+    "total": 122,
+    "devices": 31
+   },
+   {
+    "key": "m.facebook.com",
+    "total": 52,
+    "devices": 18
+   },
+   {
+    "key": "pinboard.in",
+    "total": 62,
+    "devices": 17
+   },
+   {
+    "key": "substack",
+    "total": 65,
+    "devices": 17
+   },
+   {
+    "key": "thezvi.substack.com",
+    "total": 71,
+    "devices": 17
+   },
+   {
+    "key": "facebook.com",
+    "total": 68,
+    "devices": 15
+   },
+   {
+    "key": "forum.effectivealtruism.org",
+    "total": 59,
+    "devices": 15
+   },
+   {
+    "key": "statics.gov.teams.microsoft.us",
+    "total": 94,
+    "devices": 15
+   },
+   {
+    "key": "lm.facebook.com",
+    "total": 66,
+    "devices": 14
+   },
+   {
+    "key": "substack.com",
+    "total": 46,
+    "devices": 14
+   },
+   {
+    "key": "com.google.android.gm",
+    "total": 56,
+    "devices": 12
+   },
+   {
+    "key": "duckduckgo.com",
+    "total": 35,
+    "devices": 11
+   },
+   {
+    "key": "com.google.android.googlequicksearchbox",
+    "total": 46,
+    "devices": 10
+   },
+   {
+    "key": "hckrnews.com",
+    "total": 39,
+    "devices": 9
+   },
+   {
+    "key": "daemonology.net",
+    "total": 37,
+    "devices": 8
+   },
+   {
+    "key": "insta",
+    "total": 20,
+    "devices": 8
+   },
+   {
+    "key": "msn.com",
+    "total": 33,
+    "devices": 8
+   },
+   {
+    "key": "hn.algolia.com",
+    "total": 19,
+    "devices": 7
+   },
+   {
+    "key": "justapeck",
+    "total": 30,
+    "devices": 7
+   },
+   {
+    "key": "org.telegram.messenger",
+    "total": 17,
+    "devices": 7
+   },
+   {
+    "key": "agifriday.substack.com",
+    "total": 22,
+    "devices": 6
+   },
+   {
+    "key": "go.bsky.app",
+    "total": 25,
+    "devices": 6
+   },
+   {
+    "key": "l.workplace.com",
+    "total": 27,
+    "devices": 6
+   },
+   {
+    "key": "astralcodexten.com",
+    "total": 25,
+    "devices": 5
+   },
+   {
+    "key": "l.instagram.com",
+    "total": 17,
+    "devices": 5
+   },
+   {
+    "key": "aug",
+    "total": 15,
+    "devices": 4
+   },
+   {
+    "key": "com.reddit.frontpage",
+    "total": 18,
+    "devices": 4
+   },
+   {
+    "key": "smartnews.com",
+    "total": 15,
+    "devices": 4
+   },
+   {
+    "key": "thezvi.wordpress.com",
+    "total": 20,
+    "devices": 4
+   },
+   {
+    "key": "dsext001-eu1-215dsi0708-ifwe.3dexperience.3ds.com",
+    "total": 15,
+    "devices": 3
+   },
+   {
+    "key": "hcker.news",
+    "total": 4,
+    "devices": 3
+   },
+   {
+    "key": "hntoplinks.com",
+    "total": 7,
+    "devices": 3
+   },
+   {
+    "key": "lesswrong",
+    "total": 17,
+    "devices": 3
+   },
+   {
+    "key": "mail.google.com",
+    "total": 7,
+    "devices": 3
+   },
+   {
+    "key": "reddit.com",
+    "total": 21,
+    "devices": 3
+   },
+   {
+    "key": "security.feishu.cn",
+    "total": 11,
+    "devices": 3
+   },
+   {
+    "key": "127.0.0.1",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "b3s.me",
+    "total": 7,
+    "devices": 2
+   },
+   {
+    "key": "bing.com",
+    "total": 10,
+    "devices": 2
+   },
+   {
+    "key": "bluedwarf.top",
+    "total": 7,
+    "devices": 2
+   },
+   {
+    "key": "chatgpt.com",
+    "total": 7,
+    "devices": 2
+   },
+   {
+    "key": "dsext001-eu1-215dsi0708-3dswym.3dexperience.3ds.com",
+    "total": 10,
+    "devices": 2
+   },
+   {
+    "key": "evn-substack",
+    "total": 10,
+    "devices": 2
+   },
+   {
+    "key": "inoreader.com",
+    "total": 10,
+    "devices": 2
+   },
+   {
+    "key": "l.messenger.com",
+    "total": 6,
+    "devices": 2
+   },
+   {
+    "key": "messages.google.com",
+    "total": 10,
+    "devices": 2
+   },
+   {
+    "key": "news.hada.io",
+    "total": 10,
+    "devices": 2
+   },
+   {
+    "key": "photon-sol.tinyastro.io",
+    "total": 6,
+    "devices": 2
+   },
+   {
+    "key": "slowjournal.googleplex.com",
+    "total": 10,
+    "devices": 2
+   },
+   {
+    "key": "statics.dod.teams.microsoft.us",
+    "total": 12,
+    "devices": 2
+   },
+   {
+    "key": "supertechfans.com",
+    "total": 6,
+    "devices": 2
+   },
+   {
+    "key": "web.telegram.org",
+    "total": 10,
+    "devices": 2
+   },
+   {
+    "key": "66.33.60.129",
+    "total": 4,
+    "devices": 1
+   },
+   {
+    "key": "acesounderglass.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "aotter.github.io",
+    "total": 5,
+    "devices": 1
+   },
+   {
+    "key": "app.mailbrew.com",
+    "total": 5,
+    "devices": 1
+   },
+   {
+    "key": "av-eu1.startpage.com",
+    "total": 7,
+    "devices": 1
+   },
+   {
+    "key": "axiom.trade",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "com.linkedin.android",
+    "total": 4,
+    "devices": 1
+   },
+   {
+    "key": "discuss.systems",
+    "total": 5,
+    "devices": 1
+   },
+   {
+    "key": "ecosia.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "erdekesdolgok.substack.com",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "frogandtoadai.substack.com",
+    "total": 5,
+    "devices": 1
+   },
+   {
+    "key": "greaterwrong.com",
+    "total": 6,
+    "devices": 1
+   },
+   {
+    "key": "hndigest.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "homepage.stugendron.com",
+    "total": 5,
+    "devices": 1
+   },
+   {
+    "key": "news-not-paper.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "nitter.perennialte.ch",
+    "total": 5,
+    "devices": 1
+   },
+   {
+    "key": "old.reddit.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "patreon.com",
+    "total": 4,
+    "devices": 1
+   },
+   {
+    "key": "pseudosean.github.io",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "pulsinio.com",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "safe.menlosecurity.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "scissor.studio",
+    "total": 5,
+    "devices": 1
+   },
+   {
+    "key": "search.brave.com",
+    "total": 5,
+    "devices": 1
+   },
+   {
+    "key": "search.yahoo.co.jp",
+    "total": 5,
+    "devices": 1
+   },
+   {
+    "key": "statics.gov.teams.microsoft.us.mcas-gov.us",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "statics.teams.cdn.office.net",
+    "total": 5,
+    "devices": 1
+   },
+   {
+    "key": "teams.df.onecdn.static.microsoft",
+    "total": 5,
+    "devices": 1
+   },
+   {
+    "key": "telegram.me",
+    "total": 5,
+    "devices": 1
+   },
+   {
+    "key": "thoughttrain.app",
+    "total": 5,
+    "devices": 1
+   },
+   {
+    "key": "vely.io",
+    "total": 5,
+    "devices": 1
+   }
+  ]
+ },
+ "labeled_query_source": {
+  "error": 400,
+  "body": "{\"error\":{\"code\":\"invalid_query\",\"message\":\"jsonProperty 'source' is not supported for type 'query_params'\"}}"
+ }
+}

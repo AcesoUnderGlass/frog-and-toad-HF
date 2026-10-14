@@ -1,0 +1,2463 @@
+{
+ "overview": {
+  "total": 58335,
+  "devices": 43494,
+  "queryResults": {
+   "summary": [
+    {
+     "total": 58335,
+     "devices": 43494
+    }
+   ],
+   "query": {
+    "limitRanking": "single_pass",
+    "summaryOnly": true,
+    "scope": {
+     "type": "project",
+     "ownerId": "team_bRewK1GOru7pg4m7pyxQEZYz",
+     "projectIds": [
+      "prj_aq11s0jRAcgbBXx4gIxkPSM0eVJN"
+     ]
+    },
+    "reason": "web_analytics_dashboard",
+    "event": "analyticsPageview",
+    "rollups": {
+     "total": {
+      "measure": "count",
+      "aggregation": "sum"
+     },
+     "devices": {
+      "measure": "count",
+      "aggregation": "unique",
+      "dimensions": [
+       "visitorId"
+      ]
+     }
+    },
+    "filter": "(environment eq 'production' or environment eq '')",
+    "startTime": "2026-09-12T00:00:00.000Z",
+    "endTime": "2026-10-12T00:00:00.000Z",
+    "granularity": {
+     "days": 1
+    },
+    "bucketTimezone": "UTC"
+   },
+   "statistics": {
+    "rowsRead": 195918,
+    "bytesRead": 22609612,
+    "dbTimeSeconds": 0.12577199935913086,
+    "engineTimeSeconds": 0.19178014799952506,
+    "queryTable": "Vercel_Observability__ep_web_analytics_pageview_agg_hourly_v1"
+   },
+   "queryId": "3329456168"
+  }
+ },
+ "overview_bounce": {
+  "total": 58335,
+  "devices": 43494,
+  "bounceRate": 79,
+  "queryResults": {
+   "summary": [
+    {
+     "total": 58335,
+     "devices": 43494,
+     "bouncedSessions": 34562
+    }
+   ],
+   "query": {
+    "limitRanking": "single_pass",
+    "summaryOnly": true,
+    "scope": {
+     "type": "project",
+     "ownerId": "team_bRewK1GOru7pg4m7pyxQEZYz",
+     "projectIds": [
+      "prj_aq11s0jRAcgbBXx4gIxkPSM0eVJN"
+     ]
+    },
+    "reason": "web_analytics_dashboard",
+    "event": "analyticsPageview",
+    "rollups": {
+     "total": {
+      "measure": "count",
+      "aggregation": "sum"
+     },
+     "devices": {
+      "measure": "count",
+      "aggregation": "unique",
+      "dimensions": [
+       "visitorId"
+      ]
+     },
+     "bouncedSessions": {
+      "measure": "viewsPerVisitor",
+      "aggregation": "sum",
+      "filter": "viewsPerVisitor eq 1"
+     }
+    },
+    "filter": "(environment eq 'production' or environment eq '')",
+    "startTime": "2026-09-12T00:00:00.000Z",
+    "endTime": "2026-10-12T00:00:00.000Z",
+    "granularity": {
+     "days": 1
+    },
+    "bucketTimezone": "UTC"
+   },
+   "statistics": {
+    "rowsRead": 328694,
+    "bytesRead": 4511385,
+    "dbTimeSeconds": 0.4165804386138916,
+    "engineTimeSeconds": 0.4888951359987259,
+    "queryTable": "Vercel_Observability__analytics_filtered_events_v3"
+   },
+   "queryId": "1903729492"
+  }
+ },
+ "timeseries": {
+  "data": {
+   "groups": {
+    "all": [
+     {
+      "key": "2026-09-12",
+      "total": 0,
+      "devices": 0
+     },
+     {
+      "key": "2026-09-13",
+      "total": 0,
+      "devices": 0
+     },
+     {
+      "key": "2026-09-14",
+      "total": 0,
+      "devices": 0
+     },
+     {
+      "key": "2026-09-15",
+      "total": 52,
+      "devices": 39
+     },
+     {
+      "key": "2026-09-16",
+      "total": 42,
+      "devices": 35
+     },
+     {
+      "key": "2026-09-17",
+      "total": 15,
+      "devices": 15
+     },
+     {
+      "key": "2026-09-18",
+      "total": 17,
+      "devices": 17
+     },
+     {
+      "key": "2026-09-19",
+      "total": 36,
+      "devices": 25
+     },
+     {
+      "key": "2026-09-20",
+      "total": 21,
+      "devices": 17
+     },
+     {
+      "key": "2026-09-21",
+      "total": 30,
+      "devices": 29
+     },
+     {
+      "key": "2026-09-22",
+      "total": 10,
+      "devices": 8
+     },
+     {
+      "key": "2026-09-23",
+      "total": 12,
+      "devices": 11
+     },
+     {
+      "key": "2026-09-24",
+      "total": 12,
+      "devices": 9
+     },
+     {
+      "key": "2026-09-25",
+      "total": 44,
+      "devices": 26
+     },
+     {
+      "key": "2026-09-26",
+      "total": 386,
+      "devices": 318
+     },
+     {
+      "key": "2026-09-27",
+      "total": 340,
+      "devices": 300
+     },
+     {
+      "key": "2026-09-28",
+      "total": 385,
+      "devices": 321
+     },
+     {
+      "key": "2026-09-29",
+      "total": 291,
+      "devices": 256
+     },
+     {
+      "key": "2026-09-30",
+      "total": 2020,
+      "devices": 1603
+     },
+     {
+      "key": "2026-10-01",
+      "total": 4387,
+      "devices": 3378
+     },
+     {
+      "key": "2026-10-02",
+      "total": 26321,
+      "devices": 19580
+     },
+     {
+      "key": "2026-10-03",
+      "total": 5776,
+      "devices": 4272
+     },
+     {
+      "key": "2026-10-04",
+      "total": 2730,
+      "devices": 2080
+     },
+     {
+      "key": "2026-10-05",
+      "total": 3866,
+      "devices": 2735
+     },
+     {
+      "key": "2026-10-06",
+      "total": 4069,
+      "devices": 2951
+     },
+     {
+      "key": "2026-10-07",
+      "total": 2232,
+      "devices": 1525
+     },
+     {
+      "key": "2026-10-08",
+      "total": 1856,
+      "devices": 1307
+     },
+     {
+      "key": "2026-10-09",
+      "total": 1194,
+      "devices": 905
+     },
+     {
+      "key": "2026-10-10",
+      "total": 988,
+      "devices": 765
+     },
+     {
+      "key": "2026-10-11",
+      "total": 1203,
+      "devices": 967
+     }
+    ]
+   },
+   "groupCount": 1
+  }
+ },
+ "stats_path": {
+  "data": [
+   {
+    "key": "/",
+    "total": 54911,
+    "devices": 42859
+   },
+   {
+    "key": "/learn-more",
+    "total": 1473,
+    "devices": 1391
+   },
+   {
+    "key": "/learn-more/direct",
+    "total": 405,
+    "devices": 388
+   },
+   {
+    "key": "/simple",
+    "total": 445,
+    "devices": 367
+   },
+   {
+    "key": "/about",
+    "total": 401,
+    "devices": 357
+   },
+   {
+    "key": "/de",
+    "total": 378,
+    "devices": 302
+   },
+   {
+    "key": "/contact",
+    "total": 112,
+    "devices": 100
+   },
+   {
+    "key": "/learn-more/teams.public.onecdn.static.microsoft",
+    "total": 34,
+    "devices": 26
+   },
+   {
+    "key": "/learn-more/google.com",
+    "total": 20,
+    "devices": 20
+   },
+   {
+    "key": "/bn",
+    "total": 22,
+    "devices": 16
+   },
+   {
+    "key": "/eo",
+    "total": 19,
+    "devices": 16
+   },
+   {
+    "key": "/learn-more/gigazine.net",
+    "total": 17,
+    "devices": 16
+   },
+   {
+    "key": "/sk",
+    "total": 19,
+    "devices": 15
+   },
+   {
+    "key": "/learn-more/lesswrong.com",
+    "total": 14,
+    "devices": 14
+   },
+   {
+    "key": "/learn-more/news.ycombinator.com",
+    "total": 14,
+    "devices": 13
+   },
+   {
+    "key": "/learn-more/com.slack",
+    "total": 10,
+    "devices": 10
+   },
+   {
+    "key": "/learn-more/l.facebook.com",
+    "total": 6,
+    "devices": 6
+   },
+   {
+    "key": "/learn-more/t.co",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "/learn-more/aug",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more/book",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more/facebook.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more/hckrnews.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more/justapeck",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more/metafilter.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more/news.hada.io",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more/statics.gov.teams.microsoft.us",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more/trade.padre.gg",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "/learn-more.html",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/bing.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/bluedwarf.top",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/com.google.android.googlequicksearchbox",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/com.reddit.frontpage",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/dsext001-eu1-215dsi0708-ifwe.3dexperience.3ds.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/linkedin.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/msn.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/pinboard.in",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/slowjournal.googleplex.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/learn-more/statics.dod.teams.microsoft.us",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "/ru",
+    "total": 1,
+    "devices": 1
+   }
+  ]
+ },
+ "stats_route": {
+  "data": []
+ },
+ "stats_hostname": {
+  "data": [
+   {
+    "key": "frogandtoad.ai",
+    "total": 58312,
+    "devices": 43476
+   },
+   {
+    "key": "frog-and-toad-hf.vercel.app",
+    "total": 21,
+    "devices": 21
+   },
+   {
+    "key": "frog-and-toad-5wys1ec6z-acesounderglass-projects.vercel.app",
+    "total": 2,
+    "devices": 1
+   }
+  ]
+ },
+ "stats_referrer": {
+  "data": [
+   {
+    "key": "news.ycombinator.com",
+    "total": 11875,
+    "devices": 10237
+   },
+   {
+    "key": "t.co",
+    "total": 1046,
+    "devices": 947
+   },
+   {
+    "key": "metafilter.com",
+    "total": 828,
+    "devices": 760
+   },
+   {
+    "key": "lesswrong.com",
+    "total": 845,
+    "devices": 753
+   },
+   {
+    "key": "google.com",
+    "total": 831,
+    "devices": 628
+   },
+   {
+    "key": "m.facebook.com",
+    "total": 484,
+    "devices": 440
+   },
+   {
+    "key": "facebook.com",
+    "total": 466,
+    "devices": 431
+   },
+   {
+    "key": "instagram.com",
+    "total": 449,
+    "devices": 429
+   },
+   {
+    "key": "teams.public.onecdn.static.microsoft",
+    "total": 676,
+    "devices": 427
+   },
+   {
+    "key": "gigazine.net",
+    "total": 413,
+    "devices": 362
+   },
+   {
+    "key": "com.slack",
+    "total": 413,
+    "devices": 357
+   },
+   {
+    "key": "hckrnews.com",
+    "total": 334,
+    "devices": 296
+   },
+   {
+    "key": "l.facebook.com",
+    "total": 281,
+    "devices": 247
+   },
+   {
+    "key": "com.google.android.gm",
+    "total": 249,
+    "devices": 209
+   },
+   {
+    "key": "thezvi.substack.com",
+    "total": 175,
+    "devices": 162
+   },
+   {
+    "key": "linkedin.com",
+    "total": 130,
+    "devices": 111
+   },
+   {
+    "key": "lm.facebook.com",
+    "total": 120,
+    "devices": 108
+   },
+   {
+    "key": "go.bsky.app",
+    "total": 89,
+    "devices": 80
+   },
+   {
+    "key": "substack.com",
+    "total": 87,
+    "devices": 74
+   },
+   {
+    "key": "frogandtoad.ai",
+    "total": 71,
+    "devices": 68
+   },
+   {
+    "key": "trade.padre.gg",
+    "total": 61,
+    "devices": 53
+   },
+   {
+    "key": "l.instagram.com",
+    "total": 42,
+    "devices": 42
+   },
+   {
+    "key": "duckduckgo.com",
+    "total": 53,
+    "devices": 41
+   },
+   {
+    "key": "forum.effectivealtruism.org",
+    "total": 42,
+    "devices": 38
+   },
+   {
+    "key": "hn.algolia.com",
+    "total": 39,
+    "devices": 37
+   },
+   {
+    "key": "brutalist.report",
+    "total": 36,
+    "devices": 35
+   },
+   {
+    "key": "com.google.android.googlequicksearchbox",
+    "total": 44,
+    "devices": 33
+   },
+   {
+    "key": "hcker.news",
+    "total": 30,
+    "devices": 28
+   },
+   {
+    "key": "pinboard.in",
+    "total": 30,
+    "devices": 27
+   },
+   {
+    "key": "statics.gov.teams.microsoft.us",
+    "total": 37,
+    "devices": 27
+   },
+   {
+    "key": "daemonology.net",
+    "total": 26,
+    "devices": 26
+   },
+   {
+    "key": "hackerweb.app",
+    "total": 31,
+    "devices": 25
+   },
+   {
+    "key": "io.github.hidroh.materialistic",
+    "total": 19,
+    "devices": 19
+   },
+   {
+    "key": "bing.com",
+    "total": 21,
+    "devices": 18
+   },
+   {
+    "key": "org.telegram.messenger",
+    "total": 18,
+    "devices": 18
+   },
+   {
+    "key": "l.workplace.com",
+    "total": 19,
+    "devices": 17
+   },
+   {
+    "key": "thezvi.wordpress.com",
+    "total": 20,
+    "devices": 17
+   },
+   {
+    "key": "astralcodexten.com",
+    "total": 16,
+    "devices": 16
+   },
+   {
+    "key": "inoreader.com",
+    "total": 16,
+    "devices": 16
+   },
+   {
+    "key": "mail.google.com",
+    "total": 17,
+    "devices": 16
+   },
+   {
+    "key": "hn.premii.com",
+    "total": 16,
+    "devices": 15
+   },
+   {
+    "key": "disq.us",
+    "total": 14,
+    "devices": 14
+   },
+   {
+    "key": "messages.google.com",
+    "total": 14,
+    "devices": 13
+   },
+   {
+    "key": "slowjournal.googleplex.com",
+    "total": 13,
+    "devices": 13
+   },
+   {
+    "key": "b3s.me",
+    "total": 14,
+    "devices": 12
+   },
+   {
+    "key": "mastodon.social",
+    "total": 12,
+    "devices": 12
+   },
+   {
+    "key": "news.hada.io",
+    "total": 13,
+    "devices": 12
+   },
+   {
+    "key": "msn.com",
+    "total": 11,
+    "devices": 11
+   },
+   {
+    "key": "com.linkedin.android",
+    "total": 9,
+    "devices": 9
+   },
+   {
+    "key": "agifriday.substack.com",
+    "total": 8,
+    "devices": 8
+   },
+   {
+    "key": "hackurls.com",
+    "total": 7,
+    "devices": 7
+   },
+   {
+    "key": "jimmyr.com",
+    "total": 7,
+    "devices": 7
+   },
+   {
+    "key": "com.reddit.frontpage",
+    "total": 6,
+    "devices": 6
+   },
+   {
+    "key": "disqus.com",
+    "total": 7,
+    "devices": 6
+   },
+   {
+    "key": "smartnews.com",
+    "total": 8,
+    "devices": 6
+   },
+   {
+    "key": "127.0.0.1",
+    "total": 7,
+    "devices": 5
+   },
+   {
+    "key": "l.messenger.com",
+    "total": 6,
+    "devices": 5
+   },
+   {
+    "key": "lm.workplace.com",
+    "total": 6,
+    "devices": 5
+   },
+   {
+    "key": "photon-sol.tinyastro.io",
+    "total": 5,
+    "devices": 5
+   },
+   {
+    "key": "reddit.com",
+    "total": 5,
+    "devices": 5
+   },
+   {
+    "key": "supertechfans.com",
+    "total": 5,
+    "devices": 5
+   },
+   {
+    "key": "thetower.is",
+    "total": 6,
+    "devices": 5
+   },
+   {
+    "key": "bazqux.com",
+    "total": 6,
+    "devices": 4
+   },
+   {
+    "key": "buzzing.cc",
+    "total": 4,
+    "devices": 4
+   },
+   {
+    "key": "hackernews.betacat.io",
+    "total": 4,
+    "devices": 4
+   },
+   {
+    "key": "hntoplinks.com",
+    "total": 4,
+    "devices": 4
+   },
+   {
+    "key": "safe.menlosecurity.com",
+    "total": 7,
+    "devices": 4
+   },
+   {
+    "key": "sanet.st",
+    "total": 4,
+    "devices": 4
+   },
+   {
+    "key": "search.brave.com",
+    "total": 4,
+    "devices": 4
+   },
+   {
+    "key": "statics.dod.teams.microsoft.us",
+    "total": 9,
+    "devices": 4
+   },
+   {
+    "key": "vercel.com",
+    "total": 5,
+    "devices": 4
+   },
+   {
+    "key": "web.telegram.org",
+    "total": 4,
+    "devices": 4
+   },
+   {
+    "key": "66.33.60.129",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "76.76.21.98",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "acesounderglass.com",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "claireberlinski.substack.com",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "dsext001-eu1-215dsi0708-ifwe.3dexperience.3ds.com",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "freshnews.org",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "greaterwrong.com",
+    "total": 5,
+    "devices": 3
+   },
+   {
+    "key": "hacker-news.firebaseio.com",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "org.joinmastodon.android",
+    "total": 4,
+    "devices": 3
+   },
+   {
+    "key": "skimfeed.com",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "spike.news",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "teams.df.onecdn.static.microsoft",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "tvtropes.org",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "114.114.114.114",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "66.33.60.194",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "76.76.21.142",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "bigpinekey.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "bluedwarf.top",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "dickssportinggoods.com",
+    "total": 4,
+    "devices": 2
+   },
+   {
+    "key": "dsext001-eu1-215dsi0708-3dswym.3dexperience.3ds.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "ecosia.org",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "gmgn.ai",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "hackernewz.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "haxplore.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "hn.buzzing.cc",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "hndigest.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "infosec.exchange",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "ios.feeddler.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "l.meta.ai",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "newsblur.com",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "noscroll.devazuka.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "patreon.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "pseudosean.github.io",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "readspike.com",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "search.yahoo.co.jp",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "security.feishu.cn",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "steamcommunity.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "unityriskresearch.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "universeodon.com",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "66.33.60.130",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "66.33.60.34",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "66.33.60.66",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "66.33.60.67",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "76.76.21.22",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "76.76.21.61",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "acesounderglass.wordpress.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "anchor-app.fly.dev",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "angular2-hn.firebaseapp.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "aotter.github.io",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "apexoo.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "app.mailbrew.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "articles.thufir.sylvainchevalier.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "av-eu1.startpage.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "away.vk.ru",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "axiom.trade",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "cn.bing.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "com.growse.android.io.github.hidroh.materialistic",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "com.jiaqifeng.hacki",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "com.slack.intune",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "counter.social",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "cvirtue.dreamwidth.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "d7op4x9cinqh8.cloudfront.net",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "darkhn.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "desireearmfeldt.dreamwidth.org",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "diary.ritiksingla28.workers.dev",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "discuss.systems",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "districtlms.seattleschools.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "elizabethvannostrand.substack.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "email.seznam.cz",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "erdekesdolgok.substack.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "fm-prod.effectivealtruism.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "fosstodon.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "fredrikegerman.dreamwidth.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "frirss.lumsden.uk",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "frogandtoadai.substack.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "fullhn.com",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "gaea.taild86ab6.ts.net",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "gemini.google.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "github.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "google.co.uk",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "hacker-news.news",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hackerer.news",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hakkernieuws.vercel.app",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "henrik-ch.github.io",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hn-focus-reader.boundsj.chatgpt.site",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hn-summary.k-ui.jp",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hn.cxjs.io",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hn.pfalke.com",
+    "total": 3,
+    "devices": 1
+   },
+   {
+    "key": "hn.ryanross.net",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "hn.svelte.dev",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hnews.bonnissent.fr",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hnews.jdd.dev",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "hns.local",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "homepage.stugendron.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "indieweb.social",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "innoreader.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "io.syncapps.lemmy_sync",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "jducoeur.dreamwidth.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "justme.website",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "kagi.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "l33tminion.dreamwidth.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "lauradi7dw.dreamwidth.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "lehser.dreamwidth.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "lei-ai.cloud",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "links.us1.defend.egress.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "m.baidu.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mail.telenet.be",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "martin-walls.github.io",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mas.to",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mastodon.me.uk",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mastodon.online",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mastodon.pnpde.social",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mastodon.scot",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mastodon.uno",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mathstodon.xyz",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mevx.io",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "mstdn.social",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "nerdculture.de",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "news-not-paper.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "news.facts.dev",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "news.social-protocols.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "news.uetzhome.cloud",
+    "total": 4,
+    "devices": 1
+   },
+   {
+    "key": "newshacker.me",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "nitter.perennialte.ch",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "now.hackertab.dev",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "old.reddit.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "org.telegram.messenger.web",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "outlook.live.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "perplexity.ai",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "phanpy.social",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "pulsinio.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "read.readwise.io",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "reader-bootstrap.invalid",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "rngreader.appspot.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "rss.xiffy.nl",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "runbox.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "s.muz.li",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "sanet.download",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "sanet.lc",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "scissor.studio",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "server.tailba6d00.ts.net",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "sms.localhost",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "softarchive.is",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "statics.gov.teams.microsoft.us.mcas-gov.us",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "statics.teams.cdn.office.net",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "subium.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "swisscows.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "synth-reader.pages.dev",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "telegram.me",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "theoldreader.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "thoughttrain.app",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "toot.lv",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "tophub.today",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "tumblr.com",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "vely.io",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "wispfox.dreamwidth.org",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "x.com",
+    "total": 1,
+    "devices": 1
+   }
+  ]
+ },
+ "stats_referrer_hostname": {
+  "error": 400,
+  "body": "{\"error\":{\"code\":\"bad_request\",\"message\":\"Invalid request: `type` should be equal to one of the allowed values \\\"country, client_name, os_name, path, referrer, event_name, hostname, route, device_type, query_params, event_data, flags\\\".\"}}"
+ },
+ "stats_utm_source": {
+  "error": 400,
+  "body": "{\"error\":{\"code\":\"bad_request\",\"message\":\"Invalid request: `type` should be equal to one of the allowed values \\\"country, client_name, os_name, path, referrer, event_name, hostname, route, device_type, query_params, event_data, flags\\\".\"}}"
+ },
+ "stats_utm_medium": {
+  "error": 400,
+  "body": "{\"error\":{\"code\":\"bad_request\",\"message\":\"Invalid request: `type` should be equal to one of the allowed values \\\"country, client_name, os_name, path, referrer, event_name, hostname, route, device_type, query_params, event_data, flags\\\".\"}}"
+ },
+ "stats_utm_campaign": {
+  "error": 400,
+  "body": "{\"error\":{\"code\":\"bad_request\",\"message\":\"Invalid request: `type` should be equal to one of the allowed values \\\"country, client_name, os_name, path, referrer, event_name, hostname, route, device_type, query_params, event_data, flags\\\".\"}}"
+ },
+ "stats_utm_content": {
+  "error": 400,
+  "body": "{\"error\":{\"code\":\"bad_request\",\"message\":\"Invalid request: `type` should be equal to one of the allowed values \\\"country, client_name, os_name, path, referrer, event_name, hostname, route, device_type, query_params, event_data, flags\\\".\"}}"
+ },
+ "stats_utm_term": {
+  "error": 400,
+  "body": "{\"error\":{\"code\":\"bad_request\",\"message\":\"Invalid request: `type` should be equal to one of the allowed values \\\"country, client_name, os_name, path, referrer, event_name, hostname, route, device_type, query_params, event_data, flags\\\".\"}}"
+ },
+ "stats_country": {
+  "data": [
+   {
+    "key": "US",
+    "total": 33240,
+    "devices": 24661
+   },
+   {
+    "key": "GB",
+    "total": 4069,
+    "devices": 2984
+   },
+   {
+    "key": "DE",
+    "total": 2695,
+    "devices": 2047
+   },
+   {
+    "key": "CA",
+    "total": 2619,
+    "devices": 2006
+   },
+   {
+    "key": "NL",
+    "total": 1294,
+    "devices": 973
+   },
+   {
+    "key": "AU",
+    "total": 1220,
+    "devices": 905
+   },
+   {
+    "key": "JP",
+    "total": 1203,
+    "devices": 880
+   },
+   {
+    "key": "IN",
+    "total": 1035,
+    "devices": 751
+   },
+   {
+    "key": "SE",
+    "total": 799,
+    "devices": 609
+   },
+   {
+    "key": "FR",
+    "total": 759,
+    "devices": 591
+   },
+   {
+    "key": "CH",
+    "total": 649,
+    "devices": 485
+   },
+   {
+    "key": "IL",
+    "total": 544,
+    "devices": 421
+   },
+   {
+    "key": "ES",
+    "total": 516,
+    "devices": 400
+   },
+   {
+    "key": "PL",
+    "total": 485,
+    "devices": 375
+   },
+   {
+    "key": "IT",
+    "total": 439,
+    "devices": 343
+   },
+   {
+    "key": "SG",
+    "total": 440,
+    "devices": 341
+   },
+   {
+    "key": "IE",
+    "total": 363,
+    "devices": 280
+   },
+   {
+    "key": "CZ",
+    "total": 533,
+    "devices": 271
+   },
+   {
+    "key": "FI",
+    "total": 319,
+    "devices": 259
+   },
+   {
+    "key": "NO",
+    "total": 338,
+    "devices": 245
+   },
+   {
+    "key": "NZ",
+    "total": 237,
+    "devices": 198
+   },
+   {
+    "key": "PT",
+    "total": 248,
+    "devices": 193
+   },
+   {
+    "key": "BR",
+    "total": 247,
+    "devices": 191
+   },
+   {
+    "key": "AT",
+    "total": 231,
+    "devices": 190
+   },
+   {
+    "key": "DK",
+    "total": 205,
+    "devices": 167
+   },
+   {
+    "key": "KR",
+    "total": 214,
+    "devices": 145
+   },
+   {
+    "key": "BE",
+    "total": 158,
+    "devices": 133
+   },
+   {
+    "key": "HK",
+    "total": 172,
+    "devices": 131
+   },
+   {
+    "key": "CN",
+    "total": 164,
+    "devices": 129
+   },
+   {
+    "key": "ZA",
+    "total": 151,
+    "devices": 127
+   },
+   {
+    "key": "RO",
+    "total": 151,
+    "devices": 115
+   },
+   {
+    "key": "MX",
+    "total": 119,
+    "devices": 102
+   },
+   {
+    "key": "TR",
+    "total": 111,
+    "devices": 90
+   },
+   {
+    "key": "GR",
+    "total": 114,
+    "devices": 81
+   },
+   {
+    "key": "HU",
+    "total": 115,
+    "devices": 81
+   },
+   {
+    "key": "ID",
+    "total": 109,
+    "devices": 77
+   },
+   {
+    "key": "BG",
+    "total": 92,
+    "devices": 76
+   },
+   {
+    "key": "TW",
+    "total": 89,
+    "devices": 75
+   },
+   {
+    "key": "AR",
+    "total": 97,
+    "devices": 71
+   },
+   {
+    "key": "TH",
+    "total": 100,
+    "devices": 69
+   },
+   {
+    "key": "VN",
+    "total": 81,
+    "devices": 64
+   },
+   {
+    "key": "MY",
+    "total": 74,
+    "devices": 63
+   },
+   {
+    "key": "EE",
+    "total": 72,
+    "devices": 61
+   },
+   {
+    "key": "UA",
+    "total": 106,
+    "devices": 61
+   },
+   {
+    "key": "PH",
+    "total": 73,
+    "devices": 58
+   },
+   {
+    "key": "RS",
+    "total": 61,
+    "devices": 54
+   },
+   {
+    "key": "KZ",
+    "total": 52,
+    "devices": 46
+   },
+   {
+    "key": "LT",
+    "total": 53,
+    "devices": 44
+   },
+   {
+    "key": "LV",
+    "total": 66,
+    "devices": 44
+   },
+   {
+    "key": "SI",
+    "total": 48,
+    "devices": 44
+   },
+   {
+    "key": "RU",
+    "total": 54,
+    "devices": 42
+   },
+   {
+    "key": "IS",
+    "total": 51,
+    "devices": 41
+   },
+   {
+    "key": "AE",
+    "total": 48,
+    "devices": 37
+   },
+   {
+    "key": "CO",
+    "total": 50,
+    "devices": 37
+   },
+   {
+    "key": "HR",
+    "total": 38,
+    "devices": 36
+   },
+   {
+    "key": "SK",
+    "total": 55,
+    "devices": 36
+   },
+   {
+    "key": "GE",
+    "total": 41,
+    "devices": 32
+   },
+   {
+    "key": "BD",
+    "total": 34,
+    "devices": 30
+   },
+   {
+    "key": "CL",
+    "total": 32,
+    "devices": 27
+   },
+   {
+    "key": "PK",
+    "total": 32,
+    "devices": 24
+   },
+   {
+    "key": "CY",
+    "total": 26,
+    "devices": 22
+   },
+   {
+    "key": "CR",
+    "total": 22,
+    "devices": 19
+   },
+   {
+    "key": "NG",
+    "total": 26,
+    "devices": 17
+   },
+   {
+    "key": "AM",
+    "total": 19,
+    "devices": 16
+   },
+   {
+    "key": "LU",
+    "total": 24,
+    "devices": 16
+   },
+   {
+    "key": "EG",
+    "total": 21,
+    "devices": 15
+   },
+   {
+    "key": "NP",
+    "total": 17,
+    "devices": 15
+   },
+   {
+    "key": "UY",
+    "total": 17,
+    "devices": 15
+   },
+   {
+    "key": "KE",
+    "total": 17,
+    "devices": 14
+   },
+   {
+    "key": "BY",
+    "total": 19,
+    "devices": 12
+   },
+   {
+    "key": "MK",
+    "total": 15,
+    "devices": 11
+   },
+   {
+    "key": "AZ",
+    "total": 13,
+    "devices": 10
+   },
+   {
+    "key": "ET",
+    "total": 15,
+    "devices": 10
+   },
+   {
+    "key": "IM",
+    "total": 10,
+    "devices": 10
+   },
+   {
+    "key": "MA",
+    "total": 15,
+    "devices": 10
+   },
+   {
+    "key": "PR",
+    "total": 13,
+    "devices": 10
+   },
+   {
+    "key": "UZ",
+    "total": 10,
+    "devices": 10
+   },
+   {
+    "key": "MD",
+    "total": 10,
+    "devices": 9
+   },
+   {
+    "key": "DZ",
+    "total": 11,
+    "devices": 7
+   },
+   {
+    "key": "EC",
+    "total": 9,
+    "devices": 7
+   },
+   {
+    "key": "PA",
+    "total": 9,
+    "devices": 7
+   },
+   {
+    "key": "QA",
+    "total": 12,
+    "devices": 7
+   },
+   {
+    "key": "BA",
+    "total": 6,
+    "devices": 6
+   },
+   {
+    "key": "PE",
+    "total": 7,
+    "devices": 6
+   },
+   {
+    "key": "SA",
+    "total": 7,
+    "devices": 6
+   },
+   {
+    "key": "VE",
+    "total": 7,
+    "devices": 6
+   },
+   {
+    "key": "GH",
+    "total": 6,
+    "devices": 5
+   },
+   {
+    "key": "JO",
+    "total": 12,
+    "devices": 5
+   },
+   {
+    "key": "KH",
+    "total": 5,
+    "devices": 5
+   },
+   {
+    "key": "LK",
+    "total": 10,
+    "devices": 5
+   },
+   {
+    "key": "MU",
+    "total": 6,
+    "devices": 5
+   },
+   {
+    "key": "AL",
+    "total": 4,
+    "devices": 4
+   },
+   {
+    "key": "BH",
+    "total": 4,
+    "devices": 4
+   },
+   {
+    "key": "BZ",
+    "total": 4,
+    "devices": 4
+   },
+   {
+    "key": "GT",
+    "total": 4,
+    "devices": 4
+   },
+   {
+    "key": "IQ",
+    "total": 4,
+    "devices": 4
+   },
+   {
+    "key": "KG",
+    "total": 6,
+    "devices": 4
+   },
+   {
+    "key": "LB",
+    "total": 4,
+    "devices": 4
+   },
+   {
+    "key": "MT",
+    "total": 4,
+    "devices": 4
+   },
+   {
+    "key": "TZ",
+    "total": 5,
+    "devices": 4
+   },
+   {
+    "key": "UG",
+    "total": 5,
+    "devices": 4
+   },
+   {
+    "key": "CM",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "FJ",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "MN",
+    "total": 4,
+    "devices": 3
+   },
+   {
+    "key": "OM",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "TN",
+    "total": 3,
+    "devices": 3
+   },
+   {
+    "key": "ZW",
+    "total": 5,
+    "devices": 3
+   },
+   {
+    "key": "BM",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "BO",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "DO",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "JE",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "JM",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "LA",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "LI",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "ME",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "MZ",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "PF",
+    "total": 3,
+    "devices": 2
+   },
+   {
+    "key": "PY",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "RE",
+    "total": 4,
+    "devices": 2
+   },
+   {
+    "key": "VI",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "XK",
+    "total": 4,
+    "devices": 2
+   },
+   {
+    "key": "AD",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "BB",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "BN",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "BS",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "BW",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "GU",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "KW",
+    "total": 2,
+    "devices": 1
+   },
+   {
+    "key": "MR",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "MV",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "NA",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "SC",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "SR",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "TG",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "UM",
+    "total": 1,
+    "devices": 1
+   }
+  ]
+ },
+ "stats_region": {
+  "error": 400,
+  "body": "{\"error\":{\"code\":\"bad_request\",\"message\":\"Invalid request: `type` should be equal to one of the allowed values \\\"country, client_name, os_name, path, referrer, event_name, hostname, route, device_type, query_params, event_data, flags\\\".\"}}"
+ },
+ "stats_city": {
+  "error": 400,
+  "body": "{\"error\":{\"code\":\"bad_request\",\"message\":\"Invalid request: `type` should be equal to one of the allowed values \\\"country, client_name, os_name, path, referrer, event_name, hostname, route, device_type, query_params, event_data, flags\\\".\"}}"
+ },
+ "stats_device_type": {
+  "data": [
+   {
+    "key": "mobile",
+    "total": 35418,
+    "devices": 26254
+   },
+   {
+    "key": "desktop",
+    "total": 22375,
+    "devices": 16805
+   },
+   {
+    "key": "tablet",
+    "total": 473,
+    "devices": 377
+   }
+  ]
+ },
+ "stats_browser_name": {
+  "error": 400,
+  "body": "{\"error\":{\"code\":\"bad_request\",\"message\":\"Invalid request: `type` should be equal to one of the allowed values \\\"country, client_name, os_name, path, referrer, event_name, hostname, route, device_type, query_params, event_data, flags\\\".\"}}"
+ },
+ "stats_os_name": {
+  "data": [
+   {
+    "key": "iOS",
+    "total": 22991,
+    "devices": 16527
+   },
+   {
+    "key": "Android",
+    "total": 12902,
+    "devices": 10106
+   },
+   {
+    "key": "Mac",
+    "total": 12726,
+    "devices": 9775
+   },
+   {
+    "key": "Windows",
+    "total": 7271,
+    "devices": 5194
+   },
+   {
+    "key": "GNU/Linux",
+    "total": 1950,
+    "devices": 1497
+   },
+   {
+    "key": "Ubuntu",
+    "total": 273,
+    "devices": 209
+   },
+   {
+    "key": "Chrome OS",
+    "total": 167,
+    "devices": 142
+   },
+   {
+    "key": "Firefox OS",
+    "total": 7,
+    "devices": 7
+   },
+   {
+    "key": "FreeBSD",
+    "total": 4,
+    "devices": 3
+   },
+   {
+    "key": "Tizen",
+    "total": 2,
+    "devices": 2
+   },
+   {
+    "key": "Fedora",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "KaiOS",
+    "total": 1,
+    "devices": 1
+   },
+   {
+    "key": "NetBSD",
+    "total": 2,
+    "devices": 1
+   }
+  ]
+ },
+ "stats_event_name": {
+  "data": [
+   {
+    "key": "Reached page",
+    "total": 26902,
+    "devices": 6329
+   }
+  ]
+ },
+ "stats_flags": {
+  "data": []
+ },
+ "stats_query": {
+  "error": 400,
+  "body": "{\"error\":{\"code\":\"bad_request\",\"message\":\"Invalid request: `type` should be equal to one of the allowed values \\\"country, client_name, os_name, path, referrer, event_name, hostname, route, device_type, query_params, event_data, flags\\\".\"}}"
+ }
+}
