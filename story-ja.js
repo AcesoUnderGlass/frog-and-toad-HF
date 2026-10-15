@@ -52,12 +52,12 @@ window.STORY_UI = {
 };
 
 window.STORY = `
-title: がまくん と かえるくん と どんどん かしこくなる きかい
+title: ふたりは おまかせ
 author: さく [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
 artist: え [HungerArtist](https://www.deviantart.com/hungerartist)
 translator: やく [Yuma Hoshino](https://www.upwork.com/freelancers/~01570efaac72098a8d)
 cover-image: illustrations/web/1-FAT-title-final.webp
-alt: がまくんとかえるくんと　どんどん　かしこくなる　きかい
+alt: ふたりは　おまかせ
 
 ---
 contents
