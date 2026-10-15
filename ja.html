@@ -52,7 +52,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400..600;1,400..600&family=Noto+Serif+JP:wght@400..600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400..600;1,400..600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
 <!-- The cover art, fetched first thing: the closed book shows it. AVIF at
      two sizes (illustrations/web/cover-*.avif, made by
      tools/make-web-images.py from the picture named in data-cover), chosen by
@@ -65,17 +65,20 @@
 <link rel="stylesheet" href="pageturn.css">
 <link rel="stylesheet" href="reader.css">
 <style>
-  :root { --text: 'Noto Serif', 'Noto Serif JP', Georgia, serif; }
-  /* Noto Serif JP has no italic; slanted kana looks wrong, so set it upright. */
+  /* Zen Maru Gothic, the rounded face of Japanese picture books: hiragana in
+     Noto Serif JP reads thin at story size. Its Latin is used too, so the
+     credits match. */
+  :root { --text: 'Zen Maru Gothic', 'Noto Serif', Georgia, serif; }
+  /* It has no italic; slanted kana looks wrong, so set it upright. */
   .status .title { font-style: normal; }
   /* Kana would otherwise break anywhere; the cover title breaks only at its spaces. */
   .cover-front .title { word-break: keep-all; top: 19.2cqw; }  /* a little lower, below the roof beams */
   /* Ten full-width kana on the main line; a smaller size than the Latin
      editions', so it fits the board's width. */
   .cover-front .title .main { font-size: 1.12em; }
-  /* Noto Serif JP's regular is light at reading sizes, so the story text is
-     set a step heavier. The translation spaces its words (分かち書き), so
-     lines break at those spaces, not in the middle of a word. */
+  /* The story text a step heavier than the Latin editions'. The translation
+     spaces its words (分かち書き), so lines break at those spaces, not in
+     the middle of a word. */
   .page-content p { font-weight: 500; word-break: keep-all; overflow-wrap: break-word; }
 </style>
 <script defer src="/_vercel/insights/script.js"></script>

@@ -25,6 +25,7 @@ window.FONTS = {
   'Noto Serif SC':     'Noto+Serif+SC:wght@400..600',                 // Simplified Chinese
   'Noto Serif TC':     'Noto+Serif+TC:wght@400..600',                 // Traditional Chinese
   'Noto Serif JP':     'Noto+Serif+JP:wght@400..600',                 // Japanese
+  'Zen Maru Gothic':   'Zen+Maru+Gothic:wght@400;500;700',            // Japanese, the rounded face of picture books (ja.html uses this one)
   'Noto Serif KR':     'Noto+Serif+KR:wght@400..600',                 // Korean
   'Noto Serif Hebrew': 'Noto+Serif+Hebrew:wght@400..600',
   'Noto Serif Thai':   'Noto+Serif+Thai:wght@400..600',
