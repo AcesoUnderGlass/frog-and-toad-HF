@@ -46,4 +46,7 @@ window.EDITIONS = [
   // Hindi: a stub so far (story-hi.js is still the English text). Uncomment
   // once it is translated and hi.html's noindex is removed.
   // { lang: 'hi', name: 'हिन्दी', href: 'hi.html', story: 'story-hi.js', font: 'Noto Serif Devanagari' },
+  // Simplified Chinese: a stub so far (story-zh.js is still the English text).
+  // Uncomment once it is translated and zh.html's noindex is removed.
+  // { lang: 'zh-Hans', name: '简体中文', href: 'zh.html', story: 'story-zh.js', font: 'Noto Serif SC' },
 ];
