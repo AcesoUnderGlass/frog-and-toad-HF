@@ -73,6 +73,10 @@
   /* Ten full-width kana on the main line; a smaller size than the Latin
      editions', so it fits the board's width. */
   .cover-front .title .main { font-size: 1.12em; }
+  /* Noto Serif JP's regular is light at reading sizes, so the story text is
+     set a step heavier. The translation spaces its words (分かち書き), so
+     lines break at those spaces, not in the middle of a word. */
+  .page-content p { font-weight: 500; word-break: keep-all; overflow-wrap: break-word; }
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
