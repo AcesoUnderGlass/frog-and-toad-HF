@@ -22,8 +22,8 @@ German edition).
 
 | File | What it is |
 |---|---|
-| `index.html`, `de.html`, `sk.html`, `eo.html`, `bn.html`, `ru.html`, `cs.html`, `hi.html` | The book in English, German, Slovak, Esperanto, Bengali, Russian and Czech (and a Hindi stub, see Translations): the page's title, description and link previews, and which story file it reads. |
-| `story.js`, `story-de.js`, `story-sk.js`, `story-eo.js`, `story-bn.js`, `story-ru.js`, `story-cs.js`, `story-hi.js` | The story (see below). |
+| `index.html`, `de.html`, `sk.html`, `eo.html`, `bn.html`, `ru.html`, `cs.html`, `ja.html`, `hi.html` | The book in English, German, Slovak, Esperanto, Bengali, Russian, Czech and Japanese (and a Hindi stub, see Translations): the page's title, description and link previews, and which story file it reads. |
+| `story.js`, `story-de.js`, `story-sk.js`, `story-eo.js`, `story-bn.js`, `story-ru.js`, `story-cs.js`, `story-ja.js`, `story-hi.js` | The story (see below). |
 | `languages.js` | The editions, for the language menu and the plain edition. |
 | `reader.js`, `reader.css` | The reader: the desk, the book and its cover, laying out the pages, the status line under the book. |
 | `pageturn.js`, `pageturn.css` | The page turns (the leaf, its shading and shadows, dragging). Knows nothing of the story. |
@@ -106,6 +106,11 @@ Slovak is `story-sk.js` and `sk.html` (`/sk`), Esperanto `story-eo.js` and
 `story-ru.js` and `ru.html` (`/ru`), translated by Alexander Radchenko; Czech
 is `story-cs.js` and `cs.html` (`/cs`), translated by HighEgg; Bengali is
 `story-bn.js` and `bn.html` (`/bn`), translated by Tazik and Rumi.
+
+Japanese is `story-ja.js` and `ja.html` (`/ja`), translated by
+[Yuma Hoshino](https://www.upwork.com/freelancers/~01570efaac72098a8d). It
+is finished but not yet announced: it is left out of `languages.js` and the
+`hreflang` lists, so it is reachable only by its address.
 
 Hindi is a stub: `story-hi.js` and `hi.html` (`/hi`) exist but still hold
 the English text. The page is `noindex` and its lines in `languages.js` and
