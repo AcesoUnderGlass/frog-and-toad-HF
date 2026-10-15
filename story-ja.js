@@ -1,6 +1,6 @@
 // ============================================================
 //  JAPANESE TRANSLATION of story.js. Shown by ja.html.
-//  Translated by Yuma Hoshino.
+//  Translated by 星野 由茉 (Yuma Hoshino).
 //
 //  Translate:
 //    - the story text (plain lines)
@@ -55,7 +55,7 @@ window.STORY = `
 title: ふたりは おまかせ
 author: さく [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
 artist: え [HungerArtist](https://www.deviantart.com/hungerartist)
-translator: やく [Yuma Hoshino](https://www.upwork.com/freelancers/~01570efaac72098a8d)
+translator: やく [星野 由茉](https://www.upwork.com/freelancers/~01570efaac72098a8d)
 cover-image: illustrations/web/1-FAT-title-final.webp
 alt: ふたりは　おまかせ
 
