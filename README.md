@@ -108,9 +108,7 @@ is `story-cs.js` and `cs.html` (`/cs`), translated by HighEgg; Bengali is
 `story-bn.js` and `bn.html` (`/bn`), translated by Tazik and Rumi.
 
 Japanese is `story-ja.js` and `ja.html` (`/ja`), translated by
-[Yuma Hoshino](https://www.upwork.com/freelancers/~01570efaac72098a8d). It
-is finished but not yet announced: it is left out of `languages.js` and the
-`hreflang` lists, so it is reachable only by its address.
+[Yuma Hoshino](https://www.upwork.com/freelancers/~01570efaac72098a8d).
 
 Hindi and Simplified Chinese are stubs: `story-hi.js` and `hi.html` (`/hi`),
 and `story-zh.js` and `zh.html` (`/zh`), exist but still hold the English

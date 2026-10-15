@@ -43,6 +43,7 @@ window.EDITIONS = [
   { lang: 'sk', name: 'Slovenčina', href: 'sk.html', story: 'story-sk.js' },
   { lang: 'ru', name: 'Русский', href: 'ru.html', story: 'story-ru.js' },
   { lang: 'bn', name: 'বাংলা', href: 'bn.html', story: 'story-bn.js', font: 'Baloo Da 2' },
+  { lang: 'ja', name: '日本語', href: 'ja.html', story: 'story-ja.js', font: 'Zen Maru Gothic' },
   // Hindi: a stub so far (story-hi.js is still the English text). Uncomment
   // once it is translated and hi.html's noindex is removed.
   // { lang: 'hi', name: 'हिन्दी', href: 'hi.html', story: 'story-hi.js', font: 'Noto Serif Devanagari' },
