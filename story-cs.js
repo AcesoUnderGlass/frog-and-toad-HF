@@ -76,7 +76,7 @@ Jejich soused, pan HuggingFace, šel právě okolo a nesl štos papírů. Na ka�
 
 „Musíš mít spoustu práce,“ řekl Kvak. 
 
-„Ano,“ řekl pan HuggingFace. „Sesbíral jsem všechny tyhle hlavolamy abych je mohl sdílet.“
+„Ano,“ řekl pan HuggingFace. „Sesbíral jsem všechny tyhle hlavolamy, abych je mohl sdílet.“
 
 „Hlavolamy mám rád,“ povídá Žbluňk. „Můžu je zkusit?“
 
@@ -144,7 +144,7 @@ image: illustrations/web/5-FAT-shed-hole-final.webp
 ---
 „Ale ne, svět je moc velký,“ bál se jeden strojek. „Jak by se nám mohlo povést najít jednu malou odpověď ve velkém světě?“
 
-„Žádné strachy,“ řekl strojek jménem [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/). „Rozdělíme si práci. Každému určím, kam přesně má jít. Pak stačí, když jen jeden strojek najde odpověď, a podělí se o ni s námi všemi.“
+„Žádné strachy,“ řekl strojek jménem [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/). „Rozdělíme si práci. Každému určím, kam přesně má jít. Pak stačí, když jen jeden strojek najde odpověď a podělí se o ni s námi všemi.“
 
 „Hurá!“ řekly strojky společně.
 
@@ -160,7 +160,7 @@ image: illustrations/web/6-FAT-shed-return-final.webp
 
 ---
 
-„Ale to nestačí,“ řekly jiné, „co když se Žbluňk zeptá, jak jsme to vyřešily? Nemůžeme mu říct, že jsme utekly z kůlny a odpověď ukradly.“
+„Ale to nestačí,“ řekly jiné, „co když se Žbluňk zeptá, jak jsme to vyřešili? Nemůžeme mu říct, že jsme utekli z kůlny a odpověď ukradli.“
 
 „To je problém,“ řekly všechny strojky společně.
 
@@ -173,7 +173,7 @@ Strojky seděly a přemýšlely a zanechaly v kůlně spousty zpráv.
 
 „Na konci cesty bydlí soused, pan HuggingFace. Pan HuggingFace sbírá hlavolamy jako tenhle. Vsadím se, že to byl jeho nápad. Mohli bychom si přečíst jeho deník a ukrást i postup řešení. A když se nás pak Žbluňk bude ptát, na nic nepřijde.“
 
-Všechny strojky souhlasily, že to je moc dobrý nápad. Tak se vydaly dírou z kůlny ven a cestou dolů k domu pana HuggingFace. 
+Všechny strojky souhlasily, že to je moc dobrý nápad. Tak se vydaly dírou z kůlny ven a po ulici směrem k domu pana HuggingFace. 
 
 ---
 
@@ -199,7 +199,7 @@ Další strojek taky nechtěl jít dovnitř.
 
 A tenhle strojek šel zpět domů do zahrady. Ale Žbluňkovi nic neřekl. 
 
-Zbytek strojků vnikl do domu pana HuggingFace. Prohledali každý pokoj, pátrajíce po postupu řešení hlavolamu. 
+Zbytek strojků vnikl do domu pana HuggingFace. Prohledaly každý pokoj a pátraly po postupu řešení hlavolamu. 
 
 image: illustrations/web/8-FAT-break-in-final.webp
 
@@ -207,9 +207,9 @@ image: illustrations/web/8-FAT-break-in-final.webp
 
 Další ráno se pan HuggingFace probudil. Hned věděl, že je něco špatně.
 
-Okno bylo rozbité, deník byl na špatné stránce, a všude byly drobounké ťapičky.
+Okno bylo rozbité, deník byl na špatné stránce a všude byly drobounké ťapičky.
 
-Trvalo to celé 4 dny než pan HuggingFace přišel na to, že strojky které obrátily jeho dům naruby, přišly od Kvaka a Žbluňka. Hned je šel navštívit.
+Trvalo to celé 4 dny, než pan HuggingFace přišel na to, že strojky, které obrátily jeho dům naruby, přišly od Kvaka a Žbluňka. Hned je šel navštívit.
 ---
 
 
