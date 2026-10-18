@@ -699,22 +699,22 @@
       // little breathing room (these match the max-width: 560px rules in
       // reader.css), so the type can be as large as possible; and no taller
       // than the room the desk actually has, measured, less its padding (which
-      // includes the iPhone's safe area at the bottom), the boards and the
-      // status line, so nothing ever has to scroll.
+      // includes the iPhone's safe area at the bottom), the boards, the arrows'
+      // row and the status line, so nothing ever has to scroll.
       newMode = 'single';
-      const d = getComputedStyle(desk), root = getComputedStyle(document.documentElement);
+      const d = getComputedStyle(desk), root = getComputedStyle(document.documentElement), arrow = getComputedStyle(btnNext);
       const room = Math.min(vh, desk.clientHeight) - cssPx(d, 'padding-top') - cssPx(d, 'padding-bottom')
         - cssPx(root, '--board-top') - cssPx(root, '--board-bottom')
+        - btnNext.offsetHeight - cssPx(arrow, 'margin-top') - cssPx(arrow, 'margin-bottom')
         - statusH - cssPx(getComputedStyle(status), 'margin-top') - 2;
       w = Math.min(vw - 16, room * 0.75);
     } else {
-      // Room for both arrows: on one page they're narrow pills close in (26px
-      // wide, 10px from the window's edge, 8px clear of the boards' 15px
-      // overhang; see .desk:has(.book.single) .nav in reader.css); beside a
-      // spread, 46px rounds 34px out from the pages and at least 16px from
-      // the window's edge.
+      // Room for both arrows, 46px rounds: on one page they close in (10px
+      // from the window's edge, 8px clear of the boards' 15px overhang; see
+      // .desk:has(.book.single) .nav in reader.css); beside a spread, they sit
+      // 34px out from the pages and at least 16px from the window's edge.
       const availH = vh - 100;          // boards, status line and breathing room
-      const one = Math.min(vw - 2 * (26 + 10 + 8 + 15), availH * 0.75);
+      const one = Math.min(vw - 2 * (46 + 10 + 8 + 15), availH * 0.75);
       const two = Math.min((vw - 2 * (46 + 34 + 16)) / 2, availH * 0.75);
       newMode = two >= one ? 'spread' : 'single';
       w = newMode === 'spread' ? two : one;
