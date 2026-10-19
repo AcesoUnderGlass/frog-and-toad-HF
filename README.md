@@ -22,7 +22,7 @@ German edition).
 
 | File | What it is |
 |---|---|
-| `index.html`, `de.html`, `sk.html`, `eo.html`, `bn.html`, `ru.html`, `cs.html`, `ja.html`, `hi.html`, `zh.html` | The book in English, German, Slovak, Esperanto, Bengali, Russian, Czech and Japanese (and Hindi and Simplified Chinese stubs, see Translations): the page's title, description and link previews, and which story file it reads. |
+| `index.html`, `de.html`, `sk.html`, `eo.html`, `bn.html`, `ru.html`, `cs.html`, `ja.html`, `hi.html`, `zh.html` | The book in English, German, Slovak, Esperanto, Bengali, Russian, Czech, Japanese and Simplified Chinese (and a Hindi stub, see Translations): the page's title, description and link previews, and which story file it reads. |
 | `story.js`, `story-de.js`, `story-sk.js`, `story-eo.js`, `story-bn.js`, `story-ru.js`, `story-cs.js`, `story-ja.js`, `story-hi.js`, `story-zh.js` | The story (see below). |
 | `languages.js` | The editions, for the language menu and the plain edition. |
 | `reader.js`, `reader.css` | The reader: the desk, the book and its cover, laying out the pages, the status line under the book. |
@@ -110,12 +110,15 @@ is `story-cs.js` and `cs.html` (`/cs`), translated by HighEgg; Bengali is
 Japanese is `story-ja.js` and `ja.html` (`/ja`), translated by
 [Yuma Hoshino](https://www.upwork.com/freelancers/~01570efaac72098a8d).
 
-Hindi and Simplified Chinese are stubs: `story-hi.js` and `hi.html` (`/hi`),
-and `story-zh.js` and `zh.html` (`/zh`), exist but still hold the English
-text. Each page is `noindex` and its lines in `languages.js` and the
-`hreflang` lists are commented out, so it is reachable but unlisted until it
-is translated. Chinese is `zh-Hans` in `<html lang>`, `languages.js` and
-`hreflang`, so that a Traditional edition can be `zh-Hant` beside it.
+Simplified Chinese is `story-zh.js` and `zh.html` (`/zh`), with a plain
+edition at `/simple?lang=zh-Hans`. It uses `zh-Hans` in `<html lang>`,
+`languages.js` and `hreflang`, so that a Traditional edition can be
+`zh-Hant` beside it.
+
+Hindi is a stub: `story-hi.js` and `hi.html` (`/hi`) still hold the English
+text. The page is `noindex` and its lines in `languages.js` and the
+`hreflang` lists are commented out, so it remains reachable but unlisted
+until translated.
 
 Every edition is listed in `languages.js` (the language menu) and in the
 `hreflang` lines in the `<head>` of every other edition's page. A new edition
