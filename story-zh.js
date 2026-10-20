@@ -1,5 +1,5 @@
 // Simplified Chinese edition of story.js, shown by zh.html.
-// Story text and credits follow the supplied Chinese manuscript.
+// Story text follows the supplied Chinese manuscript; translation by Babel Translation.
 // Keep the page order and illustration paths aligned with the English edition.
 
 // Reader interface. Keep the {curly} placeholders unchanged.
@@ -31,6 +31,7 @@ window.STORY = `
 title: 青蛙和蟾蜍：越来越聪明的小机器
 author: [伊丽莎白·范·诺斯特兰德](https://acesounderglass.com/about-me-2/) 著
 artist: [HungerArtist](https://www.deviantart.com/hungerartist) 绘
+translator: Babel Translation 译
 cover-image: illustrations/web/1-FAT-title-final.webp
 
 ---

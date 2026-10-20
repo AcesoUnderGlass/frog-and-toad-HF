@@ -110,8 +110,9 @@ is `story-cs.js` and `cs.html` (`/cs`), translated by HighEgg; Bengali is
 Japanese is `story-ja.js` and `ja.html` (`/ja`), translated by
 [Yuma Hoshino](https://www.upwork.com/freelancers/~01570efaac72098a8d).
 
-Simplified Chinese is `story-zh.js` and `zh.html` (`/zh`), with a plain
-edition at `/simple?lang=zh-Hans`. It uses `zh-Hans` in `<html lang>`,
+Simplified Chinese is `story-zh.js` and `zh.html` (`/zh`), translated by
+Babel Translation, with a plain edition at `/simple?lang=zh-Hans`.
+It uses `zh-Hans` in `<html lang>`,
 `languages.js` and `hreflang`, so that a Traditional edition can be
 `zh-Hant` beside it.
 
