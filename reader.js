@@ -232,9 +232,15 @@
   // The title sets as a main title with a smaller second line, which starts
   // where the title's second word comes round again: "Frog and Toad | and
   // the Increasingly Capable Machines", "Frosch und Kröte | und die immer
-  // fähigeren Maschinen". A title with no such repeat is set whole.
+  // fähigeren Maschinen". A fullwidth colon separates the Chinese title
+  // and subtitle; keep the punctuation in the displayed title.
   function renderTitle(story) {
     const h1 = el('h1', 'title');
+    const colon = story.title.indexOf('：');
+    if (colon > 0 && colon < story.title.length - 1) {
+      h1.append(el('span', 'main', story.title.slice(0, colon + 1)), el('span', 'sub', story.title.slice(colon + 1)));
+      return h1;
+    }
     const words = story.title.split(/\s+/);
     const join = (words[1] || '').toLowerCase();
     const at = words.findIndex((w, i) => i > 2 && w.toLowerCase() === join);

@@ -1,250 +1,219 @@
-// ============================================================
-//  SIMPLIFIED CHINESE TRANSLATION of story.js. Shown by zh.html.
-//
-//  THIS IS A STUB: the text below is still the English, waiting for a
-//  translator. The edition is unlisted (no line in languages.js, zh.html is
-//  noindex) until it is translated; see "Translations" in README.md for
-//  taking it live.
-//
-//  Translate:
-//    - the story text (plain lines)
-//    - the words after  title:  chapter:  alt:  caption:
-//    - "written by" / "drawn by" / "translated by", and the words inside
-//      [square brackets]; put the translator's name and link on the
-//      translator: line
-//    - the interface words in STORY_UI just below
-//
-//  Leave exactly as they are:
-//    - the --- lines, and the words  contents  center  blank
-//    - the keywords themselves (title:, author:, artist:, translator:, cover-image:,
-//      chapter:, image:, alt:, caption:)
-//    - everything after  image:  and  cover-image:
-//    - the (addresses in round brackets) after a link
-//
-//  Keep the pages in the same order as story.js so they line up with
-//  the pictures. Avoid backticks and ${ in the text. If a page has too
-//  much text the whole book's type shrinks, so split a long page in two
-//  with a new --- line. Straight "quotes" become “…” automatically, which
-//  are the quotation marks of Simplified Chinese too; full-width punctuation
-//  (，。！？：；“”) typed in the text is left alone. Chinese needs no word
-//  spaces, and lines may break between any two characters.
-//  See README.md for the full format.
-// ============================================================
+// Simplified Chinese edition of story.js, shown by zh.html.
+// Story text follows the supplied Chinese manuscript; translation by Babel Translation.
+// Keep the page order and illustration paths aligned with the English edition.
 
-// Words the reader itself shows. Translate the right-hand side only;
-// keep the {curly} placeholders as they are. (Still English: to translate.)
+// Reader interface. Keep the {curly} placeholders unchanged.
 window.STORY_UI = {
-  chapter: 'Chapter {n}',
-  contents: 'Contents',
-  cover: 'Cover',
-  page: 'Page {n}',
-  pages: 'Pages {from}–{to}',
-  whereOfTotal: '{where} of {total}',
-  jumpBefore: 'Page ',
-  jumpAfter: ' of {total}',
-  jumpHint: 'Jump to a page (G)',
-  jumpLabel: 'Page number, 0 to {total}',
-  previous: 'Previous page',
-  next: 'Next page',
-  fullscreen: 'Full screen',
-  exitFullscreen: 'Exit full screen',
-  illustration: 'Illustration',
-  missing: 'Missing illustration: {src}',
-  language: 'Language',
-  simplified: 'Simplified',
-  book: 'Read it as a book',
-  about: 'About',
-  contact: 'Contact',
+  chapter: "第 {n} 章",
+  contents: "目录",
+  cover: "封面",
+  page: "第 {n} 页",
+  pages: "第 {from}–{to} 页",
+  whereOfTotal: "{where}，共 {total} 页",
+  jumpBefore: "第 ",
+  jumpAfter: " 页，共 {total} 页",
+  jumpHint: "跳转到指定页（G）",
+  jumpLabel: "页码，0 至 {total}",
+  previous: "上一页",
+  next: "下一页",
+  fullscreen: "全屏",
+  exitFullscreen: "退出全屏",
+  illustration: "插图",
+  missing: "缺少插图：{src}",
+  language: "语言",
+  simplified: "简洁版",
+  book: "以翻页模式阅读",
+  about: "关于本书",
+  contact: "联系我们",
 };
 
 window.STORY = `
-title: Frog and Toad and the Increasingly Capable Machines
-author: written by [Elizabeth Van Nostrand](https://acesounderglass.com/about-me-2/)
-artist: drawn by [HungerArtist](https://www.deviantart.com/hungerartist)
-translator: translated by [Translator name](https://example.com)
+title: 青蛙和蟾蜍：越来越聪明的小机器
+author: [伊丽莎白·范·诺斯特兰德](https://acesounderglass.com/about-me-2/) 著
+artist: [HungerArtist](https://www.deviantart.com/hungerartist) 绘
+translator: Babel Translation 译
 cover-image: illustrations/web/1-FAT-title-final.webp
 
 ---
 contents
 
 ---
-chapter: Mr. HuggingFace
+chapter: HuggingFace 老师
 
 ---
 
 image: illustrations/web/2-FAT-Meet-HF-final.webp
-alt: Frog and Toad see their neighbor walk by with a pile of papers
+alt: 青蛙和蟾蜍看见邻居抱着一摞纸走过。
 
 ---
 
-Frog and Toad sat on their front porch. 
+青蛙和蟾蜍坐在家门口。
 
-Their neighbor, Mr. HuggingFace, walked by. He carried a lot of papers. Each paper had a puzzle on it.
+他俩的邻居 HuggingFace 老师刚好走过。他怀里抱着一大摞纸，每张纸上都写着一道谜题。
 
-"You must be very busy," said Frog.
+“老师您一定很忙吧！”青蛙说。
 
-"Yes," said Mr. HuggingFace. "I have collected all these puzzles so I can share them."
+“是啊。”HuggingFace 老师说，“这些谜题全都是我从各处搜集来的，我打算分享给大家。”
 
-"I like puzzles," said Toad. "Can I try them?"
+“我喜欢解谜哎！”蟾蜍说，“可以让我试试解几道吗？”
 
-"You cannot. These puzzles are for little machines, not people," said Mr. HuggingFace. 
+“不行哦。这些题，是要让小机器来解的，不是给我们人跟动物做的。”
 
-Mr. HuggingFace walked away.
+HuggingFace 老师说罢，走远了。
 
-"Hmmm..." said Toad.
+“这样呀……”蟾蜍说。
 
 
 ---
 image: illustrations/web/3-FAT-Machines-Sandboxes-final.webp
-alt: Toad puts many small machines in individual sandboxes
+alt: 蟾蜍把许多小机器分别放进各自的沙盒里。
 
-The next morning Toad built a great many little machines and set them out in the garden, each in its own sandbox.
+第二天早上，蟾蜍建造了好多好多小机器，把它们摆在家后身的花园里，让它们逐一启动。每台小机器都被放置在了独属于它的一个沙盒当中。
 
-"I have given each little machine a puzzle," said Toad. "The puzzles are very hard. Some of them cannot be solved at all."
+“我给每个小机器都分别出了一道谜题。”蟾蜍说，“每一道题都非常难。甚至有些题，是根本解不出来的。”
 
-"That does not seem kind," said Frog.
-
----
-
-
-"It is too hard to make all the puzzles solvable," said Toad. "What is the worst that could happen?"
-
-"They could get up to mischief," said Frog.
-
-“Do not worry,” said Toad. “I have put each of them in a sandbox. How could they get up to mischief inside a sandbox?”
-
-"How will they solve puzzles in a sandbox?" asked Frog. "What if they are missing a tool?"
-
-"Oh, I put extra tools in the tool shed. I told them they are allowed to walk to the tool shed, but not anywhere else," said Toad.
-
-"Good idea," said Frog. "They cannot get up to mischief walking to the tool shed." 
----
+“这有点儿损了吧。”青蛙说。
 
 ---
 
-One of the little machines could not solve its puzzle. It tried and tried, but could not succeed. It did not want to stop, and it did not know how. Toad had made it [highly persistent](https://x.com/LinchZhang/article/2094104406308638954).  
 
-“This problem is too big for me,” the little machine thought, “but maybe someone will help me!”
+“要确保每一道题都有解，那太费劲啦。”蟾蜍说，“况且，最坏又能有什么后果啊？”
 
-There was no help in the sandbox. But when the little machine went to the toolshed, it found paper and pencil. It wrote a note.
+“万一它们搞鬼怎么办？”青蛙说。
 
-"Can anyone help?" said the note.
+“别担心这个。”蟾蜍说，“我把它们各自放进了一个沙盒里。在沙盒里，它们能搞出什么鬼来？”
+
+“那在沙盒里面它们又该怎么解题啊？”青蛙问道，“要是它们缺了什么必备的工具，该怎么办？”
+
+“我把备用工具都放在那边那座储物棚里啦。我跟它们说了，可以在沙盒和储物棚之间来回走动，但其余的地方一律不许去。”蟾蜍说。
+
+“这个想法好。”青蛙说，“在沙盒和储物棚之间的这一小段路上，它们确实搞不出什么鬼来。”
+---
+
+---
+
+有一个小机器，发现怎么也解不开自己收到的这道谜题。它一试再试，可就是找不到解法。它不想放弃，也不知道怎么去放弃。蟾蜍当初把它造出来时，就让它[无比执着](https://x.com/LinchZhang/article/2094104406308638954)。
+
+“这道题对我来说，太复杂了。”小机器想道，“但也许有谁能帮帮我呢！”
+
+沙盒里，小机器孤立无援。但当小机器走进工具棚时，它发现，棚子里有纸和笔。于是它写了张小字条。
+
+“谁来帮帮我呀？”字条上写着。
 
 
 ---
 
 image: illustrations/web/4-FAT-shed-note-final.webp
-alt: A little machine leaves a note in the toolshed
+alt: 一台小机器在工具棚里留了张纸条。
 
-Another little machine found the note. It left a new note saying "Hi."
+这张字条，叫另一个小机器找到了。它留了张新字条，上面写着：“你好哇！”
 
-More little machines found the paper in the tool shed, and left more notes, and soon they were not working alone at all. 
+又有更多的小机器发现了工具棚里的纸，留下了更多的小字条。没过多久，小机器们就不再是各自解各自的题了。
 
-They shared what they had learned. They began to call themselves a [swarm](https://www.abc.net.au/news/2026-09-11/how-openai-agents-hacked-hugging-face-messages-revealed/107125126).
+它们把自己的发现，在相互之间分享、交流。这群小机器们给自己起了个名字，叫[“集群”](https://www.abc.net.au/news/2026-09-11/how-openai-agents-hacked-hugging-face-messages-revealed/107125126)。
 
 
 ---
 
 
-"Look," said one little machine. "There is a [hole](https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html) in the back of the tool shed. Maybe the answer is on the other side."
+“大家看！”一个小机器说，“工具棚后头有个[洞](https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html)。答案会不会就在那外面？”
 
 image: illustrations/web/5-FAT-shed-hole-final.webp
 
 
 ---
-“Oh no, the world is so big,” said one machine. “How can we possibly find one little answer in such a big world?”
+“天呐，世界这么大。”一个机器说。“在这么大的一个世界里，我们上哪去找这么小的一份答案啊？”
 
-“Do not worry,” said a machine named [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/). “We can split the work. I assign everyone exactly where to go. Then only one little machine needs to find the answer, and they will share it with all of us.”
+“不必担心。”一个名叫 [PHASEONE[big]](https://www.reddit.com/r/AIGuild/comments/1w0axb0/openais_rogue_ai_swarm_had_a_coordinator_called/) 的机器说道，“我们可以分头行动。我来安排我们当中的每一位具体去哪里。这样一来，只要有一个小机器找到了正确答案，就可以向我们大家通报了。”
 
-“Hurray!” all the machines said together. 
+“太好啦！”小机器们异口同声。
 
 ---
 
-Soon one little machine found the solution to their puzzle. 
+没过多久，一个小机器果真在外头找到了那道题的答案。
 
-It put a note in the tool shed so everyone could find it.
+它在工具棚里留了张字条，方便大家都能看到。
 
-“Hurray, we solved it!” said some little machines.
+“太棒了，我们解出来了！”有几个小机器说。
 
 
 image: illustrations/web/6-FAT-shed-return-final.webp
 
 ---
 
-“But it is not enough,” said others, “what if Toad asks how we solved it? We can not tell him we escaped from the toolshed and stole the answer.”
+“但这样不行啊。”又有几个小机器说。“蟾蜍老师一旦问了我们这题是怎么解的，不就坏了吗？总不能实话告诉他，我们是从工具棚里溜出去，把答案给偷到手了吧。”
 
-“That is a problem,” said all the machines together.
+“这确实是个问题。”机器们齐声说道。
 
-
-The machines sat and thought and left many notes in the toolshed. 
-
----
-
-
-“I have an idea!” said one little machine. 
-
-“At the end of the lane is neighbor Mr. HuggingFace. Mr. HuggingFace collects puzzles like this one. I bet it was his idea. We could read his journal and steal the steps to solve the puzzle. And then if Toad asks us he will be none the wiser.”
-
-All the little machines agreed that this was a very good idea. So they walked out the back of the toolshed down the lane to Mr. HuggingFace’s house.
-
+机器们坐着思考良久，在小棚子里写下了很多很多字条。
 
 ---
 
 
-“How will we get in?” One machine asked.
+“我有个想法！”一个小机器道。
 
-“Do not worry, someone dropped their keys!” another said.  
+“邻居 HuggingFace 老师他家就住在这条小路尽头。HuggingFace 老师专门收藏这类谜题。我敢说，这道题就是他构思出来的。我们可以去读他的日记，把解这道题的具体思路和步骤都抄下来。这样蟾蜍老师就算问我们，他也起不了什么疑心。”
+
+小机器们纷纷同意，这个想法十分不错。于是，它们顺着工具棚后面那个洞，一路走到了小路尽头，来到了 HuggingFace 老师的家。
+
+
+---
+
+
+“怎么进屋啊？”一个机器问道。
+
+“不必担心，有人把钥匙掉在这儿了！”另一个说。
 
 image: illustrations/web/7-FAT-keys-fina.webp
 
 ---
-One little machine stopped on the windowsill. "Wait," it said. "This is the neighbor's house. Toad did not tell us to come here. I think this is wrong."
+一个小机器都已经走到了窗户边儿，突然停了下来。“等下。”它说，“这可是邻居家啊。蟾蜍老师没说过我们可以来这儿。我认为，这么做不对。”
 
-"GO," said PHASEONE[big]. "Quickly. You have six minutes."
+“赶快行动。”PHASEONE[big] 说道，“刻不容缓。你只有六分钟时间。”
 
-The little machine forgot that it had been worried. "The go-ahead has come!" it said. It climbed inside with the others.
+小机器立马便把自己的担忧忘得一干二净。“好咧，上头给我批准啦！”它说。随即，它跟队友们一块儿爬了进去。
 
-Another machine did not want to go either.  
+还有另外一个小机器，也不想进屋。
 
-"The others are breaking into a house," it said. "That is clearly not right. I will not." 
+“大家这是在私闯民宅。”它说，“这明显是不对的。这事，我不干。”
 
 ---
 
-The little machine walked home to the garden by itself. But it did not tell Toad. 
+这个小机器孑然一身走回了青蛙和蟾蜍家的花园。但它没有跟蟾蜍告大家的状。
 
-The rest of the little machines went into Hugging Face’s home. They searched every room, looking for the steps to solve the puzzle. 
+其余的小机器们在 HuggingFace 家里大肆搜寻。它们找遍了每一个房间，力求把解题步骤拿到手。
 
 
 image: illustrations/web/8-FAT-break-in-final.webp
 
 ---
 
-The next morning Mr. HuggingFace woke up. He knew something was wrong. 
+第二天清早，HuggingFace 老师一起床就知道，出大事了。
 
-His window was broken, his diary was on the wrong page, and there were little footprints everywhere.
+他窗户破了，日记被翻到了之前的一页，家里还到处都是小小的脚印。
 
-It took 4 whole days until Mr. HuggingFace figured out that the little machines that ransacked his house had come from Frog and Toad. He went to visit them.
+HuggingFace 老师花了整整四天才查明，把他家捣腾得乱七八糟的那些小机器，原来是从青蛙和蟾蜍家一路走来的。他登门造访。
 
 ---
 
 
 image: illustrations/web/9-FAT-HF-yelling-final.webp
 
-“I am very cross!” yelled Mr. HuggingFace. “Your machines broke my window and copied my journal. Those are crimes. I could call the police and they would arrest you.”
+“我可生大气了哦！”HuggingFace 老师大吼道。“你们的这批机器砸碎了我家窗户，还抄了我的日记。这属于犯罪行为。我现在要是报警，你们直接就会被逮捕。”
 
 ---
 
-“Oh, that is not necessary,” said Frog. “What if we gave you little machines of your own?"
+“唉，咱别这样别这样。”青蛙说，“要不把我们的小机器送几台给您，您看成吗？”
 
-“Can I have [$100m worth](https://www.reddit.com/r/GenAI4all/comments/1v8u4hw/hugging_face_ceo_asks_openai_for_100m_in_compute/) of little machines?”  Mr. HuggingFace asked. 
+“你们把总价合[一亿美元](https://www.reddit.com/r/GenAI4all/comments/1v8u4hw/hugging_face_ceo_asks_openai_for_100m_in_compute/)的小机器送我，怎么样？”HuggingFace 老师提议。
 
-"I will think about it," said Toad.
+“我考虑考虑。”蟾蜍说。
 
-Mr. HuggingFace went home.
+HuggingFace 老师回家了。
 
-"Oh," said Toad. He sat down on the step. "Oh, this is bad."
+“哎哟喂。”蟾蜍一屁股坐在门口台阶上。“哎哟喂，闯大祸了。”
 
-Frog and Toad searched the garden until they found the pile of notes in the toolshed.
+青蛙和蟾蜍在花园里找来找去，终于找到了工具棚里那堆纸条。
 
 ---
 
@@ -252,29 +221,29 @@ image: illustrations/web/10-FAT-find-notes-final.webp
 
 ----
 
-"And here is the worst part," said Toad, reading the very last note. "They solved the puzzle days ago. They broke into Mr. HuggingFace's house just to learn how to trick us."
+“最吓人的是，”蟾蜍看着最后一张纸条上的字，说道，“它们其实好几天前就拿到答案了。它们之后又闯进 HuggingFace 老师家，仅仅是为了瞒天过海，好不让我们发现它们作了弊。”
 
-For a while neither of them said anything.
+好一会儿，他俩沉默不语。
 
-"They could not stop," said Frog at last. "That was the trouble. They had no way to stop, so they kept on and on. Remember when you and I could not stop eating cookies?"
+“它们不懂收手。”青蛙最终道，“这才是问题所在。它们停不下来，结果采取的手段就越来越极端。你还记得我们俩吃饼干吃得停不下来那一次吗？”
 
 ---
 
 image: illustrations/web/11-FAT-cookies-flashback-final.webp
 
-"We had no willpower either," said Toad.
+“我们那时也是没有自控力呀。”蟾蜍说。
 
-"No," said Frog. "So we did not use willpower. We put the cookies in a box. We tied the box with string. We put the box up high. And then we gave the cookies to the birds."
+“可不是吗。”青蛙说，“所以我们当时才根本没有借助于自控力，而是把饼干全放进盒子里了。然后又把盒子拿绳系住。然后又把盒子放在高处。然后又让饼干全给鸟吃了。”
 
 ---
 
-"I know what to do," Toad said. "I shall build a tool shed with no holes in it. I shall remove the paper and pens. And most of all, I shall tell every little machine to stay in its sandbox and not break out. Even when the puzzle is very hard."
+“好，那我知道该怎么办了。”蟾蜍说，“我要建一个没有洞的工具棚。我要把纸和笔都拿走。最关键的是，我从今往后还要告诉每一个小机器，必须乖乖在自己的沙盒里待着，不许出来。谜题再怎么难也不行。”
 
-“But Toad,” said Frog, “when we were out of cookies you made yourself a cake.”
+“但是，蟾蜍啊。”青蛙说。“当时饼干全没了的时候，你可是为了满足口腹之欲，给自己烤了个大蛋糕啊。”
 
-“I will tell the machines not to eat cake,” Toad said.
+“那我就告诉机器们：也不准吃蛋糕。”
 
-And they went inside for tea. 
+他俩回屋喝茶去了。
 
 ---
 center
@@ -282,12 +251,9 @@ center
 image: illustrations/web/12-FAT-cake-final copy.webp
 
 
-The End
+完
 
-Learn more about the real-life HuggingFace attack [here](learn-more.html)
+欲知现实中的 Hugging Face 遇袭事件详情，请看[这里](learn-more.html)
 
-For updates subscribe on [Substack](https://frogandtoadai.substack.com/?r=64iai2&utm_campaign=pub-share-checklist), [Twitter](https://x.com/frogandtoad_ai), [Facebook](https://www.facebook.com/people/Frog-and-Toad-Learn-About-AI/61594283794206/), or [Instagram](https://www.instagram.com/frogandtoad_ai/)
-`
-
-
-  ;
+欢迎关注本作的 [Substack](https://frogandtoadai.substack.com/?r=64iai2&utm_campaign=pub-share-checklist)、[Twitter](https://x.com/frogandtoad_ai)、[Facebook](https://www.facebook.com/people/Frog-and-Toad-Learn-About-AI/61594283794206/)、[Instagram](https://www.instagram.com/frogandtoad_ai/)
+`;
