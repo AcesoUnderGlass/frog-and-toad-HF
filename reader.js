@@ -614,6 +614,22 @@
     furthest = Math.max(furthest, now);
   }
 
+  // And whether the reader turned the first page: one "Turned first page"
+  // event, once per visit, the first time the book goes forward from the
+  // opening that shows the first page of the story. Deep links and jumps
+  // past it don't count; only a reader who had the first page before them
+  // and went on. In the two-page spread, the first page is the right-hand
+  // page of its opening, so "going forward" means to the next opening.
+  let turnedFirst = false;
+  function trackFirstTurn(from, to) {
+    if (turnedFirst) return;
+    const first = mode === 'spread' ? spreadRight(FIRST) : FIRST;
+    if (from !== first || to <= first) return;
+    turnedFirst = true;
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    window.va('event', { name: 'Turned first page', data: { source: SOURCE } });
+  }
+
   // The opening after (dir 1) or before (-1) opening o, or null at the ends.
   // Paging back from the first page of the story shuts the book.
   function neighbour(o, dir) {
@@ -677,6 +693,7 @@
       desk.style.setProperty('--open', (k * k * (3 - 2 * k)).toFixed(4));
     },
     onChange(o) {
+      trackFirstTurn(cur, o);
       cur = o;
       updateChrome();
       prefetchNeighbours();
