@@ -40,6 +40,7 @@ window.EDITIONS = [
   { lang: 'de', name: 'Deutsch', href: 'de.html', story: 'story-de.js' },
   { lang: 'en', name: 'English', href: 'index.html', story: 'story.js' },
   { lang: 'eo', name: 'Esperanto', href: 'eo.html', story: 'story-eo.js' },
+  { lang: 'it', name: 'Italiano', href: 'it.html', story: 'story-it.js' },
   { lang: 'sk', name: 'Slovenčina', href: 'sk.html', story: 'story-sk.js' },
   { lang: 'ru', name: 'Русский', href: 'ru.html', story: 'story-ru.js' },
   { lang: 'bn', name: 'বাংলা', href: 'bn.html', story: 'story-bn.js', font: 'Baloo Da 2' },
