@@ -61,7 +61,7 @@
     const KEY_RE = /^(image|alt|caption|chapter)\s*:\s*(.*)$/i;
     const FLAG_RE = /^(contents|blank|center)\s*$/i;
     const LANG = e.lang;
-    const QUOTES = { de: ['„', '“', '‚', '’'], sk: ['„', '“', '‚', '’'], cs: ['„', '“', '‚', '‘'], ru: ['«', '»', '„', '“'] }[LANG.slice(0, 2)] || ['“', '”', '‘', '’'];
+    const QUOTES = { de: ['„', '“', '‚', '’'], sk: ['„', '“', '‚', '’'], cs: ['„', '“', '‚', '‘'], ru: ['«', '»', '„', '“'], it: ['«', '»', '“', '”'] }[LANG.slice(0, 2)] || ['“', '”', '‘', '’'];
 
     function smartQuotes(s) {
       return s

@@ -22,8 +22,8 @@ German edition).
 
 | File | What it is |
 |---|---|
-| `index.html`, `de.html`, `sk.html`, `eo.html`, `bn.html`, `ru.html`, `cs.html`, `ja.html`, `hi.html`, `zh.html` | The book in English, German, Slovak, Esperanto, Bengali, Russian, Czech, Japanese and Simplified Chinese (and a Hindi stub, see Translations): the page's title, description and link previews, and which story file it reads. |
-| `story.js`, `story-de.js`, `story-sk.js`, `story-eo.js`, `story-bn.js`, `story-ru.js`, `story-cs.js`, `story-ja.js`, `story-hi.js`, `story-zh.js` | The story (see below). |
+| `index.html`, `de.html`, `sk.html`, `eo.html`, `it.html`, `bn.html`, `ru.html`, `cs.html`, `ja.html`, `hi.html`, `zh.html` | The book in English, German, Slovak, Esperanto, Italian, Bengali, Russian, Czech, Japanese and Simplified Chinese (and a Hindi stub, see Translations): the page's title, description and link previews, and which story file it reads. |
+| `story.js`, `story-de.js`, `story-sk.js`, `story-eo.js`, `story-it.js`, `story-bn.js`, `story-ru.js`, `story-cs.js`, `story-ja.js`, `story-hi.js`, `story-zh.js` | The story (see below). |
 | `languages.js` | The editions, for the language menu and the plain edition. |
 | `reader.js`, `reader.css` | The reader: the desk, the book and its cover, laying out the pages, the status line under the book. |
 | `pageturn.js`, `pageturn.css` | The page turns (the leaf, its shading and shadows, dragging). Knows nothing of the story. |
@@ -110,6 +110,9 @@ is `story-cs.js` and `cs.html` (`/cs`), translated by HighEgg; Bengali is
 Japanese is `story-ja.js` and `ja.html` (`/ja`), translated by
 [Yuma Hoshino](https://www.upwork.com/freelancers/~01570efaac72098a8d).
 
+Italian is `story-it.js` and `it.html` (`/it`), translated by
+[Luca Pedersoli](https://github.com/kessal001).
+
 Simplified Chinese is `story-zh.js` and `zh.html` (`/zh`), translated by
 Babel Translation, with a plain edition at `/simple?lang=zh-Hans`.
 It uses `zh-Hans` in `<html lang>`,
@@ -125,7 +128,7 @@ Every edition is listed in `languages.js` (the language menu) and in the
 `hreflang` lines in the `<head>` of every other edition's page. A new edition
 needs its line in both. Bengali and Esperanto keep English-style curly quotes,
 so they need no entry in the quote styles (`QUOTES` in `reader.js` and
-`simple.js`); German, Slovak, Czech and Russian have one.
+`simple.js`); German, Slovak, Czech, Russian and Italian have one.
 
 Fonts: Noto Serif, which every page links in its `<head>`, covers Latin,
 Cyrillic and Greek. A language in another script needs that script's font

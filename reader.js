@@ -65,9 +65,9 @@
 
   // Straight quotes become curly ones in the edition's own style: “…” and
   // ‘…’ in English, „…“ in German, Slovak and Czech (where a straight ' is taken
-  // for an apostrophe; type ‚…‘ as they are), «…» and „…“ in Russian. Curly
+  // for an apostrophe; type ‚…‘ as they are), «…» and „…“ in Russian, «…» and “…” in Italian. Curly
   // quotes in the story are left as they are.
-  const QUOTES = { de: ['„', '“', '‚', '’'], sk: ['„', '“', '‚', '’'], cs: ['„', '“', '‚', '‘'], ru: ['«', '»', '„', '“'] }[LANG.slice(0, 2)] || ['“', '”', '‘', '’'];
+  const QUOTES = { de: ['„', '“', '‚', '’'], sk: ['„', '“', '‚', '’'], cs: ['„', '“', '‚', '‘'], ru: ['«', '»', '„', '“'], it: ['«', '»', '“', '”'] }[LANG.slice(0, 2)] || ['“', '”', '‘', '’'];
 
   function smartQuotes(s) {
     return s
