@@ -39,6 +39,7 @@ window.EDITIONS = [
   { lang: 'cs', name: 'Čeština', href: 'cs.html', story: 'story-cs.js' },
   { lang: 'de', name: 'Deutsch', href: 'de.html', story: 'story-de.js' },
   { lang: 'en', name: 'English', href: 'index.html', story: 'story.js' },
+  { lang: 'es-MX', name: 'Español (México)', href: 'es.html', story: 'story-es.js' },
   { lang: 'eo', name: 'Esperanto', href: 'eo.html', story: 'story-eo.js' },
   { lang: 'it', name: 'Italiano', href: 'it.html', story: 'story-it.js' },
   { lang: 'sk', name: 'Slovenčina', href: 'sk.html', story: 'story-sk.js' },
