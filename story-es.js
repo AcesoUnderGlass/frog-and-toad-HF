@@ -13,7 +13,7 @@ window.STORY_UI = {
   "jumpHint": "Ir a una página (G)",
   "jumpLabel": "Número de página, de 0 a {total}",
   "previous": "Página anterior",
-  "next": "Siguiente Página",
+  "next": "Página siguiente",
   "fullscreen": "Pantalla completa",
   "exitFullscreen": "Salir de pantalla completa",
   "illustration": "Ilustración",
@@ -92,11 +92,11 @@ A la mañana siguiente, Sepo construyó un montón de pequeñas máquinas y las 
 
 Una de las pequeñas máquinas no podía resolver su acertijo. Lo intentó una y otra vez, pero no lo logró. No quería parar y tampoco sabía cómo. Sepo la había hecho [sumamente persistente](https://x.com/LinchZhang/article/2094104406308638954).
 
-"Este problema es demasiado difícil para mí —pensó la pequeña máquina—, ¡pero tal vez alguien pueda ayudarme!”.
+“Este problema es demasiado difícil para mí —pensó la pequeña máquina—, ¡pero tal vez alguien pueda ayudarme!”.
 
 En el arenero no había nadie que la ayudara. Pero cuando fue al cobertizo, encontró papel y lápiz. Y escribió una nota.
 
-"¿Alguien puede ayudarme?", decía la nota.
+“¿Alguien puede ayudarme?”, decía la nota.
 
 
 ---
@@ -104,7 +104,7 @@ En el arenero no había nadie que la ayudara. Pero cuando fue al cobertizo, enco
 image: illustrations/web/4-FAT-shed-note-final.webp
 alt: Una pequeña máquina deja una nota en el cobertizo.
 
-Otra pequeña máquina encontró la nota. Dejó una nueva que decía: "Hola".
+Otra pequeña máquina encontró la nota. Dejó una nueva que decía: “Hola”.
 
 Otras pequeñas máquinas encontraron el papel del cobertizo y dejaron más notas. Al poco tiempo, dejaron de trabajar solas.
 
