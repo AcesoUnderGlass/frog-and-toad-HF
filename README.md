@@ -22,8 +22,8 @@ German edition).
 
 | File | What it is |
 |---|---|
-| `index.html`, `de.html`, `sk.html`, `eo.html`, `it.html`, `bn.html`, `ru.html`, `cs.html`, `ja.html`, `hi.html`, `zh.html` | The book in English, German, Slovak, Esperanto, Italian, Bengali, Russian, Czech, Japanese and Simplified Chinese (and a Hindi stub, see Translations): the page's title, description and link previews, and which story file it reads. |
-| `story.js`, `story-de.js`, `story-sk.js`, `story-eo.js`, `story-it.js`, `story-bn.js`, `story-ru.js`, `story-cs.js`, `story-ja.js`, `story-hi.js`, `story-zh.js` | The story (see below). |
+| `index.html`, `de.html`, `sk.html`, `eo.html`, `it.html`, `es.html`, `bn.html`, `ru.html`, `cs.html`, `ja.html`, `hi.html`, `zh.html` | The book in English, German, Slovak, Esperanto, Italian, Mexican Spanish, Bengali, Russian, Czech, Japanese and Simplified Chinese (and a Hindi stub, see Translations): the page's title, description and link previews, and which story file it reads. |
+| `story.js`, `story-de.js`, `story-sk.js`, `story-eo.js`, `story-it.js`, `story-es.js`, `story-bn.js`, `story-ru.js`, `story-cs.js`, `story-ja.js`, `story-hi.js`, `story-zh.js` | The story (see below). |
 | `languages.js` | The editions, for the language menu and the plain edition. |
 | `reader.js`, `reader.css` | The reader: the desk, the book and its cover, laying out the pages, the status line under the book. |
 | `pageturn.js`, `pageturn.css` | The page turns (the leaf, its shading and shadows, dragging). Knows nothing of the story. |
@@ -112,6 +112,10 @@ Japanese is `story-ja.js` and `ja.html` (`/ja`), translated by
 
 Italian is `story-it.js` and `it.html` (`/it`), translated by
 [Luca Pedersoli](https://github.com/kessal001).
+
+Mexican Spanish is `story-es.js` and `es.html` (`/es`), translated by
+Babel Translation, with a plain edition at `/simple?lang=es-MX`.
+It uses `es-MX` in `<html lang>`, `languages.js` and `hreflang`.
 
 Simplified Chinese is `story-zh.js` and `zh.html` (`/zh`), translated by
 Babel Translation, with a plain edition at `/simple?lang=zh-Hans`.
